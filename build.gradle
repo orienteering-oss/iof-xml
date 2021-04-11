@@ -1,0 +1,73 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def generated_dir="src/main/java"
+
+sourceSets {
+
+    generated {
+        java.srcDir "$generated_dir"
+    }
+}
+
+dependencies {
+    compile sourceSets.generated.output
+
+    // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
+    compile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
+    generatedCompile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
+}
+
+
+// XJC tasks
+
+// JAXB configuration holds classpath for running the JAXB XJC compiler
+configurations {
+    jaxb
+}
+
+dependencies {
+    jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.3"
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
+}
+
+// Cookie cutter function for defining multiple XJC tasks
+def addXjcTask(taskName, schema, pkg, dest) {
+
+    // If you haven't already, create the generated output dir before running XJC or it will fail
+    file(dest).mkdirs()
+
+    // The main XJC task, calls XJCFacade which is the entry point of the XJC JAR
+    tasks.create(name: taskName, type: JavaExec) {
+
+        classpath configurations.jaxb
+        main 'com.sun.tools.xjc.XJCFacade'
+
+        // To explore available args, download the XJC JAR and run java -jar jaxb-xjc.jar --help
+        args schema, "-p", pkg, "-d", dest
+    }
+
+    // Add a dependency on the new task so it gets invoked
+    compileGeneratedJava.dependsOn tasks.getByName(taskName)
+}
+
+// Add all the XJC tasks you need
+
+addXjcTask("iof_v2",
+        "src/main/resources/iof_v2.xsd",
+        'iof.v2',
+        "$generated_dir")
+
+addXjcTask("iof_v3",
+        "src/main/resources/iof_v3.xsd",
+        'iof.v3',
+        "$generated_dir")
