@@ -1,9 +1,11 @@
 plugins {
     id 'java'
+    id 'java-library'
+    id 'application'
     id 'org.jetbrains.kotlin.jvm' version '1.4.31'
 }
 
-group 'org.example'
+group 'com.github.orienteering-oss'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -13,7 +15,6 @@ repositories {
 def generated_dir="src/main/java"
 
 sourceSets {
-
     generated {
         java.srcDir "$generated_dir"
     }
@@ -64,10 +65,12 @@ def addXjcTask(taskName, schema, pkg, dest) {
 
 addXjcTask("iof_v2",
         "src/main/resources/iof_v2.xsd",
-        'iof.v2',
+        'v2',
         "$generated_dir")
 
 addXjcTask("iof_v3",
         "src/main/resources/iof_v3.xsd",
-        'iof.v3',
+        'v3',
         "$generated_dir")
+
+mainClassName = 'MainKt'

@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema
 import com.fasterxml.jackson.module.jsonSchema.JsonSchemaGenerator
 import com.fasterxml.jackson.module.jsonSchema.types.ObjectSchema
-import iof.v2.*
-import iof.v3.IofV3
+import v2.*
+import v3.IofV3
 import org.xml.sax.InputSource
 import java.io.File
 import java.io.StringReader
@@ -16,25 +16,12 @@ import javax.xml.transform.sax.SAXSource
 
 
 fun main() {
-    //var jsonSchema = toJsonSchema(classesV2)
-    var jsonSchema = toJsonSchema(listOf(IofV2::class.java))
-    writeToFile(jsonSchema, "iof_v2_schema.json")
-    jsonSchema = toJsonSchema(listOf(IofV3::class.java))
-    writeToFile(jsonSchema, "iof_v3_schema.json")
-
     val file = File("ResultList_example_iofv2.xml").readText()
     val obj = unmarshalGenericIofV2(file)
     println(ObjectMapper().writeValueAsString(obj))
 }
 
-fun writeToFile(content: String, filename: String) {
-    File(filename).printWriter().use { out ->
-        out.println(content)
-    }
-
-}
-
-fun getMainElementName(xml: String) =
+private fun getMainElementName(xml: String) =
     "<([A-Z][a-zA-Z]+)"
         .toRegex()
         .find(xml)
@@ -44,7 +31,7 @@ fun getMainElementName(xml: String) =
 
 fun unmarshalGenericIofV3(xml: String): Any {
     val className = getMainElementName(xml) ?: ""
-    val actualClass = Class.forName("iof.v3.$className")
+    val actualClass = Class.forName("v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
     val reader = StringReader(xml)
@@ -53,7 +40,7 @@ fun unmarshalGenericIofV3(xml: String): Any {
 
 fun unmarshalGenericIofV2(xml: String): Any {
     val className = getMainElementName(xml) ?: ""
-    val actualClass = Class.forName("iof.v2.$className")
+    val actualClass = Class.forName("v2.$className")
 
     val jaxbContext = JAXBContext.newInstance(actualClass)
 
@@ -89,43 +76,3 @@ val classesV2 = listOf(
     ClassData::class.java,
     CourseData::class.java,
 )
-
-fun toJsonSchema(classes: List<java.lang.Class<*>>): String {
-    val mapper = ObjectMapper()
-    val schemaGen = JsonSchemaGenerator(mapper)
-
-    try {
-        val sb = StringBuilder()
-        classes.forEachIndexed { index, clazz ->
-            val schema: JsonSchema = schemaGen.generateSchema(clazz)
-            schema.asObjectSchema().rejectAdditionalProperties()
-            sb.append(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema))
-            if (index != classes.size -1) {
-                sb.appendLine(",")
-            }
-        }
-
-        return sb.toString()
-
-    } catch (e: JsonMappingException) {
-        e.printStackTrace()
-    } catch (e: JsonProcessingException) {
-        e.printStackTrace()
-    }
-
-    return "[]"
-}
-
-fun generateSchema(generator: JsonSchemaGenerator, type: Class<*>): ObjectSchema {
-    val schema = generator.generateSchema(type).asObjectSchema()
-
-    for (field in type.declaredFields) {
-        println(field.name)
-        if (!field.type.isEnum && !field.type.name.startsWith("java") && !field.type.isPrimitive) {
-            val fieldSchema = generateSchema(generator, field.type)
-            fieldSchema.rejectAdditionalProperties()
-            schema.putProperty(field.name, fieldSchema)
-        }
-    }
-    return schema
-}

@@ -1,4 +1,15 @@
-# iof-xml-to-json
-JSON converter for XML defined by the International Orienteering Federation XSD, both v2 and v3
+# Java IOF XML
 
-See converted schemas in [mikaello/iof-orienteering-data-schemas](https://github.com/mikaello/iof-orienteering-data-schemas).
+Java classes for IOF XML version 2 and 3
+
+The folder [./src/main/java](./src/main/java) contains Java files generated from the XSD files for IOF v2 and v3. They are generated at build time with the Gradle task `addXjcTask` in `build.gradle`.
+
+Original XSD files that the Java classes are generated from:
+
+* [iof_v2.xsd](src/main/resources/iof_v2.xsd) (converted from [IOFdata.dtd](src/main/resources/IOFdata.dtd))
+* [iof_v3.xsd](src/main/resources/iof_v3.xsd)
+
+## Related
+
+* C# classes for IOF XML v3: [github.com/international-orienteering-federation/Dotnet-Client-IOF.XML.V3](https://github.com/international-orienteering-federation/Dotnet-Client-IOF.XML.V3)
+* IOF repository for [v2](https://github.com/international-orienteering-federation/datastandard-v2) and [v3](https://github.com/international-orienteering-federation/datastandard-v3) datastandard.
