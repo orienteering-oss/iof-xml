@@ -9,6 +9,22 @@ Original XSD files that the Java classes are generated from:
 * [iof_v2.xsd](src/main/resources/iof_v2.xsd) (converted from [IOFdata.dtd](src/main/resources/IOFdata.dtd))
 * [iof_v3.xsd](src/main/resources/iof_v3.xsd)
 
+## Gradle
+
+### Run project
+
+```shell
+gradle run
+```
+
+### Upload to maven central
+
+(Remember to put a file `gradle.properties` with the required fields (GPG-key and ossrh username and password))
+
+```shell
+gradle uploadArchives
+```
+
 ## Related
 
 * C# classes for IOF XML v3: [github.com/international-orienteering-federation/Dotnet-Client-IOF.XML.V3](https://github.com/international-orienteering-federation/Dotnet-Client-IOF.XML.V3)

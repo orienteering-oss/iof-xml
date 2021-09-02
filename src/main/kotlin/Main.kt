@@ -1,11 +1,13 @@
+package iofXml
+
 import com.fasterxml.jackson.core.JsonProcessingException
 import com.fasterxml.jackson.databind.JsonMappingException
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema
 import com.fasterxml.jackson.module.jsonSchema.JsonSchemaGenerator
 import com.fasterxml.jackson.module.jsonSchema.types.ObjectSchema
-import v2.*
-import v3.IofV3
+import iofXml.v2.*
+import iofXml.v3.IofV3
 import org.xml.sax.InputSource
 import java.io.File
 import java.io.StringReader
@@ -31,7 +33,7 @@ private fun getMainElementName(xml: String) =
 
 fun unmarshalGenericIofV3(xml: String): Any {
     val className = getMainElementName(xml) ?: ""
-    val actualClass = Class.forName("v3.$className")
+    val actualClass = Class.forName("iofXml.v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
     val reader = StringReader(xml)
@@ -40,7 +42,7 @@ fun unmarshalGenericIofV3(xml: String): Any {
 
 fun unmarshalGenericIofV2(xml: String): Any {
     val className = getMainElementName(xml) ?: ""
-    val actualClass = Class.forName("v2.$className")
+    val actualClass = Class.forName("iofXml.v2.$className")
 
     val jaxbContext = JAXBContext.newInstance(actualClass)
 

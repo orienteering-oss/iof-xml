@@ -86,12 +86,12 @@ def addXjcTask(taskName, schema, pkg, dest) {
 
 addXjcTask("iof_v2",
         "src/main/resources/iof_v2.xsd",
-        'v2',
+        "${archivesBaseName}.v2",
         "$generated_dir")
 
 addXjcTask("iof_v3",
         "src/main/resources/iof_v3.xsd",
-        'v3',
+        "${archivesBaseName}.v3",
         "$generated_dir")
 
 uploadArchives {
@@ -139,4 +139,4 @@ uploadArchives {
     }
 }
 
-mainClassName = 'MainKt'
+mainClassName = "${archivesBaseName}.MainKt"
