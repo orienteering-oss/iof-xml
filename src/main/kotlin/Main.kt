@@ -19,8 +19,10 @@ import javax.xml.transform.sax.SAXSource
 
 fun main() {
     val file = File("ResultList_example_iofv2.xml").readText()
-    val obj = unmarshalGenericIofV2(file)
+    val (obj, name, theClass) = unmarshalGenericIofV2(file)
     println(ObjectMapper().writeValueAsString(obj))
+    println("name: $name")
+    println("class: $theClass")
 }
 
 private fun getMainElementName(xml: String) =
@@ -31,16 +33,16 @@ private fun getMainElementName(xml: String) =
         ?.get(1)
         ?.value
 
-fun unmarshalGenericIofV3(xml: String): Any {
+fun unmarshalGenericIofV3(xml: String): Triple<Any, String, Class<*>> {
     val className = getMainElementName(xml) ?: ""
     val actualClass = Class.forName("iofXml.v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
     val reader = StringReader(xml)
-    return unmarshall.unmarshal(reader)
+    return Triple(unmarshall.unmarshal(reader), className, actualClass)
 }
 
-fun unmarshalGenericIofV2(xml: String): Any {
+fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
     val className = getMainElementName(xml) ?: ""
     val actualClass = Class.forName("iofXml.v2.$className")
 
@@ -58,12 +60,25 @@ fun unmarshalGenericIofV2(xml: String): Any {
             spf.newSAXParser().xmlReader,
             InputSource(StringReader(xml))
         )
-        unmarshall.unmarshal(xmlSource)
+        Triple(unmarshall.unmarshal(xmlSource), className, actualClass)
     } else {
         val reader = StringReader(xml)
-        unmarshall.unmarshal(reader)
+        Triple(unmarshall.unmarshal(reader), className, actualClass)
     }
 }
+
+val classesV3 = listOf(
+    iofXml.v3.CompetitorList::class.java,
+    iofXml.v3.OrganisationList::class.java,
+    iofXml.v3.EventList::class.java,
+    iofXml.v3.ClassList::class.java,
+    iofXml.v3.EntryList::class.java,
+    iofXml.v3.CourseData::class.java,
+    iofXml.v3.StartList::class.java,
+    iofXml.v3.ResultList::class.java,
+    iofXml.v3.ServiceRequestList::class.java,
+    iofXml.v3.ControlCardList::class.java
+)
 
 val classesV2 = listOf(
     PersonList::class.java,
