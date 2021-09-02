@@ -1,18 +1,21 @@
 plugins {
     id 'java'
     id 'java-library'
+    id 'maven' // See https://central.sonatype.org/publish/publish-gradle/
+    id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
     id 'org.jetbrains.kotlin.jvm' version '1.4.31'
 }
 
-group 'com.github.orienteering-oss'
+group 'io.github.orienteering-oss'
+archivesBaseName = "iofXml"
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
-def generated_dir="src/main/java"
+def generated_dir = "src/main/java"
 
 sourceSets {
     generated {
@@ -39,6 +42,24 @@ configurations {
 dependencies {
     jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.3"
     compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
 }
 
 // Cookie cutter function for defining multiple XJC tasks
@@ -72,5 +93,50 @@ addXjcTask("iof_v3",
         "src/main/resources/iof_v3.xsd",
         'v3',
         "$generated_dir")
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name 'iofXml'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description 'Java classes generated from IOF XSD v3 and v2'
+                url 'https://github.com/orienteering-oss/iof-xml'
+
+                scm {
+                    connection 'scm:https://github.com/orienteering-oss/iof-xml.git'
+                    developerConnection 'scm:https://github.com/orienteering-oss/iof-xml.git'
+                    url 'https://github.com/orienteering-oss/iof-xml'
+                }
+
+                licenses {
+                    license {
+                        name 'GNU General Public License v3.0'
+                        url 'https://github.com/orienteering-oss/iof-xml/blob/main/LICENSE'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'mikaello'
+                        name 'mikeallo'
+                        email 'orienteering.oss@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
 
 mainClassName = 'MainKt'
