@@ -83,7 +83,7 @@ def addXjcTask(taskName, schema, pkg, dest) {
         main 'com.sun.tools.xjc.XJCFacade'
 
         // To explore available args, download the XJC JAR and run java -jar jaxb-xjc.jar --help
-        args schema, "-p", pkg, "-d", dest
+        args schema, "-p", pkg, "-d", dest // , "-no-header" // no-header removes timestamp header in each file
     }
 
     // Add a dependency on the new task so it gets invoked (depends on compilation)
