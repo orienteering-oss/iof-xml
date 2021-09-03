@@ -2,7 +2,7 @@
 <!--
   List of ControlCards
 -->
-<ControlCardList xmlns="http://www.orienteering.org/datastandard/3.0"
+<ServiceRequestList xmlns="http://www.orienteering.org/datastandard/3.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  iofVersion="3.0"
                  createTime="2021-09-01T19:16:31+02:00"
@@ -14,4 +14,39 @@
             <Time>10:00:00+01:00</Time>
         </StartTime>
     </Event>
-</ControlCardList>
+
+    <PersonServiceRequest>
+        <Person>
+            <Name>
+                <Family>Monsen</Family>
+                <Given>Larsy</Given>
+            </Name>
+        </Person>
+        <ServiceRequest>
+            <Service>
+                <Name>Full massage</Name>
+            </Service>
+            <RequestedQuantity>3</RequestedQuantity>
+        </ServiceRequest>
+    </PersonServiceRequest>
+
+    <OrganisationServiceRequest>
+        <Organisation>
+            <Name>OSSI</Name>
+        </Organisation>
+        <PersonServiceRequest>
+            <Person>
+                <Name>
+                    <Family>Larm</Family>
+                    <Given>Mons</Given>
+                </Name>
+            </Person>
+            <ServiceRequest>
+                <Service>
+                    <Name language="NO">Down jog</Name>
+                </Service>
+                <RequestedQuantity>1</RequestedQuantity>
+            </ServiceRequest>
+        </PersonServiceRequest>
+    </OrganisationServiceRequest>
+</ServiceRequestList>

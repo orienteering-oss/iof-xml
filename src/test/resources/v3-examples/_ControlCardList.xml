@@ -1,2 +1,17 @@
-package `v3-examples`
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  List of ControlCards
+-->
+<ControlCardList xmlns="http://www.orienteering.org/datastandard/3.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 iofVersion="3.0"
+                 createTime="2021-09-01T19:16:31+02:00"
+                 creator="orienteering-oss">
+    <!-- specify punching system using the 'punchingSystem' attribute -->
+    <Owner>Best Runner in Grefsen</Owner>
+    <ControlCard punchingSystem="SI">12345</ControlCard>
+    <ControlCard punchingSystem="Emit">67890</ControlCard>
+    <ControlCard punchingSystem="SI">54345</ControlCard>
+    <ControlCard punchingSystem="SI">99999</ControlCard>
+    <ControlCard punchingSystem="Emit">88888</ControlCard>
+</ControlCardList>
