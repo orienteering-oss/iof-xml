@@ -86,12 +86,11 @@ def addXjcTask(taskName, schema, pkg, dest) {
         args schema, "-p", pkg, "-d", dest
     }
 
-    // Add a dependency on the new task so it gets invoked
-    compileGeneratedJava.dependsOn tasks.getByName(taskName)
+    // Add a dependency on the new task so it gets invoked (depends on compilation)
+    //compileGeneratedJava.dependsOn tasks.getByName(taskName) // using 'generateSources' instead for now
 }
 
 // Add all the XJC tasks you need
-
 addXjcTask("iof_v2",
         "src/main/resources/iof_v2.xsd",
         "${archivesBaseName}.v2",
@@ -101,6 +100,12 @@ addXjcTask("iof_v3",
         "src/main/resources/iof_v3.xsd",
         "${archivesBaseName}.v3",
         "$generated_dir")
+
+tasks.register('generateSources') {
+    description "Generate Java sources fram XSD files"
+    dependsOn tasks.getByName('iof_v2')
+    dependsOn tasks.getByName('iof_v3')
+}
 
 uploadArchives {
     repositories {
