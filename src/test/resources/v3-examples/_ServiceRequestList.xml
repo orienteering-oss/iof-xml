@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  List of ControlCards
+-->
+<ControlCardList xmlns="http://www.orienteering.org/datastandard/3.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 iofVersion="3.0"
+                 createTime="2021-09-01T19:16:31+02:00"
+                 creator="orienteering-oss">
+    <Event>
+        <Name>Example event</Name>
+        <StartTime>
+            <Date>2021-09-01</Date>
+            <Time>10:00:00+01:00</Time>
+        </StartTime>
+    </Event>
+</ControlCardList>

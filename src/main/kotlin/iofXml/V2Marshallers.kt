@@ -7,8 +7,9 @@ import javax.xml.bind.JAXBContext
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.sax.SAXSource
 
-fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
-    val className = getMainElementName(xml) ?: ""
+fun unmarshalGenericIofV2(dirtyXml: String): Triple<Any, String, Class<*>> {
+    val className = getMainElementName(dirtyXml) ?: ""
+    val xml = removeUTF8BOM(dirtyXml, className)
     val actualClass = Class.forName("iofXml.v2.$className")
 
     val jaxbContext = JAXBContext.newInstance(actualClass)
@@ -38,8 +39,9 @@ fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
  * @param xml IOF v2 XML string of type `className`
  * @return class of type `className`, you need to cast to this class yourself
  */
-private fun unmarshalV2Xml(className: String, xml: String): Any {
-    val mainElementName = getMainElementName(xml) ?: ""
+private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
+    val mainElementName = getMainElementName(dirtyXml) ?: ""
+    val xml = removeUTF8BOM(dirtyXml, mainElementName)
 
     if (mainElementName != className) {
         println("ERROR V2: mainElementName=$mainElementName is not equal to className=$className")

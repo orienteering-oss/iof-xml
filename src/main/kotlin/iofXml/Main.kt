@@ -20,6 +20,15 @@ internal fun getMainElementName(xml: String) =
         ?.get(1)
         ?.value
 
+private val UTF8_BOM = "\uFEFF"
+internal fun removeUTF8BOM(s: String, mainElement: String) =
+    if (s.startsWith(UTF8_BOM)) {
+        println("WARNING: removing BOM from XML of type $mainElement")
+        s.substring(1)
+    } else {
+        s
+    }
+
 /**
  * List of all main types / classes of IOF V3 XSD specification. Only these
  * classes can be top level XML elements.

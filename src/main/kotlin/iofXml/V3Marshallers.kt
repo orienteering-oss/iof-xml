@@ -4,8 +4,10 @@ import java.io.StringReader
 import java.lang.Class
 import javax.xml.bind.JAXBContext
 
-fun unmarshalGenericIofV3(xml: String): Triple<Any, String, Class<*>> {
-    val className = getMainElementName(xml) ?: ""
+
+fun unmarshalGenericIofV3(dirtyXml: String): Triple<Any, String, Class<*>> {
+    val className = getMainElementName(dirtyXml) ?: ""
+    val xml = removeUTF8BOM(dirtyXml, className)
     val actualClass = Class.forName("iofXml.v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
@@ -19,8 +21,9 @@ fun unmarshalGenericIofV3(xml: String): Triple<Any, String, Class<*>> {
  * @param xml IOF v3 XML string of type `className`
  * @return class of type `className`, you need to cast to this class yourself
  */
-private fun unmarshalV3Xml(className: String, xml: String): Any {
-    val mainElementName = getMainElementName(xml) ?: ""
+private fun unmarshalV3Xml(className: String, dirtyXml: String): Any {
+    val mainElementName = getMainElementName(dirtyXml) ?: ""
+    val xml = removeUTF8BOM(dirtyXml, mainElementName)
     if (mainElementName != className) {
         println("ERROR V3: mainElementName=$mainElementName is not equal to className=$className")
     }
