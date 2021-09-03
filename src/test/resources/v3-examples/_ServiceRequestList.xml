@@ -29,24 +29,4 @@
             <RequestedQuantity>3</RequestedQuantity>
         </ServiceRequest>
     </PersonServiceRequest>
-
-    <OrganisationServiceRequest>
-        <Organisation>
-            <Name>OSSI</Name>
-        </Organisation>
-        <PersonServiceRequest>
-            <Person>
-                <Name>
-                    <Family>Larm</Family>
-                    <Given>Mons</Given>
-                </Name>
-            </Person>
-            <ServiceRequest>
-                <Service>
-                    <Name language="NO">Down jog</Name>
-                </Service>
-                <RequestedQuantity>1</RequestedQuantity>
-            </ServiceRequest>
-        </PersonServiceRequest>
-    </OrganisationServiceRequest>
 </ServiceRequestList>

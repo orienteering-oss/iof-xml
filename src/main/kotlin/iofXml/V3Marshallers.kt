@@ -1,16 +1,35 @@
 package iofXml
 
+import java.io.File
 import java.io.StringReader
+import java.io.StringWriter
 import java.lang.Class
+import javax.xml.XMLConstants
 import javax.xml.bind.JAXBContext
+import javax.xml.bind.Marshaller
+import javax.xml.validation.SchemaFactory
 
 
-fun unmarshalGenericIofV3(dirtyXml: String): Triple<Any, String, Class<*>> {
+fun marshallIofV3(obj: Any, prettyPrint: Boolean = true): String {
+    val jaxbContext: JAXBContext = JAXBContext.newInstance(obj.javaClass)
+    val jaxbMarshaller = jaxbContext.createMarshaller()
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, prettyPrint)
+    val writer = StringWriter()
+    jaxbMarshaller.marshal(obj, writer)
+    return writer.toString()
+}
+
+fun unmarshalGenericIofV3(dirtyXml: String, validateXml: Boolean = true): Triple<Any, String, Class<*>> {
     val className = getMainElementName(dirtyXml) ?: ""
     val xml = removeUTF8BOM(dirtyXml, className)
     val actualClass = Class.forName("iofXml.v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
+    if (validateXml) {
+        val sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+        val v3Schema = sf.newSchema(File("src/main/resources/iof_v3.xsd"))
+        unmarshall.setSchema(v3Schema)
+    }
     val reader = StringReader(xml)
     return Triple(unmarshall.unmarshal(reader), className, actualClass)
 }
@@ -21,7 +40,7 @@ fun unmarshalGenericIofV3(dirtyXml: String): Triple<Any, String, Class<*>> {
  * @param xml IOF v3 XML string of type `className`
  * @return class of type `className`, you need to cast to this class yourself
  */
-private fun unmarshalV3Xml(className: String, dirtyXml: String): Any {
+private fun unmarshalV3Xml(className: String, dirtyXml: String, validateXml: Boolean = true): Any {
     val mainElementName = getMainElementName(dirtyXml) ?: ""
     val xml = removeUTF8BOM(dirtyXml, mainElementName)
     if (mainElementName != className) {
@@ -31,6 +50,14 @@ private fun unmarshalV3Xml(className: String, dirtyXml: String): Any {
     val actualClass = Class.forName("iofXml.v3.$className")
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
+
+    // Validation
+    if (validateXml) {
+        val sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+        val v3Schema = sf.newSchema(File("src/main/resources/iof_v3.xsd"))
+        unmarshall.setSchema(v3Schema)
+    }
+
     val reader = StringReader(xml)
     return unmarshall.unmarshal(reader)
 }
