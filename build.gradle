@@ -4,7 +4,7 @@ plugins {
     id 'maven' // See https://central.sonatype.org/publish/publish-gradle/
     id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
 }
 
 group 'io.github.orienteering-oss'
@@ -29,6 +29,14 @@ dependencies {
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
     compile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
     generatedCompile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
+
+    testImplementation platform("org.junit:junit-bom:5.7.2")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 

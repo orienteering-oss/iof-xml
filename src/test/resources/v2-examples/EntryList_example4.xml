@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE EntryList SYSTEM "IOFdata.dtd">
+<EntryList>
+   <IOFVersion version="2.0.3" />
+
+   <ClubEntry>
+      <Club>
+         <ClubId>3390</ClubId>
+
+         <Name>Orienteringsklubben Pan, Århus</Name>
+
+         <ShortName>OK Pan</ShortName>
+
+         <CountryId value="DEN" />
+
+         <Address street="Silistria, Ørneredevej" city="Højbjerg" zipCode="8270">
+            <AddressType value="official" />
+         </Address>
+
+         <Tele phoneNumber="+45 86256718">
+         </Tele>
+
+         <WebURL>http://www.orientering.dk/okpan/</WebURL>
+
+         <Account>1199 6000177</Account>
+
+         <Account type="bankAccount">7120 3788190</Account>
+
+         <Contact>
+            <Person>
+               <PersonName>
+                  <Family>Ejsing</Family>
+
+                  <Given>Sten</Given>
+               </PersonName>
+
+               <PersonId>11710</PersonId>
+
+               <Address street="Elsdyrvej 5" city="Højbjerg" zipCode="8270">
+                  <AddressType value="home" />
+               </Address>
+
+               <Tele phoneNumber="+45 26172819" mailAddress="sten.ejsing@mail.dk">
+               </Tele>
+            </Person>
+
+            <ContactType value="official" />
+         </Contact>
+
+         <Contact>
+            <Person>
+               <PersonName>
+                  <Family>Fenger-Grøn</Family>
+
+                  <Given>Morten</Given>
+               </PersonName>
+
+               <PersonId>11468</PersonId>
+
+               <Tele phoneNumber="+45 2671880" mailAddress="mfg@mi.au.dk">
+               </Tele>
+            </Person>
+
+            <ContactType value="result" />
+         </Contact>
+
+         <Contact>
+            <Person>
+               <PersonName>
+                  <Family>Arildsen</Family>
+
+                  <Given>Finn</Given>
+               </PersonName>
+
+               <PersonId>11438</PersonId>
+
+               <Tele phoneNumber="+45 8671880" mailAddress="finn@arildsen.com">
+               </Tele>
+            </Person>
+
+            <ContactType value="financial" />
+         </Contact>
+
+         <ModifyDate>
+            <Date>2002-02-22</Date>
+         </ModifyDate>
+      </Club>
+
+      <Contact>
+         <Person>
+            <PersonName>
+               <Family>Ejsing</Family>
+
+               <Given>Sten</Given>
+            </PersonName>
+
+            <PersonId>11710</PersonId>
+
+            <Address street="Elsdyrvej 5" city="Højbjerg" zipCode="8270">
+            </Address>
+
+            <Tele phoneNumber="+45 26172819" mailAddress="sten.ejsing@mail.dk">
+            </Tele>
+         </Person>
+
+         <ContactType value="entry" />
+      </Contact>
+
+      <Entry>
+         <TeamName>OK Pan Old Boys 1</TeamName>
+
+         <Person sex="M">
+            <PersonName>
+               <Family>Plattner</Family>
+
+               <Given sequence="1">Christoph</Given>
+
+               <Given sequence="2">Thomas</Given>
+            </PersonName>
+
+            <PersonId type="int" idManager="IOF">12345</PersonId>
+
+            <BirthDate>
+               <Date>1979-12-12</Date>
+            </BirthDate>
+
+            <Address street="Karl Stauffer Strasse 23" city="Zürich" zipCode="CH-8008">
+               <AddressType value="work" />
+
+               <CountryId value="SUI" />
+            </Address>
+
+            <Address street="Bernstrasse 134" city="Zürich" zipCode="CH-8008">
+               <AddressType value="home" />
+
+               <CountryId value="SUI" />
+            </Address>
+
+            <Tele phoneNumber="+41 2 345 6789" mobilePhoneNumber="+41 1 234 5678">
+               <TeleType value="home" />
+            </Tele>
+
+            <Tele phoneNumber="+41 2 345 6790" faxNumber="+41 2 345 6791" mobilePhoneNumber="+41 1 234 5578" mailAddress="plattner@ibm.com">
+               <TeleType value="work" />
+            </Tele>
+
+            <Nationality>
+               <CountryId value="SUI" />
+            </Nationality>
+
+            <ModifyDate>
+               <Date>2002-02-01</Date>
+            </ModifyDate>
+         </Person>
+
+         <Club>
+            <ClubId>3390</ClubId>
+
+            <Name>Orienteringsklubben Pan, Århus</Name>
+
+            <ShortName>OK Pan</ShortName>
+
+            <CountryId value="DEN" />
+
+            <Address street="Silistria, Ørneredevej" city="Højbjerg" zipCode="8270">
+               <AddressType value="official" />
+            </Address>
+
+            <Tele phoneNumber="+45 86256718">
+            </Tele>
+
+            <WebURL>http://www.orientering.dk/okpan/</WebURL>
+
+            <Account>1199 6000177</Account>
+
+            <Account type="bankAccount">7120 3788190</Account>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Ejsing</Family>
+
+                     <Given>Sten</Given>
+                  </PersonName>
+
+                  <PersonId>11710</PersonId>
+
+                  <Address street="Elsdyrvej 5" city="Højbjerg" zipCode="8270">
+                     <AddressType value="home" />
+                  </Address>
+
+                  <Tele phoneNumber="+45 26172819" mailAddress="sten.ejsing@mail.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="official" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Fenger-Grøn</Family>
+
+                     <Given>Morten</Given>
+                  </PersonName>
+
+                  <PersonId>11468</PersonId>
+
+                  <Tele phoneNumber="+45 2671880" mailAddress="mfg@mi.au.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="result" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Arildsen</Family>
+
+                     <Given>Finn</Given>
+                  </PersonName>
+
+                  <PersonId>11438</PersonId>
+
+                  <Tele phoneNumber="+45 8671880" mailAddress="finn@arildsen.com">
+                  </Tele>
+               </Person>
+
+               <ContactType value="financial" />
+            </Contact>
+
+            <ModifyDate>
+               <Date>2002-02-22</Date>
+            </ModifyDate>
+         </Club>
+
+         <CCard>
+            <CCardId>287130</CCardId>
+
+            <PunchingUnitType value="SI" />
+
+            <ModifyDate>
+               <Date>2001-09-01</Date>
+            </ModifyDate>
+         </CCard>
+
+         <CCard>
+            <CCardId>18547</CCardId>
+
+            <PunchingUnitType value="Emit" />
+         </CCard>
+
+         <Rank>
+            <OrganisationId type="int" idManager="IOF">1</OrganisationId>
+
+            <RankPosition>202</RankPosition>
+
+            <RankValue>136.45</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-01-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-06-30</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <Rank>
+            <OrganisationId type="nat" idManager="DOF">31</OrganisationId>
+
+            <RankPosition>12</RankPosition>
+
+            <RankValue>5266</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-09-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-03-31</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <TeamSequence>1</TeamSequence>
+
+         <Person sex="M">
+            <PersonName>
+               <Family>Thorsen</Family>
+
+               <Given sequence="1">Emil</Given>
+            </PersonName>
+
+            <PersonId type="nat" idManager="DOF">27645</PersonId>
+
+            <BirthDate>
+               <Date>1981-05-06</Date>
+            </BirthDate>
+
+            <Address street="Henne Strand Allé 23" city="Nr. Nebel" zipCode="DK-6860">
+               <AddressType value="home" />
+
+               <CountryId value="DEN" />
+            </Address>
+
+            <Tele phoneNumber="+45 7545 6789" mobilePhoneNumber="+45 2232 5678">
+               <TeleType value="home" />
+            </Tele>
+
+            <Tele phoneNumber="+45 2745 6790" faxNumber="+45 2345 6791" mobilePhoneNumber="+45 9175 2578" mailAddress="emil@dddb.dk">
+               <TeleType value="work" />
+            </Tele>
+
+            <Nationality>
+               <CountryId value="DEN" />
+            </Nationality>
+
+            <ModifyDate>
+               <Date>2002-02-01</Date>
+            </ModifyDate>
+         </Person>
+
+         <Club>
+            <ClubId>2290</ClubId>
+
+            <Name>Orienteringsklubben West</Name>
+
+            <ShortName>OK West</ShortName>
+
+            <CountryId value="DEN" />
+
+            <Address street="Vrøgum Skole, Filsøvej" city="Oksbøl" zipCode="DK-6840">
+               <AddressType value="official" />
+            </Address>
+
+            <Tele phoneNumber="+45 75276718">
+            </Tele>
+
+            <WebURL>http://www.orientering.dk/okwest/</WebURL>
+
+            <Account>1199 1986576</Account>
+
+            <Account type="bankAccount">7120 265761253</Account>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Bønnelykke</Family>
+
+                     <Given>Emil</Given>
+                  </PersonName>
+
+                  <PersonId>11720</PersonId>
+
+                  <Address street="Kornvænget 321" city="Varde" zipCode="DK-6800">
+                     <AddressType value="home" />
+                  </Address>
+
+                  <Tele phoneNumber="+45 75272819" mailAddress="emilb@mail.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="official" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Olsen</Family>
+
+                     <Given>Jesper</Given>
+                  </PersonName>
+
+                  <PersonId>11422</PersonId>
+
+                  <Tele phoneNumber="+45 25881880" mailAddress="mfg@olsen.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="result" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Arildsen</Family>
+
+                     <Given>Abel</Given>
+                  </PersonName>
+
+                  <PersonId>12551</PersonId>
+
+                  <Tele phoneNumber="+45 8678880" mailAddress="abel@arildsen.com">
+                  </Tele>
+               </Person>
+
+               <ContactType value="financial" />
+            </Contact>
+
+            <ModifyDate>
+               <Date>2002-02-22</Date>
+            </ModifyDate>
+         </Club>
+
+         <CCard>
+            <CCardId>287136</CCardId>
+
+            <PunchingUnitType value="SI" />
+
+            <ModifyDate>
+               <Date>2001-09-01</Date>
+            </ModifyDate>
+         </CCard>
+
+         <CCard>
+            <CCardId>13547</CCardId>
+
+            <PunchingUnitType value="Emit" />
+         </CCard>
+
+         <Rank>
+            <OrganisationId type="int" idManager="IOF">1</OrganisationId>
+
+            <RankPosition>2021</RankPosition>
+
+            <RankValue>16.26</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-01-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-06-30</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <Rank>
+            <OrganisationId type="nat" idManager="DOF">31</OrganisationId>
+
+            <RankPosition>116</RankPosition>
+
+            <RankValue>1551</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-09-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-03-31</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <TeamSequence>2</TeamSequence>
+
+         <Person sex="M">
+            <PersonName>
+               <Family>Fenger-Grøn</Family>
+
+               <Given sequence="1">Morten</Given>
+            </PersonName>
+
+            <PersonId type="int" idManager="IOF">12745</PersonId>
+
+            <BirthDate>
+               <Date>1972-01-12</Date>
+            </BirthDate>
+
+            <Address street="Mølleparken 32, 1. tv." city="Århus C" zipCode="DK-8000">
+               <AddressType value="home" />
+
+               <CountryId value="SUI" />
+            </Address>
+
+            <Address street="Matematisk Institut, Ny Munkegade" city="Århus C" zipCode="DK-8000">
+               <AddressType value="work" />
+
+               <CountryId value="SUI" />
+            </Address>
+
+            <Tele phoneNumber="+45 3467 2289" mobilePhoneNumber="+45 1234 5678">
+               <TeleType value="home" />
+            </Tele>
+
+            <Tele phoneNumber="+45 1345 6790" faxNumber="+45 2145 6791" mobilePhoneNumber="+45 8834 5578" mailAddress="mfg@mi.au.dk">
+               <TeleType value="work" />
+            </Tele>
+
+            <Nationality>
+               <CountryId value="DEN" />
+            </Nationality>
+
+            <ModifyDate>
+               <Date>2002-02-01</Date>
+            </ModifyDate>
+         </Person>
+
+         <Club>
+            <ClubId>3390</ClubId>
+
+            <Name>Orienteringsklubben Pan, Århus</Name>
+
+            <ShortName>OK Pan</ShortName>
+
+            <CountryId value="DEN" />
+
+            <Address street="Silistria, Ørneredevej" city="Højbjerg" zipCode="8270">
+               <AddressType value="official" />
+            </Address>
+
+            <Tele phoneNumber="+45 86256718">
+            </Tele>
+
+            <WebURL>http://www.orientering.dk/okpan/</WebURL>
+
+            <Account>1199 6000177</Account>
+
+            <Account type="bankAccount">7120 3788190</Account>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Ejsing</Family>
+
+                     <Given>Sten</Given>
+                  </PersonName>
+
+                  <PersonId>11710</PersonId>
+
+                  <Address street="Elsdyrvej 5" city="Højbjerg" zipCode="8270">
+                     <AddressType value="home" />
+                  </Address>
+
+                  <Tele phoneNumber="+45 26172819" mailAddress="sten.ejsing@mail.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="official" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Fenger-Grøn</Family>
+
+                     <Given>Morten</Given>
+                  </PersonName>
+
+                  <PersonId>11468</PersonId>
+
+                  <Tele phoneNumber="+45 2671880" mailAddress="mfg@mi.au.dk">
+                  </Tele>
+               </Person>
+
+               <ContactType value="result" />
+            </Contact>
+
+            <Contact>
+               <Person>
+                  <PersonName>
+                     <Family>Arildsen</Family>
+
+                     <Given>Finn</Given>
+                  </PersonName>
+
+                  <PersonId>11438</PersonId>
+
+                  <Tele phoneNumber="+45 8671880" mailAddress="finn@arildsen.com">
+                  </Tele>
+               </Person>
+
+               <ContactType value="financial" />
+            </Contact>
+
+            <ModifyDate>
+               <Date>2002-02-22</Date>
+            </ModifyDate>
+         </Club>
+
+         <CCard>
+            <CCardId>287110</CCardId>
+
+            <PunchingUnitType value="SI" />
+
+            <ModifyDate>
+               <Date>2001-09-01</Date>
+            </ModifyDate>
+         </CCard>
+
+         <CCard>
+            <CCardId>18522</CCardId>
+
+            <PunchingUnitType value="Emit" />
+         </CCard>
+
+         <Rank>
+            <OrganisationId type="int" idManager="IOF">1</OrganisationId>
+
+            <RankPosition>202</RankPosition>
+
+            <RankValue>136.45</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-01-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-06-30</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <Rank>
+            <OrganisationId type="nat" idManager="DOF">31</OrganisationId>
+
+            <RankPosition>13</RankPosition>
+
+            <RankValue>5265</RankValue>
+
+            <ValidFromDate>
+               <Date>2002-09-01</Date>
+            </ValidFromDate>
+
+            <ValidToDate>
+               <Date>2002-03-31</Date>
+            </ValidToDate>
+
+            <ModifyDate>
+               <Date>2001-12-31</Date>
+            </ModifyDate>
+         </Rank>
+
+         <TeamSequence>3</TeamSequence>
+
+         <EntryClass sequence="1">
+            <ClassShortName>H21E</ClassShortName>
+         </EntryClass>
+
+         <EntryClass sequence="2">
+            <ClassShortName>H21A</ClassShortName>
+         </EntryClass>
+
+         <AllocationControl>
+            <AllocationControlType value="earlyStart" />
+         </AllocationControl>
+
+         <EntryDate>
+            <Date>2002-02-17</Date>
+         </EntryDate>
+
+         <ModifyDate>
+            <Date>2001-02-22</Date>
+         </ModifyDate>
+      </Entry>
+   </ClubEntry>
+</EntryList>
+
