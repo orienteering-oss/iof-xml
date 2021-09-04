@@ -4,14 +4,13 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
+fun getV2ResourceAsText(file: String): String {
+    return object {}.javaClass.getResource("/v2-examples/$file").readText()
+}
 internal class V2UnmarshallersKtTest {
-    fun getResourceAsText(file: String): String {
-        return object {}.javaClass.getResource("/v2-examples/$file").readText()
-    }
-
     @Test
     fun marshallIofV2() {
-        val file = getResourceAsText("EntryList_example.xml")
+        val file = getV2ResourceAsText("EntryList_example.xml")
         val (obj) = unmarshalGenericIofV2(file)
         val xmlString = marshallIofObject(obj)
 
@@ -22,7 +21,7 @@ internal class V2UnmarshallersKtTest {
 
     @Test
     fun unmarshalGenericIofV2() {
-        val file = getResourceAsText("ClubList_example.xml")
+        val file = getV2ResourceAsText("ClubList_example.xml")
         val (obj, name, classs) = unmarshalGenericIofV2(file)
 
         assertEquals("ClubList", name)
