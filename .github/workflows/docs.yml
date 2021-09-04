@@ -1,5 +1,13 @@
 name: Generate documentation
-on: push
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ '**.kt', '**.java', '.github/workflows/docs.yml' ]
+  pull_request:
+    branches: [ main ]
+    paths: [ '**.kt', '**.java', '.github/workflows/docs.yml' ]
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -15,25 +23,13 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: Build dokka documentation with Gradle
-        # https://github.com/Kotlin/dokka
+      - name: Build dokka documentation with Gradle https://github.com/Kotlin/dokka
         run: ./gradlew dokkaHTML dokkaJavadoc
 
       - name: Copy to Documentation Website Location
         run: |
           cp -rf build/dokka/javadoc public
           cp -rf build/dokka/html public/kotlin
-
-      - name: Tidy up the javadocs
-        id: tidy
-        uses: cicirello/javadoc-cleanup@v1
-        with:
-          base-url-path: https://orienteering-oss.github.io/iof-xml/
-          path-to-root: public/
-
-      - name: Log javadoc-cleanup output
-        run: |
-          echo "modified-count = ${{ steps.tidy.outputs.modified-count }}"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
