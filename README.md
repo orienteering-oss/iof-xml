@@ -22,14 +22,14 @@ Install the project by adding the dependency to your pom.xml or build.gradle fil
     <dependency>
       <groupId>io.github.orienteering-oss</groupId>
       <artifactId>iofXml</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
     </dependency>
   </dependencies>
 <!-- ... -->
 ```
 
 ```groovy
-  implementation group: 'io.github.orienteering-oss', name: 'iofXml', version: '1.0'
+  implementation group: 'io.github.orienteering-oss', name: 'iofXml', version: '1.1'
 ```
 
 ### Usage
