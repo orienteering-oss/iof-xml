@@ -1,4 +1,4 @@
-# Java IOF XML
+# Java / Kotlin IOF XML
 
 Java classes for IOF XML version 2 and 3. Also marshal and unmarshal helper functions for both XML versions.
 
