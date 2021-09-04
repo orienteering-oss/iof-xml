@@ -1,0 +1,8 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:iofXml.v3/TeamMemberRaceResult.Position///PointingToDeclaration/iofXml/v3/TeamMemberRaceResult.Position.html
+$dokka.location:iofXml.v3/TeamMemberRaceResult.TimeBehind///PointingToDeclaration/iofXml/v3/TeamMemberRaceResult.TimeBehind.html
+iofXml
+iofXml.v2
+iofXml.v3
+
