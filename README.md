@@ -14,8 +14,9 @@ Original XSD files that the Java classes are generated from:
 
 ### Install
 
-Install the project by adding the dependency to your pom.xml or build.gradle file:
+Install the project by adding the dependency to your pom.xml or build.gradle file.
 
+**pom.xml:**
 ```xml
 <!-- ... -->
   <dependencies>
@@ -28,6 +29,7 @@ Install the project by adding the dependency to your pom.xml or build.gradle fil
 <!-- ... -->
 ```
 
+**build.gradle:**
 ```groovy
   implementation group: 'io.github.orienteering-oss', name: 'iofXml', version: '1.1'
 ```
