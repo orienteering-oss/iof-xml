@@ -9,7 +9,7 @@ plugins {
 
 group 'io.github.orienteering-oss'
 archivesBaseName = "iofXml"
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()

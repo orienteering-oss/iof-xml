@@ -12,7 +12,7 @@ internal class V2MarshallersKtTest {
     @Test
     fun unmarshalGenericIofV2() {
         val file = getResourceAsText("ClubList_example.xml")
-        val (obj, name, classs) = unmarshalGenericIofV2(file)
+        val (obj, name, classs) = unmarshalGenericIofV2(file, true)
 
         assertEquals("ClubList", name)
         assert(obj is iofXml.v2.ClubList)
