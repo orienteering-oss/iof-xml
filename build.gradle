@@ -1,7 +1,12 @@
 plugins {
     id 'java'
     id 'java-library'
+
     id 'maven' // See https://central.sonatype.org/publish/publish-gradle/
+    // 'maven' is deprecated, should consider using maven-publish, see
+    // https://medium.com/@nmauti/sign-and-publish-on-maven-central-a-project-with-the-new-maven-publish-gradle-plugin-22a72a4bfd4b
+    // and https://github.com/jmini/html-publish-helper/blob/master/build.gradle
+
     id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
     id 'org.jetbrains.kotlin.jvm' version '1.5.30'
@@ -16,31 +21,11 @@ repositories {
 }
 
 def generated_dir = "src/main/java"
-
 sourceSets {
     generated {
         java.srcDir "$generated_dir"
     }
 }
-
-dependencies {
-    compile sourceSets.generated.output
-
-    // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
-    compile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
-    generatedCompile "org.glassfish.jaxb:jaxb-runtime:2.3.3"
-
-    testImplementation platform("org.junit:junit-bom:5.7.2")
-    testImplementation "org.junit.jupiter:junit-jupiter"
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
-}
-
-test {
-    useJUnitPlatform()
-}
-
-
-// XJC tasks
 
 // JAXB configuration holds classpath for running the JAXB XJC compiler
 configurations {
@@ -49,7 +34,23 @@ configurations {
 
 dependencies {
     jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.3"
-    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
+
+    // The generated IOF v2/3 files
+    implementation sourceSets.generated.output
+
+    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
+
+    // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.5"
+    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:2.3.5"
+
+    testImplementation platform("org.junit:junit-bom:5.7.2")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 task javadocJar(type: Jar) {
