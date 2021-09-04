@@ -10,6 +10,10 @@ Original XSD files that the Java classes are generated from:
 * [iof_v2.xsd](src/main/resources/iof_v2.xsd) (converted from [IOFdata.dtd](src/main/resources/IOFdata.dtd))
 * [iof_v3.xsd](src/main/resources/iof_v3.xsd)
 
+See also generated documentation from the source code:
+* Javadoc: <https://orienteering-oss.github.io/iof-xml>
+* Dokka Kotlin: <https://orienteering-oss.github.io/iof-xml/kotlin>
+
 ## Install and usage
 
 ### Install

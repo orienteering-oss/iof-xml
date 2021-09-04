@@ -1,0 +1,905 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>CourseControl 1.2-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../search.js"></script>
+    <script async type="text/javascript" src="../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class CourseControl" class="title">Class CourseControl</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=CourseControl.html>CourseControl</a></span>
+
+                    </pre>
+                    <div class="block"><p>A control included in a particular course. &lt;p&gt;Java class for CourseControl complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="CourseControl"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="Control" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&amp;gt; &amp;lt;element name="MapText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="MapTextPosition" type="{http://www.orienteering.org/datastandard/3.0}MapPosition" minOccurs="0"/&amp;gt; &amp;lt;element name="LegLength" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt; &amp;lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;attribute name="type" type="{http://www.orienteering.org/datastandard/3.0}ControlType" /&amp;gt; &amp;lt;attribute name="randomOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&amp;gt; &amp;lt;attribute name="specialInstruction" default="None"&amp;gt; &amp;lt;simpleType&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt; &amp;lt;enumeration value="None"/&amp;gt; &amp;lt;enumeration value="TapedRoute"/&amp;gt; &amp;lt;enumeration value="FunnelTapedRoute"/&amp;gt; &amp;lt;enumeration value="MandatoryCrossingPoint"/&amp;gt; &amp;lt;enumeration value="MandatoryOutOfBoundsAreaPassage"/&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/simpleType&amp;gt; &amp;lt;/attribute&amp;gt; &amp;lt;attribute name="tapedRouteLength" type="{http://www.w3.org/2001/XMLSchema}double" /&amp;gt; &amp;lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#control>control</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#mapText>mapText</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=MapPosition.html>MapPosition</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#mapTextPosition>mapTextPosition</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#legLength>legLength</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#score>score</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=Extensions.html>Extensions</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#extensions>extensions</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=ControlType.html>ControlType</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#type>type</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#randomOrder>randomOrder</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#specialInstruction>specialInstruction</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#tapedRouteLength>tapedRouteLength</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#modifyTime>modifyTime</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getControl()>getControl</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the control property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getMapText()>getMapText</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the mapText property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setMapText(String)>setMapText</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the mapText property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code><a href=MapPosition.html>MapPosition</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getMapTextPosition()>getMapTextPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the mapTextPosition property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setMapTextPosition(MapPosition)>setMapTextPosition</a>(<a href=MapPosition.html>MapPosition</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the mapTextPosition property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getLegLength()>getLegLength</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the legLength property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setLegLength(Double)>setLegLength</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the legLength property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getScore()>getScore</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the score property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setScore(Double)>setScore</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the score property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=Extensions.html>Extensions</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getExtensions()>getExtensions</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the extensions property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setExtensions(Extensions)>setExtensions</a>(<a href=Extensions.html>Extensions</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the extensions property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code><a href=ControlType.html>ControlType</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getType()>getType</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the type property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setType(ControlType)>setType</a>(<a href=ControlType.html>ControlType</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the type property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setRandomOrder(Boolean)>setRandomOrder</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the randomOrder property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getSpecialInstruction()>getSpecialInstruction</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the specialInstruction property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setSpecialInstruction(String)>setSpecialInstruction</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the specialInstruction property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getTapedRouteLength()>getTapedRouteLength</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the tapedRouteLength property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setTapedRouteLength(Double)>setTapedRouteLength</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the tapedRouteLength property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#getModifyTime()>getModifyTime</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the modifyTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#setModifyTime(XMLGregorianCalendar)>setModifyTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the modifyTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CourseControl.html#isRandomOrder()>isRandomOrder</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the randomOrder property.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getControl()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getControl</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; <a href=CourseControl.html#getControl()>getControl</a>()</pre>
+                                        <div class="block"><p>Gets the value of the control property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the control property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getControl().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMapText()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMapText</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=CourseControl.html#getMapText()>getMapText</a>()</pre>
+                                        <div class="block"><p>Gets the value of the mapText property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setMapText(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setMapText</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setMapText(String)>setMapText</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the mapText property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMapTextPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMapTextPosition</h4>
+                                        <pre class="methodSignature"> <a href=MapPosition.html>MapPosition</a> <a href=CourseControl.html#getMapTextPosition()>getMapTextPosition</a>()</pre>
+                                        <div class="block"><p>Gets the value of the mapTextPosition property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setMapTextPosition(MapPosition)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setMapTextPosition</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setMapTextPosition(MapPosition)>setMapTextPosition</a>(<a href=MapPosition.html>MapPosition</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the mapTextPosition property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=MapPosition.html>MapPosition</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getLegLength()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLegLength</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=CourseControl.html#getLegLength()>getLegLength</a>()</pre>
+                                        <div class="block"><p>Gets the value of the legLength property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setLegLength(Double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setLegLength</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setLegLength(Double)>setLegLength</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the legLength property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getScore()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getScore</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=CourseControl.html#getScore()>getScore</a>()</pre>
+                                        <div class="block"><p>Gets the value of the score property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setScore(Double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setScore</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setScore(Double)>setScore</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the score property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getExtensions()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getExtensions</h4>
+                                        <pre class="methodSignature"> <a href=Extensions.html>Extensions</a> <a href=CourseControl.html#getExtensions()>getExtensions</a>()</pre>
+                                        <div class="block"><p>Gets the value of the extensions property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setExtensions(Extensions)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setExtensions</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setExtensions(Extensions)>setExtensions</a>(<a href=Extensions.html>Extensions</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the extensions property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=Extensions.html>Extensions</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getType()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getType</h4>
+                                        <pre class="methodSignature"> <a href=ControlType.html>ControlType</a> <a href=CourseControl.html#getType()>getType</a>()</pre>
+                                        <div class="block"><p>Gets the value of the type property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setType(ControlType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setType</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setType(ControlType)>setType</a>(<a href=ControlType.html>ControlType</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the type property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=ControlType.html>ControlType</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setRandomOrder(Boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setRandomOrder</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setRandomOrder(Boolean)>setRandomOrder</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the randomOrder property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSpecialInstruction()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSpecialInstruction</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=CourseControl.html#getSpecialInstruction()>getSpecialInstruction</a>()</pre>
+                                        <div class="block"><p>Gets the value of the specialInstruction property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSpecialInstruction(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSpecialInstruction</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setSpecialInstruction(String)>setSpecialInstruction</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the specialInstruction property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getTapedRouteLength()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTapedRouteLength</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=CourseControl.html#getTapedRouteLength()>getTapedRouteLength</a>()</pre>
+                                        <div class="block"><p>Gets the value of the tapedRouteLength property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setTapedRouteLength(Double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setTapedRouteLength</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setTapedRouteLength(Double)>setTapedRouteLength</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the tapedRouteLength property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getModifyTime()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getModifyTime</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> <a href=CourseControl.html#getModifyTime()>getModifyTime</a>()</pre>
+                                        <div class="block"><p>Gets the value of the modifyTime property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setModifyTime(XMLGregorianCalendar)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setModifyTime</h4>
+                                        <pre class="methodSignature"> void <a href=CourseControl.html#setModifyTime(XMLGregorianCalendar)>setModifyTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the modifyTime property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isRandomOrder()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isRandomOrder</h4>
+                                        <pre class="methodSignature"> boolean <a href=CourseControl.html#isRandomOrder()>isRandomOrder</a>()</pre>
+                                        <div class="block"><p>Gets the value of the randomOrder property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

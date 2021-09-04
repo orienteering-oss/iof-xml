@@ -1,0 +1,1172 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>PersonRaceResult 1.2-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../search.js"></script>
+    <script async type="text/javascript" src="../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class PersonRaceResult" class="title">Class PersonRaceResult</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=PersonRaceResult.html>PersonRaceResult</a></span>
+
+                    </pre>
+                    <div class="block"><p>Result information for a person in a race. &lt;p&gt;Java class for PersonRaceResult complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="PersonRaceResult"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&amp;gt; &amp;lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&amp;gt; &amp;lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt; &amp;lt;element name="TimeBehind" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt; &amp;lt;element name="Position" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&amp;gt; &amp;lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}ResultStatus"/&amp;gt; &amp;lt;element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="OverallResult" type="{http://www.orienteering.org/datastandard/3.0}OverallResult" minOccurs="0"/&amp;gt; &amp;lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleCourse" minOccurs="0"/&amp;gt; &amp;lt;element name="SplitTime" type="{http://www.orienteering.org/datastandard/3.0}SplitTime" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="ControlAnswer" type="{http://www.orienteering.org/datastandard/3.0}ControlAnswer" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Route" type="{http://www.orienteering.org/datastandard/3.0}Route" minOccurs="0"/&amp;gt; &amp;lt;element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#bibNumber>bibNumber</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#startTime>startTime</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#finishTime>finishTime</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#time>time</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#timeBehind>timeBehind</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#position>position</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=ResultStatus.html>ResultStatus</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#status>status</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Score.html>Score</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#score>score</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=OverallResult.html>OverallResult</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#overallResult>overallResult</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=SimpleCourse.html>SimpleCourse</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#course>course</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=SplitTime.html>SplitTime</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#splitTime>splitTime</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlAnswer.html>ControlAnswer</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#controlAnswer>controlAnswer</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=Route.html>Route</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#route>route</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlCard.html>ControlCard</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#controlCard>controlCard</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=AssignedFee.html>AssignedFee</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#assignedFee>assignedFee</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ServiceRequest.html>ServiceRequest</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#serviceRequest>serviceRequest</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=Extensions.html>Extensions</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#extensions>extensions</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#raceNumber>raceNumber</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getBibNumber()>getBibNumber</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the bibNumber property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setBibNumber(String)>setBibNumber</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the bibNumber property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getStartTime()>getStartTime</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the startTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setStartTime(XMLGregorianCalendar)>setStartTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the startTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getFinishTime()>getFinishTime</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the finishTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setFinishTime(XMLGregorianCalendar)>setFinishTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the finishTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getTime()>getTime</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the time property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setTime(Double)>setTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the time property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getTimeBehind()>getTimeBehind</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the timeBehind property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setTimeBehind(Double)>setTimeBehind</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the timeBehind property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getPosition()>getPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the position property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setPosition(BigInteger)>setPosition</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the position property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code><a href=ResultStatus.html>ResultStatus</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getStatus()>getStatus</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the status property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setStatus(ResultStatus)>setStatus</a>(<a href=ResultStatus.html>ResultStatus</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the status property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Score.html>Score</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getScore()>getScore</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the score property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code><a href=OverallResult.html>OverallResult</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getOverallResult()>getOverallResult</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the overallResult property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setOverallResult(OverallResult)>setOverallResult</a>(<a href=OverallResult.html>OverallResult</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the overallResult property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleCourse.html>SimpleCourse</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getCourse()>getCourse</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the course property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setCourse(SimpleCourse)>setCourse</a>(<a href=SimpleCourse.html>SimpleCourse</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the course property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=SplitTime.html>SplitTime</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getSplitTime()>getSplitTime</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the splitTime property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlAnswer.html>ControlAnswer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getControlAnswer()>getControlAnswer</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the controlAnswer property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code><a href=Route.html>Route</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getRoute()>getRoute</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the route property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setRoute(Route)>setRoute</a>(<a href=Route.html>Route</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the route property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlCard.html>ControlCard</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getControlCard()>getControlCard</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the controlCard property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=AssignedFee.html>AssignedFee</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getAssignedFee()>getAssignedFee</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the assignedFee property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ServiceRequest.html>ServiceRequest</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getServiceRequest()>getServiceRequest</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the serviceRequest property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code><a href=Extensions.html>Extensions</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getExtensions()>getExtensions</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the extensions property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setExtensions(Extensions)>setExtensions</a>(<a href=Extensions.html>Extensions</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the extensions property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#getRaceNumber()>getRaceNumber</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the value of the raceNumber property.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PersonRaceResult.html#setRaceNumber(BigInteger)>setRaceNumber</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Sets the value of the raceNumber property.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getBibNumber()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getBibNumber</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=PersonRaceResult.html#getBibNumber()>getBibNumber</a>()</pre>
+                                        <div class="block"><p>Gets the value of the bibNumber property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setBibNumber(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setBibNumber</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setBibNumber(String)>setBibNumber</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the bibNumber property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getStartTime()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getStartTime</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> <a href=PersonRaceResult.html#getStartTime()>getStartTime</a>()</pre>
+                                        <div class="block"><p>Gets the value of the startTime property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStartTime(XMLGregorianCalendar)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStartTime</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setStartTime(XMLGregorianCalendar)>setStartTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the startTime property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getFinishTime()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getFinishTime</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> <a href=PersonRaceResult.html#getFinishTime()>getFinishTime</a>()</pre>
+                                        <div class="block"><p>Gets the value of the finishTime property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setFinishTime(XMLGregorianCalendar)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setFinishTime</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setFinishTime(XMLGregorianCalendar)>setFinishTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the finishTime property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getTime()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTime</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=PersonRaceResult.html#getTime()>getTime</a>()</pre>
+                                        <div class="block"><p>Gets the value of the time property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setTime(Double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setTime</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setTime(Double)>setTime</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the time property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getTimeBehind()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTimeBehind</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=PersonRaceResult.html#getTimeBehind()>getTimeBehind</a>()</pre>
+                                        <div class="block"><p>Gets the value of the timeBehind property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setTimeBehind(Double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setTimeBehind</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setTimeBehind(Double)>setTimeBehind</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the timeBehind property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getPosition</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> <a href=PersonRaceResult.html#getPosition()>getPosition</a>()</pre>
+                                        <div class="block"><p>Gets the value of the position property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPosition(BigInteger)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPosition</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setPosition(BigInteger)>setPosition</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the position property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getStatus()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getStatus</h4>
+                                        <pre class="methodSignature"> <a href=ResultStatus.html>ResultStatus</a> <a href=PersonRaceResult.html#getStatus()>getStatus</a>()</pre>
+                                        <div class="block"><p>Gets the value of the status property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStatus(ResultStatus)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStatus</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setStatus(ResultStatus)>setStatus</a>(<a href=ResultStatus.html>ResultStatus</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the status property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=ResultStatus.html>ResultStatus</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getScore()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getScore</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Score.html>Score</a>&gt; <a href=PersonRaceResult.html#getScore()>getScore</a>()</pre>
+                                        <div class="block"><p>Gets the value of the score property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the score property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getScore().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Score.html>Score</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOverallResult()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOverallResult</h4>
+                                        <pre class="methodSignature"> <a href=OverallResult.html>OverallResult</a> <a href=PersonRaceResult.html#getOverallResult()>getOverallResult</a>()</pre>
+                                        <div class="block"><p>Gets the value of the overallResult property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOverallResult(OverallResult)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOverallResult</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setOverallResult(OverallResult)>setOverallResult</a>(<a href=OverallResult.html>OverallResult</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the overallResult property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=OverallResult.html>OverallResult</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getCourse()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getCourse</h4>
+                                        <pre class="methodSignature"> <a href=SimpleCourse.html>SimpleCourse</a> <a href=PersonRaceResult.html#getCourse()>getCourse</a>()</pre>
+                                        <div class="block"><p>Gets the value of the course property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setCourse(SimpleCourse)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setCourse</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setCourse(SimpleCourse)>setCourse</a>(<a href=SimpleCourse.html>SimpleCourse</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the course property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=SimpleCourse.html>SimpleCourse</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSplitTime()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSplitTime</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=SplitTime.html>SplitTime</a>&gt; <a href=PersonRaceResult.html#getSplitTime()>getSplitTime</a>()</pre>
+                                        <div class="block"><p>Gets the value of the splitTime property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the splitTime property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getSplitTime().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=SplitTime.html>SplitTime</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getControlAnswer()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getControlAnswer</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlAnswer.html>ControlAnswer</a>&gt; <a href=PersonRaceResult.html#getControlAnswer()>getControlAnswer</a>()</pre>
+                                        <div class="block"><p>Gets the value of the controlAnswer property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the controlAnswer property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getControlAnswer().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=ControlAnswer.html>ControlAnswer</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRoute()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRoute</h4>
+                                        <pre class="methodSignature"> <a href=Route.html>Route</a> <a href=PersonRaceResult.html#getRoute()>getRoute</a>()</pre>
+                                        <div class="block"><p>Gets the value of the route property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setRoute(Route)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setRoute</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setRoute(Route)>setRoute</a>(<a href=Route.html>Route</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the route property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=Route.html>Route</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getControlCard()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getControlCard</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ControlCard.html>ControlCard</a>&gt; <a href=PersonRaceResult.html#getControlCard()>getControlCard</a>()</pre>
+                                        <div class="block"><p>Gets the value of the controlCard property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the controlCard property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getControlCard().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=ControlCard.html>ControlCard</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAssignedFee()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAssignedFee</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=AssignedFee.html>AssignedFee</a>&gt; <a href=PersonRaceResult.html#getAssignedFee()>getAssignedFee</a>()</pre>
+                                        <div class="block"><p>Gets the value of the assignedFee property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the assignedFee property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getAssignedFee().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=AssignedFee.html>AssignedFee</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getServiceRequest()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getServiceRequest</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ServiceRequest.html>ServiceRequest</a>&gt; <a href=PersonRaceResult.html#getServiceRequest()>getServiceRequest</a>()</pre>
+                                        <div class="block"><p>Gets the value of the serviceRequest property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the serviceRequest property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getServiceRequest().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=ServiceRequest.html>ServiceRequest</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getExtensions()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getExtensions</h4>
+                                        <pre class="methodSignature"> <a href=Extensions.html>Extensions</a> <a href=PersonRaceResult.html#getExtensions()>getExtensions</a>()</pre>
+                                        <div class="block"><p>Gets the value of the extensions property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setExtensions(Extensions)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setExtensions</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setExtensions(Extensions)>setExtensions</a>(<a href=Extensions.html>Extensions</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the extensions property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=Extensions.html>Extensions</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRaceNumber()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRaceNumber</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> <a href=PersonRaceResult.html#getRaceNumber()>getRaceNumber</a>()</pre>
+                                        <div class="block"><p>Gets the value of the raceNumber property.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setRaceNumber(BigInteger)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setRaceNumber</h4>
+                                        <pre class="methodSignature"> void <a href=PersonRaceResult.html#setRaceNumber(BigInteger)>setRaceNumber</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a> value)</pre>
+                                        <div class="block"><p>Sets the value of the raceNumber property.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - allowed object is <a href=https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html>BigInteger</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
