@@ -1,0 +1,39 @@
+on: push
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 1.11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Build dokka documentation with Gradle
+        # https://github.com/Kotlin/dokka
+        run: ./gradlew dokkaHTML dokkaJavadoc dokkaGfm
+
+      - name: Copy to Documentation Website Location
+        run: cp -rf build/dokka public
+
+      - name: Tidy up the javadocs
+        id: tidy
+        uses: cicirello/javadoc-cleanup@v1
+        with:
+          base-url-path: https://orienteering-oss.github.io/iof-xml/
+          path-to-root: public/javadoc
+
+      - name: Log javadoc-cleanup output
+        run: |
+          echo "modified-count = ${{ steps.tidy.outputs.modified-count }}"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./public
