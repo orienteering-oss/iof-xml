@@ -14,7 +14,7 @@ plugins {
 
 group 'io.github.orienteering-oss'
 archivesBaseName = "iofXml"
-version '1.1-SNAPSHOT'
+version '1.2-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -144,8 +144,8 @@ uploadArchives {
                 developers {
                     developer {
                         id 'mikaello'
-                        name 'mikeallo'
-                        email 'orienteering.oss@gmail.com'
+                        name 'mikaello'
+                        email 'eeeeeeeefeeeeeeeeee+ooosss@gmail.com'
                     }
                 }
             }
