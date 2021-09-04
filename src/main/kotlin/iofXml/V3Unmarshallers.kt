@@ -2,24 +2,10 @@ package iofXml
 
 import java.io.File
 import java.io.StringReader
-import java.io.StringWriter
 import java.lang.Class
 import javax.xml.XMLConstants
 import javax.xml.bind.JAXBContext
-import javax.xml.bind.Marshaller
 import javax.xml.validation.SchemaFactory
-
-/**
- * Convert an object of IOF V3 type to XML string
- */
-fun marshallIofV3(obj: Any, prettyPrint: Boolean = true): String {
-    val jaxbContext: JAXBContext = JAXBContext.newInstance(obj.javaClass)
-    val jaxbMarshaller = jaxbContext.createMarshaller()
-    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, prettyPrint)
-    val writer = StringWriter()
-    jaxbMarshaller.marshal(obj, writer)
-    return writer.toString()
-}
 
 /**
  * Convert an XML file to an object of IOF V3 type. This function could be great for

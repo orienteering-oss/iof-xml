@@ -3,9 +3,8 @@ package iofXml
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
-import kotlin.math.min
 
-internal class V3MarshallersKtTest {
+internal class V3UnmarshallersKtTest {
     fun getResourceAsText(file: String): String {
         return object {}.javaClass.getResource("/v3-examples/$file").readText()
     }
@@ -14,7 +13,7 @@ internal class V3MarshallersKtTest {
     fun marshallIofV3() {
         val file = getResourceAsText("CourseData_Relay_Step2.xml")
         val (obj) = unmarshalGenericIofV3(file)
-        val xml = iofXml.marshallIofV3(obj)
+        val xml = iofXml.marshallIofObject(obj)
         assert(xml.contains("RaceCourseData"))
     }
 

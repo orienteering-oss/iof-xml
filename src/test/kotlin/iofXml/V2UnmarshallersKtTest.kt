@@ -4,9 +4,20 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
-internal class V2MarshallersKtTest {
+internal class V2UnmarshallersKtTest {
     fun getResourceAsText(file: String): String {
         return object {}.javaClass.getResource("/v2-examples/$file").readText()
+    }
+
+    @Test
+    fun marshallIofV2() {
+        val file = getResourceAsText("EntryList_example.xml")
+        val (obj) = unmarshalGenericIofV2(file)
+        val xmlString = marshallIofObject(obj)
+
+        assert(xmlString.length > 0)
+        assert(xmlString.contains("<PersonName>"))
+        assert(xmlString.contains("Ejsing"))
     }
 
     @Test

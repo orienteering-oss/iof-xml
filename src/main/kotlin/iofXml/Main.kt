@@ -2,6 +2,9 @@ package iofXml
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.io.File
+import java.io.StringWriter
+import javax.xml.bind.JAXBContext
+import javax.xml.bind.Marshaller
 
 private fun main() {
     val file = File("ResultList_example_iofv2.xml").readText()
@@ -11,6 +14,19 @@ private fun main() {
     println("class: $theClass")
     println("Specific: ${unmarshalIofV2ResultList(file).iofVersion.version}")
 }
+
+/**
+ * Convert an object of IOF V3 or V2 type to XML string
+ */
+fun marshallIofObject(obj: Any, prettyPrint: Boolean = true): String {
+    val jaxbContext: JAXBContext = JAXBContext.newInstance(obj.javaClass)
+    val jaxbMarshaller = jaxbContext.createMarshaller()
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, prettyPrint)
+    val writer = StringWriter()
+    jaxbMarshaller.marshal(obj, writer)
+    return writer.toString()
+}
+
 
 internal fun getMainElementName(xml: String) =
     "<([A-Z][a-zA-Z]+)"
