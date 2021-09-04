@@ -1,3 +1,4 @@
+name: Generate documentation
 on: push
 jobs:
   docs:
@@ -16,17 +17,19 @@ jobs:
 
       - name: Build dokka documentation with Gradle
         # https://github.com/Kotlin/dokka
-        run: ./gradlew dokkaHTML dokkaJavadoc dokkaGfm
+        run: ./gradlew dokkaHTML dokkaJavadoc
 
       - name: Copy to Documentation Website Location
-        run: cp -rf build/dokka public
+        run: |
+          cp -rf build/dokka/javadoc public
+          cp -rf build/dokka/html public/kotlin
 
       - name: Tidy up the javadocs
         id: tidy
         uses: cicirello/javadoc-cleanup@v1
         with:
           base-url-path: https://orienteering-oss.github.io/iof-xml/
-          path-to-root: public/javadoc
+          path-to-root: public/
 
       - name: Log javadoc-cleanup output
         run: |
