@@ -1683,7 +1683,7 @@ $dokka.location:iofXml//classesV3/#/PointingToDeclaration/iof-xml/iofXml/classe
 $dokka.location:iofXml//iofV2JsonToXml/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v2-json-to-xml.html
 $dokka.location:iofXml//iofV2XmlToJson/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v2-xml-to-json.html
 $dokka.location:iofXml//iofV3JsonToXml/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v3-json-to-xml.html
-$dokka.location:iofXml//iofV3XmlToJson/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v3-xml-to-json.html
+$dokka.location:iofXml//iofV3XmlToJson/#kotlin.String#kotlin.Boolean/PointingToDeclaration/iof-xml/iofXml/iof-v3-xml-to-json.html
 $dokka.location:iofXml//marshalIofObjectToJson/#kotlin.Any#kotlin.Boolean/PointingToDeclaration/iof-xml/iofXml/marshal-iof-object-to-json.html
 $dokka.location:iofXml//marshallIofObject/#kotlin.Any#kotlin.Boolean/PointingToDeclaration/iof-xml/iofXml/marshall-iof-object.html
 $dokka.location:iofXml//unmarshalGenericIofV2/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/unmarshal-generic-iof-v2.html
