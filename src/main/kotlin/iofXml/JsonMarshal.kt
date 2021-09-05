@@ -11,11 +11,12 @@ import java.util.Locale
  * value will be added to the JSON (as defined in the v3 XSD).
  *
  * @param xml any of the supported v3 XML types
+ * @param validateXml if the XML string should be validated against IOF V3 XSD
  * @return JSON representation of this XML
  * @sample iofXml.JsonMarshalKtTest.iofV3XmlToJson
  */
-fun iofV3XmlToJson(xml: String): String {
-    val (obj) = unmarshalGenericIofV3(xml)
+fun iofV3XmlToJson(xml: String, validateXml: Boolean = true): String {
+    val (obj) = unmarshalGenericIofV3(xml, validateXml)
     return marshalIofObjectToJson(obj)
 }
 
