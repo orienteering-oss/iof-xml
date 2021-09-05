@@ -1,4 +1,4 @@
-name: Generate documentation
+name: Gen documentation
 
 on:
   push:
@@ -23,10 +23,10 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: Build dokka documentation with Gradle https://github.com/Kotlin/dokka
+      - name: Build documentation Dokka plugin https://github.com/Kotlin/dokka
         run: ./gradlew dokkaHTML dokkaJavadoc
 
-      - name: Copy to Documentation Website Location
+      - name: Copy to documentation website location
         run: |
           cp -rf build/dokka/javadoc public
           cp -rf build/dokka/html public/kotlin

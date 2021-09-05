@@ -2,6 +2,9 @@
 
 > ⚠️ **WARNING:** this page refers to an outdated version of the data standard. [Find here](https://github.com/international-orienteering-federation/datastandard-v3) the latest version
 
+This folder of example files are copied from
+[international-orienteering-federation/datastandard-v2](https://github.com/international-orienteering-federation/datastandard-v2/tree/master/examples).
+
 ## EventList
 
 This list is used to exchange event information for a number of

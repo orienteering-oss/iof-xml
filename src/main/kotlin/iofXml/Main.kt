@@ -7,7 +7,7 @@ import javax.xml.bind.JAXBContext
 import javax.xml.bind.Marshaller
 
 private fun main() {
-    val file = File("ResultList_example_iofv2.xml").readText()
+    val file = File("src/test/resources/v2-examples/ResultList_example.xml").readText()
     val (obj, name, theClass) = unmarshalGenericIofV2(file)
     println(ObjectMapper().writeValueAsString(obj))
     println("name: $name")

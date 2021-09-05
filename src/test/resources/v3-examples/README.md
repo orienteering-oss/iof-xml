@@ -1,6 +1,9 @@
 # Example files
 
-[Here](Event_name_and_start_time.xml) is an example of an XML file that conforms to the IOF Interface Standard version 3.0. It contains the name and start time for an orienteering event.
+This folder of example files are copied from
+[international-orienteering-federation/datastandard-v3](https://github.com/international-orienteering-federation/datastandard-v3/tree/master/examples).
+
+The file [Event_name_and_start_time.xml](./Event_name_and_start_time.xml) is an example of an XML file that conforms to the IOF Interface Standard version 3.0. It contains the name and start time for an orienteering event.
 
 A few things to note:
 
