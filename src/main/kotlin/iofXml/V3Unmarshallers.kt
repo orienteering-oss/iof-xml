@@ -11,8 +11,10 @@ import javax.xml.validation.SchemaFactory
  * Convert an XML file to an object of IOF V3 type. This function could be great for
  * testing, but in production you may want to use one of the specialized converters,
  * e.g. `unmarshalIofV3CompetitorList`.
+ *
  * @param xml XML string to be deserialized
  * @param validateXml if the XML string should be validated against IOF V3 XSD
+ * @sample iofXml.V3UnmarshallersKtTest.unmarshalGenericIofV3
  */
 fun unmarshalGenericIofV3(xml: String, validateXml: Boolean = true): Triple<Any, String, Class<*>> {
     val className = getMainElementName(xml) ?: ""

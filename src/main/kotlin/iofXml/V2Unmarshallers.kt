@@ -11,7 +11,9 @@ import org.xml.sax.InputSource
  * Convert an XML file to an object of IOF V2 type. This function could be great for
  * testing, but in production you may want to use one of the specialized converters,
  * e.g. `unmarshalIofV2PersonList`.
+ *
  * @param xml XML string to be deserialized
+ * @sample iofXml.V2UnmarshallersKtTest.unmarshalGenericIofV2
  */
 fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
     val className = getMainElementName(xml) ?: ""

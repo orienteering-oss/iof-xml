@@ -5,22 +5,55 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import java.util.Locale
 
-/** Convert an IOF V3 XML to JSON */
+/**
+ * Convert an IOF V3 XML to JSON. If a value is not
+ * explicitly set in the XML document, the default
+ * value will be added to the JSON (as defined in the v3 XSD).
+ *
+ * @param xml any of the supported v3 XML types
+ * @return JSON representation of this XML
+ * @sample iofXml.JsonMarshalKtTest.iofV3XmlToJson
+ */
 fun iofV3XmlToJson(xml: String): String {
     val (obj) = unmarshalGenericIofV3(xml)
     return marshalIofObjectToJson(obj)
 }
 
-/** Convert an IOF V2 XML to JSON */
+/**
+ * Convert an IOF V2 XML to JSON. If a value is not
+ * explicitly set in the XML document, the default
+ * value will be added to the JSON (as defined in the v2 DTD).
+ *
+ * @param xml any of the supported v2 XML types
+ * @return JSON representation of this XML
+ * @sample iofXml.JsonMarshalKtTest.iofV2XmlToJson
+ */
 fun iofV2XmlToJson(xml: String): String {
     val (obj) = unmarshalGenericIofV2(xml)
     return marshalIofObjectToJson(obj)
 }
 
-/** Convert an IOF V3 JSON to XML. NB does not support 'Extensions' */
+/**
+ * Convert an IOF V3 JSON to XML.
+ *
+ * **NB:** Experimental. This function does not support 'Extensions',
+ * and may also have other datatypes it does not support.
+ *
+ * @param json JSON of any of the v3 root data types
+ * @return XML representation of the IOF JSON
+ * @sample iofXml.JsonMarshalKtTest.iofV3JsonToXml
+ */
 fun iofV3JsonToXml(json: String) = iofJsonToXml(json, "v3")
 
-/** Convert an IOF V2 JSON to XML. NB. unstable, failing in some conditions */
+/**
+ * Convert an IOF V2 JSON to XML.
+ *
+ * **NB:** Experimental/unstable. failing for some types of data.
+ *
+ * @param json JSON of any of the v2 root data types
+ * @return XML representation of the IOF JSON
+ * @sample iofXml.JsonMarshalKtTest.iofV2JsonToXml
+ */
 fun iofV2JsonToXml(json: String) = iofJsonToXml(json, "v2")
 
 internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
@@ -59,6 +92,11 @@ internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
 
 /**
  * Serialize an IOF object (v3 or v2) to a JSON string
+ *
+ * @param obj previously unmarshalled JSON or XML string
+ * @param prettyPrint should output be indented/prettified
+ * @return JSON representation of the object
+ * @sample iofXml.JsonMarshalKtTest.marshalIofObjectToJson
  */
 fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
     val mapper = ObjectMapper()

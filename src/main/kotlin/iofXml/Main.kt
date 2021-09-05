@@ -17,6 +17,11 @@ private fun main() {
 
 /**
  * Convert an object of IOF V3 or V2 type to XML string
+ *
+ * @param obj previously unmarshalled JSON or XML string
+ * @param prettyPrint should output be indented/prettified
+ * @return XML representation of the object
+ * @sample iofXml.V3UnmarshallersKtTest.marshallIofV3
  */
 fun marshallIofObject(obj: Any, prettyPrint: Boolean = true): String {
     val jaxbContext: JAXBContext = JAXBContext.newInstance(obj.javaClass)
