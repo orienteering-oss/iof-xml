@@ -70,6 +70,11 @@ val classesV3 = listOf(
 )
 
 /**
+ * List of all names for all main classes of IOF V3 XSD specification, generated from [classesV3][classesV3].
+ */
+val classNamesV3 = classesV3.map { nameFromJavaClass(it.javaClass) }
+
+/**
  * List of all main types / classes of IOF V2 XSD specification. Only these
  * classes can be top level XML elements.
  *
@@ -88,3 +93,8 @@ val classesV2 = listOf(
     iofXml.v2.ClassData::class.java,
     iofXml.v2.CourseData::class.java,
 )
+
+/**
+ * List of all names for all main classes of IOF V2 XSD specification, generated from [classesV2][classesV2].
+ */
+val classNamesV2 = classesV2.map { nameFromJavaClass(it.javaClass) }

@@ -68,8 +68,8 @@ internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
         throw Exception(
             "IOF JSON must have a single top level key saying which type " +
                     "class/type the object is for. Available types\n" +
-                    "iofV3: ${classesV3.joinToString { nameFromJavaClass(it.javaClass) }}" +
-                    "iofV2: ${classesV2.joinToString { nameFromJavaClass(it.javaClass) }}"
+                    "iofV3: ${classNamesV3}\n" +
+                    "iofV2: ${classNamesV2}"
         )
     }
 
