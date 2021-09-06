@@ -1678,6 +1678,8 @@ $dokka.location:iofXml.v3/TeamStart/organisation/#/PointingToDeclaration/iof-xm
 $dokka.location:iofXml.v3/TeamStart/serviceRequest/#/PointingToDeclaration/iof-xml/iofXml.v3/-team-start/service-request.html
 $dokka.location:iofXml.v3/TeamStart/teamMemberStart/#/PointingToDeclaration/iof-xml/iofXml.v3/-team-start/team-member-start.html
 $dokka.location:iofXml////PointingToDeclaration/iof-xml/iofXml/index.html
+$dokka.location:iofXml//classNamesV2/#/PointingToDeclaration/iof-xml/iofXml/class-names-v2.html
+$dokka.location:iofXml//classNamesV3/#/PointingToDeclaration/iof-xml/iofXml/class-names-v3.html
 $dokka.location:iofXml//classesV2/#/PointingToDeclaration/iof-xml/iofXml/classes-v2.html
 $dokka.location:iofXml//classesV3/#/PointingToDeclaration/iof-xml/iofXml/classes-v3.html
 $dokka.location:iofXml//iofV2JsonToXml/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v2-json-to-xml.html
