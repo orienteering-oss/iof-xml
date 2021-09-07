@@ -15,7 +15,7 @@ plugins {
 
 group 'io.github.orienteering-oss'
 archivesBaseName = "iofXml"
-version '1.3.4-SNAPSHOT'
+version '1.3.5-SNAPSHOT'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 repositories {
