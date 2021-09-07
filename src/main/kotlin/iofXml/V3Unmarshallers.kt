@@ -1,11 +1,15 @@
 package iofXml
 
-import java.io.File
 import java.io.StringReader
 import java.lang.Class
+import java.net.URL
 import javax.xml.XMLConstants
 import javax.xml.bind.JAXBContext
 import javax.xml.validation.SchemaFactory
+
+internal fun getResource(file: String): URL {
+    return object {}.javaClass.classLoader.getResource(file)
+}
 
 /**
  * Convert an XML file to an object of IOF V3 type. This function could be great for
@@ -24,7 +28,7 @@ fun unmarshalGenericIofV3(xml: String, validateXml: Boolean = true): Triple<Any,
     val unmarshall = jaxbContext.createUnmarshaller()
     if (validateXml) {
         val sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-        val v3Schema = sf.newSchema(File("src/main/resources/iof_v3.xsd"))
+        val v3Schema = sf.newSchema(getResource("iof_v3.xsd"))
         unmarshall.setSchema(v3Schema)
     }
     val reader = StringReader(xmlClean)
@@ -51,7 +55,7 @@ private fun unmarshalV3Xml(className: String, dirtyXml: String, validateXml: Boo
     // Validation
     if (validateXml) {
         val sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-        val v3Schema = sf.newSchema(File("src/main/resources/iof_v3.xsd"))
+        val v3Schema = sf.newSchema(getResource("iof_v3.xsd"))
         unmarshall.setSchema(v3Schema)
     }
 
