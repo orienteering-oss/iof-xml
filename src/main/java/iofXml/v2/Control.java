@@ -3,12 +3,12 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -16,27 +16,27 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}ControlCode"/&gt;
- *         &lt;element ref="{}Description" minOccurs="0"/&gt;
- *         &lt;element ref="{}ControlPosition" minOccurs="0"/&gt;
- *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;element ref="{}PunchingUnit"/&gt;
- *           &lt;element ref="{}PunchPattern"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}PunchingUnitType" minOccurs="0"/&gt;
- *         &lt;element ref="{}MapPosition" minOccurs="0"/&gt;
- *         &lt;element ref="{}Comment" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}ControlCode"/>
+ *         <element ref="{}Description" minOccurs="0"/>
+ *         <element ref="{}ControlPosition" minOccurs="0"/>
+ *         <choice maxOccurs="unbounded" minOccurs="0">
+ *           <element ref="{}PunchingUnit"/>
+ *           <element ref="{}PunchPattern"/>
+ *         </choice>
+ *         <element ref="{}PunchingUnitType" minOccurs="0"/>
+ *         <element ref="{}MapPosition" minOccurs="0"/>
+ *         <element ref="{}Comment" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -152,8 +152,8 @@ public class Control {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the punchingUnitOrPunchPattern property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the punchingUnitOrPunchPattern property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -168,10 +168,12 @@ public class Control {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the punchingUnitOrPunchPattern property.
      */
     public List<Object> getPunchingUnitOrPunchPattern() {
         if (punchingUnitOrPunchPattern == null) {
-            punchingUnitOrPunchPattern = new ArrayList<Object>();
+            punchingUnitOrPunchPattern = new ArrayList<>();
         }
         return this.punchingUnitOrPunchPattern;
     }
@@ -230,8 +232,8 @@ public class Control {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the comment property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the comment property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -245,10 +247,12 @@ public class Control {
      * {@link Comment }
      * 
      * 
+     * @return
+     *     The value of the comment property.
      */
     public List<Comment> getComment() {
         if (comment == null) {
-            comment = new ArrayList<Comment>();
+            comment = new ArrayList<>();
         }
         return this.comment;
     }

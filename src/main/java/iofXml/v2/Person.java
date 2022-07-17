@@ -3,14 +3,14 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -18,31 +18,31 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}PersonName"/&gt;
- *         &lt;element ref="{}PersonId"/&gt;
- *         &lt;element ref="{}BirthDate" minOccurs="0"/&gt;
- *         &lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Nationality" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="sex"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="M"/&gt;
- *             &lt;enumeration value="F"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}PersonName"/>
+ *         <element ref="{}PersonId"/>
+ *         <element ref="{}BirthDate" minOccurs="0"/>
+ *         <element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Nationality" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="sex">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="M"/>
+ *             <enumeration value="F"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -155,8 +155,8 @@ public class Person {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the address property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the address property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -170,10 +170,12 @@ public class Person {
      * {@link Address }
      * 
      * 
+     * @return
+     *     The value of the address property.
      */
     public List<Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
@@ -184,8 +186,8 @@ public class Person {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the tele property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the tele property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -199,10 +201,12 @@ public class Person {
      * {@link Tele }
      * 
      * 
+     * @return
+     *     The value of the tele property.
      */
     public List<Tele> getTele() {
         if (tele == null) {
-            tele = new ArrayList<Tele>();
+            tele = new ArrayList<>();
         }
         return this.tele;
     }

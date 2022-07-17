@@ -3,15 +3,15 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -19,39 +19,39 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}FirstStart" minOccurs="0"/&gt;
- *         &lt;element ref="{}StartInterval" minOccurs="0"/&gt;
- *         &lt;element ref="{}EstimatedBestTime" minOccurs="0"/&gt;
- *         &lt;element ref="{}EstimatedLastPrizeTime" minOccurs="0"/&gt;
- *         &lt;element ref="{}PrizeCeremonyTime" minOccurs="0"/&gt;
- *         &lt;element ref="{}AllocationMethod" minOccurs="0"/&gt;
- *         &lt;element ref="{}StartMethod" minOccurs="0"/&gt;
- *         &lt;element ref="{}ClassRaceStatus"/&gt;
- *         &lt;element ref="{}CourseVariationId" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="numberOfVacants" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="rankingRace" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="numberOfPrizes" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="bibNumberPrefix" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="bibNumberBase" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="finishChute" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}FirstStart" minOccurs="0"/>
+ *         <element ref="{}StartInterval" minOccurs="0"/>
+ *         <element ref="{}EstimatedBestTime" minOccurs="0"/>
+ *         <element ref="{}EstimatedLastPrizeTime" minOccurs="0"/>
+ *         <element ref="{}PrizeCeremonyTime" minOccurs="0"/>
+ *         <element ref="{}AllocationMethod" minOccurs="0"/>
+ *         <element ref="{}StartMethod" minOccurs="0"/>
+ *         <element ref="{}ClassRaceStatus"/>
+ *         <element ref="{}CourseVariationId" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="numberOfVacants" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="rankingRace" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="numberOfPrizes" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="bibNumberPrefix" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="bibNumberBase" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="finishChute" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -308,8 +308,8 @@ public class ClassRaceInfo {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the courseVariationId property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the courseVariationId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -323,10 +323,12 @@ public class ClassRaceInfo {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the courseVariationId property.
      */
     public List<String> getCourseVariationId() {
         if (courseVariationId == null) {
-            courseVariationId = new ArrayList<String>();
+            courseVariationId = new ArrayList<>();
         }
         return this.courseVariationId;
     }

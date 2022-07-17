@@ -3,11 +3,11 @@ package iofXml.v3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,19 +15,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.orienteering.org/datastandard/3.0}BaseMessageElement"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Event" type="{http://www.orienteering.org/datastandard/3.0}Event"/&gt;
- *         &lt;element name="ClassStart" type="{http://www.orienteering.org/datastandard/3.0}ClassStart" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.orienteering.org/datastandard/3.0}BaseMessageElement">
+ *       <sequence>
+ *         <element name="Event" type="{http://www.orienteering.org/datastandard/3.0}Event"/>
+ *         <element name="ClassStart" type="{http://www.orienteering.org/datastandard/3.0}ClassStart" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -79,8 +79,8 @@ public class StartList
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the classStart property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the classStart property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -94,10 +94,12 @@ public class StartList
      * {@link ClassStart }
      * 
      * 
+     * @return
+     *     The value of the classStart property.
      */
     public List<ClassStart> getClassStart() {
         if (classStart == null) {
-            classStart = new ArrayList<ClassStart>();
+            classStart = new ArrayList<>();
         }
         return this.classStart;
     }

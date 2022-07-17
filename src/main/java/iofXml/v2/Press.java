@@ -3,14 +3,14 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -18,38 +18,38 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}Name"/&gt;
- *         &lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}Country"/&gt;
- *           &lt;element ref="{}CountryId"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}ResultSelection" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="mediaType" use="required"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="paper"/&gt;
- *             &lt;enumeration value="tv"/&gt;
- *             &lt;enumeration value="radio"/&gt;
- *             &lt;enumeration value="magazine"/&gt;
- *             &lt;enumeration value="web"/&gt;
- *             &lt;enumeration value="other"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}Name"/>
+ *         <element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/>
+ *         <choice>
+ *           <element ref="{}Country"/>
+ *           <element ref="{}CountryId"/>
+ *         </choice>
+ *         <element ref="{}ResultSelection" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="mediaType" use="required">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="paper"/>
+ *             <enumeration value="tv"/>
+ *             <enumeration value="radio"/>
+ *             <enumeration value="magazine"/>
+ *             <enumeration value="web"/>
+ *             <enumeration value="other"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -117,8 +117,8 @@ public class Press {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the contact property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the contact property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -132,10 +132,12 @@ public class Press {
      * {@link Contact }
      * 
      * 
+     * @return
+     *     The value of the contact property.
      */
     public List<Contact> getContact() {
         if (contact == null) {
-            contact = new ArrayList<Contact>();
+            contact = new ArrayList<>();
         }
         return this.contact;
     }
@@ -146,8 +148,8 @@ public class Press {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the address property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the address property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -161,10 +163,12 @@ public class Press {
      * {@link Address }
      * 
      * 
+     * @return
+     *     The value of the address property.
      */
     public List<Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
@@ -175,8 +179,8 @@ public class Press {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the tele property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the tele property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -190,10 +194,12 @@ public class Press {
      * {@link Tele }
      * 
      * 
+     * @return
+     *     The value of the tele property.
      */
     public List<Tele> getTele() {
         if (tele == null) {
-            tele = new ArrayList<Tele>();
+            tele = new ArrayList<>();
         }
         return this.tele;
     }
@@ -252,8 +258,8 @@ public class Press {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the resultSelection property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the resultSelection property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -267,10 +273,12 @@ public class Press {
      * {@link ResultSelection }
      * 
      * 
+     * @return
+     *     The value of the resultSelection property.
      */
     public List<ResultSelection> getResultSelection() {
         if (resultSelection == null) {
-            resultSelection = new ArrayList<ResultSelection>();
+            resultSelection = new ArrayList<>();
         }
         return this.resultSelection;
     }

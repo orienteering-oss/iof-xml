@@ -3,14 +3,14 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -18,44 +18,44 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}EventId"/&gt;
- *         &lt;element ref="{}Name"/&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}EventClassificationId"/&gt;
- *           &lt;element ref="{}EventClassification"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}StartDate"/&gt;
- *         &lt;element ref="{}FinishDate" minOccurs="0"/&gt;
- *         &lt;element ref="{}EventOfficial" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Organiser" minOccurs="0"/&gt;
- *         &lt;element ref="{}EventClass" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}EventRace" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}EntryData" minOccurs="0"/&gt;
- *         &lt;element ref="{}Service" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="eventForm" default="IndSingleDay"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="IndSingleDay"/&gt;
- *             &lt;enumeration value="IndMultiDay"/&gt;
- *             &lt;enumeration value="teamSingleDay"/&gt;
- *             &lt;enumeration value="teamMultiDay"/&gt;
- *             &lt;enumeration value="relay"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}EventId"/>
+ *         <element ref="{}Name"/>
+ *         <choice>
+ *           <element ref="{}EventClassificationId"/>
+ *           <element ref="{}EventClassification"/>
+ *         </choice>
+ *         <element ref="{}StartDate"/>
+ *         <element ref="{}FinishDate" minOccurs="0"/>
+ *         <element ref="{}EventOfficial" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Organiser" minOccurs="0"/>
+ *         <element ref="{}EventClass" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}EventRace" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}EntryData" minOccurs="0"/>
+ *         <element ref="{}Service" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="eventForm" default="IndSingleDay">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="IndSingleDay"/>
+ *             <enumeration value="IndMultiDay"/>
+ *             <enumeration value="teamSingleDay"/>
+ *             <enumeration value="teamMultiDay"/>
+ *             <enumeration value="relay"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -264,8 +264,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the eventOfficial property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the eventOfficial property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -279,10 +279,12 @@ public class Event {
      * {@link EventOfficial }
      * 
      * 
+     * @return
+     *     The value of the eventOfficial property.
      */
     public List<EventOfficial> getEventOfficial() {
         if (eventOfficial == null) {
-            eventOfficial = new ArrayList<EventOfficial>();
+            eventOfficial = new ArrayList<>();
         }
         return this.eventOfficial;
     }
@@ -317,8 +319,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the eventClass property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the eventClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -332,10 +334,12 @@ public class Event {
      * {@link EventClass }
      * 
      * 
+     * @return
+     *     The value of the eventClass property.
      */
     public List<EventClass> getEventClass() {
         if (eventClass == null) {
-            eventClass = new ArrayList<EventClass>();
+            eventClass = new ArrayList<>();
         }
         return this.eventClass;
     }
@@ -346,8 +350,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the eventRace property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the eventRace property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -361,10 +365,12 @@ public class Event {
      * {@link EventRace }
      * 
      * 
+     * @return
+     *     The value of the eventRace property.
      */
     public List<EventRace> getEventRace() {
         if (eventRace == null) {
-            eventRace = new ArrayList<EventRace>();
+            eventRace = new ArrayList<>();
         }
         return this.eventRace;
     }
@@ -375,8 +381,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the webURL property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the webURL property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -390,10 +396,12 @@ public class Event {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the webURL property.
      */
     public List<String> getWebURL() {
         if (webURL == null) {
-            webURL = new ArrayList<String>();
+            webURL = new ArrayList<>();
         }
         return this.webURL;
     }
@@ -428,8 +436,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the service property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the service property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -443,10 +451,12 @@ public class Event {
      * {@link Service }
      * 
      * 
+     * @return
+     *     The value of the service property.
      */
     public List<Service> getService() {
         if (service == null) {
-            service = new ArrayList<Service>();
+            service = new ArrayList<>();
         }
         return this.service;
     }
@@ -457,8 +467,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the account property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the account property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -472,10 +482,12 @@ public class Event {
      * {@link Account }
      * 
      * 
+     * @return
+     *     The value of the account property.
      */
     public List<Account> getAccount() {
         if (account == null) {
-            account = new ArrayList<Account>();
+            account = new ArrayList<>();
         }
         return this.account;
     }

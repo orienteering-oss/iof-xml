@@ -3,13 +3,13 @@ package iofXml.v3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -17,36 +17,36 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="Event"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="StartTime" type="{http://www.orienteering.org/datastandard/3.0}DateAndOptionalTime" minOccurs="0"/&gt;
- *         &lt;element name="EndTime" type="{http://www.orienteering.org/datastandard/3.0}DateAndOptionalTime" minOccurs="0"/&gt;
- *         &lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}EventStatus" minOccurs="0"/&gt;
- *         &lt;element name="Classification" type="{http://www.orienteering.org/datastandard/3.0}EventClassification" minOccurs="0"/&gt;
- *         &lt;element name="Form" type="{http://www.orienteering.org/datastandard/3.0}EventForm" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Organiser" type="{http://www.orienteering.org/datastandard/3.0}Organisation" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Official" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Race" type="{http://www.orienteering.org/datastandard/3.0}Race" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="EntryReceiver" type="{http://www.orienteering.org/datastandard/3.0}EntryReceiver" minOccurs="0"/&gt;
- *         &lt;element name="Service" type="{http://www.orienteering.org/datastandard/3.0}Service" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="URL" type="{http://www.orienteering.org/datastandard/3.0}EventURL" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Information" type="{http://www.orienteering.org/datastandard/3.0}InformationItem" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Schedule" type="{http://www.orienteering.org/datastandard/3.0}Schedule" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="News" type="{http://www.orienteering.org/datastandard/3.0}InformationItem" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="Event">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="StartTime" type="{http://www.orienteering.org/datastandard/3.0}DateAndOptionalTime" minOccurs="0"/>
+ *         <element name="EndTime" type="{http://www.orienteering.org/datastandard/3.0}DateAndOptionalTime" minOccurs="0"/>
+ *         <element name="Status" type="{http://www.orienteering.org/datastandard/3.0}EventStatus" minOccurs="0"/>
+ *         <element name="Classification" type="{http://www.orienteering.org/datastandard/3.0}EventClassification" minOccurs="0"/>
+ *         <element name="Form" type="{http://www.orienteering.org/datastandard/3.0}EventForm" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Organiser" type="{http://www.orienteering.org/datastandard/3.0}Organisation" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Official" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Race" type="{http://www.orienteering.org/datastandard/3.0}Race" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="EntryReceiver" type="{http://www.orienteering.org/datastandard/3.0}EntryReceiver" minOccurs="0"/>
+ *         <element name="Service" type="{http://www.orienteering.org/datastandard/3.0}Service" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="URL" type="{http://www.orienteering.org/datastandard/3.0}EventURL" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Information" type="{http://www.orienteering.org/datastandard/3.0}InformationItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Schedule" type="{http://www.orienteering.org/datastandard/3.0}Schedule" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="News" type="{http://www.orienteering.org/datastandard/3.0}InformationItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -269,8 +269,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the form property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the form property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -284,10 +284,12 @@ public class Event {
      * {@link EventForm }
      * 
      * 
+     * @return
+     *     The value of the form property.
      */
     public List<EventForm> getForm() {
         if (form == null) {
-            form = new ArrayList<EventForm>();
+            form = new ArrayList<>();
         }
         return this.form;
     }
@@ -298,8 +300,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organiser property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organiser property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -313,10 +315,12 @@ public class Event {
      * {@link Organisation }
      * 
      * 
+     * @return
+     *     The value of the organiser property.
      */
     public List<Organisation> getOrganiser() {
         if (organiser == null) {
-            organiser = new ArrayList<Organisation>();
+            organiser = new ArrayList<>();
         }
         return this.organiser;
     }
@@ -327,8 +331,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the official property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the official property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -342,10 +346,12 @@ public class Event {
      * {@link Role }
      * 
      * 
+     * @return
+     *     The value of the official property.
      */
     public List<Role> getOfficial() {
         if (official == null) {
-            official = new ArrayList<Role>();
+            official = new ArrayList<>();
         }
         return this.official;
     }
@@ -356,8 +362,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -371,10 +377,12 @@ public class Event {
      * {@link Class }
      * 
      * 
+     * @return
+     *     The value of the clazz property.
      */
     public List<Class> getClazz() {
         if (clazz == null) {
-            clazz = new ArrayList<Class>();
+            clazz = new ArrayList<>();
         }
         return this.clazz;
     }
@@ -385,8 +393,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the race property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the race property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -400,10 +408,12 @@ public class Event {
      * {@link Race }
      * 
      * 
+     * @return
+     *     The value of the race property.
      */
     public List<Race> getRace() {
         if (race == null) {
-            race = new ArrayList<Race>();
+            race = new ArrayList<>();
         }
         return this.race;
     }
@@ -438,8 +448,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the service property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the service property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -453,10 +463,12 @@ public class Event {
      * {@link Service }
      * 
      * 
+     * @return
+     *     The value of the service property.
      */
     public List<Service> getService() {
         if (service == null) {
-            service = new ArrayList<Service>();
+            service = new ArrayList<>();
         }
         return this.service;
     }
@@ -467,8 +479,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the account property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the account property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -482,10 +494,12 @@ public class Event {
      * {@link Account }
      * 
      * 
+     * @return
+     *     The value of the account property.
      */
     public List<Account> getAccount() {
         if (account == null) {
-            account = new ArrayList<Account>();
+            account = new ArrayList<>();
         }
         return this.account;
     }
@@ -496,8 +510,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the url property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the url property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -511,10 +525,12 @@ public class Event {
      * {@link EventURL }
      * 
      * 
+     * @return
+     *     The value of the url property.
      */
     public List<EventURL> getURL() {
         if (url == null) {
-            url = new ArrayList<EventURL>();
+            url = new ArrayList<>();
         }
         return this.url;
     }
@@ -525,8 +541,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the information property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the information property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -540,10 +556,12 @@ public class Event {
      * {@link InformationItem }
      * 
      * 
+     * @return
+     *     The value of the information property.
      */
     public List<InformationItem> getInformation() {
         if (information == null) {
-            information = new ArrayList<InformationItem>();
+            information = new ArrayList<>();
         }
         return this.information;
     }
@@ -554,8 +572,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the schedule property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the schedule property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -569,10 +587,12 @@ public class Event {
      * {@link Schedule }
      * 
      * 
+     * @return
+     *     The value of the schedule property.
      */
     public List<Schedule> getSchedule() {
         if (schedule == null) {
-            schedule = new ArrayList<Schedule>();
+            schedule = new ArrayList<>();
         }
         return this.schedule;
     }
@@ -583,8 +603,8 @@ public class Event {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the news property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the news property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -598,10 +618,12 @@ public class Event {
      * {@link InformationItem }
      * 
      * 
+     * @return
+     *     The value of the news property.
      */
     public List<InformationItem> getNews() {
         if (news == null) {
-            news = new ArrayList<InformationItem>();
+            news = new ArrayList<>();
         }
         return this.news;
     }

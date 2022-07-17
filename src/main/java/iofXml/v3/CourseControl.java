@@ -3,15 +3,15 @@ package iofXml.v3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -23,37 +23,37 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="CourseControl"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Control" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
- *         &lt;element name="MapText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="MapTextPosition" type="{http://www.orienteering.org/datastandard/3.0}MapPosition" minOccurs="0"/&gt;
- *         &lt;element name="LegLength" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
- *         &lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="type" type="{http://www.orienteering.org/datastandard/3.0}ControlType" /&gt;
- *       &lt;attribute name="randomOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="specialInstruction" default="None"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="None"/&gt;
- *             &lt;enumeration value="TapedRoute"/&gt;
- *             &lt;enumeration value="FunnelTapedRoute"/&gt;
- *             &lt;enumeration value="MandatoryCrossingPoint"/&gt;
- *             &lt;enumeration value="MandatoryOutOfBoundsAreaPassage"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="tapedRouteLength" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="CourseControl">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Control" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
+ *         <element name="MapText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="MapTextPosition" type="{http://www.orienteering.org/datastandard/3.0}MapPosition" minOccurs="0"/>
+ *         <element name="LegLength" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="Score" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="type" type="{http://www.orienteering.org/datastandard/3.0}ControlType" />
+ *       <attribute name="randomOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="specialInstruction" default="None">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="None"/>
+ *             <enumeration value="TapedRoute"/>
+ *             <enumeration value="FunnelTapedRoute"/>
+ *             <enumeration value="MandatoryCrossingPoint"/>
+ *             <enumeration value="MandatoryOutOfBoundsAreaPassage"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="tapedRouteLength" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -99,8 +99,8 @@ public class CourseControl {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the control property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the control property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -114,10 +114,12 @@ public class CourseControl {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the control property.
      */
     public List<String> getControl() {
         if (control == null) {
-            control = new ArrayList<String>();
+            control = new ArrayList<>();
         }
         return this.control;
     }

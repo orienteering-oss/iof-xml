@@ -3,13 +3,13 @@ package iofXml.v3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -21,23 +21,23 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="ClassResult"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class"/&gt;
- *         &lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleRaceCourse" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PersonResult" type="{http://www.orienteering.org/datastandard/3.0}PersonResult" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TeamResult" type="{http://www.orienteering.org/datastandard/3.0}TeamResult" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="timeResolution" type="{http://www.w3.org/2001/XMLSchema}double" default="1" /&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="ClassResult">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class"/>
+ *         <element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleRaceCourse" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="PersonResult" type="{http://www.orienteering.org/datastandard/3.0}PersonResult" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TeamResult" type="{http://www.orienteering.org/datastandard/3.0}TeamResult" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="timeResolution" type="{http://www.w3.org/2001/XMLSchema}double" default="1" />
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -97,8 +97,8 @@ public class ClassResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the course property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the course property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -112,10 +112,12 @@ public class ClassResult {
      * {@link SimpleRaceCourse }
      * 
      * 
+     * @return
+     *     The value of the course property.
      */
     public List<SimpleRaceCourse> getCourse() {
         if (course == null) {
-            course = new ArrayList<SimpleRaceCourse>();
+            course = new ArrayList<>();
         }
         return this.course;
     }
@@ -126,8 +128,8 @@ public class ClassResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the personResult property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the personResult property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -141,10 +143,12 @@ public class ClassResult {
      * {@link PersonResult }
      * 
      * 
+     * @return
+     *     The value of the personResult property.
      */
     public List<PersonResult> getPersonResult() {
         if (personResult == null) {
-            personResult = new ArrayList<PersonResult>();
+            personResult = new ArrayList<>();
         }
         return this.personResult;
     }
@@ -155,8 +159,8 @@ public class ClassResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the teamResult property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the teamResult property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -170,10 +174,12 @@ public class ClassResult {
      * {@link TeamResult }
      * 
      * 
+     * @return
+     *     The value of the teamResult property.
      */
     public List<TeamResult> getTeamResult() {
         if (teamResult == null) {
-            teamResult = new ArrayList<TeamResult>();
+            teamResult = new ArrayList<>();
         }
         return this.teamResult;
     }

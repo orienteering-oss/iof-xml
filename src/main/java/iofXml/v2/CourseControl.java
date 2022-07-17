@@ -3,14 +3,14 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -18,32 +18,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}Sequence"/&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}ControlCode"/&gt;
- *           &lt;element ref="{}Control"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}Comment" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}LegLength" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}MapTextPosition" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="markedRoute" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}Sequence"/>
+ *         <choice>
+ *           <element ref="{}ControlCode"/>
+ *           <element ref="{}Control"/>
+ *         </choice>
+ *         <element ref="{}Comment" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}LegLength" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}MapTextPosition" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="markedRoute" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -153,8 +153,8 @@ public class CourseControl {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the comment property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the comment property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -168,10 +168,12 @@ public class CourseControl {
      * {@link Comment }
      * 
      * 
+     * @return
+     *     The value of the comment property.
      */
     public List<Comment> getComment() {
         if (comment == null) {
-            comment = new ArrayList<Comment>();
+            comment = new ArrayList<>();
         }
         return this.comment;
     }
@@ -182,8 +184,8 @@ public class CourseControl {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the legLength property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the legLength property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -197,10 +199,12 @@ public class CourseControl {
      * {@link LegLength }
      * 
      * 
+     * @return
+     *     The value of the legLength property.
      */
     public List<LegLength> getLegLength() {
         if (legLength == null) {
-            legLength = new ArrayList<LegLength>();
+            legLength = new ArrayList<>();
         }
         return this.legLength;
     }

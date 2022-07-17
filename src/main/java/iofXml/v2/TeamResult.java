@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,31 +15,31 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}TeamName"/&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element ref="{}CountryId"/&gt;
- *           &lt;element ref="{}Country"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}StartNumber" minOccurs="0"/&gt;
- *         &lt;element ref="{}BibNumber" minOccurs="0"/&gt;
- *         &lt;element ref="{}StartTime" minOccurs="0"/&gt;
- *         &lt;element ref="{}FinishTime" minOccurs="0"/&gt;
- *         &lt;element ref="{}Time" minOccurs="0"/&gt;
- *         &lt;element ref="{}ResultPosition" minOccurs="0"/&gt;
- *         &lt;element ref="{}TeamStatus"/&gt;
- *         &lt;element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Point" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}PersonResult" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}TeamName"/>
+ *         <choice minOccurs="0">
+ *           <element ref="{}CountryId"/>
+ *           <element ref="{}Country"/>
+ *         </choice>
+ *         <element ref="{}StartNumber" minOccurs="0"/>
+ *         <element ref="{}BibNumber" minOccurs="0"/>
+ *         <element ref="{}StartTime" minOccurs="0"/>
+ *         <element ref="{}FinishTime" minOccurs="0"/>
+ *         <element ref="{}Time" minOccurs="0"/>
+ *         <element ref="{}ResultPosition" minOccurs="0"/>
+ *         <element ref="{}TeamStatus"/>
+ *         <element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Point" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}PersonResult" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -335,8 +335,8 @@ public class TeamResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rank property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the rank property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -350,10 +350,12 @@ public class TeamResult {
      * {@link Rank }
      * 
      * 
+     * @return
+     *     The value of the rank property.
      */
     public List<Rank> getRank() {
         if (rank == null) {
-            rank = new ArrayList<Rank>();
+            rank = new ArrayList<>();
         }
         return this.rank;
     }
@@ -364,8 +366,8 @@ public class TeamResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the point property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the point property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -379,10 +381,12 @@ public class TeamResult {
      * {@link Point }
      * 
      * 
+     * @return
+     *     The value of the point property.
      */
     public List<Point> getPoint() {
         if (point == null) {
-            point = new ArrayList<Point>();
+            point = new ArrayList<>();
         }
         return this.point;
     }
@@ -393,8 +397,8 @@ public class TeamResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the personResult property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the personResult property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -408,10 +412,12 @@ public class TeamResult {
      * {@link PersonResult }
      * 
      * 
+     * @return
+     *     The value of the personResult property.
      */
     public List<PersonResult> getPersonResult() {
         if (personResult == null) {
-            personResult = new ArrayList<PersonResult>();
+            personResult = new ArrayList<>();
         }
         return this.personResult;
     }

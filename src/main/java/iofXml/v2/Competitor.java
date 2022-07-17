@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,30 +15,30 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}PersonId"/&gt;
- *           &lt;element ref="{}Person"/&gt;
- *         &lt;/choice&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}ClubId"/&gt;
- *           &lt;element ref="{}Club"/&gt;
- *           &lt;element ref="{}Country"/&gt;
- *           &lt;element ref="{}CountryId"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}PreSelectedClass" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <choice>
+ *           <element ref="{}PersonId"/>
+ *           <element ref="{}Person"/>
+ *         </choice>
+ *         <choice>
+ *           <element ref="{}ClubId"/>
+ *           <element ref="{}Club"/>
+ *           <element ref="{}Country"/>
+ *           <element ref="{}CountryId"/>
+ *         </choice>
+ *         <element ref="{}PreSelectedClass" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -229,8 +229,8 @@ public class Competitor {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the preSelectedClass property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the preSelectedClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -244,10 +244,12 @@ public class Competitor {
      * {@link PreSelectedClass }
      * 
      * 
+     * @return
+     *     The value of the preSelectedClass property.
      */
     public List<PreSelectedClass> getPreSelectedClass() {
         if (preSelectedClass == null) {
-            preSelectedClass = new ArrayList<PreSelectedClass>();
+            preSelectedClass = new ArrayList<>();
         }
         return this.preSelectedClass;
     }
@@ -258,8 +260,8 @@ public class Competitor {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cCard property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the cCard property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -273,10 +275,12 @@ public class Competitor {
      * {@link CCard }
      * 
      * 
+     * @return
+     *     The value of the cCard property.
      */
     public List<CCard> getCCard() {
         if (cCard == null) {
-            cCard = new ArrayList<CCard>();
+            cCard = new ArrayList<>();
         }
         return this.cCard;
     }
@@ -287,8 +291,8 @@ public class Competitor {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rank property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the rank property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -302,10 +306,12 @@ public class Competitor {
      * {@link Rank }
      * 
      * 
+     * @return
+     *     The value of the rank property.
      */
     public List<Rank> getRank() {
         if (rank == null) {
-            rank = new ArrayList<Rank>();
+            rank = new ArrayList<>();
         }
         return this.rank;
     }

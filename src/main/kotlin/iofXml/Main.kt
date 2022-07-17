@@ -3,8 +3,8 @@ package iofXml
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.io.File
 import java.io.StringWriter
-import javax.xml.bind.JAXBContext
-import javax.xml.bind.Marshaller
+import jakarta.xml.bind.JAXBContext
+import jakarta.xml.bind.Marshaller
 
 private fun main() {
     val file = File("src/test/resources/v2-examples/ResultList_example.xml").readText()

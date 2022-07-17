@@ -1,36 +1,36 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for ResultStatus.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="ResultStatus"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="OK"/&gt;
- *     &lt;enumeration value="Finished"/&gt;
- *     &lt;enumeration value="MissingPunch"/&gt;
- *     &lt;enumeration value="Disqualified"/&gt;
- *     &lt;enumeration value="DidNotFinish"/&gt;
- *     &lt;enumeration value="Active"/&gt;
- *     &lt;enumeration value="Inactive"/&gt;
- *     &lt;enumeration value="OverTime"/&gt;
- *     &lt;enumeration value="SportingWithdrawal"/&gt;
- *     &lt;enumeration value="NotCompeting"/&gt;
- *     &lt;enumeration value="Moved"/&gt;
- *     &lt;enumeration value="MovedUp"/&gt;
- *     &lt;enumeration value="DidNotStart"/&gt;
- *     &lt;enumeration value="DidNotEnter"/&gt;
- *     &lt;enumeration value="Cancelled"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="ResultStatus">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="OK"/>
+ *     <enumeration value="Finished"/>
+ *     <enumeration value="MissingPunch"/>
+ *     <enumeration value="Disqualified"/>
+ *     <enumeration value="DidNotFinish"/>
+ *     <enumeration value="Active"/>
+ *     <enumeration value="Inactive"/>
+ *     <enumeration value="OverTime"/>
+ *     <enumeration value="SportingWithdrawal"/>
+ *     <enumeration value="NotCompeting"/>
+ *     <enumeration value="Moved"/>
+ *     <enumeration value="MovedUp"/>
+ *     <enumeration value="DidNotStart"/>
+ *     <enumeration value="DidNotEnter"/>
+ *     <enumeration value="Cancelled"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "ResultStatus")

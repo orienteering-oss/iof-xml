@@ -3,15 +3,15 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlElementRefs;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementRef;
+import jakarta.xml.bind.annotation.XmlElementRefs;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -19,37 +19,37 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}Account"/&gt;
- *         &lt;element ref="{}ForeignAccount" minOccurs="0"/&gt;
- *         &lt;element ref="{}Date"/&gt;
- *         &lt;element ref="{}Amount"/&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}ClubId"/&gt;
- *           &lt;element ref="{}Club"/&gt;
- *           &lt;element ref="{}OrganisationId"/&gt;
- *           &lt;element ref="{}Organisation"/&gt;
- *         &lt;/choice&gt;
- *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;element ref="{}PersonId"/&gt;
- *           &lt;element ref="{}Person"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}EntryId" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;element ref="{}ServiceOrderNumber"/&gt;
- *           &lt;element ref="{}ServiceId"/&gt;
- *           &lt;element ref="{}Service"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}Account"/>
+ *         <element ref="{}ForeignAccount" minOccurs="0"/>
+ *         <element ref="{}Date"/>
+ *         <element ref="{}Amount"/>
+ *         <choice>
+ *           <element ref="{}ClubId"/>
+ *           <element ref="{}Club"/>
+ *           <element ref="{}OrganisationId"/>
+ *           <element ref="{}Organisation"/>
+ *         </choice>
+ *         <choice maxOccurs="unbounded" minOccurs="0">
+ *           <element ref="{}PersonId"/>
+ *           <element ref="{}Person"/>
+ *         </choice>
+ *         <element ref="{}EntryId" maxOccurs="unbounded" minOccurs="0"/>
+ *         <choice maxOccurs="unbounded" minOccurs="0">
+ *           <element ref="{}ServiceOrderNumber"/>
+ *           <element ref="{}ServiceId"/>
+ *           <element ref="{}Service"/>
+ *         </choice>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -301,8 +301,8 @@ public class Transaction {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the personIdOrPerson property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the personIdOrPerson property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -317,10 +317,12 @@ public class Transaction {
      * {@link PersonId }
      * 
      * 
+     * @return
+     *     The value of the personIdOrPerson property.
      */
     public List<Object> getPersonIdOrPerson() {
         if (personIdOrPerson == null) {
-            personIdOrPerson = new ArrayList<Object>();
+            personIdOrPerson = new ArrayList<>();
         }
         return this.personIdOrPerson;
     }
@@ -331,8 +333,8 @@ public class Transaction {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the entryId property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the entryId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -346,10 +348,12 @@ public class Transaction {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the entryId property.
      */
     public List<String> getEntryId() {
         if (entryId == null) {
-            entryId = new ArrayList<String>();
+            entryId = new ArrayList<>();
         }
         return this.entryId;
     }
@@ -360,8 +364,8 @@ public class Transaction {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the serviceOrderNumberOrServiceIdOrService property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the serviceOrderNumberOrServiceIdOrService property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -377,10 +381,12 @@ public class Transaction {
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
+     * @return
+     *     The value of the serviceOrderNumberOrServiceIdOrService property.
      */
     public List<Object> getServiceOrderNumberOrServiceIdOrService() {
         if (serviceOrderNumberOrServiceIdOrService == null) {
-            serviceOrderNumberOrServiceIdOrService = new ArrayList<Object>();
+            serviceOrderNumberOrServiceIdOrService = new ArrayList<>();
         }
         return this.serviceOrderNumberOrServiceIdOrService;
     }

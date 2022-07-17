@@ -4,13 +4,13 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -22,29 +22,29 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="TeamEntry"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TeamEntryPerson" type="{http://www.orienteering.org/datastandard/3.0}TeamEntryPerson" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Race" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="StartTimeAllocationRequest" type="{http://www.orienteering.org/datastandard/3.0}StartTimeAllocationRequest" minOccurs="0"/&gt;
- *         &lt;element name="ContactInformation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="EntryTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="TeamEntry">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TeamEntryPerson" type="{http://www.orienteering.org/datastandard/3.0}TeamEntryPerson" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Race" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="StartTimeAllocationRequest" type="{http://www.orienteering.org/datastandard/3.0}StartTimeAllocationRequest" minOccurs="0"/>
+ *         <element name="ContactInformation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="EntryTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -148,8 +148,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisation property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisation property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -163,10 +163,12 @@ public class TeamEntry {
      * {@link Organisation }
      * 
      * 
+     * @return
+     *     The value of the organisation property.
      */
     public List<Organisation> getOrganisation() {
         if (organisation == null) {
-            organisation = new ArrayList<Organisation>();
+            organisation = new ArrayList<>();
         }
         return this.organisation;
     }
@@ -177,8 +179,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the teamEntryPerson property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the teamEntryPerson property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -192,10 +194,12 @@ public class TeamEntry {
      * {@link TeamEntryPerson }
      * 
      * 
+     * @return
+     *     The value of the teamEntryPerson property.
      */
     public List<TeamEntryPerson> getTeamEntryPerson() {
         if (teamEntryPerson == null) {
-            teamEntryPerson = new ArrayList<TeamEntryPerson>();
+            teamEntryPerson = new ArrayList<>();
         }
         return this.teamEntryPerson;
     }
@@ -206,8 +210,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -221,10 +225,12 @@ public class TeamEntry {
      * {@link Class }
      * 
      * 
+     * @return
+     *     The value of the clazz property.
      */
     public List<Class> getClazz() {
         if (clazz == null) {
-            clazz = new ArrayList<Class>();
+            clazz = new ArrayList<>();
         }
         return this.clazz;
     }
@@ -235,8 +241,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the race property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the race property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -250,10 +256,12 @@ public class TeamEntry {
      * {@link BigInteger }
      * 
      * 
+     * @return
+     *     The value of the race property.
      */
     public List<BigInteger> getRace() {
         if (race == null) {
-            race = new ArrayList<BigInteger>();
+            race = new ArrayList<>();
         }
         return this.race;
     }
@@ -264,8 +272,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the assignedFee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -279,10 +287,12 @@ public class TeamEntry {
      * {@link AssignedFee }
      * 
      * 
+     * @return
+     *     The value of the assignedFee property.
      */
     public List<AssignedFee> getAssignedFee() {
         if (assignedFee == null) {
-            assignedFee = new ArrayList<AssignedFee>();
+            assignedFee = new ArrayList<>();
         }
         return this.assignedFee;
     }
@@ -293,8 +303,8 @@ public class TeamEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the serviceRequest property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -308,10 +318,12 @@ public class TeamEntry {
      * {@link ServiceRequest }
      * 
      * 
+     * @return
+     *     The value of the serviceRequest property.
      */
     public List<ServiceRequest> getServiceRequest() {
         if (serviceRequest == null) {
-            serviceRequest = new ArrayList<ServiceRequest>();
+            serviceRequest = new ArrayList<>();
         }
         return this.serviceRequest;
     }

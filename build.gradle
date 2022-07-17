@@ -16,7 +16,7 @@ plugins {
 
 group 'io.github.orienteering-oss'
 archivesBaseName = "iofXml"
-version '1.3.5-SNAPSHOT'
+version '1.3.6-SNAPSHOT'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 repositories {
@@ -36,16 +36,18 @@ configurations {
 }
 
 dependencies {
-    jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.6"
+    jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.0"
+    jaxb "org.glassfish.jaxb:jaxb-runtime:4.0.0" // See also https://github.com/bjornvester/xjc-gradle-plugin/issues/21#issuecomment-904518682
+
+    // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
+    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:4.0.0"
+    implementation "org.glassfish.jaxb:jaxb-runtime:4.0.0"
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0' // In JAXB v3, 'javax.xml.bind' was moved to 'jakarta.xml.bind'
 
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
 
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
-
-    // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
-    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.6"
-    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:2.3.6"
 
     testImplementation platform("org.junit:junit-bom:5.7.2")
     testImplementation "org.junit.jupiter:junit-jupiter"
@@ -103,6 +105,12 @@ task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
 }
 
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -142,7 +150,7 @@ publishing {
     }
     repositories {
         maven {
-            name = "iofXml"
+            name = "sonatype"
 
             def releaseRepo = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             def snapshotRepo = "https://s01.oss.sonatype.org/content/repositories/snapshots/"

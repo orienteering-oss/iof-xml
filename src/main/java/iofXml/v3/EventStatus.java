@@ -1,27 +1,27 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for EventStatus.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="EventStatus"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Planned"/&gt;
- *     &lt;enumeration value="Applied"/&gt;
- *     &lt;enumeration value="Proposed"/&gt;
- *     &lt;enumeration value="Sanctioned"/&gt;
- *     &lt;enumeration value="Canceled"/&gt;
- *     &lt;enumeration value="Rescheduled"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="EventStatus">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="Planned"/>
+ *     <enumeration value="Applied"/>
+ *     <enumeration value="Proposed"/>
+ *     <enumeration value="Sanctioned"/>
+ *     <enumeration value="Canceled"/>
+ *     <enumeration value="Rescheduled"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "EventStatus")

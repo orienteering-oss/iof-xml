@@ -1,26 +1,26 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for RaceDiscipline.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="RaceDiscipline"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Sprint"/&gt;
- *     &lt;enumeration value="Middle"/&gt;
- *     &lt;enumeration value="Long"/&gt;
- *     &lt;enumeration value="Ultralong"/&gt;
- *     &lt;enumeration value="Other"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="RaceDiscipline">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="Sprint"/>
+ *     <enumeration value="Middle"/>
+ *     <enumeration value="Long"/>
+ *     <enumeration value="Ultralong"/>
+ *     <enumeration value="Other"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "RaceDiscipline")

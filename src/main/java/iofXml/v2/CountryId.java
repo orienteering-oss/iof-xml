@@ -1,13 +1,13 @@
 
 package iofXml.v2;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -15,80 +15,80 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;attribute name="value" use="required"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="ARG"/&gt;
- *             &lt;enumeration value="AUS"/&gt;
- *             &lt;enumeration value="AUT"/&gt;
- *             &lt;enumeration value="BEL"/&gt;
- *             &lt;enumeration value="BLR"/&gt;
- *             &lt;enumeration value="BRA"/&gt;
- *             &lt;enumeration value="BUL"/&gt;
- *             &lt;enumeration value="CAN"/&gt;
- *             &lt;enumeration value="CHI"/&gt;
- *             &lt;enumeration value="CHN"/&gt;
- *             &lt;enumeration value="COL"/&gt;
- *             &lt;enumeration value="CRO"/&gt;
- *             &lt;enumeration value="CUB"/&gt;
- *             &lt;enumeration value="CZE"/&gt;
- *             &lt;enumeration value="DEN"/&gt;
- *             &lt;enumeration value="ECU"/&gt;
- *             &lt;enumeration value="ESP"/&gt;
- *             &lt;enumeration value="EST"/&gt;
- *             &lt;enumeration value="FIN"/&gt;
- *             &lt;enumeration value="FRA"/&gt;
- *             &lt;enumeration value="GBR"/&gt;
- *             &lt;enumeration value="GER"/&gt;
- *             &lt;enumeration value="GRE"/&gt;
- *             &lt;enumeration value="HKG"/&gt;
- *             &lt;enumeration value="HUN"/&gt;
- *             &lt;enumeration value="INA"/&gt;
- *             &lt;enumeration value="IND"/&gt;
- *             &lt;enumeration value="IRL"/&gt;
- *             &lt;enumeration value="ISR"/&gt;
- *             &lt;enumeration value="ITA"/&gt;
- *             &lt;enumeration value="JAM"/&gt;
- *             &lt;enumeration value="JPN"/&gt;
- *             &lt;enumeration value="KAZ"/&gt;
- *             &lt;enumeration value="KOR"/&gt;
- *             &lt;enumeration value="LAT"/&gt;
- *             &lt;enumeration value="LTU"/&gt;
- *             &lt;enumeration value="MAS"/&gt;
- *             &lt;enumeration value="MDA"/&gt;
- *             &lt;enumeration value="MKD"/&gt;
- *             &lt;enumeration value="NED"/&gt;
- *             &lt;enumeration value="NOR"/&gt;
- *             &lt;enumeration value="NZL"/&gt;
- *             &lt;enumeration value="PAK"/&gt;
- *             &lt;enumeration value="POL"/&gt;
- *             &lt;enumeration value="POR"/&gt;
- *             &lt;enumeration value="PRK"/&gt;
- *             &lt;enumeration value="ROM"/&gt;
- *             &lt;enumeration value="RSA"/&gt;
- *             &lt;enumeration value="RUS"/&gt;
- *             &lt;enumeration value="SLO"/&gt;
- *             &lt;enumeration value="SUI"/&gt;
- *             &lt;enumeration value="SVK"/&gt;
- *             &lt;enumeration value="SWE"/&gt;
- *             &lt;enumeration value="TPE"/&gt;
- *             &lt;enumeration value="UKR"/&gt;
- *             &lt;enumeration value="URU"/&gt;
- *             &lt;enumeration value="USA"/&gt;
- *             &lt;enumeration value="VEN"/&gt;
- *             &lt;enumeration value="YOG"/&gt;
- *             &lt;enumeration value="other"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <attribute name="value" use="required">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="ARG"/>
+ *             <enumeration value="AUS"/>
+ *             <enumeration value="AUT"/>
+ *             <enumeration value="BEL"/>
+ *             <enumeration value="BLR"/>
+ *             <enumeration value="BRA"/>
+ *             <enumeration value="BUL"/>
+ *             <enumeration value="CAN"/>
+ *             <enumeration value="CHI"/>
+ *             <enumeration value="CHN"/>
+ *             <enumeration value="COL"/>
+ *             <enumeration value="CRO"/>
+ *             <enumeration value="CUB"/>
+ *             <enumeration value="CZE"/>
+ *             <enumeration value="DEN"/>
+ *             <enumeration value="ECU"/>
+ *             <enumeration value="ESP"/>
+ *             <enumeration value="EST"/>
+ *             <enumeration value="FIN"/>
+ *             <enumeration value="FRA"/>
+ *             <enumeration value="GBR"/>
+ *             <enumeration value="GER"/>
+ *             <enumeration value="GRE"/>
+ *             <enumeration value="HKG"/>
+ *             <enumeration value="HUN"/>
+ *             <enumeration value="INA"/>
+ *             <enumeration value="IND"/>
+ *             <enumeration value="IRL"/>
+ *             <enumeration value="ISR"/>
+ *             <enumeration value="ITA"/>
+ *             <enumeration value="JAM"/>
+ *             <enumeration value="JPN"/>
+ *             <enumeration value="KAZ"/>
+ *             <enumeration value="KOR"/>
+ *             <enumeration value="LAT"/>
+ *             <enumeration value="LTU"/>
+ *             <enumeration value="MAS"/>
+ *             <enumeration value="MDA"/>
+ *             <enumeration value="MKD"/>
+ *             <enumeration value="NED"/>
+ *             <enumeration value="NOR"/>
+ *             <enumeration value="NZL"/>
+ *             <enumeration value="PAK"/>
+ *             <enumeration value="POL"/>
+ *             <enumeration value="POR"/>
+ *             <enumeration value="PRK"/>
+ *             <enumeration value="ROM"/>
+ *             <enumeration value="RSA"/>
+ *             <enumeration value="RUS"/>
+ *             <enumeration value="SLO"/>
+ *             <enumeration value="SUI"/>
+ *             <enumeration value="SVK"/>
+ *             <enumeration value="SWE"/>
+ *             <enumeration value="TPE"/>
+ *             <enumeration value="UKR"/>
+ *             <enumeration value="URU"/>
+ *             <enumeration value="USA"/>
+ *             <enumeration value="VEN"/>
+ *             <enumeration value="YOG"/>
+ *             <enumeration value="other"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

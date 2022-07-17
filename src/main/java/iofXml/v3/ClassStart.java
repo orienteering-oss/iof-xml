@@ -3,13 +3,13 @@ package iofXml.v3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -21,24 +21,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="ClassStart"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class"/&gt;
- *         &lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleRaceCourse" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="StartName" type="{http://www.orienteering.org/datastandard/3.0}StartName" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PersonStart" type="{http://www.orienteering.org/datastandard/3.0}PersonStart" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TeamStart" type="{http://www.orienteering.org/datastandard/3.0}TeamStart" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="timeResolution" type="{http://www.w3.org/2001/XMLSchema}double" default="1" /&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="ClassStart">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class"/>
+ *         <element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleRaceCourse" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="StartName" type="{http://www.orienteering.org/datastandard/3.0}StartName" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="PersonStart" type="{http://www.orienteering.org/datastandard/3.0}PersonStart" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TeamStart" type="{http://www.orienteering.org/datastandard/3.0}TeamStart" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="timeResolution" type="{http://www.w3.org/2001/XMLSchema}double" default="1" />
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -101,8 +101,8 @@ public class ClassStart {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the course property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the course property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -116,10 +116,12 @@ public class ClassStart {
      * {@link SimpleRaceCourse }
      * 
      * 
+     * @return
+     *     The value of the course property.
      */
     public List<SimpleRaceCourse> getCourse() {
         if (course == null) {
-            course = new ArrayList<SimpleRaceCourse>();
+            course = new ArrayList<>();
         }
         return this.course;
     }
@@ -130,8 +132,8 @@ public class ClassStart {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the startName property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the startName property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -145,10 +147,12 @@ public class ClassStart {
      * {@link StartName }
      * 
      * 
+     * @return
+     *     The value of the startName property.
      */
     public List<StartName> getStartName() {
         if (startName == null) {
-            startName = new ArrayList<StartName>();
+            startName = new ArrayList<>();
         }
         return this.startName;
     }
@@ -159,8 +163,8 @@ public class ClassStart {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the personStart property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the personStart property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -174,10 +178,12 @@ public class ClassStart {
      * {@link PersonStart }
      * 
      * 
+     * @return
+     *     The value of the personStart property.
      */
     public List<PersonStart> getPersonStart() {
         if (personStart == null) {
-            personStart = new ArrayList<PersonStart>();
+            personStart = new ArrayList<>();
         }
         return this.personStart;
     }
@@ -188,8 +194,8 @@ public class ClassStart {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the teamStart property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the teamStart property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -203,10 +209,12 @@ public class ClassStart {
      * {@link TeamStart }
      * 
      * 
+     * @return
+     *     The value of the teamStart property.
      */
     public List<TeamStart> getTeamStart() {
         if (teamStart == null) {
-            teamStart = new ArrayList<TeamStart>();
+            teamStart = new ArrayList<>();
         }
         return this.teamStart;
     }

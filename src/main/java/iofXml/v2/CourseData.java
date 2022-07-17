@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,22 +15,22 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}IOFVersion" minOccurs="0"/&gt;
- *         &lt;element ref="{}Map" minOccurs="0"/&gt;
- *         &lt;element ref="{}StartPoint" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Control" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}FinishPoint" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Course" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}IOFVersion" minOccurs="0"/>
+ *         <element ref="{}Map" minOccurs="0"/>
+ *         <element ref="{}StartPoint" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Control" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}FinishPoint" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Course" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -113,8 +113,8 @@ public class CourseData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the startPoint property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the startPoint property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -128,10 +128,12 @@ public class CourseData {
      * {@link StartPoint }
      * 
      * 
+     * @return
+     *     The value of the startPoint property.
      */
     public List<StartPoint> getStartPoint() {
         if (startPoint == null) {
-            startPoint = new ArrayList<StartPoint>();
+            startPoint = new ArrayList<>();
         }
         return this.startPoint;
     }
@@ -142,8 +144,8 @@ public class CourseData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the control property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the control property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -157,10 +159,12 @@ public class CourseData {
      * {@link Control }
      * 
      * 
+     * @return
+     *     The value of the control property.
      */
     public List<Control> getControl() {
         if (control == null) {
-            control = new ArrayList<Control>();
+            control = new ArrayList<>();
         }
         return this.control;
     }
@@ -171,8 +175,8 @@ public class CourseData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the finishPoint property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the finishPoint property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -186,10 +190,12 @@ public class CourseData {
      * {@link FinishPoint }
      * 
      * 
+     * @return
+     *     The value of the finishPoint property.
      */
     public List<FinishPoint> getFinishPoint() {
         if (finishPoint == null) {
-            finishPoint = new ArrayList<FinishPoint>();
+            finishPoint = new ArrayList<>();
         }
         return this.finishPoint;
     }
@@ -200,8 +206,8 @@ public class CourseData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the course property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the course property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -215,10 +221,12 @@ public class CourseData {
      * {@link Course }
      * 
      * 
+     * @return
+     *     The value of the course property.
      */
     public List<Course> getCourse() {
         if (course == null) {
-            course = new ArrayList<Course>();
+            course = new ArrayList<>();
         }
         return this.course;
     }

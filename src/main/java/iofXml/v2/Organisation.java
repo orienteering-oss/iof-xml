@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,33 +15,33 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}OrganisationId"/&gt;
- *         &lt;element ref="{}Name"/&gt;
- *         &lt;element ref="{}ShortName" minOccurs="0"/&gt;
- *         &lt;choice&gt;
- *           &lt;element ref="{}OrganisationTypeId"/&gt;
- *           &lt;element ref="{}OrganisationType"/&gt;
- *         &lt;/choice&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element ref="{}CountryId"/&gt;
- *           &lt;element ref="{}Country"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}SubOrganisation" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}OrganisationId"/>
+ *         <element ref="{}Name"/>
+ *         <element ref="{}ShortName" minOccurs="0"/>
+ *         <choice>
+ *           <element ref="{}OrganisationTypeId"/>
+ *           <element ref="{}OrganisationType"/>
+ *         </choice>
+ *         <choice minOccurs="0">
+ *           <element ref="{}CountryId"/>
+ *           <element ref="{}Country"/>
+ *         </choice>
+ *         <element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}SubOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -265,8 +265,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the address property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the address property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -280,10 +280,12 @@ public class Organisation {
      * {@link Address }
      * 
      * 
+     * @return
+     *     The value of the address property.
      */
     public List<Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
@@ -294,8 +296,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the tele property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the tele property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -309,10 +311,12 @@ public class Organisation {
      * {@link Tele }
      * 
      * 
+     * @return
+     *     The value of the tele property.
      */
     public List<Tele> getTele() {
         if (tele == null) {
-            tele = new ArrayList<Tele>();
+            tele = new ArrayList<>();
         }
         return this.tele;
     }
@@ -323,8 +327,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the account property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the account property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -338,10 +342,12 @@ public class Organisation {
      * {@link Account }
      * 
      * 
+     * @return
+     *     The value of the account property.
      */
     public List<Account> getAccount() {
         if (account == null) {
-            account = new ArrayList<Account>();
+            account = new ArrayList<>();
         }
         return this.account;
     }
@@ -352,8 +358,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the contact property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the contact property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -367,10 +373,12 @@ public class Organisation {
      * {@link Contact }
      * 
      * 
+     * @return
+     *     The value of the contact property.
      */
     public List<Contact> getContact() {
         if (contact == null) {
-            contact = new ArrayList<Contact>();
+            contact = new ArrayList<>();
         }
         return this.contact;
     }
@@ -381,8 +389,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the subOrganisation property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the subOrganisation property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -396,10 +404,12 @@ public class Organisation {
      * {@link SubOrganisation }
      * 
      * 
+     * @return
+     *     The value of the subOrganisation property.
      */
     public List<SubOrganisation> getSubOrganisation() {
         if (subOrganisation == null) {
-            subOrganisation = new ArrayList<SubOrganisation>();
+            subOrganisation = new ArrayList<>();
         }
         return this.subOrganisation;
     }
