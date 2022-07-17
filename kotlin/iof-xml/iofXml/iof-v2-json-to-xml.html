@@ -52,11 +52,11 @@ import org.junit.jupiter.api.assertDoesNotThrow
 fun main() { 
    //sampleStart 
    /*
-This is not stabel, failing examples are (at least):
-CourseData_example1.xml
-CourseData_example2.xml
-EntryList_example4.xml
- */
+  This is not stable, failing examples are (at least):
+  CourseData_example1.xml
+  CourseData_example2.xml
+  EntryList_example4.xml
+*/
 val originalXml = getV2ResourceAsText(&quot;EntryList_example.xml&quot;)
 val json = iofV2XmlToJson(originalXml)
 val newXml = iofV2JsonToXml(json)
