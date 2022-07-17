@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,19 +15,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}IOFVersion" minOccurs="0"/&gt;
- *         &lt;element ref="{}ClassType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}Class" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}IOFVersion" minOccurs="0"/>
+ *         <element ref="{}ClassType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}Class" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -77,8 +77,8 @@ public class ClassData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the classType property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the classType property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -92,10 +92,12 @@ public class ClassData {
      * {@link ClassType }
      * 
      * 
+     * @return
+     *     The value of the classType property.
      */
     public List<ClassType> getClassType() {
         if (classType == null) {
-            classType = new ArrayList<ClassType>();
+            classType = new ArrayList<>();
         }
         return this.classType;
     }
@@ -106,8 +108,8 @@ public class ClassData {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -121,10 +123,12 @@ public class ClassData {
      * {@link Class }
      * 
      * 
+     * @return
+     *     The value of the clazz property.
      */
     public List<Class> getClazz() {
         if (clazz == null) {
-            clazz = new ArrayList<Class>();
+            clazz = new ArrayList<>();
         }
         return this.clazz;
     }

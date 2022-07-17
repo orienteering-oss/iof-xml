@@ -4,11 +4,11 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -20,23 +20,23 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="ClassCourseAssignment"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="ClassId" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="ClassName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="AllowedOnLeg" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="CourseName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="CourseFamily" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="numberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="ClassCourseAssignment">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="ClassId" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="ClassName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="AllowedOnLeg" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="CourseName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="CourseFamily" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="numberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -120,8 +120,8 @@ public class ClassCourseAssignment {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the allowedOnLeg property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the allowedOnLeg property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -135,10 +135,12 @@ public class ClassCourseAssignment {
      * {@link BigInteger }
      * 
      * 
+     * @return
+     *     The value of the allowedOnLeg property.
      */
     public List<BigInteger> getAllowedOnLeg() {
         if (allowedOnLeg == null) {
-            allowedOnLeg = new ArrayList<BigInteger>();
+            allowedOnLeg = new ArrayList<>();
         }
         return this.allowedOnLeg;
     }

@@ -1,10 +1,10 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -16,17 +16,17 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="GeoPosition"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;attribute name="lng" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *       &lt;attribute name="lat" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *       &lt;attribute name="alt" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="GeoPosition">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <attribute name="lng" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *       <attribute name="lat" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *       <attribute name="alt" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

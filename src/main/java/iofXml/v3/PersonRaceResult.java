@@ -4,13 +4,13 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -22,34 +22,34 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="PersonRaceResult"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
- *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
- *         &lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
- *         &lt;element name="TimeBehind" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
- *         &lt;element name="Position" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&gt;
- *         &lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}ResultStatus"/&gt;
- *         &lt;element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="OverallResult" type="{http://www.orienteering.org/datastandard/3.0}OverallResult" minOccurs="0"/&gt;
- *         &lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleCourse" minOccurs="0"/&gt;
- *         &lt;element name="SplitTime" type="{http://www.orienteering.org/datastandard/3.0}SplitTime" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="ControlAnswer" type="{http://www.orienteering.org/datastandard/3.0}ControlAnswer" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Route" type="{http://www.orienteering.org/datastandard/3.0}Route" minOccurs="0"/&gt;
- *         &lt;element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="PersonRaceResult">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         <element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         <element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="TimeBehind" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="Position" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         <element name="Status" type="{http://www.orienteering.org/datastandard/3.0}ResultStatus"/>
+ *         <element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="OverallResult" type="{http://www.orienteering.org/datastandard/3.0}OverallResult" minOccurs="0"/>
+ *         <element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleCourse" minOccurs="0"/>
+ *         <element name="SplitTime" type="{http://www.orienteering.org/datastandard/3.0}SplitTime" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="ControlAnswer" type="{http://www.orienteering.org/datastandard/3.0}ControlAnswer" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Route" type="{http://www.orienteering.org/datastandard/3.0}Route" minOccurs="0"/>
+ *         <element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -289,8 +289,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the score property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the score property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -304,10 +304,12 @@ public class PersonRaceResult {
      * {@link Score }
      * 
      * 
+     * @return
+     *     The value of the score property.
      */
     public List<Score> getScore() {
         if (score == null) {
-            score = new ArrayList<Score>();
+            score = new ArrayList<>();
         }
         return this.score;
     }
@@ -366,8 +368,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the splitTime property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the splitTime property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -381,10 +383,12 @@ public class PersonRaceResult {
      * {@link SplitTime }
      * 
      * 
+     * @return
+     *     The value of the splitTime property.
      */
     public List<SplitTime> getSplitTime() {
         if (splitTime == null) {
-            splitTime = new ArrayList<SplitTime>();
+            splitTime = new ArrayList<>();
         }
         return this.splitTime;
     }
@@ -395,8 +399,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the controlAnswer property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the controlAnswer property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -410,10 +414,12 @@ public class PersonRaceResult {
      * {@link ControlAnswer }
      * 
      * 
+     * @return
+     *     The value of the controlAnswer property.
      */
     public List<ControlAnswer> getControlAnswer() {
         if (controlAnswer == null) {
-            controlAnswer = new ArrayList<ControlAnswer>();
+            controlAnswer = new ArrayList<>();
         }
         return this.controlAnswer;
     }
@@ -448,8 +454,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the controlCard property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the controlCard property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -463,10 +469,12 @@ public class PersonRaceResult {
      * {@link ControlCard }
      * 
      * 
+     * @return
+     *     The value of the controlCard property.
      */
     public List<ControlCard> getControlCard() {
         if (controlCard == null) {
-            controlCard = new ArrayList<ControlCard>();
+            controlCard = new ArrayList<>();
         }
         return this.controlCard;
     }
@@ -477,8 +485,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the assignedFee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -492,10 +500,12 @@ public class PersonRaceResult {
      * {@link AssignedFee }
      * 
      * 
+     * @return
+     *     The value of the assignedFee property.
      */
     public List<AssignedFee> getAssignedFee() {
         if (assignedFee == null) {
-            assignedFee = new ArrayList<AssignedFee>();
+            assignedFee = new ArrayList<>();
         }
         return this.assignedFee;
     }
@@ -506,8 +516,8 @@ public class PersonRaceResult {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the serviceRequest property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -521,10 +531,12 @@ public class PersonRaceResult {
      * {@link ServiceRequest }
      * 
      * 
+     * @return
+     *     The value of the serviceRequest property.
      */
     public List<ServiceRequest> getServiceRequest() {
         if (serviceRequest == null) {
-            serviceRequest = new ArrayList<ServiceRequest>();
+            serviceRequest = new ArrayList<>();
         }
         return this.serviceRequest;
     }

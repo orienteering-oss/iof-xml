@@ -1,26 +1,26 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for EventClassStatus.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="EventClassStatus"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Normal"/&gt;
- *     &lt;enumeration value="Divided"/&gt;
- *     &lt;enumeration value="Joined"/&gt;
- *     &lt;enumeration value="Invalidated"/&gt;
- *     &lt;enumeration value="InvalidatedNoFee"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="EventClassStatus">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="Normal"/>
+ *     <enumeration value="Divided"/>
+ *     <enumeration value="Joined"/>
+ *     <enumeration value="Invalidated"/>
+ *     <enumeration value="InvalidatedNoFee"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "EventClassStatus")

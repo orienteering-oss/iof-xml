@@ -1,24 +1,24 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for EventForm.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="EventForm"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Individual"/&gt;
- *     &lt;enumeration value="Team"/&gt;
- *     &lt;enumeration value="Relay"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="EventForm">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="Individual"/>
+ *     <enumeration value="Team"/>
+ *     <enumeration value="Relay"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "EventForm")

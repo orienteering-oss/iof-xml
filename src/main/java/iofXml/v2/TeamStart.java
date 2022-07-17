@@ -3,11 +3,11 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,22 +15,22 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}TeamName"/&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element ref="{}CountryId"/&gt;
- *           &lt;element ref="{}Country"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}PersonStart" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}TeamName"/>
+ *         <choice minOccurs="0">
+ *           <element ref="{}CountryId"/>
+ *           <element ref="{}Country"/>
+ *         </choice>
+ *         <element ref="{}PersonStart" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -131,8 +131,8 @@ public class TeamStart {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the personStart property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the personStart property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -146,10 +146,12 @@ public class TeamStart {
      * {@link PersonStart }
      * 
      * 
+     * @return
+     *     The value of the personStart property.
      */
     public List<PersonStart> getPersonStart() {
         if (personStart == null) {
-            personStart = new ArrayList<PersonStart>();
+            personStart = new ArrayList<>();
         }
         return this.personStart;
     }

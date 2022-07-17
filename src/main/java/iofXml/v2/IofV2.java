@@ -1,11 +1,11 @@
 
 package iofXml.v2;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -13,27 +13,27 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice&gt;
- *         &lt;element ref="{}PersonList" minOccurs="0"/&gt;
- *         &lt;element ref="{}CompetitorList" minOccurs="0"/&gt;
- *         &lt;element ref="{}RankList" minOccurs="0"/&gt;
- *         &lt;element ref="{}ClubList" minOccurs="0"/&gt;
- *         &lt;element ref="{}EventList" minOccurs="0"/&gt;
- *         &lt;element ref="{}ServiceRequestList" minOccurs="0"/&gt;
- *         &lt;element ref="{}EntryList" minOccurs="0"/&gt;
- *         &lt;element ref="{}StartList" minOccurs="0"/&gt;
- *         &lt;element ref="{}ResultList" minOccurs="0"/&gt;
- *         &lt;element ref="{}ClassData" minOccurs="0"/&gt;
- *         &lt;element ref="{}CourseData" minOccurs="0"/&gt;
- *       &lt;/choice&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice>
+ *         <element ref="{}PersonList" minOccurs="0"/>
+ *         <element ref="{}CompetitorList" minOccurs="0"/>
+ *         <element ref="{}RankList" minOccurs="0"/>
+ *         <element ref="{}ClubList" minOccurs="0"/>
+ *         <element ref="{}EventList" minOccurs="0"/>
+ *         <element ref="{}ServiceRequestList" minOccurs="0"/>
+ *         <element ref="{}EntryList" minOccurs="0"/>
+ *         <element ref="{}StartList" minOccurs="0"/>
+ *         <element ref="{}ResultList" minOccurs="0"/>
+ *         <element ref="{}ClassData" minOccurs="0"/>
+ *         <element ref="{}CourseData" minOccurs="0"/>
+ *       </choice>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

@@ -3,15 +3,15 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -19,49 +19,49 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}EntryId" minOccurs="0"/&gt;
- *         &lt;choice&gt;
- *           &lt;sequence&gt;
- *             &lt;choice&gt;
- *               &lt;element ref="{}PersonId"/&gt;
- *               &lt;element ref="{}Person"/&gt;
- *             &lt;/choice&gt;
- *             &lt;element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/&gt;
- *             &lt;element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/&gt;
- *           &lt;/sequence&gt;
- *           &lt;sequence&gt;
- *             &lt;element ref="{}TeamName"/&gt;
- *             &lt;sequence maxOccurs="unbounded" minOccurs="0"&gt;
- *               &lt;choice minOccurs="0"&gt;
- *                 &lt;element ref="{}ClubId"/&gt;
- *                 &lt;element ref="{}Club"/&gt;
- *               &lt;/choice&gt;
- *               &lt;element ref="{}TeamSequence" minOccurs="0"/&gt;
- *             &lt;/sequence&gt;
- *           &lt;/sequence&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}EntryClass" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{}AllocationControl" minOccurs="0"/&gt;
- *         &lt;element ref="{}EntryDate"/&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="nonCompetitor" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}EntryId" minOccurs="0"/>
+ *         <choice>
+ *           <sequence>
+ *             <choice>
+ *               <element ref="{}PersonId"/>
+ *               <element ref="{}Person"/>
+ *             </choice>
+ *             <element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/>
+ *             <element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/>
+ *           </sequence>
+ *           <sequence>
+ *             <element ref="{}TeamName"/>
+ *             <sequence maxOccurs="unbounded" minOccurs="0">
+ *               <choice minOccurs="0">
+ *                 <element ref="{}ClubId"/>
+ *                 <element ref="{}Club"/>
+ *               </choice>
+ *               <element ref="{}TeamSequence" minOccurs="0"/>
+ *             </sequence>
+ *           </sequence>
+ *         </choice>
+ *         <element ref="{}EntryClass" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{}AllocationControl" minOccurs="0"/>
+ *         <element ref="{}EntryDate"/>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="nonCompetitor" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -190,8 +190,8 @@ public class Entry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cCard property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the cCard property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -205,10 +205,12 @@ public class Entry {
      * {@link CCard }
      * 
      * 
+     * @return
+     *     The value of the cCard property.
      */
     public List<CCard> getCCard() {
         if (cCard == null) {
-            cCard = new ArrayList<CCard>();
+            cCard = new ArrayList<>();
         }
         return this.cCard;
     }
@@ -219,8 +221,8 @@ public class Entry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rank property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the rank property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -234,10 +236,12 @@ public class Entry {
      * {@link Rank }
      * 
      * 
+     * @return
+     *     The value of the rank property.
      */
     public List<Rank> getRank() {
         if (rank == null) {
-            rank = new ArrayList<Rank>();
+            rank = new ArrayList<>();
         }
         return this.rank;
     }
@@ -272,8 +276,8 @@ public class Entry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clubIdOrClubAndTeamSequence property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the clubIdOrClubAndTeamSequence property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -289,10 +293,12 @@ public class Entry {
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the clubIdOrClubAndTeamSequence property.
      */
     public List<Object> getClubIdOrClubAndTeamSequence() {
         if (clubIdOrClubAndTeamSequence == null) {
-            clubIdOrClubAndTeamSequence = new ArrayList<Object>();
+            clubIdOrClubAndTeamSequence = new ArrayList<>();
         }
         return this.clubIdOrClubAndTeamSequence;
     }
@@ -303,8 +309,8 @@ public class Entry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the entryClass property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the entryClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -318,10 +324,12 @@ public class Entry {
      * {@link EntryClass }
      * 
      * 
+     * @return
+     *     The value of the entryClass property.
      */
     public List<EntryClass> getEntryClass() {
         if (entryClass == null) {
-            entryClass = new ArrayList<EntryClass>();
+            entryClass = new ArrayList<>();
         }
         return this.entryClass;
     }

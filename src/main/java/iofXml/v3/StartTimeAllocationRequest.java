@@ -1,13 +1,13 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -19,29 +19,29 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="StartTimeAllocationRequest"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" minOccurs="0"/&gt;
- *         &lt;element name="Person" type="{http://www.orienteering.org/datastandard/3.0}Person" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="type" default="Normal"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="Normal"/&gt;
- *             &lt;enumeration value="EarlyStart"/&gt;
- *             &lt;enumeration value="LateStart"/&gt;
- *             &lt;enumeration value="SeparatedFrom"/&gt;
- *             &lt;enumeration value="GroupedWith"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="StartTimeAllocationRequest">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" minOccurs="0"/>
+ *         <element name="Person" type="{http://www.orienteering.org/datastandard/3.0}Person" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="type" default="Normal">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="Normal"/>
+ *             <enumeration value="EarlyStart"/>
+ *             <enumeration value="LateStart"/>
+ *             <enumeration value="SeparatedFrom"/>
+ *             <enumeration value="GroupedWith"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

@@ -1,26 +1,26 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for ControlType.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="ControlType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Control"/&gt;
- *     &lt;enumeration value="Start"/&gt;
- *     &lt;enumeration value="Finish"/&gt;
- *     &lt;enumeration value="CrossingPoint"/&gt;
- *     &lt;enumeration value="EndOfMarkedRoute"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="ControlType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="Control"/>
+ *     <enumeration value="Start"/>
+ *     <enumeration value="Finish"/>
+ *     <enumeration value="CrossingPoint"/>
+ *     <enumeration value="EndOfMarkedRoute"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "ControlType")

@@ -3,16 +3,16 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -20,69 +20,69 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{}ClassId"/&gt;
- *         &lt;element ref="{}Name" minOccurs="0"/&gt;
- *         &lt;element ref="{}ClassShortName"/&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element ref="{}ClassTypeId"/&gt;
- *           &lt;element ref="{}ClassType"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}SubstituteClass" minOccurs="0"/&gt;
- *         &lt;element ref="{}NotQualifiedSubstituteClass" minOccurs="0"/&gt;
- *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;element ref="{}EntryFeeId"/&gt;
- *           &lt;element ref="{}EntryFee"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="lowAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="highAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="sex" use="required"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="M"/&gt;
- *             &lt;enumeration value="F"/&gt;
- *             &lt;enumeration value="B"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="numberInTeam" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" default="1" /&gt;
- *       &lt;attribute name="teamEntry" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="maxNumberInClass" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="actualForRanking" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="timePresentation" default="Y"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="allowedMinAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *       &lt;attribute name="allowedMaxAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{}ClassId"/>
+ *         <element ref="{}Name" minOccurs="0"/>
+ *         <element ref="{}ClassShortName"/>
+ *         <choice minOccurs="0">
+ *           <element ref="{}ClassTypeId"/>
+ *           <element ref="{}ClassType"/>
+ *         </choice>
+ *         <element ref="{}SubstituteClass" minOccurs="0"/>
+ *         <element ref="{}NotQualifiedSubstituteClass" minOccurs="0"/>
+ *         <choice maxOccurs="unbounded" minOccurs="0">
+ *           <element ref="{}EntryFeeId"/>
+ *           <element ref="{}EntryFee"/>
+ *         </choice>
+ *         <element ref="{}ModifyDate" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="lowAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="highAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="sex" use="required">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="M"/>
+ *             <enumeration value="F"/>
+ *             <enumeration value="B"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="numberInTeam" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" default="1" />
+ *       <attribute name="teamEntry" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="maxNumberInClass" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="actualForRanking" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="timePresentation" default="Y">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="allowedMinAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       <attribute name="allowedMaxAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -327,8 +327,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the entryFeeIdOrEntryFee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the entryFeeIdOrEntryFee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -343,10 +343,12 @@ public class Class {
      * {@link EntryFeeId }
      * 
      * 
+     * @return
+     *     The value of the entryFeeIdOrEntryFee property.
      */
     public List<Object> getEntryFeeIdOrEntryFee() {
         if (entryFeeIdOrEntryFee == null) {
-            entryFeeIdOrEntryFee = new ArrayList<Object>();
+            entryFeeIdOrEntryFee = new ArrayList<>();
         }
         return this.entryFeeIdOrEntryFee;
     }

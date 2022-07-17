@@ -3,14 +3,14 @@ package iofXml.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -18,40 +18,40 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice minOccurs="0"&gt;
- *         &lt;element ref="{}Symbol" maxOccurs="unbounded"/&gt;
- *         &lt;element ref="{}Text"/&gt;
- *       &lt;/choice&gt;
- *       &lt;attribute name="column" use="required"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="A"/&gt;
- *             &lt;enumeration value="B"/&gt;
- *             &lt;enumeration value="C"/&gt;
- *             &lt;enumeration value="D"/&gt;
- *             &lt;enumeration value="E"/&gt;
- *             &lt;enumeration value="F"/&gt;
- *             &lt;enumeration value="G"/&gt;
- *             &lt;enumeration value="H"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="hasDiagonal" default="N"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
- *             &lt;enumeration value="Y"/&gt;
- *             &lt;enumeration value="N"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice minOccurs="0">
+ *         <element ref="{}Symbol" maxOccurs="unbounded"/>
+ *         <element ref="{}Text"/>
+ *       </choice>
+ *       <attribute name="column" use="required">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="A"/>
+ *             <enumeration value="B"/>
+ *             <enumeration value="C"/>
+ *             <enumeration value="D"/>
+ *             <enumeration value="E"/>
+ *             <enumeration value="F"/>
+ *             <enumeration value="G"/>
+ *             <enumeration value="H"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="hasDiagonal" default="N">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             <enumeration value="Y"/>
+ *             <enumeration value="N"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -80,8 +80,8 @@ public class Box {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the symbol property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the symbol property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -95,10 +95,12 @@ public class Box {
      * {@link Symbol }
      * 
      * 
+     * @return
+     *     The value of the symbol property.
      */
     public List<Symbol> getSymbol() {
         if (symbol == null) {
-            symbol = new ArrayList<Symbol>();
+            symbol = new ArrayList<>();
         }
         return this.symbol;
     }

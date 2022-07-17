@@ -1,26 +1,26 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for EventClassification.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="EventClassification"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="International"/&gt;
- *     &lt;enumeration value="National"/&gt;
- *     &lt;enumeration value="Regional"/&gt;
- *     &lt;enumeration value="Local"/&gt;
- *     &lt;enumeration value="Club"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="EventClassification">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="International"/>
+ *     <enumeration value="National"/>
+ *     <enumeration value="Regional"/>
+ *     <enumeration value="Local"/>
+ *     <enumeration value="Club"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "EventClassification")

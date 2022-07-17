@@ -1,11 +1,11 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -13,26 +13,26 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}CompetitorList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}OrganisationList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}EventList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}ClassList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}EntryList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}CourseData" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}StartList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}ResultList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}ServiceRequestList" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.orienteering.org/datastandard/3.0}ControlCardList" minOccurs="0"/&gt;
- *       &lt;/choice&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}CompetitorList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}OrganisationList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}EventList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}ClassList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}EntryList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}CourseData" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}StartList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}ResultList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}ServiceRequestList" minOccurs="0"/>
+ *         <element ref="{http://www.orienteering.org/datastandard/3.0}ControlCardList" minOccurs="0"/>
+ *       </choice>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

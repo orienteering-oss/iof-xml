@@ -4,15 +4,15 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -24,45 +24,45 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="Organisation"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="MediaName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="ParentOrganisationId" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&gt;
- *         &lt;element name="Country" type="{http://www.orienteering.org/datastandard/3.0}Country" minOccurs="0"/&gt;
- *         &lt;element name="Address" type="{http://www.orienteering.org/datastandard/3.0}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Contact" type="{http://www.orienteering.org/datastandard/3.0}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Position" type="{http://www.orienteering.org/datastandard/3.0}GeoPosition" minOccurs="0"/&gt;
- *         &lt;element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Role" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Logotype" type="{http://www.orienteering.org/datastandard/3.0}Image" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="type"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="IOF"/&gt;
- *             &lt;enumeration value="IOFRegion"/&gt;
- *             &lt;enumeration value="NationalFederation"/&gt;
- *             &lt;enumeration value="NationalRegion"/&gt;
- *             &lt;enumeration value="Club"/&gt;
- *             &lt;enumeration value="School"/&gt;
- *             &lt;enumeration value="Company"/&gt;
- *             &lt;enumeration value="Military"/&gt;
- *             &lt;enumeration value="Other"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="Organisation">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="MediaName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="ParentOrganisationId" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         <element name="Country" type="{http://www.orienteering.org/datastandard/3.0}Country" minOccurs="0"/>
+ *         <element name="Address" type="{http://www.orienteering.org/datastandard/3.0}Address" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Contact" type="{http://www.orienteering.org/datastandard/3.0}Contact" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Position" type="{http://www.orienteering.org/datastandard/3.0}GeoPosition" minOccurs="0"/>
+ *         <element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Role" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Logotype" type="{http://www.orienteering.org/datastandard/3.0}Image" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="type">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="IOF"/>
+ *             <enumeration value="IOFRegion"/>
+ *             <enumeration value="NationalFederation"/>
+ *             <enumeration value="NationalRegion"/>
+ *             <enumeration value="Club"/>
+ *             <enumeration value="School"/>
+ *             <enumeration value="Company"/>
+ *             <enumeration value="Military"/>
+ *             <enumeration value="Other"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -267,8 +267,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the address property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the address property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -282,10 +282,12 @@ public class Organisation {
      * {@link Address }
      * 
      * 
+     * @return
+     *     The value of the address property.
      */
     public List<Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
@@ -296,8 +298,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the contact property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the contact property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -311,10 +313,12 @@ public class Organisation {
      * {@link Contact }
      * 
      * 
+     * @return
+     *     The value of the contact property.
      */
     public List<Contact> getContact() {
         if (contact == null) {
-            contact = new ArrayList<Contact>();
+            contact = new ArrayList<>();
         }
         return this.contact;
     }
@@ -349,8 +353,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the account property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the account property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -364,10 +368,12 @@ public class Organisation {
      * {@link Account }
      * 
      * 
+     * @return
+     *     The value of the account property.
      */
     public List<Account> getAccount() {
         if (account == null) {
-            account = new ArrayList<Account>();
+            account = new ArrayList<>();
         }
         return this.account;
     }
@@ -378,8 +384,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the role property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the role property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -393,10 +399,12 @@ public class Organisation {
      * {@link Role }
      * 
      * 
+     * @return
+     *     The value of the role property.
      */
     public List<Role> getRole() {
         if (role == null) {
-            role = new ArrayList<Role>();
+            role = new ArrayList<>();
         }
         return this.role;
     }
@@ -407,8 +415,8 @@ public class Organisation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the logotype property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the logotype property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -422,10 +430,12 @@ public class Organisation {
      * {@link Image }
      * 
      * 
+     * @return
+     *     The value of the logotype property.
      */
     public List<Image> getLogotype() {
         if (logotype == null) {
-            logotype = new ArrayList<Image>();
+            logotype = new ArrayList<>();
         }
         return this.logotype;
     }

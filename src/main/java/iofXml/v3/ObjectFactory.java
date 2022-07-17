@@ -1,7 +1,7 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
@@ -32,6 +32,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberRaceResult }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberRaceResult }
      */
     public TeamMemberRaceResult createTeamMemberRaceResult() {
         return new TeamMemberRaceResult();
@@ -40,6 +42,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link IofV3 }
      * 
+     * @return
+     *     the new instance of {@link IofV3 }
      */
     public IofV3 createIofV3() {
         return new IofV3();
@@ -48,6 +52,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CompetitorList }
      * 
+     * @return
+     *     the new instance of {@link CompetitorList }
      */
     public CompetitorList createCompetitorList() {
         return new CompetitorList();
@@ -56,6 +62,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Competitor }
      * 
+     * @return
+     *     the new instance of {@link Competitor }
      */
     public Competitor createCompetitor() {
         return new Competitor();
@@ -64,6 +72,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Extensions }
      * 
+     * @return
+     *     the new instance of {@link Extensions }
      */
     public Extensions createExtensions() {
         return new Extensions();
@@ -72,6 +82,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OrganisationList }
      * 
+     * @return
+     *     the new instance of {@link OrganisationList }
      */
     public OrganisationList createOrganisationList() {
         return new OrganisationList();
@@ -80,6 +92,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Organisation }
      * 
+     * @return
+     *     the new instance of {@link Organisation }
      */
     public Organisation createOrganisation() {
         return new Organisation();
@@ -88,6 +102,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EventList }
      * 
+     * @return
+     *     the new instance of {@link EventList }
      */
     public EventList createEventList() {
         return new EventList();
@@ -96,6 +112,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Event }
      * 
+     * @return
+     *     the new instance of {@link Event }
      */
     public Event createEvent() {
         return new Event();
@@ -104,6 +122,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassList }
      * 
+     * @return
+     *     the new instance of {@link ClassList }
      */
     public ClassList createClassList() {
         return new ClassList();
@@ -112,6 +132,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Class }
      * 
+     * @return
+     *     the new instance of {@link Class }
      */
     public Class createClass() {
         return new Class();
@@ -120,6 +142,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EntryList }
      * 
+     * @return
+     *     the new instance of {@link EntryList }
      */
     public EntryList createEntryList() {
         return new EntryList();
@@ -128,6 +152,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamEntry }
      * 
+     * @return
+     *     the new instance of {@link TeamEntry }
      */
     public TeamEntry createTeamEntry() {
         return new TeamEntry();
@@ -136,6 +162,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonEntry }
      * 
+     * @return
+     *     the new instance of {@link PersonEntry }
      */
     public PersonEntry createPersonEntry() {
         return new PersonEntry();
@@ -144,6 +172,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CourseData }
      * 
+     * @return
+     *     the new instance of {@link CourseData }
      */
     public CourseData createCourseData() {
         return new CourseData();
@@ -152,6 +182,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RaceCourseData }
      * 
+     * @return
+     *     the new instance of {@link RaceCourseData }
      */
     public RaceCourseData createRaceCourseData() {
         return new RaceCourseData();
@@ -160,6 +192,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link StartList }
      * 
+     * @return
+     *     the new instance of {@link StartList }
      */
     public StartList createStartList() {
         return new StartList();
@@ -168,6 +202,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassStart }
      * 
+     * @return
+     *     the new instance of {@link ClassStart }
      */
     public ClassStart createClassStart() {
         return new ClassStart();
@@ -176,6 +212,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ResultList }
      * 
+     * @return
+     *     the new instance of {@link ResultList }
      */
     public ResultList createResultList() {
         return new ResultList();
@@ -184,6 +222,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassResult }
      * 
+     * @return
+     *     the new instance of {@link ClassResult }
      */
     public ClassResult createClassResult() {
         return new ClassResult();
@@ -192,6 +232,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ServiceRequestList }
      * 
+     * @return
+     *     the new instance of {@link ServiceRequestList }
      */
     public ServiceRequestList createServiceRequestList() {
         return new ServiceRequestList();
@@ -200,6 +242,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OrganisationServiceRequest }
      * 
+     * @return
+     *     the new instance of {@link OrganisationServiceRequest }
      */
     public OrganisationServiceRequest createOrganisationServiceRequest() {
         return new OrganisationServiceRequest();
@@ -208,6 +252,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonServiceRequest }
      * 
+     * @return
+     *     the new instance of {@link PersonServiceRequest }
      */
     public PersonServiceRequest createPersonServiceRequest() {
         return new PersonServiceRequest();
@@ -216,6 +262,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ControlCardList }
      * 
+     * @return
+     *     the new instance of {@link ControlCardList }
      */
     public ControlCardList createControlCardList() {
         return new ControlCardList();
@@ -224,6 +272,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ControlCard }
      * 
+     * @return
+     *     the new instance of {@link ControlCard }
      */
     public ControlCard createControlCard() {
         return new ControlCard();
@@ -232,6 +282,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Id }
      * 
+     * @return
+     *     the new instance of {@link Id }
      */
     public Id createId() {
         return new Id();
@@ -240,6 +292,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Person }
      * 
+     * @return
+     *     the new instance of {@link Person }
      */
     public Person createPerson() {
         return new Person();
@@ -248,6 +302,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonName }
      * 
+     * @return
+     *     the new instance of {@link PersonName }
      */
     public PersonName createPersonName() {
         return new PersonName();
@@ -256,6 +312,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Score }
      * 
+     * @return
+     *     the new instance of {@link Score }
      */
     public Score createScore() {
         return new Score();
@@ -264,6 +322,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Role }
      * 
+     * @return
+     *     the new instance of {@link Role }
      */
     public Role createRole() {
         return new Role();
@@ -272,6 +332,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EntryReceiver }
      * 
+     * @return
+     *     the new instance of {@link EntryReceiver }
      */
     public EntryReceiver createEntryReceiver() {
         return new EntryReceiver();
@@ -280,6 +342,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Race }
      * 
+     * @return
+     *     the new instance of {@link Race }
      */
     public Race createRace() {
         return new Race();
@@ -288,6 +352,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EventURL }
      * 
+     * @return
+     *     the new instance of {@link EventURL }
      */
     public EventURL createEventURL() {
         return new EventURL();
@@ -296,6 +362,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Schedule }
      * 
+     * @return
+     *     the new instance of {@link Schedule }
      */
     public Schedule createSchedule() {
         return new Schedule();
@@ -304,6 +372,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link InformationItem }
      * 
+     * @return
+     *     the new instance of {@link InformationItem }
      */
     public InformationItem createInformationItem() {
         return new InformationItem();
@@ -312,6 +382,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassType }
      * 
+     * @return
+     *     the new instance of {@link ClassType }
      */
     public ClassType createClassType() {
         return new ClassType();
@@ -320,6 +392,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RaceClass }
      * 
+     * @return
+     *     the new instance of {@link RaceClass }
      */
     public RaceClass createRaceClass() {
         return new RaceClass();
@@ -328,6 +402,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Fee }
      * 
+     * @return
+     *     the new instance of {@link Fee }
      */
     public Fee createFee() {
         return new Fee();
@@ -336,6 +412,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AssignedFee }
      * 
+     * @return
+     *     the new instance of {@link AssignedFee }
      */
     public AssignedFee createAssignedFee() {
         return new AssignedFee();
@@ -344,6 +422,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Amount }
      * 
+     * @return
+     *     the new instance of {@link Amount }
      */
     public Amount createAmount() {
         return new Amount();
@@ -352,6 +432,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamEntryPerson }
      * 
+     * @return
+     *     the new instance of {@link TeamEntryPerson }
      */
     public TeamEntryPerson createTeamEntryPerson() {
         return new TeamEntryPerson();
@@ -360,6 +442,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link StartTimeAllocationRequest }
      * 
+     * @return
+     *     the new instance of {@link StartTimeAllocationRequest }
      */
     public StartTimeAllocationRequest createStartTimeAllocationRequest() {
         return new StartTimeAllocationRequest();
@@ -368,6 +452,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link StartName }
      * 
+     * @return
+     *     the new instance of {@link StartName }
      */
     public StartName createStartName() {
         return new StartName();
@@ -376,6 +462,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonStart }
      * 
+     * @return
+     *     the new instance of {@link PersonStart }
      */
     public PersonStart createPersonStart() {
         return new PersonStart();
@@ -384,6 +472,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonRaceStart }
      * 
+     * @return
+     *     the new instance of {@link PersonRaceStart }
      */
     public PersonRaceStart createPersonRaceStart() {
         return new PersonRaceStart();
@@ -392,6 +482,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamStart }
      * 
+     * @return
+     *     the new instance of {@link TeamStart }
      */
     public TeamStart createTeamStart() {
         return new TeamStart();
@@ -400,6 +492,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberStart }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberStart }
      */
     public TeamMemberStart createTeamMemberStart() {
         return new TeamMemberStart();
@@ -408,6 +502,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberRaceStart }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberRaceStart }
      */
     public TeamMemberRaceStart createTeamMemberRaceStart() {
         return new TeamMemberRaceStart();
@@ -416,6 +512,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonResult }
      * 
+     * @return
+     *     the new instance of {@link PersonResult }
      */
     public PersonResult createPersonResult() {
         return new PersonResult();
@@ -424,6 +522,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonRaceResult }
      * 
+     * @return
+     *     the new instance of {@link PersonRaceResult }
      */
     public PersonRaceResult createPersonRaceResult() {
         return new PersonRaceResult();
@@ -432,6 +532,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamResult }
      * 
+     * @return
+     *     the new instance of {@link TeamResult }
      */
     public TeamResult createTeamResult() {
         return new TeamResult();
@@ -440,6 +542,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberResult }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberResult }
      */
     public TeamMemberResult createTeamMemberResult() {
         return new TeamMemberResult();
@@ -448,6 +552,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OverallResult }
      * 
+     * @return
+     *     the new instance of {@link OverallResult }
      */
     public OverallResult createOverallResult() {
         return new OverallResult();
@@ -456,6 +562,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ControlAnswer }
      * 
+     * @return
+     *     the new instance of {@link ControlAnswer }
      */
     public ControlAnswer createControlAnswer() {
         return new ControlAnswer();
@@ -464,6 +572,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SplitTime }
      * 
+     * @return
+     *     the new instance of {@link SplitTime }
      */
     public SplitTime createSplitTime() {
         return new SplitTime();
@@ -472,6 +582,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Route }
      * 
+     * @return
+     *     the new instance of {@link Route }
      */
     public Route createRoute() {
         return new Route();
@@ -480,6 +592,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Leg }
      * 
+     * @return
+     *     the new instance of {@link Leg }
      */
     public Leg createLeg() {
         return new Leg();
@@ -488,6 +602,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Control }
      * 
+     * @return
+     *     the new instance of {@link Control }
      */
     public Control createControl() {
         return new Control();
@@ -496,6 +612,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GeoPosition }
      * 
+     * @return
+     *     the new instance of {@link GeoPosition }
      */
     public GeoPosition createGeoPosition() {
         return new GeoPosition();
@@ -504,6 +622,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Map }
      * 
+     * @return
+     *     the new instance of {@link Map }
      */
     public Map createMap() {
         return new Map();
@@ -512,6 +632,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Image }
      * 
+     * @return
+     *     the new instance of {@link Image }
      */
     public Image createImage() {
         return new Image();
@@ -520,6 +642,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MapPosition }
      * 
+     * @return
+     *     the new instance of {@link MapPosition }
      */
     public MapPosition createMapPosition() {
         return new MapPosition();
@@ -528,6 +652,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassCourseAssignment }
      * 
+     * @return
+     *     the new instance of {@link ClassCourseAssignment }
      */
     public ClassCourseAssignment createClassCourseAssignment() {
         return new ClassCourseAssignment();
@@ -536,6 +662,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PersonCourseAssignment }
      * 
+     * @return
+     *     the new instance of {@link PersonCourseAssignment }
      */
     public PersonCourseAssignment createPersonCourseAssignment() {
         return new PersonCourseAssignment();
@@ -544,6 +672,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamCourseAssignment }
      * 
+     * @return
+     *     the new instance of {@link TeamCourseAssignment }
      */
     public TeamCourseAssignment createTeamCourseAssignment() {
         return new TeamCourseAssignment();
@@ -552,6 +682,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberCourseAssignment }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberCourseAssignment }
      */
     public TeamMemberCourseAssignment createTeamMemberCourseAssignment() {
         return new TeamMemberCourseAssignment();
@@ -560,6 +692,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Course }
      * 
+     * @return
+     *     the new instance of {@link Course }
      */
     public Course createCourse() {
         return new Course();
@@ -568,6 +702,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleCourse }
      * 
+     * @return
+     *     the new instance of {@link SimpleCourse }
      */
     public SimpleCourse createSimpleCourse() {
         return new SimpleCourse();
@@ -576,6 +712,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleRaceCourse }
      * 
+     * @return
+     *     the new instance of {@link SimpleRaceCourse }
      */
     public SimpleRaceCourse createSimpleRaceCourse() {
         return new SimpleRaceCourse();
@@ -584,6 +722,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CourseControl }
      * 
+     * @return
+     *     the new instance of {@link CourseControl }
      */
     public CourseControl createCourseControl() {
         return new CourseControl();
@@ -592,6 +732,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Service }
      * 
+     * @return
+     *     the new instance of {@link Service }
      */
     public Service createService() {
         return new Service();
@@ -600,6 +742,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ServiceRequest }
      * 
+     * @return
+     *     the new instance of {@link ServiceRequest }
      */
     public ServiceRequest createServiceRequest() {
         return new ServiceRequest();
@@ -608,6 +752,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Account }
      * 
+     * @return
+     *     the new instance of {@link Account }
      */
     public Account createAccount() {
         return new Account();
@@ -616,6 +762,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Address }
      * 
+     * @return
+     *     the new instance of {@link Address }
      */
     public Address createAddress() {
         return new Address();
@@ -624,6 +772,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Country }
      * 
+     * @return
+     *     the new instance of {@link Country }
      */
     public Country createCountry() {
         return new Country();
@@ -632,6 +782,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Contact }
      * 
+     * @return
+     *     the new instance of {@link Contact }
      */
     public Contact createContact() {
         return new Contact();
@@ -640,6 +792,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DateAndOptionalTime }
      * 
+     * @return
+     *     the new instance of {@link DateAndOptionalTime }
      */
     public DateAndOptionalTime createDateAndOptionalTime() {
         return new DateAndOptionalTime();
@@ -648,6 +802,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LanguageString }
      * 
+     * @return
+     *     the new instance of {@link LanguageString }
      */
     public LanguageString createLanguageString() {
         return new LanguageString();
@@ -656,6 +812,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberRaceResult.TimeBehind }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberRaceResult.TimeBehind }
      */
     public TeamMemberRaceResult.TimeBehind createTeamMemberRaceResultTimeBehind() {
         return new TeamMemberRaceResult.TimeBehind();
@@ -664,6 +822,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TeamMemberRaceResult.Position }
      * 
+     * @return
+     *     the new instance of {@link TeamMemberRaceResult.Position }
      */
     public TeamMemberRaceResult.Position createTeamMemberRaceResultPosition() {
         return new TeamMemberRaceResult.Position();

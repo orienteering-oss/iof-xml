@@ -3,8 +3,8 @@ package iofXml
 import java.io.StringReader
 import java.lang.Class
 import java.net.URL
+import jakarta.xml.bind.JAXBContext
 import javax.xml.XMLConstants
-import javax.xml.bind.JAXBContext
 import javax.xml.validation.SchemaFactory
 
 internal fun getResource(file: String): URL {

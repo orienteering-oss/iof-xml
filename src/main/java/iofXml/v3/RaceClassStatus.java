@@ -1,27 +1,27 @@
 
 package iofXml.v3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for RaceClassStatus.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="RaceClassStatus"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="StartTimesNotAllocated"/&gt;
- *     &lt;enumeration value="StartTimesAllocated"/&gt;
- *     &lt;enumeration value="NotUsed"/&gt;
- *     &lt;enumeration value="Completed"/&gt;
- *     &lt;enumeration value="Invalidated"/&gt;
- *     &lt;enumeration value="InvalidatedNoFee"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="RaceClassStatus">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="StartTimesNotAllocated"/>
+ *     <enumeration value="StartTimesAllocated"/>
+ *     <enumeration value="NotUsed"/>
+ *     <enumeration value="Completed"/>
+ *     <enumeration value="Invalidated"/>
+ *     <enumeration value="InvalidatedNoFee"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "RaceClassStatus")

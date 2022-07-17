@@ -4,13 +4,13 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -22,29 +22,29 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="PersonEntry"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="Person" type="{http://www.orienteering.org/datastandard/3.0}Person"/&gt;
- *         &lt;element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" minOccurs="0"/&gt;
- *         &lt;element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="RaceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="StartTimeAllocationRequest" type="{http://www.orienteering.org/datastandard/3.0}StartTimeAllocationRequest" minOccurs="0"/&gt;
- *         &lt;element name="EntryTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="PersonEntry">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="Person" type="{http://www.orienteering.org/datastandard/3.0}Person"/>
+ *         <element name="Organisation" type="{http://www.orienteering.org/datastandard/3.0}Organisation" minOccurs="0"/>
+ *         <element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Class" type="{http://www.orienteering.org/datastandard/3.0}Class" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="RaceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="StartTimeAllocationRequest" type="{http://www.orienteering.org/datastandard/3.0}StartTimeAllocationRequest" minOccurs="0"/>
+ *         <element name="EntryTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -172,8 +172,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the controlCard property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the controlCard property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -187,10 +187,12 @@ public class PersonEntry {
      * {@link ControlCard }
      * 
      * 
+     * @return
+     *     The value of the controlCard property.
      */
     public List<ControlCard> getControlCard() {
         if (controlCard == null) {
-            controlCard = new ArrayList<ControlCard>();
+            controlCard = new ArrayList<>();
         }
         return this.controlCard;
     }
@@ -201,8 +203,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the score property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the score property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -216,10 +218,12 @@ public class PersonEntry {
      * {@link Score }
      * 
      * 
+     * @return
+     *     The value of the score property.
      */
     public List<Score> getScore() {
         if (score == null) {
-            score = new ArrayList<Score>();
+            score = new ArrayList<>();
         }
         return this.score;
     }
@@ -230,8 +234,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -245,10 +249,12 @@ public class PersonEntry {
      * {@link Class }
      * 
      * 
+     * @return
+     *     The value of the clazz property.
      */
     public List<Class> getClazz() {
         if (clazz == null) {
-            clazz = new ArrayList<Class>();
+            clazz = new ArrayList<>();
         }
         return this.clazz;
     }
@@ -259,8 +265,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the raceNumber property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the raceNumber property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -274,10 +280,12 @@ public class PersonEntry {
      * {@link BigInteger }
      * 
      * 
+     * @return
+     *     The value of the raceNumber property.
      */
     public List<BigInteger> getRaceNumber() {
         if (raceNumber == null) {
-            raceNumber = new ArrayList<BigInteger>();
+            raceNumber = new ArrayList<>();
         }
         return this.raceNumber;
     }
@@ -288,8 +296,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the assignedFee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -303,10 +311,12 @@ public class PersonEntry {
      * {@link AssignedFee }
      * 
      * 
+     * @return
+     *     The value of the assignedFee property.
      */
     public List<AssignedFee> getAssignedFee() {
         if (assignedFee == null) {
-            assignedFee = new ArrayList<AssignedFee>();
+            assignedFee = new ArrayList<>();
         }
         return this.assignedFee;
     }
@@ -317,8 +327,8 @@ public class PersonEntry {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the serviceRequest property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -332,10 +342,12 @@ public class PersonEntry {
      * {@link ServiceRequest }
      * 
      * 
+     * @return
+     *     The value of the serviceRequest property.
      */
     public List<ServiceRequest> getServiceRequest() {
         if (serviceRequest == null) {
-            serviceRequest = new ArrayList<ServiceRequest>();
+            serviceRequest = new ArrayList<>();
         }
         return this.serviceRequest;
     }

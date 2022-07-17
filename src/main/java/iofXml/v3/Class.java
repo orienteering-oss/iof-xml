@@ -4,15 +4,15 @@ package iofXml.v3;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -24,55 +24,55 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="Class"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="ClassType" type="{http://www.orienteering.org/datastandard/3.0}ClassType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Leg" type="{http://www.orienteering.org/datastandard/3.0}Leg" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TeamFee" type="{http://www.orienteering.org/datastandard/3.0}Fee" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Fee" type="{http://www.orienteering.org/datastandard/3.0}Fee" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}EventClassStatus" minOccurs="0"/&gt;
- *         &lt;element name="RaceClass" type="{http://www.orienteering.org/datastandard/3.0}RaceClass" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TooFewEntriesSubstituteClass" type="{http://www.orienteering.org/datastandard/3.0}Class" minOccurs="0"/&gt;
- *         &lt;element name="TooManyEntriesSubstituteClass" type="{http://www.orienteering.org/datastandard/3.0}Class" minOccurs="0"/&gt;
- *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="minAge" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="maxAge" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="sex" default="B"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="B"/&gt;
- *             &lt;enumeration value="F"/&gt;
- *             &lt;enumeration value="M"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="minNumberOfTeamMembers" type="{http://www.w3.org/2001/XMLSchema}integer" default="1" /&gt;
- *       &lt;attribute name="maxNumberOfTeamMembers" type="{http://www.w3.org/2001/XMLSchema}integer" default="1" /&gt;
- *       &lt;attribute name="minTeamAge" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="maxTeamAge" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="numberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="maxNumberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="resultListMode" default="Default"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="Default"/&gt;
- *             &lt;enumeration value="Unordered"/&gt;
- *             &lt;enumeration value="UnorderedNoTimes"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="Class">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/>
+ *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="ClassType" type="{http://www.orienteering.org/datastandard/3.0}ClassType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Leg" type="{http://www.orienteering.org/datastandard/3.0}Leg" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TeamFee" type="{http://www.orienteering.org/datastandard/3.0}Fee" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Fee" type="{http://www.orienteering.org/datastandard/3.0}Fee" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="Status" type="{http://www.orienteering.org/datastandard/3.0}EventClassStatus" minOccurs="0"/>
+ *         <element name="RaceClass" type="{http://www.orienteering.org/datastandard/3.0}RaceClass" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TooFewEntriesSubstituteClass" type="{http://www.orienteering.org/datastandard/3.0}Class" minOccurs="0"/>
+ *         <element name="TooManyEntriesSubstituteClass" type="{http://www.orienteering.org/datastandard/3.0}Class" minOccurs="0"/>
+ *         <element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="minAge" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="maxAge" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="sex" default="B">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="B"/>
+ *             <enumeration value="F"/>
+ *             <enumeration value="M"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="minNumberOfTeamMembers" type="{http://www.w3.org/2001/XMLSchema}integer" default="1" />
+ *       <attribute name="maxNumberOfTeamMembers" type="{http://www.w3.org/2001/XMLSchema}integer" default="1" />
+ *       <attribute name="minTeamAge" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="maxTeamAge" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="numberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="maxNumberOfCompetitors" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       <attribute name="resultListMode" default="Default">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="Default"/>
+ *             <enumeration value="Unordered"/>
+ *             <enumeration value="UnorderedNoTimes"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -222,8 +222,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the classType property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the classType property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -237,10 +237,12 @@ public class Class {
      * {@link ClassType }
      * 
      * 
+     * @return
+     *     The value of the classType property.
      */
     public List<ClassType> getClassType() {
         if (classType == null) {
-            classType = new ArrayList<ClassType>();
+            classType = new ArrayList<>();
         }
         return this.classType;
     }
@@ -251,8 +253,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the leg property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the leg property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -266,10 +268,12 @@ public class Class {
      * {@link Leg }
      * 
      * 
+     * @return
+     *     The value of the leg property.
      */
     public List<Leg> getLeg() {
         if (leg == null) {
-            leg = new ArrayList<Leg>();
+            leg = new ArrayList<>();
         }
         return this.leg;
     }
@@ -280,8 +284,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the teamFee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the teamFee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -295,10 +299,12 @@ public class Class {
      * {@link Fee }
      * 
      * 
+     * @return
+     *     The value of the teamFee property.
      */
     public List<Fee> getTeamFee() {
         if (teamFee == null) {
-            teamFee = new ArrayList<Fee>();
+            teamFee = new ArrayList<>();
         }
         return this.teamFee;
     }
@@ -309,8 +315,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the fee property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the fee property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -324,10 +330,12 @@ public class Class {
      * {@link Fee }
      * 
      * 
+     * @return
+     *     The value of the fee property.
      */
     public List<Fee> getFee() {
         if (fee == null) {
-            fee = new ArrayList<Fee>();
+            fee = new ArrayList<>();
         }
         return this.fee;
     }
@@ -362,8 +370,8 @@ public class Class {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the raceClass property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the raceClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -377,10 +385,12 @@ public class Class {
      * {@link RaceClass }
      * 
      * 
+     * @return
+     *     The value of the raceClass property.
      */
     public List<RaceClass> getRaceClass() {
         if (raceClass == null) {
-            raceClass = new ArrayList<RaceClass>();
+            raceClass = new ArrayList<>();
         }
         return this.raceClass;
     }
