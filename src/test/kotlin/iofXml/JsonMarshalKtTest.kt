@@ -36,11 +36,11 @@ internal class JsonMarshalKtTest {
     @Test
     fun iofV2JsonToXml() {
         /*
-        This is not stabel, failing examples are (at least):
-        CourseData_example1.xml
-        CourseData_example2.xml
-        EntryList_example4.xml
-         */
+          This is not stable, failing examples are (at least):
+          CourseData_example1.xml
+          CourseData_example2.xml
+          EntryList_example4.xml
+        */
         val originalXml = getV2ResourceAsText("EntryList_example.xml")
         val json = iofV2XmlToJson(originalXml)
         val newXml = iofV2JsonToXml(json)
