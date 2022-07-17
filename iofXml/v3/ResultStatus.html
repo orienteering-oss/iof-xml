@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
-    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.4.0.min.js"></script>
     <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
 
     <script type="text/javascript" src="../../search.js"></script>
@@ -108,14 +108,6 @@ var pathtoroot = "../../";
                         <dt>All Implemented Interfaces:</dt>
                         <dd>
                             
-                            <code>java.io.Serializable</code>
-                            
-                            ,
-                            
-                            
-                            <code>java.lang.Comparable</code>
-                            
-                            
                         </dd>
                     </dl>
                     
@@ -125,23 +117,24 @@ var pathtoroot = "../../";
 public enum <span class="typeNameLabel"><a href=ResultStatus.html>ResultStatus</a></span>
 
                     </pre>
-                    <div class="block"><p>Java class for ResultStatus. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;simpleType name="ResultStatus"&gt;
-  &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-    &lt;enumeration value="OK"/&gt;
-    &lt;enumeration value="Finished"/&gt;
-    &lt;enumeration value="MissingPunch"/&gt;
-    &lt;enumeration value="Disqualified"/&gt;
-    &lt;enumeration value="DidNotFinish"/&gt;
-    &lt;enumeration value="Active"/&gt;
-    &lt;enumeration value="Inactive"/&gt;
-    &lt;enumeration value="OverTime"/&gt;
-    &lt;enumeration value="SportingWithdrawal"/&gt;
-    &lt;enumeration value="NotCompeting"/&gt;
-    &lt;enumeration value="Moved"/&gt;
-    &lt;enumeration value="MovedUp"/&gt;
-    &lt;enumeration value="DidNotStart"/&gt;
-    &lt;enumeration value="DidNotEnter"/&gt;
-    &lt;enumeration value="Cancelled"/&gt;
+                    <div class="block"><p>Java class for ResultStatus. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+&lt;simpleType name=&quot;ResultStatus&quot;&gt;
+  &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}NMTOKEN&quot;&gt;
+    &lt;enumeration value=&quot;OK&quot;/&gt;
+    &lt;enumeration value=&quot;Finished&quot;/&gt;
+    &lt;enumeration value=&quot;MissingPunch&quot;/&gt;
+    &lt;enumeration value=&quot;Disqualified&quot;/&gt;
+    &lt;enumeration value=&quot;DidNotFinish&quot;/&gt;
+    &lt;enumeration value=&quot;Active&quot;/&gt;
+    &lt;enumeration value=&quot;Inactive&quot;/&gt;
+    &lt;enumeration value=&quot;OverTime&quot;/&gt;
+    &lt;enumeration value=&quot;SportingWithdrawal&quot;/&gt;
+    &lt;enumeration value=&quot;NotCompeting&quot;/&gt;
+    &lt;enumeration value=&quot;Moved&quot;/&gt;
+    &lt;enumeration value=&quot;MovedUp&quot;/&gt;
+    &lt;enumeration value=&quot;DidNotStart&quot;/&gt;
+    &lt;enumeration value=&quot;DidNotEnter&quot;/&gt;
+    &lt;enumeration value=&quot;Cancelled&quot;/&gt;
   &lt;/restriction&gt;
 &lt;/simpleType&gt;
 </code></pre></div>
@@ -153,9 +146,75 @@ public enum <span class="typeNameLabel"><a href=ResultStatus.html>ResultStatus</
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== FIELD SUMMARY =========== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
                     
@@ -174,80 +233,8 @@ public enum <span class="typeNameLabel"><a href=ResultStatus.html>ResultStatus</
                                     
                                     <tr class="altColor">
                                         <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#CANCELLED>CANCELLED</a></a></span></code></th>
-                                        <td class="colLast"><p>The competitor has cancelled his/hers entry.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#DID_NOT_ENTER>DID_NOT_ENTER</a></a></span></code></th>
-                                        <td class="colLast"><p>Did not enter (in this race).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#DID_NOT_START>DID_NOT_START</a></a></span></code></th>
-                                        <td class="colLast"><p>Did not start (in this race).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#MOVED_UP>MOVED_UP</a></a></span></code></th>
-                                        <td class="colLast"><p>Moved to a "better" class, in case of entry restrictions.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#MOVED>MOVED</a></a></span></code></th>
-                                        <td class="colLast"><p>Moved to another class.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#NOT_COMPETING>NOT_COMPETING</a></a></span></code></th>
-                                        <td class="colLast"><p>Not competing (i.e. running outside the competition).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#SPORTING_WITHDRAWAL>SPORTING_WITHDRAWAL</a></a></span></code></th>
-                                        <td class="colLast"><p>Sporting withdrawal (e.g. helping an injured competitor).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#OVER_TIME>OVER_TIME</a></a></span></code></th>
-                                        <td class="colLast"><p>Overtime, i.e. did not finish within the maximum time set by the organiser.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#INACTIVE>INACTIVE</a></a></span></code></th>
-                                        <td class="colLast"><p>Has not yet started.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#ACTIVE>ACTIVE</a></a></span></code></th>
-                                        <td class="colLast"><p>Currently on course.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#DID_NOT_FINISH>DID_NOT_FINISH</a></a></span></code></th>
-                                        <td class="colLast"><p>Did not finish (i.e. conciously cancelling the race after having started, in contrast to MissingPunch).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#DISQUALIFIED>DISQUALIFIED</a></a></span></code></th>
-                                        <td class="colLast"><p>Disqualified (for some other reason than a missing punch).</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#MISSING_PUNCH>MISSING_PUNCH</a></a></span></code></th>
-                                        <td class="colLast"><p>Missing punch.</p></td>
+                                                href="TODO"><a href=ResultStatus.html#OK>OK</a></a></span></code></th>
+                                        <td class="colLast"><p>Finished and validated.</p></td>
                                     </tr>
                                     
                                     <tr class="rowColor">
@@ -258,8 +245,80 @@ public enum <span class="typeNameLabel"><a href=ResultStatus.html>ResultStatus</
                                     
                                     <tr class="altColor">
                                         <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=ResultStatus.html#OK>OK</a></a></span></code></th>
-                                        <td class="colLast"><p>Finished and validated.</p></td>
+                                                href="TODO"><a href=ResultStatus.html#MISSING_PUNCH>MISSING_PUNCH</a></a></span></code></th>
+                                        <td class="colLast"><p>Missing punch.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#DISQUALIFIED>DISQUALIFIED</a></a></span></code></th>
+                                        <td class="colLast"><p>Disqualified (for some other reason than a missing punch).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#DID_NOT_FINISH>DID_NOT_FINISH</a></a></span></code></th>
+                                        <td class="colLast"><p>Did not finish (i.e. conciously cancelling the race after having started, in contrast to MissingPunch).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#ACTIVE>ACTIVE</a></a></span></code></th>
+                                        <td class="colLast"><p>Currently on course.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#INACTIVE>INACTIVE</a></a></span></code></th>
+                                        <td class="colLast"><p>Has not yet started.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#OVER_TIME>OVER_TIME</a></a></span></code></th>
+                                        <td class="colLast"><p>Overtime, i.e. did not finish within the maximum time set by the organiser.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#SPORTING_WITHDRAWAL>SPORTING_WITHDRAWAL</a></a></span></code></th>
+                                        <td class="colLast"><p>Sporting withdrawal (e.g. helping an injured competitor).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#NOT_COMPETING>NOT_COMPETING</a></a></span></code></th>
+                                        <td class="colLast"><p>Not competing (i.e. running outside the competition).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#MOVED>MOVED</a></a></span></code></th>
+                                        <td class="colLast"><p>Moved to another class.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#MOVED_UP>MOVED_UP</a></a></span></code></th>
+                                        <td class="colLast"><p>Moved to a &quot;better&quot; class, in case of entry restrictions.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#DID_NOT_START>DID_NOT_START</a></a></span></code></th>
+                                        <td class="colLast"><p>Did not start (in this race).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#DID_NOT_ENTER>DID_NOT_ENTER</a></a></span></code></th>
+                                        <td class="colLast"><p>Did not enter (in this race).</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=ResultStatus.html#CANCELLED>CANCELLED</a></a></span></code></th>
+                                        <td class="colLast"><p>The competitor has cancelled his/hers entry.</p></td>
                                     </tr>
                                     
                                 </table>
@@ -343,6 +402,17 @@ public enum <span class="typeNameLabel"><a href=ResultStatus.html>ResultStatus</
             <ul class="blockList">
                 <li class="blockList">
                     <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ============ METHOD DETAIL ========== -->
                     

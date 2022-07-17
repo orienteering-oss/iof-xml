@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
-    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.4.0.min.js"></script>
     <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
 
     <script type="text/javascript" src="../../search.js"></script>
@@ -104,40 +104,48 @@ var pathtoroot = "../../";
             <ul class="blockList">
                 <li class="blockList">
                     
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
                     <hr>
                     <pre class="wrap-overflow">
 
 public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInfo</a></span>
 
                     </pre>
-                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType&gt;
+                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+&lt;complexType&gt;
   &lt;complexContent&gt;
-    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+    &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
       &lt;sequence&gt;
-        &lt;element ref="{}FirstStart" minOccurs="0"/&gt;
-        &lt;element ref="{}StartInterval" minOccurs="0"/&gt;
-        &lt;element ref="{}EstimatedBestTime" minOccurs="0"/&gt;
-        &lt;element ref="{}EstimatedLastPrizeTime" minOccurs="0"/&gt;
-        &lt;element ref="{}PrizeCeremonyTime" minOccurs="0"/&gt;
-        &lt;element ref="{}AllocationMethod" minOccurs="0"/&gt;
-        &lt;element ref="{}StartMethod" minOccurs="0"/&gt;
-        &lt;element ref="{}ClassRaceStatus"/&gt;
-        &lt;element ref="{}CourseVariationId" maxOccurs="unbounded" minOccurs="0"/&gt;
-        &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+        &lt;element ref=&quot;{}FirstStart&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}StartInterval&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}EstimatedBestTime&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}EstimatedLastPrizeTime&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}PrizeCeremonyTime&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}AllocationMethod&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}StartMethod&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}ClassRaceStatus&quot;/&gt;
+        &lt;element ref=&quot;{}CourseVariationId&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element ref=&quot;{}ModifyDate&quot; minOccurs=&quot;0&quot;/&gt;
       &lt;/sequence&gt;
-      &lt;attribute name="numberOfVacants" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
-      &lt;attribute name="rankingRace" default="N"&gt;
+      &lt;attribute name=&quot;numberOfVacants&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}anySimpleType&quot; /&gt;
+      &lt;attribute name=&quot;rankingRace&quot; default=&quot;N&quot;&gt;
         &lt;simpleType&gt;
-          &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
-            &lt;enumeration value="Y"/&gt;
-            &lt;enumeration value="N"/&gt;
+          &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}token&quot;&gt;
+            &lt;enumeration value=&quot;Y&quot;/&gt;
+            &lt;enumeration value=&quot;N&quot;/&gt;
           &lt;/restriction&gt;
         &lt;/simpleType&gt;
       &lt;/attribute&gt;
-      &lt;attribute name="numberOfPrizes" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
-      &lt;attribute name="bibNumberPrefix" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
-      &lt;attribute name="bibNumberBase" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
-      &lt;attribute name="finishChute" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+      &lt;attribute name=&quot;numberOfPrizes&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}anySimpleType&quot; /&gt;
+      &lt;attribute name=&quot;bibNumberPrefix&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}anySimpleType&quot; /&gt;
+      &lt;attribute name=&quot;bibNumberBase&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}anySimpleType&quot; /&gt;
+      &lt;attribute name=&quot;finishChute&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}anySimpleType&quot; /&gt;
     &lt;/restriction&gt;
   &lt;/complexContent&gt;
 &lt;/complexType&gt;
@@ -149,6 +157,27 @@ public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInf
             <ul class="blockList">
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- =========== FIELD SUMMARY =========== -->
                     
@@ -167,102 +196,6 @@ public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInf
                                             <th class="colLast" scope="col">Description</th>
                                         </tr>
                                         
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=FirstStart.html>FirstStart</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#firstStart>firstStart</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=StartInterval.html>StartInterval</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#startInterval>startInterval</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=EstimatedBestTime.html>EstimatedBestTime</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#estimatedBestTime>estimatedBestTime</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=EstimatedLastPrizeTime.html>EstimatedLastPrizeTime</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#estimatedLastPrizeTime>estimatedLastPrizeTime</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=PrizeCeremonyTime.html>PrizeCeremonyTime</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#prizeCeremonyTime>prizeCeremonyTime</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=AllocationMethod.html>AllocationMethod</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#allocationMethod>allocationMethod</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=StartMethod.html>StartMethod</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#startMethod>startMethod</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=ClassRaceStatus.html>ClassRaceStatus</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#classRaceStatus>classRaceStatus</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#courseVariationId>courseVariationId</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=ModifyDate.html>ModifyDate</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#modifyDate>modifyDate</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#numberOfVacants>numberOfVacants</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#rankingRace>rankingRace</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#numberOfPrizes>numberOfPrizes</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#bibNumberPrefix>bibNumberPrefix</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#bibNumberBase>bibNumberBase</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ClassRaceInfo.html#finishChute>finishChute</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
                                     </table>
                                 </div>
                             </li>
@@ -271,7 +204,49 @@ public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInf
                     
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ========== METHOD SUMMARY =========== -->
                     
@@ -565,6 +540,17 @@ public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInf
             <ul class="blockList">
                 <li class="blockList">
                     <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ============ METHOD DETAIL ========== -->
                     
@@ -896,7 +882,7 @@ public class <span class="typeNameLabel"><a href=ClassRaceInfo.html>ClassRaceInf
                                     <li class="blockList">
                                         <h4>getCourseVariationId</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; <a href=ClassRaceInfo.html#getCourseVariationId()>getCourseVariationId</a>()</pre>
-                                        <div class="block"><p>Gets the value of the courseVariationId property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the courseVariationId property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getCourseVariationId().add(newItem);
+                                        <div class="block"><p>Gets the value of the courseVariationId property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the courseVariationId property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getCourseVariationId().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->

@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
-    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.4.0.min.js"></script>
     <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
 
     <script type="text/javascript" src="../../search.js"></script>
@@ -104,31 +104,39 @@ var pathtoroot = "../../";
             <ul class="blockList">
                 <li class="blockList">
                     
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
                     <hr>
                     <pre class="wrap-overflow">
 
 public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSelection</a></span>
 
                     </pre>
-                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType&gt;
+                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+&lt;complexType&gt;
   &lt;complexContent&gt;
-    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+    &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
       &lt;sequence&gt;
-        &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
-          &lt;element ref="{}OrganisationId"/&gt;
-          &lt;element ref="{}Organisation"/&gt;
+        &lt;choice maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;
+          &lt;element ref=&quot;{}OrganisationId&quot;/&gt;
+          &lt;element ref=&quot;{}Organisation&quot;/&gt;
         &lt;/choice&gt;
-        &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
-          &lt;element ref="{}ClubId"/&gt;
-          &lt;element ref="{}Club"/&gt;
+        &lt;choice maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;
+          &lt;element ref=&quot;{}ClubId&quot;/&gt;
+          &lt;element ref=&quot;{}Club&quot;/&gt;
         &lt;/choice&gt;
-        &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
-          &lt;element ref="{}ClassId"/&gt;
-          &lt;element ref="{}ClassShortName"/&gt;
-          &lt;element ref="{}Class"/&gt;
+        &lt;choice maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;
+          &lt;element ref=&quot;{}ClassId&quot;/&gt;
+          &lt;element ref=&quot;{}ClassShortName&quot;/&gt;
+          &lt;element ref=&quot;{}Class&quot;/&gt;
         &lt;/choice&gt;
-        &lt;element ref="{}Position"/&gt;
-        &lt;element ref="{}ModifyDate"/&gt;
+        &lt;element ref=&quot;{}Position&quot;/&gt;
+        &lt;element ref=&quot;{}ModifyDate&quot;/&gt;
       &lt;/sequence&gt;
     &lt;/restriction&gt;
   &lt;/complexContent&gt;
@@ -141,6 +149,27 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
             <ul class="blockList">
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- =========== FIELD SUMMARY =========== -->
                     
@@ -159,36 +188,6 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                                             <th class="colLast" scope="col">Description</th>
                                         </tr>
                                         
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ResultSelection.html#organisationIdOrOrganisation>organisationIdOrOrganisation</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ResultSelection.html#clubIdOrClub>clubIdOrClub</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ResultSelection.html#classIdOrClassShortNameOrClazz>classIdOrClassShortNameOrClazz</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ResultSelection.html#position>position</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=ModifyDate.html>ModifyDate</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=ResultSelection.html#modifyDate>modifyDate</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
                                     </table>
                                 </div>
                             </li>
@@ -197,7 +196,49 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                     
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ========== METHOD SUMMARY =========== -->
                     
@@ -300,6 +341,17 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                 <li class="blockList">
                     <!-- ========= CONSTRUCTOR DETAIL ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- ============ METHOD DETAIL ========== -->
                     
                     <section role="region">
@@ -318,7 +370,7 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                                     <li class="blockList">
                                         <h4>getOrganisationIdOrOrganisation</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=ResultSelection.html#getOrganisationIdOrOrganisation()>getOrganisationIdOrOrganisation</a>()</pre>
-                                        <div class="block"><p>Gets the value of the organisationIdOrOrganisation property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the organisationIdOrOrganisation property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getOrganisationIdOrOrganisation().add(newItem);
+                                        <div class="block"><p>Gets the value of the organisationIdOrOrganisation property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the organisationIdOrOrganisation property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getOrganisationIdOrOrganisation().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Organisation.html>Organisation</a><a href=OrganisationId.html>OrganisationId</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -334,7 +386,7 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                                     <li class="blockList">
                                         <h4>getClubIdOrClub</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=ResultSelection.html#getClubIdOrClub()>getClubIdOrClub</a>()</pre>
-                                        <div class="block"><p>Gets the value of the clubIdOrClub property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the clubIdOrClub property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getClubIdOrClub().add(newItem);
+                                        <div class="block"><p>Gets the value of the clubIdOrClub property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the clubIdOrClub property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getClubIdOrClub().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Club.html>Club</a><a href=ClubId.html>ClubId</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -350,7 +402,7 @@ public class <span class="typeNameLabel"><a href=ResultSelection.html>ResultSele
                                     <li class="blockList">
                                         <h4>getClassIdOrClassShortNameOrClazz</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=ResultSelection.html#getClassIdOrClassShortNameOrClazz()>getClassIdOrClassShortNameOrClazz</a>()</pre>
-                                        <div class="block"><p>Gets the value of the classIdOrClassShortNameOrClazz property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the classIdOrClassShortNameOrClazz property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getClassIdOrClassShortNameOrClazz().add(newItem);
+                                        <div class="block"><p>Gets the value of the classIdOrClassShortNameOrClazz property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the classIdOrClassShortNameOrClazz property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getClassIdOrClassShortNameOrClazz().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Class.html>Class</a><a href=ClassId.html>ClassId</a><a href=ClassShortName.html>ClassShortName</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->

@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
-    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.4.0.min.js"></script>
     <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
 
     <script type="text/javascript" src="../../search.js"></script>
@@ -108,14 +108,6 @@ var pathtoroot = "../../";
                         <dt>All Implemented Interfaces:</dt>
                         <dd>
                             
-                            <code>java.io.Serializable</code>
-                            
-                            ,
-                            
-                            
-                            <code>java.lang.Comparable</code>
-                            
-                            
                         </dd>
                     </dl>
                     
@@ -125,14 +117,15 @@ var pathtoroot = "../../";
 public enum <span class="typeNameLabel"><a href=RaceClassStatus.html>RaceClassStatus</a></span>
 
                     </pre>
-                    <div class="block"><p>Java class for RaceClassStatus. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;simpleType name="RaceClassStatus"&gt;
-  &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-    &lt;enumeration value="StartTimesNotAllocated"/&gt;
-    &lt;enumeration value="StartTimesAllocated"/&gt;
-    &lt;enumeration value="NotUsed"/&gt;
-    &lt;enumeration value="Completed"/&gt;
-    &lt;enumeration value="Invalidated"/&gt;
-    &lt;enumeration value="InvalidatedNoFee"/&gt;
+                    <div class="block"><p>Java class for RaceClassStatus. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+&lt;simpleType name=&quot;RaceClassStatus&quot;&gt;
+  &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}NMTOKEN&quot;&gt;
+    &lt;enumeration value=&quot;StartTimesNotAllocated&quot;/&gt;
+    &lt;enumeration value=&quot;StartTimesAllocated&quot;/&gt;
+    &lt;enumeration value=&quot;NotUsed&quot;/&gt;
+    &lt;enumeration value=&quot;Completed&quot;/&gt;
+    &lt;enumeration value=&quot;Invalidated&quot;/&gt;
+    &lt;enumeration value=&quot;InvalidatedNoFee&quot;/&gt;
   &lt;/restriction&gt;
 &lt;/simpleType&gt;
 </code></pre></div>
@@ -144,9 +137,75 @@ public enum <span class="typeNameLabel"><a href=RaceClassStatus.html>RaceClassSt
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== FIELD SUMMARY =========== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
                     
@@ -165,38 +224,38 @@ public enum <span class="typeNameLabel"><a href=RaceClassStatus.html>RaceClassSt
                                     
                                     <tr class="altColor">
                                         <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=RaceClassStatus.html#INVALIDATED_NO_FEE>INVALIDATED_NO_FEE</a></a></span></code></th>
-                                        <td class="colLast"><p>The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.</p></td>
+                                                href="TODO"><a href=RaceClassStatus.html#START_TIMES_NOT_ALLOCATED>START_TIMES_NOT_ALLOCATED</a></a></span></code></th>
+                                        <td class="colLast"><p>The start list draw has not been made for this class in this race.</p></td>
                                     </tr>
                                     
                                     <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=RaceClassStatus.html#INVALIDATED>INVALIDATED</a></a></span></code></th>
-                                        <td class="colLast"><p>The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=RaceClassStatus.html#COMPLETED>COMPLETED</a></a></span></code></th>
-                                        <td class="colLast"><p>The result list is complete for this class in this race.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="rowColor">
-                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=RaceClassStatus.html#NOT_USED>NOT_USED</a></a></span></code></th>
-                                        <td class="colLast"><p>The class is not organised in this race, e.g. for classes that are organised in only some of the races in a multi-race event.</p></td>
-                                    </tr>
-                                    
-                                    <tr class="altColor">
                                         <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
                                                 href="TODO"><a href=RaceClassStatus.html#START_TIMES_ALLOCATED>START_TIMES_ALLOCATED</a></a></span></code></th>
                                         <td class="colLast"><p>The start list draw has been made for this class in this race.</p></td>
                                     </tr>
                                     
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=RaceClassStatus.html#NOT_USED>NOT_USED</a></a></span></code></th>
+                                        <td class="colLast"><p>The class is not organised in this race, e.g. for classes that are organised in only some of the races in a multi-race event.</p></td>
+                                    </tr>
+                                    
                                     <tr class="rowColor">
                                         <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
-                                                href="TODO"><a href=RaceClassStatus.html#START_TIMES_NOT_ALLOCATED>START_TIMES_NOT_ALLOCATED</a></a></span></code></th>
-                                        <td class="colLast"><p>The start list draw has not been made for this class in this race.</p></td>
+                                                href="TODO"><a href=RaceClassStatus.html#COMPLETED>COMPLETED</a></a></span></code></th>
+                                        <td class="colLast"><p>The result list is complete for this class in this race.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="altColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=RaceClassStatus.html#INVALIDATED>INVALIDATED</a></a></span></code></th>
+                                        <td class="colLast"><p>The results are considered invalid due to technical issues such as misplaced controls. Entry fees are not refunded.</p></td>
+                                    </tr>
+                                    
+                                    <tr class="rowColor">
+                                        <th class="colFirst" scope="row"><code><span class="memberNameLink"><a
+                                                href="TODO"><a href=RaceClassStatus.html#INVALIDATED_NO_FEE>INVALIDATED_NO_FEE</a></a></span></code></th>
+                                        <td class="colLast"><p>The results are considered invalid due to technical issues such as misplaced controls. Entry fees are refunded.</p></td>
                                     </tr>
                                     
                                 </table>
@@ -280,6 +339,17 @@ public enum <span class="typeNameLabel"><a href=RaceClassStatus.html>RaceClassSt
             <ul class="blockList">
                 <li class="blockList">
                     <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ============ METHOD DETAIL ========== -->
                     

@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../dokka-javadoc-stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
-    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery-migrate-3.4.0.min.js"></script>
     <script type="text/javascript" src="../../jquery/jquery-ui.js"></script>
 
     <script type="text/javascript" src="../../search.js"></script>
@@ -104,33 +104,41 @@ var pathtoroot = "../../";
             <ul class="blockList">
                 <li class="blockList">
                     
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
                     <hr>
                     <pre class="wrap-overflow">
 
 public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
 
                     </pre>
-                    <div class="block"><p>Represents a person. This could either be a competitor (see the Competitor element) or contact persons in an organisation (see the Organisation element). </p><p>Java class for Person complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType name="Person"&gt;
+                    <div class="block"><p>Represents a person. This could either be a competitor (see the Competitor element) or contact persons in an organisation (see the Organisation element). </p><p>Java class for Person complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+&lt;complexType name=&quot;Person&quot;&gt;
   &lt;complexContent&gt;
-    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+    &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
       &lt;sequence&gt;
-        &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" maxOccurs="unbounded" minOccurs="0"/&gt;
-        &lt;element name="Name" type="{http://www.orienteering.org/datastandard/3.0}PersonName"/&gt;
-        &lt;element name="BirthDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/&gt;
-        &lt;element name="Nationality" type="{http://www.orienteering.org/datastandard/3.0}Country" minOccurs="0"/&gt;
-        &lt;element name="Address" type="{http://www.orienteering.org/datastandard/3.0}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
-        &lt;element name="Contact" type="{http://www.orienteering.org/datastandard/3.0}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
-        &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+        &lt;element name=&quot;Id&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}Id&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element name=&quot;Name&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}PersonName&quot;/&gt;
+        &lt;element name=&quot;BirthDate&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}date&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element name=&quot;Nationality&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}Country&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element name=&quot;Address&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}Address&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element name=&quot;Contact&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}Contact&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;/&gt;
+        &lt;element name=&quot;Extensions&quot; type=&quot;{http://www.orienteering.org/datastandard/3.0}Extensions&quot; minOccurs=&quot;0&quot;/&gt;
       &lt;/sequence&gt;
-      &lt;attribute name="sex"&gt;
+      &lt;attribute name=&quot;sex&quot;&gt;
         &lt;simpleType&gt;
-          &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-            &lt;enumeration value="F"/&gt;
-            &lt;enumeration value="M"/&gt;
+          &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}NMTOKEN&quot;&gt;
+            &lt;enumeration value=&quot;F&quot;/&gt;
+            &lt;enumeration value=&quot;M&quot;/&gt;
           &lt;/restriction&gt;
         &lt;/simpleType&gt;
       &lt;/attribute&gt;
-      &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+      &lt;attribute name=&quot;modifyTime&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}dateTime&quot; /&gt;
     &lt;/restriction&gt;
   &lt;/complexContent&gt;
 &lt;/complexType&gt;
@@ -142,6 +150,27 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
             <ul class="blockList">
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- =========== FIELD SUMMARY =========== -->
                     
@@ -160,60 +189,6 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                                             <th class="colLast" scope="col">Description</th>
                                         </tr>
                                         
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Id.html>Id</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#id>id</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=PersonName.html>PersonName</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#name>name</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#birthDate>birthDate</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=Country.html>Country</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#nationality>nationality</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Address.html>Address</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#address>address</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Contact.html>Contact</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#contact>contact</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=Extensions.html>Extensions</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#extensions>extensions</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#sex>sex</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>protected  <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/datatype/XMLGregorianCalendar.html>XMLGregorianCalendar</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Person.html#modifyTime>modifyTime</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
                                     </table>
                                 </div>
                             </li>
@@ -222,7 +197,49 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                     
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ========== METHOD SUMMARY =========== -->
                     
@@ -389,6 +406,17 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                 <li class="blockList">
                     <!-- ========= CONSTRUCTOR DETAIL ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- ============ METHOD DETAIL ========== -->
                     
                     <section role="region">
@@ -407,7 +435,7 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                                     <li class="blockList">
                                         <h4>getId</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Id.html>Id</a>&gt; <a href=Person.html#getId()>getId</a>()</pre>
-                                        <div class="block"><p>Gets the value of the id property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the id property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getId().add(newItem);
+                                        <div class="block"><p>Gets the value of the id property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the id property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getId().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Id.html>Id</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -540,7 +568,7 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                                     <li class="blockList">
                                         <h4>getAddress</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Address.html>Address</a>&gt; <a href=Person.html#getAddress()>getAddress</a>()</pre>
-                                        <div class="block"><p>Gets the value of the address property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the address property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getAddress().add(newItem);
+                                        <div class="block"><p>Gets the value of the address property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the address property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getAddress().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Address.html>Address</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -556,7 +584,7 @@ public class <span class="typeNameLabel"><a href=Person.html>Person</a></span>
                                     <li class="blockList">
                                         <h4>getContact</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Contact.html>Contact</a>&gt; <a href=Person.html#getContact()>getContact</a>()</pre>
-                                        <div class="block"><p>Gets the value of the contact property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the contact property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getContact().add(newItem);
+                                        <div class="block"><p>Gets the value of the contact property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the contact property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getContact().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Contact.html>Contact</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->

@@ -1,586 +1,564 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>iofXml</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../scripts/main.js" async="async"></script>  </head>
-  <body>
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-          <div id="logo"></div>
-        </a>
-        <div id="paneSearch"></div>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../index.html">
+                    <span>iofXml</span>
+            </a>
+    </div>
+    <div>
+1.3.5-SNAPSHOT    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <div id="leftToggler"><span class="icon-toggler"></span></div>
-<script type="text/javascript" src="../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="iofXml::iofXml////PointingToDeclaration//769193423">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../index.html">iofXml</a>/<a href="index.html">iofXml</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package</span> <span>iof</span><wbr></wbr><span>Xml</span></h1>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="-696987306%2FFunctions%2F769193423" anchor-label="iofV2JsonToXml" id="-696987306%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="iof-v2-json-to-xml.html">iofV2JsonToXml</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696987306%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="iof-v2-json-to-xml.html">iofV2JsonToXml</a>(json: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="iofXml::iofXml////PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">iofXml</a><span class="delimiter">/</span><a href="index.html">iofXml</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package</span></span> <span>iof</span><wbr></wbr><span><span>Xml</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><p class="paragraph">Collection of utility functions for working with IOF XML. E.g. there are functions for converting from IOF XML to JSON, and for unmarshalling to and from IOF XML to Kotlin/Java objects.</p></div></div>
   </div>
-<a data-name="-696987306%2FFunctions%2F769193423" anchor-label="iofV2JsonToXml" id="-696987306%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-696987306%2FFunctions%2F769193423" anchor-label="iofV2JsonToXml" id="-696987306%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an IOF V2 JSON to XML.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="2144925244%2FFunctions%2F769193423" anchor-label="iofV2XmlToJson" id="2144925244%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="iof-v2-xml-to-json.html">iofV2XmlToJson</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2144925244%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="iof-v2-xml-to-json.html">iofV2XmlToJson</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="2144925244%2FFunctions%2F769193423" anchor-label="iofV2XmlToJson" id="2144925244%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="2144925244%2FFunctions%2F769193423" anchor-label="iofV2XmlToJson" id="2144925244%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an IOF V2 XML to JSON.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="272593717%2FFunctions%2F769193423" anchor-label="iofV3JsonToXml" id="272593717%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="iof-v3-json-to-xml.html">iofV3JsonToXml</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="272593717%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="iof-v3-json-to-xml.html">iofV3JsonToXml</a>(json: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="272593717%2FFunctions%2F769193423" anchor-label="iofV3JsonToXml" id="272593717%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="272593717%2FFunctions%2F769193423" anchor-label="iofV3JsonToXml" id="272593717%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an IOF V3 JSON to XML.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1283956215%2FFunctions%2F769193423" anchor-label="iofV3XmlToJson" id="-1283956215%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="iof-v3-xml-to-json.html">iofV3XmlToJson</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283956215%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="iof-v3-xml-to-json.html">iofV3XmlToJson</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, validateXml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = true): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1283956215%2FFunctions%2F769193423" anchor-label="iofV3XmlToJson" id="-1283956215%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-1283956215%2FFunctions%2F769193423" anchor-label="iofV3XmlToJson" id="-1283956215%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an IOF V3 XML to JSON.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-759078879%2FFunctions%2F769193423" anchor-label="marshalIofObjectToJson" id="-759078879%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="marshal-iof-object-to-json.html">marshalIofObjectToJson</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-759078879%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="marshal-iof-object-to-json.html">marshalIofObjectToJson</a>(obj: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>, prettyPrint: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = true): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-759078879%2FFunctions%2F769193423" anchor-label="marshalIofObjectToJson" id="-759078879%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-759078879%2FFunctions%2F769193423" anchor-label="marshalIofObjectToJson" id="-759078879%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Serialize an IOF object (v3 or v2) to a JSON string</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="713973248%2FFunctions%2F769193423" anchor-label="marshallIofObject" id="713973248%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="marshall-iof-object.html">marshallIofObject</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="713973248%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="marshall-iof-object.html">marshallIofObject</a>(obj: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>, prettyPrint: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = true): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="713973248%2FFunctions%2F769193423" anchor-label="marshallIofObject" id="713973248%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="713973248%2FFunctions%2F769193423" anchor-label="marshallIofObject" id="713973248%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an object of IOF V3 or V2 type to XML string</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-486534918%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV2" id="-486534918%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-generic-iof-v2.html">unmarshalGenericIofV2</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-486534918%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-generic-iof-v2.html">unmarshalGenericIofV2</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a>&lt;*&gt;&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-486534918%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV2" id="-486534918%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-486534918%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV2" id="-486534918%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an XML file to an object of IOF V2 type.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="516468201%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV3" id="516468201%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-generic-iof-v3.html">unmarshalGenericIofV3</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="516468201%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-generic-iof-v3.html">unmarshalGenericIofV3</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, validateXml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = true): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a>&lt;*&gt;&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="516468201%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV3" id="516468201%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="516468201%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV3" id="516468201%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Convert an XML file to an object of IOF V3 type.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="14988219%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClassData" id="14988219%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-class-data.html">unmarshalIofV2ClassData</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="14988219%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-class-data.html">unmarshalIofV2ClassData</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-class-data/index.html">ClassData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="14988219%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClassData" id="14988219%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="14988219%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClassData" id="14988219%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize ClassData XML to an object of type ClassData</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1258387977%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClubList" id="1258387977%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-club-list.html">unmarshalIofV2ClubList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1258387977%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-club-list.html">unmarshalIofV2ClubList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-club-list/index.html">ClubList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1258387977%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClubList" id="1258387977%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1258387977%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClubList" id="1258387977%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize ClubList XML to an object of type ClubList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1383096479%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CompetitorList" id="1383096479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-competitor-list.html">unmarshalIofV2CompetitorList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1383096479%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-competitor-list.html">unmarshalIofV2CompetitorList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-competitor-list/index.html">CompetitorList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1383096479%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CompetitorList" id="1383096479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1383096479%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CompetitorList" id="1383096479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize CompetitorList XML to an object of type CompetitorList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="866347450%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CourseData" id="866347450%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-course-data.html">unmarshalIofV2CourseData</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="866347450%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-course-data.html">unmarshalIofV2CourseData</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-course-data/index.html">CourseData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="866347450%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CourseData" id="866347450%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="866347450%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CourseData" id="866347450%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize CourseData XML to an object of type CourseData</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1452137431%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EntryList" id="-1452137431%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-entry-list.html">unmarshalIofV2EntryList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1452137431%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-entry-list.html">unmarshalIofV2EntryList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-entry-list/index.html">EntryList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1452137431%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EntryList" id="-1452137431%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-1452137431%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EntryList" id="-1452137431%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize EntryList XML to an object of type EntryList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-540386223%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EventList" id="-540386223%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-event-list.html">unmarshalIofV2EventList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540386223%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-event-list.html">unmarshalIofV2EventList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-event-list/index.html">EventList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-540386223%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EventList" id="-540386223%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-540386223%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EventList" id="-540386223%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize EventList XML to an object of type EventList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="840754792%2FFunctions%2F769193423" anchor-label="unmarshalIofV2PersonList" id="840754792%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-person-list.html">unmarshalIofV2PersonList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840754792%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-person-list.html">unmarshalIofV2PersonList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-person-list/index.html">PersonList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="840754792%2FFunctions%2F769193423" anchor-label="unmarshalIofV2PersonList" id="840754792%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="840754792%2FFunctions%2F769193423" anchor-label="unmarshalIofV2PersonList" id="840754792%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize PersonList XML to an object of type PersonList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1055944191%2FFunctions%2F769193423" anchor-label="unmarshalIofV2RankList" id="1055944191%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-rank-list.html">unmarshalIofV2RankList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055944191%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-rank-list.html">unmarshalIofV2RankList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-rank-list/index.html">RankList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1055944191%2FFunctions%2F769193423" anchor-label="unmarshalIofV2RankList" id="1055944191%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1055944191%2FFunctions%2F769193423" anchor-label="unmarshalIofV2RankList" id="1055944191%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize RankList XML to an object of type RankList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1423009488%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ResultList" id="-1423009488%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-result-list.html">unmarshalIofV2ResultList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1423009488%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-result-list.html">unmarshalIofV2ResultList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-result-list/index.html">ResultList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1423009488%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ResultList" id="-1423009488%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-1423009488%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ResultList" id="-1423009488%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize ResultList XML to an object of type ResultList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1094989037%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ServiceRequestList" id="1094989037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-service-request-list.html">unmarshalIofV2ServiceRequestList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1094989037%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-service-request-list.html">unmarshalIofV2ServiceRequestList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-service-request-list/index.html">ServiceRequestList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1094989037%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ServiceRequestList" id="1094989037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1094989037%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ServiceRequestList" id="1094989037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize ServiceRequestList XML to an object of type ServiceRequestList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="2058875929%2FFunctions%2F769193423" anchor-label="unmarshalIofV2StartList" id="2058875929%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v2-start-list.html">unmarshalIofV2StartList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2058875929%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v2-start-list.html">unmarshalIofV2StartList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v2/-start-list/index.html">StartList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="2058875929%2FFunctions%2F769193423" anchor-label="unmarshalIofV2StartList" id="2058875929%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="2058875929%2FFunctions%2F769193423" anchor-label="unmarshalIofV2StartList" id="2058875929%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>IOF V2: Deserialize StartList XML to an object of type StartList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1859043214%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ClassList" id="1859043214%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-class-list.html">unmarshalIofV3ClassList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1859043214%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-class-list.html">unmarshalIofV3ClassList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-class-list/index.html">ClassList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1859043214%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ClassList" id="1859043214%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1859043214%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ClassList" id="1859043214%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize ClassList XML to an object of type ClassList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-542436832%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CompetitorList" id="-542436832%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-competitor-list.html">unmarshalIofV3CompetitorList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-542436832%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-competitor-list.html">unmarshalIofV3CompetitorList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-competitor-list/index.html">CompetitorList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-542436832%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CompetitorList" id="-542436832%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-542436832%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CompetitorList" id="-542436832%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize CompetitorList XML to an object of type CompetitorList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="948916515%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ControlCardList" id="948916515%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-control-card-list.html">unmarshalIofV3ControlCardList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948916515%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-control-card-list.html">unmarshalIofV3ControlCardList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-control-card-list/index.html">ControlCardList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="948916515%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ControlCardList" id="948916515%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="948916515%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ControlCardList" id="948916515%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize ControlCardList XML to an object of type ControlCardList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="858588091%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CourseData" id="858588091%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-course-data.html">unmarshalIofV3CourseData</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="858588091%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-course-data.html">unmarshalIofV3CourseData</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-course-data/index.html">CourseData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="858588091%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CourseData" id="858588091%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="858588091%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CourseData" id="858588091%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize CourseData XML to an object of type CourseData</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-482556408%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EntryList" id="-482556408%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-entry-list.html">unmarshalIofV3EntryList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-482556408%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-entry-list.html">unmarshalIofV3EntryList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-entry-list/index.html">EntryList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-482556408%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EntryList" id="-482556408%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-482556408%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EntryList" id="-482556408%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize EntryList XML to an object of type EntryList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="429194800%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EventList" id="429194800%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-event-list.html">unmarshalIofV3EventList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="429194800%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-event-list.html">unmarshalIofV3EventList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-event-list/index.html">EventList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="429194800%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EventList" id="429194800%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="429194800%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EventList" id="429194800%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize EventList XML to an object of type EventList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-2015580050%2FFunctions%2F769193423" anchor-label="unmarshalIofV3OrganisationList" id="-2015580050%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-organisation-list.html">unmarshalIofV3OrganisationList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2015580050%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-organisation-list.html">unmarshalIofV3OrganisationList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-organisation-list/index.html">OrganisationList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-2015580050%2FFunctions%2F769193423" anchor-label="unmarshalIofV3OrganisationList" id="-2015580050%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-2015580050%2FFunctions%2F769193423" anchor-label="unmarshalIofV3OrganisationList" id="-2015580050%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize OrganisationList XML to an object of type OrganisationList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1430768847%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ResultList" id="-1430768847%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-result-list.html">unmarshalIofV3ResultList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1430768847%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-result-list.html">unmarshalIofV3ResultList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-result-list/index.html">ResultList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1430768847%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ResultList" id="-1430768847%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-1430768847%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ResultList" id="-1430768847%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize ResultList XML to an object of type ResultList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1725447662%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ServiceRequestList" id="1725447662%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-service-request-list.html">unmarshalIofV3ServiceRequestList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1725447662%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-service-request-list.html">unmarshalIofV3ServiceRequestList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-service-request-list/index.html">ServiceRequestList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1725447662%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ServiceRequestList" id="1725447662%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1725447662%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ServiceRequestList" id="1725447662%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize ServiceRequestList XML to an object of type ServiceRequestList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1266510344%2FFunctions%2F769193423" anchor-label="unmarshalIofV3StartList" id="-1266510344%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="unmarshal-iof-v3-start-list.html">unmarshalIofV3StartList</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1266510344%2FFunctions%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="unmarshal-iof-v3-start-list.html">unmarshalIofV3StartList</a>(xml: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../iofXml.v3/-start-list/index.html">StartList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1266510344%2FFunctions%2F769193423" anchor-label="unmarshalIofV3StartList" id="-1266510344%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-1266510344%2FFunctions%2F769193423" anchor-label="unmarshalIofV3StartList" id="-1266510344%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Deserialize StartList XML to an object of type StartList</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Properties</h2>
-              <div class="table" data-togglable="Properties"><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="classes-v2.html">classesV2</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1161903890%2FProperties%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">val <a href="classes-v2.html">classesV2</a>: <span data-unresolved-link="/&amp;lt;ERROR CLASS&amp;gt;///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>List of all main types / classes of IOF V2 XSD specification.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="classes-v3.html">classesV3</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1192923697%2FProperties%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">val <a href="classes-v3.html">classesV3</a>: <span data-unresolved-link="/&amp;lt;ERROR CLASS&amp;gt;///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>List of all main types / classes of IOF V3 XSD specification.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="class-names-v2.html">classNamesV2</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="28907578%2FProperties%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">val <a href="class-names-v2.html">classNamesV2</a>: <span data-unresolved-link="/&amp;lt;ERROR CLASS&amp;gt;///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>List of all names for all main classes of IOF V2 XSD specification, generated from <a href="classes-v2.html">classesV2</a>.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="class-names-v3.html">classNamesV3</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="59927385%2FProperties%2F769193423"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">val <a href="class-names-v3.html">classNamesV3</a>: <span data-unresolved-link="/&amp;lt;ERROR CLASS&amp;gt;///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>List of all names for all main classes of IOF V3 XSD specification, generated from <a href="classes-v3.html">classesV3</a>.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-696987306%2FFunctions%2F769193423" anchor-label="iofV2JsonToXml" id="-696987306%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="iof-v2-json-to-xml.html"><span>iof</span><wbr></wbr><span>V2Json</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Xml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696987306%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="iof-v2-json-to-xml.html"><span class="token function">iofV2JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an IOF V2 JSON to XML.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+<a data-name="2144925244%2FFunctions%2F769193423" anchor-label="iofV2XmlToJson" id="2144925244%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="iof-v2-xml-to-json.html"><span>iof</span><wbr></wbr><span>V2Xml</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2144925244%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="iof-v2-xml-to-json.html"><span class="token function">iofV2XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an IOF V2 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v2 DTD).</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="272593717%2FFunctions%2F769193423" anchor-label="iofV3JsonToXml" id="272593717%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="iof-v3-json-to-xml.html"><span>iof</span><wbr></wbr><span>V3Json</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Xml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="272593717%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="iof-v3-json-to-xml.html"><span class="token function">iofV3JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an IOF V3 JSON to XML.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1283956215%2FFunctions%2F769193423" anchor-label="iofV3XmlToJson" id="-1283956215%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="iof-v3-xml-to-json.html"><span>iof</span><wbr></wbr><span>V3Xml</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283956215%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="iof-v3-xml-to-json.html"><span class="token function">iofV3XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an IOF V3 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v3 XSD).</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-759078879%2FFunctions%2F769193423" anchor-label="marshalIofObjectToJson" id="-759078879%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="marshal-iof-object-to-json.html"><span>marshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>Object</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-759078879%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="marshal-iof-object-to-json.html"><span class="token function">marshalIofObjectToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Serialize an IOF object (v3 or v2) to a JSON string</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="713973248%2FFunctions%2F769193423" anchor-label="marshallIofObject" id="713973248%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="marshall-iof-object.html"><span>marshall</span><wbr></wbr><span>Iof</span><wbr></wbr><span><span>Object</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="713973248%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="marshall-iof-object.html"><span class="token function">marshallIofObject</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an object of IOF V3 or V2 type to XML string</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-486534918%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV2" id="-486534918%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-generic-iof-v2.html"><span>unmarshal</span><wbr></wbr><span>Generic</span><wbr></wbr><span>Iof</span><wbr></wbr><span><span>V2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-486534918%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v2.html"><span class="token function">unmarshalGenericIofV2</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V2 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV2PersonList</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="516468201%2FFunctions%2F769193423" anchor-label="unmarshalGenericIofV3" id="516468201%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-generic-iof-v3.html"><span>unmarshal</span><wbr></wbr><span>Generic</span><wbr></wbr><span>Iof</span><wbr></wbr><span><span>V3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="516468201%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v3.html"><span class="token function">unmarshalGenericIofV3</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V3 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV3CompetitorList</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="14988219%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClassData" id="14988219%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-class-data.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Class</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="14988219%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-class-data.html"><span class="token function">unmarshalIofV2ClassData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-class-data/index.html">ClassData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClassData XML to an object of type ClassData</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1258387977%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ClubList" id="1258387977%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-club-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Club</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1258387977%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-club-list.html"><span class="token function">unmarshalIofV2ClubList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-club-list/index.html">ClubList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClubList XML to an object of type ClubList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1383096479%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CompetitorList" id="1383096479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-competitor-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Competitor</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1383096479%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-competitor-list.html"><span class="token function">unmarshalIofV2CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-competitor-list/index.html">CompetitorList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="866347450%2FFunctions%2F769193423" anchor-label="unmarshalIofV2CourseData" id="866347450%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-course-data.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Course</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="866347450%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-course-data.html"><span class="token function">unmarshalIofV2CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-course-data/index.html">CourseData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1452137431%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EntryList" id="-1452137431%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-entry-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Entry</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1452137431%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-entry-list.html"><span class="token function">unmarshalIofV2EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-entry-list/index.html">EntryList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-540386223%2FFunctions%2F769193423" anchor-label="unmarshalIofV2EventList" id="-540386223%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-event-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Event</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540386223%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-event-list.html"><span class="token function">unmarshalIofV2EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-event-list/index.html">EventList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EventList XML to an object of type EventList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="840754792%2FFunctions%2F769193423" anchor-label="unmarshalIofV2PersonList" id="840754792%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-person-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Person</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840754792%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-person-list.html"><span class="token function">unmarshalIofV2PersonList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-person-list/index.html">PersonList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize PersonList XML to an object of type PersonList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1055944191%2FFunctions%2F769193423" anchor-label="unmarshalIofV2RankList" id="1055944191%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-rank-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Rank</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055944191%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-rank-list.html"><span class="token function">unmarshalIofV2RankList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-rank-list/index.html">RankList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize RankList XML to an object of type RankList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1423009488%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ResultList" id="-1423009488%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-result-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Result</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1423009488%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-result-list.html"><span class="token function">unmarshalIofV2ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-result-list/index.html">ResultList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1094989037%2FFunctions%2F769193423" anchor-label="unmarshalIofV2ServiceRequestList" id="1094989037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-service-request-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Service</span><wbr></wbr><span>Request</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1094989037%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-service-request-list.html"><span class="token function">unmarshalIofV2ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-service-request-list/index.html">ServiceRequestList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2058875929%2FFunctions%2F769193423" anchor-label="unmarshalIofV2StartList" id="2058875929%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v2-start-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V2Start</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2058875929%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v2-start-list.html"><span class="token function">unmarshalIofV2StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-start-list/index.html">StartList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">IOF V2: Deserialize StartList XML to an object of type StartList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1859043214%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ClassList" id="1859043214%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-class-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Class</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1859043214%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-class-list.html"><span class="token function">unmarshalIofV3ClassList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-class-list/index.html">ClassList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize ClassList XML to an object of type ClassList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-542436832%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CompetitorList" id="-542436832%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-competitor-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Competitor</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-542436832%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-competitor-list.html"><span class="token function">unmarshalIofV3CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-competitor-list/index.html">CompetitorList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="948916515%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ControlCardList" id="948916515%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-control-card-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Control</span><wbr></wbr><span>Card</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948916515%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-control-card-list.html"><span class="token function">unmarshalIofV3ControlCardList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-control-card-list/index.html">ControlCardList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize ControlCardList XML to an object of type ControlCardList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="858588091%2FFunctions%2F769193423" anchor-label="unmarshalIofV3CourseData" id="858588091%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-course-data.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Course</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="858588091%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-course-data.html"><span class="token function">unmarshalIofV3CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-course-data/index.html">CourseData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-482556408%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EntryList" id="-482556408%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-entry-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Entry</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-482556408%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-entry-list.html"><span class="token function">unmarshalIofV3EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-entry-list/index.html">EntryList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="429194800%2FFunctions%2F769193423" anchor-label="unmarshalIofV3EventList" id="429194800%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-event-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Event</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="429194800%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-event-list.html"><span class="token function">unmarshalIofV3EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-event-list/index.html">EventList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize EventList XML to an object of type EventList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2015580050%2FFunctions%2F769193423" anchor-label="unmarshalIofV3OrganisationList" id="-2015580050%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-organisation-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Organisation</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2015580050%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-organisation-list.html"><span class="token function">unmarshalIofV3OrganisationList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-organisation-list/index.html">OrganisationList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize OrganisationList XML to an object of type OrganisationList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1430768847%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ResultList" id="-1430768847%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-result-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Result</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1430768847%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-result-list.html"><span class="token function">unmarshalIofV3ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-result-list/index.html">ResultList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1725447662%2FFunctions%2F769193423" anchor-label="unmarshalIofV3ServiceRequestList" id="1725447662%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-service-request-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Service</span><wbr></wbr><span>Request</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1725447662%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-service-request-list.html"><span class="token function">unmarshalIofV3ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-service-request-list/index.html">ServiceRequestList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1266510344%2FFunctions%2F769193423" anchor-label="unmarshalIofV3StartList" id="-1266510344%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unmarshal-iof-v3-start-list.html"><span>unmarshal</span><wbr></wbr><span>Iof</span><wbr></wbr><span>V3Start</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1266510344%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="unmarshal-iof-v3-start-list.html"><span class="token function">unmarshalIofV3StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-start-list/index.html">StartList</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Deserialize StartList XML to an object of type StartList</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="classes-v2.html"><span>classes</span><wbr></wbr><span><span>V2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1161903890%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-v2.html">classesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1161903890%2FProperties%2F769193423" anchor-label="classesV2" id="1161903890%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">List of all main types / classes of IOF V2 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="classes-v3.html"><span>classes</span><wbr></wbr><span><span>V3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1192923697%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-v3.html">classesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../iofXml.v3/-base-message-element/index.html">BaseMessageElement</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1192923697%2FProperties%2F769193423" anchor-label="classesV3" id="1192923697%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">List of all main types / classes of IOF V3 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="class-names-v2.html"><span>class</span><wbr></wbr><span>Names</span><wbr></wbr><span><span>V2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="28907578%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="class-names-v2.html">classNamesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="28907578%2FProperties%2F769193423" anchor-label="classNamesV2" id="28907578%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">List of all names for all main classes of IOF V2 XSD specification, generated from <a href="classes-v2.html">classesV2</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="class-names-v3.html"><span>class</span><wbr></wbr><span>Names</span><wbr></wbr><span><span>V3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="59927385%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="class-names-v3.html">classNamesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="59927385%2FProperties%2F769193423" anchor-label="classNamesV3" id="59927385%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">List of all names for all main classes of IOF V3 XSD specification, generated from <a href="classes-v3.html">classesV3</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
 </html>
-
