@@ -164,6 +164,14 @@ tasks.withType(Sign) {
     onlyIf { isReleaseVersion }
 }
 
+dokkaHtml {
+    dokkaSourceSets {
+        configureEach {
+            samples.from("src/test/kotlin/iofXml")
+        }
+    }
+}
+
 mainClassName = "${archivesBaseName}.MainKt"
 kotlin {
   jvmToolchain {
