@@ -19,41 +19,41 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         A control included in a particular course.
  *       
  * 
- * &lt;p&gt;Java class for CourseControl complex type.
+ * <p>Java class for CourseControl complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="CourseControl"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="Control" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&amp;gt;
- *         &amp;lt;element name="MapText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="MapTextPosition" type="{http://www.orienteering.org/datastandard/3.0}MapPosition" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="LegLength" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="type" type="{http://www.orienteering.org/datastandard/3.0}ControlType" /&amp;gt;
- *       &amp;lt;attribute name="randomOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&amp;gt;
- *       &amp;lt;attribute name="specialInstruction" default="None"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *             &amp;lt;enumeration value="None"/&amp;gt;
- *             &amp;lt;enumeration value="TapedRoute"/&amp;gt;
- *             &amp;lt;enumeration value="FunnelTapedRoute"/&amp;gt;
- *             &amp;lt;enumeration value="MandatoryCrossingPoint"/&amp;gt;
- *             &amp;lt;enumeration value="MandatoryOutOfBoundsAreaPassage"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="tapedRouteLength" type="{http://www.w3.org/2001/XMLSchema}double" /&amp;gt;
- *       &amp;lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="CourseControl"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Control" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="MapText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="MapTextPosition" type="{http://www.orienteering.org/datastandard/3.0}MapPosition" minOccurs="0"/&gt;
+ *         &lt;element name="LegLength" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
+ *         &lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
+ *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="type" type="{http://www.orienteering.org/datastandard/3.0}ControlType" /&gt;
+ *       &lt;attribute name="randomOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="specialInstruction" default="None"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="None"/&gt;
+ *             &lt;enumeration value="TapedRoute"/&gt;
+ *             &lt;enumeration value="FunnelTapedRoute"/&gt;
+ *             &lt;enumeration value="MandatoryCrossingPoint"/&gt;
+ *             &lt;enumeration value="MandatoryOutOfBoundsAreaPassage"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="tapedRouteLength" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -96,20 +96,20 @@ public class CourseControl {
     /**
      * Gets the value of the control property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the control property.
+     * This is why there is not a <CODE>set</CODE> method for the control property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getControl().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
      * 

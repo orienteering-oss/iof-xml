@@ -7,20 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for RaceDiscipline.
+ * <p>Java class for RaceDiscipline.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="RaceDiscipline"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *     &amp;lt;enumeration value="Sprint"/&amp;gt;
- *     &amp;lt;enumeration value="Middle"/&amp;gt;
- *     &amp;lt;enumeration value="Long"/&amp;gt;
- *     &amp;lt;enumeration value="Ultralong"/&amp;gt;
- *     &amp;lt;enumeration value="Other"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <pre>
+ * &lt;simpleType name="RaceDiscipline"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Sprint"/&gt;
+ *     &lt;enumeration value="Middle"/&gt;
+ *     &lt;enumeration value="Long"/&gt;
+ *     &lt;enumeration value="Ultralong"/&gt;
+ *     &lt;enumeration value="Other"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "RaceDiscipline")

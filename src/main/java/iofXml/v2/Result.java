@@ -11,44 +11,44 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}StartNumber" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}BibNumber" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}CCardId"/&amp;gt;
- *           &amp;lt;element ref="{}CCard"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}StartTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}FinishTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Time" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ResultPosition" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}CompetitorStatus"/&amp;gt;
- *         &amp;lt;element ref="{}TeamSequence" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}CourseVariationId"/&amp;gt;
- *           &amp;lt;element ref="{}CourseVariation"/&amp;gt;
- *           &amp;lt;element ref="{}CourseLength"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}SplitTime" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}BadgeValueId"/&amp;gt;
- *           &amp;lt;element ref="{}BadgeValue"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}Point" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}StartNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{}BibNumber" minOccurs="0"/&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element ref="{}CCardId"/&gt;
+ *           &lt;element ref="{}CCard"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}StartTime" minOccurs="0"/&gt;
+ *         &lt;element ref="{}FinishTime" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Time" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ResultPosition" minOccurs="0"/&gt;
+ *         &lt;element ref="{}CompetitorStatus"/&gt;
+ *         &lt;element ref="{}TeamSequence" minOccurs="0"/&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element ref="{}CourseVariationId"/&gt;
+ *           &lt;element ref="{}CourseVariation"/&gt;
+ *           &lt;element ref="{}CourseLength"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}SplitTime" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element ref="{}BadgeValueId"/&gt;
+ *           &lt;element ref="{}BadgeValue"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}Point" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -428,20 +428,20 @@ public class Result {
     /**
      * Gets the value of the splitTime property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the splitTime property.
+     * This is why there is not a <CODE>set</CODE> method for the splitTime property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getSplitTime().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SplitTime }
      * 
@@ -505,20 +505,20 @@ public class Result {
     /**
      * Gets the value of the point property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the point property.
+     * This is why there is not a <CODE>set</CODE> method for the point property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPoint().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Point }
      * 

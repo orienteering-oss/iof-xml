@@ -14,23 +14,23 @@ import javax.xml.bind.annotation.XmlValue;
  *           Defines an image file, either as a link (use the url attribute) or as base64-encoded binary data.
  *         
  * 
- * &lt;p&gt;Java class for Image complex type.
+ * <p>Java class for Image complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="Image"&amp;gt;
- *   &amp;lt;simpleContent&amp;gt;
- *     &amp;lt;extension base="&amp;lt;http://www.w3.org/2001/XMLSchema&amp;gt;base64Binary"&amp;gt;
- *       &amp;lt;attribute name="url" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;
- *       &amp;lt;attribute name="mediaType" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;
- *       &amp;lt;attribute name="width" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;
- *       &amp;lt;attribute name="height" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;
- *       &amp;lt;attribute name="resolution" type="{http://www.w3.org/2001/XMLSchema}double" /&amp;gt;
- *     &amp;lt;/extension&amp;gt;
- *   &amp;lt;/simpleContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="Image"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;base64Binary"&gt;
+ *       &lt;attribute name="url" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="mediaType" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="width" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *       &lt;attribute name="height" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *       &lt;attribute name="resolution" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

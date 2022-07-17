@@ -7,21 +7,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for EventStatus.
+ * <p>Java class for EventStatus.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="EventStatus"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *     &amp;lt;enumeration value="Planned"/&amp;gt;
- *     &amp;lt;enumeration value="Applied"/&amp;gt;
- *     &amp;lt;enumeration value="Proposed"/&amp;gt;
- *     &amp;lt;enumeration value="Sanctioned"/&amp;gt;
- *     &amp;lt;enumeration value="Canceled"/&amp;gt;
- *     &amp;lt;enumeration value="Rescheduled"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <pre>
+ * &lt;simpleType name="EventStatus"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Planned"/&gt;
+ *     &lt;enumeration value="Applied"/&gt;
+ *     &lt;enumeration value="Proposed"/&gt;
+ *     &lt;enumeration value="Sanctioned"/&gt;
+ *     &lt;enumeration value="Canceled"/&gt;
+ *     &lt;enumeration value="Rescheduled"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "EventStatus")

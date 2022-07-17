@@ -14,42 +14,42 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}Name"/&amp;gt;
- *         &amp;lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;element ref="{}Country"/&amp;gt;
- *           &amp;lt;element ref="{}CountryId"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}ResultSelection" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="mediaType" use="required"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="paper"/&amp;gt;
- *             &amp;lt;enumeration value="tv"/&amp;gt;
- *             &amp;lt;enumeration value="radio"/&amp;gt;
- *             &amp;lt;enumeration value="magazine"/&amp;gt;
- *             &amp;lt;enumeration value="web"/&amp;gt;
- *             &amp;lt;enumeration value="other"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}Name"/&gt;
+ *         &lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="{}Country"/&gt;
+ *           &lt;element ref="{}CountryId"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}ResultSelection" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="mediaType" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="paper"/&gt;
+ *             &lt;enumeration value="tv"/&gt;
+ *             &lt;enumeration value="radio"/&gt;
+ *             &lt;enumeration value="magazine"/&gt;
+ *             &lt;enumeration value="web"/&gt;
+ *             &lt;enumeration value="other"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -114,20 +114,20 @@ public class Press {
     /**
      * Gets the value of the contact property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the contact property.
+     * This is why there is not a <CODE>set</CODE> method for the contact property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getContact().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Contact }
      * 
@@ -143,20 +143,20 @@ public class Press {
     /**
      * Gets the value of the address property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the address property.
+     * This is why there is not a <CODE>set</CODE> method for the address property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAddress().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Address }
      * 
@@ -172,20 +172,20 @@ public class Press {
     /**
      * Gets the value of the tele property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the tele property.
+     * This is why there is not a <CODE>set</CODE> method for the tele property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getTele().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Tele }
      * 
@@ -249,20 +249,20 @@ public class Press {
     /**
      * Gets the value of the resultSelection property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the resultSelection property.
+     * This is why there is not a <CODE>set</CODE> method for the resultSelection property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getResultSelection().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ResultSelection }
      * 

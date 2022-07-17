@@ -9,34 +9,34 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;element ref="{}BadgeValueId"/&amp;gt;
- *           &amp;lt;element ref="{}BadgeValue"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;element ref="{}EventClassificationId"/&amp;gt;
- *           &amp;lt;element ref="{}EventClassification"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;choice minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}ClassTypeId"/&amp;gt;
- *           &amp;lt;element ref="{}ClassType"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}TimeFactor"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="{}BadgeValueId"/&gt;
+ *           &lt;element ref="{}BadgeValue"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="{}EventClassificationId"/&gt;
+ *           &lt;element ref="{}EventClassification"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element ref="{}ClassTypeId"/&gt;
+ *           &lt;element ref="{}ClassType"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}TimeFactor"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

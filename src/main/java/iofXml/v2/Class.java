@@ -16,73 +16,73 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}ClassId"/&amp;gt;
- *         &amp;lt;element ref="{}Name" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ClassShortName"/&amp;gt;
- *         &amp;lt;choice minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}ClassTypeId"/&amp;gt;
- *           &amp;lt;element ref="{}ClassType"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}SubstituteClass" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}NotQualifiedSubstituteClass" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;
- *           &amp;lt;element ref="{}EntryFeeId"/&amp;gt;
- *           &amp;lt;element ref="{}EntryFee"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="lowAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="highAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="sex" use="required"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="M"/&amp;gt;
- *             &amp;lt;enumeration value="F"/&amp;gt;
- *             &amp;lt;enumeration value="B"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="numberInTeam" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" default="1" /&amp;gt;
- *       &amp;lt;attribute name="teamEntry" default="N"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="Y"/&amp;gt;
- *             &amp;lt;enumeration value="N"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="maxNumberInClass" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="actualForRanking" default="N"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="Y"/&amp;gt;
- *             &amp;lt;enumeration value="N"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="timePresentation" default="Y"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="Y"/&amp;gt;
- *             &amp;lt;enumeration value="N"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="allowedMinAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="allowedMaxAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}ClassId"/&gt;
+ *         &lt;element ref="{}Name" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ClassShortName"/&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element ref="{}ClassTypeId"/&gt;
+ *           &lt;element ref="{}ClassType"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}SubstituteClass" minOccurs="0"/&gt;
+ *         &lt;element ref="{}NotQualifiedSubstituteClass" minOccurs="0"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{}EntryFeeId"/&gt;
+ *           &lt;element ref="{}EntryFee"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="lowAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="highAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="sex" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="M"/&gt;
+ *             &lt;enumeration value="F"/&gt;
+ *             &lt;enumeration value="B"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="numberInTeam" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" default="1" /&gt;
+ *       &lt;attribute name="teamEntry" default="N"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="Y"/&gt;
+ *             &lt;enumeration value="N"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="maxNumberInClass" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="actualForRanking" default="N"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="Y"/&gt;
+ *             &lt;enumeration value="N"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="timePresentation" default="Y"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="Y"/&gt;
+ *             &lt;enumeration value="N"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="allowedMinAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="allowedMaxAge" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -324,23 +324,23 @@ public class Class {
     /**
      * Gets the value of the entryFeeIdOrEntryFee property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the entryFeeIdOrEntryFee property.
+     * This is why there is not a <CODE>set</CODE> method for the entryFeeIdOrEntryFee property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getEntryFeeIdOrEntryFee().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link EntryFeeId }
      * {@link EntryFee }
+     * {@link EntryFeeId }
      * 
      * 
      */

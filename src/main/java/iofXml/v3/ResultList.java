@@ -14,32 +14,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;extension base="{http://www.orienteering.org/datastandard/3.0}BaseMessageElement"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="Event" type="{http://www.orienteering.org/datastandard/3.0}Event"/&amp;gt;
- *         &amp;lt;element name="ClassResult" type="{http://www.orienteering.org/datastandard/3.0}ClassResult" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="status" default="Complete"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *             &amp;lt;enumeration value="Complete"/&amp;gt;
- *             &amp;lt;enumeration value="Delta"/&amp;gt;
- *             &amp;lt;enumeration value="Snapshot"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *     &amp;lt;/extension&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.orienteering.org/datastandard/3.0}BaseMessageElement"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Event" type="{http://www.orienteering.org/datastandard/3.0}Event"/&gt;
+ *         &lt;element name="ClassResult" type="{http://www.orienteering.org/datastandard/3.0}ClassResult" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="status" default="Complete"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="Complete"/&gt;
+ *             &lt;enumeration value="Delta"/&gt;
+ *             &lt;enumeration value="Snapshot"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -91,20 +91,20 @@ public class ResultList
     /**
      * Gets the value of the classResult property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the classResult property.
+     * This is why there is not a <CODE>set</CODE> method for the classResult property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getClassResult().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassResult }
      * 

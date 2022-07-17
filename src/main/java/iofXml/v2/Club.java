@@ -11,34 +11,34 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}ClubId"/&amp;gt;
- *         &amp;lt;element ref="{}Name" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ShortName"/&amp;gt;
- *         &amp;lt;element ref="{}OrganisationId" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;element ref="{}CountryId"/&amp;gt;
- *           &amp;lt;element ref="{}Country"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}ClubId"/&gt;
+ *         &lt;element ref="{}Name" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ShortName"/&gt;
+ *         &lt;element ref="{}OrganisationId" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="{}CountryId"/&gt;
+ *           &lt;element ref="{}Country"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Tele" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -232,20 +232,20 @@ public class Club {
     /**
      * Gets the value of the address property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the address property.
+     * This is why there is not a <CODE>set</CODE> method for the address property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAddress().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Address }
      * 
@@ -261,20 +261,20 @@ public class Club {
     /**
      * Gets the value of the tele property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the tele property.
+     * This is why there is not a <CODE>set</CODE> method for the tele property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getTele().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Tele }
      * 
@@ -290,20 +290,20 @@ public class Club {
     /**
      * Gets the value of the webURL property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the webURL property.
+     * This is why there is not a <CODE>set</CODE> method for the webURL property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getWebURL().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
      * 
@@ -319,20 +319,20 @@ public class Club {
     /**
      * Gets the value of the account property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the account property.
+     * This is why there is not a <CODE>set</CODE> method for the account property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAccount().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Account }
      * 
@@ -348,20 +348,20 @@ public class Club {
     /**
      * Gets the value of the contact property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the contact property.
+     * This is why there is not a <CODE>set</CODE> method for the contact property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getContact().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Contact }
      * 

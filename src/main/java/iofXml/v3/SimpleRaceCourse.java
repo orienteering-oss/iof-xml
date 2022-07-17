@@ -13,19 +13,19 @@ import javax.xml.bind.annotation.XmlType;
  *         Defines a course for a certain race, excluding controls.
  *       
  * 
- * &lt;p&gt;Java class for SimpleRaceCourse complex type.
+ * <p>Java class for SimpleRaceCourse complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="SimpleRaceCourse"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;extension base="{http://www.orienteering.org/datastandard/3.0}SimpleCourse"&amp;gt;
- *       &amp;lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;
- *     &amp;lt;/extension&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="SimpleRaceCourse"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.orienteering.org/datastandard/3.0}SimpleCourse"&gt;
+ *       &lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

@@ -7,20 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for EventClassification.
+ * <p>Java class for EventClassification.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="EventClassification"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *     &amp;lt;enumeration value="International"/&amp;gt;
- *     &amp;lt;enumeration value="National"/&amp;gt;
- *     &amp;lt;enumeration value="Regional"/&amp;gt;
- *     &amp;lt;enumeration value="Local"/&amp;gt;
- *     &amp;lt;enumeration value="Club"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <pre>
+ * &lt;simpleType name="EventClassification"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="International"/&gt;
+ *     &lt;enumeration value="National"/&gt;
+ *     &lt;enumeration value="Regional"/&gt;
+ *     &lt;enumeration value="Local"/&gt;
+ *     &lt;enumeration value="Club"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "EventClassification")

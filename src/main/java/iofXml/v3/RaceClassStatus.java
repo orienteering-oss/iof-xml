@@ -7,21 +7,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Java class for RaceClassStatus.
+ * <p>Java class for RaceClassStatus.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="RaceClassStatus"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *     &amp;lt;enumeration value="StartTimesNotAllocated"/&amp;gt;
- *     &amp;lt;enumeration value="StartTimesAllocated"/&amp;gt;
- *     &amp;lt;enumeration value="NotUsed"/&amp;gt;
- *     &amp;lt;enumeration value="Completed"/&amp;gt;
- *     &amp;lt;enumeration value="Invalidated"/&amp;gt;
- *     &amp;lt;enumeration value="InvalidatedNoFee"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <pre>
+ * &lt;simpleType name="RaceClassStatus"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="StartTimesNotAllocated"/&gt;
+ *     &lt;enumeration value="StartTimesAllocated"/&gt;
+ *     &lt;enumeration value="NotUsed"/&gt;
+ *     &lt;enumeration value="Completed"/&gt;
+ *     &lt;enumeration value="Invalidated"/&gt;
+ *     &lt;enumeration value="InvalidatedNoFee"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "RaceClassStatus")

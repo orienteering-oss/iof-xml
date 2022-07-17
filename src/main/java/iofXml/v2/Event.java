@@ -14,48 +14,48 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}EventId"/&amp;gt;
- *         &amp;lt;element ref="{}Name"/&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;element ref="{}EventClassificationId"/&amp;gt;
- *           &amp;lt;element ref="{}EventClassification"/&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}StartDate"/&amp;gt;
- *         &amp;lt;element ref="{}FinishDate" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EventOfficial" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Organiser" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EventClass" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EventRace" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EntryData" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Service" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="eventForm" default="IndSingleDay"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="IndSingleDay"/&amp;gt;
- *             &amp;lt;enumeration value="IndMultiDay"/&amp;gt;
- *             &amp;lt;enumeration value="teamSingleDay"/&amp;gt;
- *             &amp;lt;enumeration value="teamMultiDay"/&amp;gt;
- *             &amp;lt;enumeration value="relay"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}EventId"/&gt;
+ *         &lt;element ref="{}Name"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element ref="{}EventClassificationId"/&gt;
+ *           &lt;element ref="{}EventClassification"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}StartDate"/&gt;
+ *         &lt;element ref="{}FinishDate" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EventOfficial" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Organiser" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EventClass" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EventRace" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}WebURL" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EntryData" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Service" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="eventForm" default="IndSingleDay"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="IndSingleDay"/&gt;
+ *             &lt;enumeration value="IndMultiDay"/&gt;
+ *             &lt;enumeration value="teamSingleDay"/&gt;
+ *             &lt;enumeration value="teamMultiDay"/&gt;
+ *             &lt;enumeration value="relay"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -261,20 +261,20 @@ public class Event {
     /**
      * Gets the value of the eventOfficial property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the eventOfficial property.
+     * This is why there is not a <CODE>set</CODE> method for the eventOfficial property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getEventOfficial().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventOfficial }
      * 
@@ -314,20 +314,20 @@ public class Event {
     /**
      * Gets the value of the eventClass property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the eventClass property.
+     * This is why there is not a <CODE>set</CODE> method for the eventClass property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getEventClass().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventClass }
      * 
@@ -343,20 +343,20 @@ public class Event {
     /**
      * Gets the value of the eventRace property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the eventRace property.
+     * This is why there is not a <CODE>set</CODE> method for the eventRace property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getEventRace().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventRace }
      * 
@@ -372,20 +372,20 @@ public class Event {
     /**
      * Gets the value of the webURL property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the webURL property.
+     * This is why there is not a <CODE>set</CODE> method for the webURL property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getWebURL().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
      * 
@@ -425,20 +425,20 @@ public class Event {
     /**
      * Gets the value of the service property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the service property.
+     * This is why there is not a <CODE>set</CODE> method for the service property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getService().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Service }
      * 
@@ -454,20 +454,20 @@ public class Event {
     /**
      * Gets the value of the account property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the account property.
+     * This is why there is not a <CODE>set</CODE> method for the account property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAccount().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Account }
      * 

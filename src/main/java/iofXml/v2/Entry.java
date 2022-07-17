@@ -15,53 +15,53 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}EntryId" minOccurs="0"/&amp;gt;
- *         &amp;lt;choice&amp;gt;
- *           &amp;lt;sequence&amp;gt;
- *             &amp;lt;choice&amp;gt;
- *               &amp;lt;element ref="{}PersonId"/&amp;gt;
- *               &amp;lt;element ref="{}Person"/&amp;gt;
- *             &amp;lt;/choice&amp;gt;
- *             &amp;lt;element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *             &amp;lt;element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *           &amp;lt;/sequence&amp;gt;
- *           &amp;lt;sequence&amp;gt;
- *             &amp;lt;element ref="{}TeamName"/&amp;gt;
- *             &amp;lt;sequence maxOccurs="unbounded" minOccurs="0"&amp;gt;
- *               &amp;lt;choice minOccurs="0"&amp;gt;
- *                 &amp;lt;element ref="{}ClubId"/&amp;gt;
- *                 &amp;lt;element ref="{}Club"/&amp;gt;
- *               &amp;lt;/choice&amp;gt;
- *               &amp;lt;element ref="{}TeamSequence" minOccurs="0"/&amp;gt;
- *             &amp;lt;/sequence&amp;gt;
- *           &amp;lt;/sequence&amp;gt;
- *         &amp;lt;/choice&amp;gt;
- *         &amp;lt;element ref="{}EntryClass" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}AllocationControl" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EntryDate"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="nonCompetitor" default="N"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="Y"/&amp;gt;
- *             &amp;lt;enumeration value="N"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}EntryId" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;sequence&gt;
+ *             &lt;choice&gt;
+ *               &lt;element ref="{}PersonId"/&gt;
+ *               &lt;element ref="{}Person"/&gt;
+ *             &lt;/choice&gt;
+ *             &lt;element ref="{}CCard" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *             &lt;element ref="{}Rank" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *           &lt;/sequence&gt;
+ *           &lt;sequence&gt;
+ *             &lt;element ref="{}TeamName"/&gt;
+ *             &lt;sequence maxOccurs="unbounded" minOccurs="0"&gt;
+ *               &lt;choice minOccurs="0"&gt;
+ *                 &lt;element ref="{}ClubId"/&gt;
+ *                 &lt;element ref="{}Club"/&gt;
+ *               &lt;/choice&gt;
+ *               &lt;element ref="{}TeamSequence" minOccurs="0"/&gt;
+ *             &lt;/sequence&gt;
+ *           &lt;/sequence&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{}EntryClass" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}AllocationControl" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EntryDate"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="nonCompetitor" default="N"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="Y"/&gt;
+ *             &lt;enumeration value="N"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -187,20 +187,20 @@ public class Entry {
     /**
      * Gets the value of the cCard property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the cCard property.
+     * This is why there is not a <CODE>set</CODE> method for the cCard property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getCCard().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CCard }
      * 
@@ -216,20 +216,20 @@ public class Entry {
     /**
      * Gets the value of the rank property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the rank property.
+     * This is why there is not a <CODE>set</CODE> method for the rank property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getRank().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Rank }
      * 
@@ -269,23 +269,23 @@ public class Entry {
     /**
      * Gets the value of the clubIdOrClubAndTeamSequence property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the clubIdOrClubAndTeamSequence property.
+     * This is why there is not a <CODE>set</CODE> method for the clubIdOrClubAndTeamSequence property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getClubIdOrClubAndTeamSequence().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ClubId }
      * {@link Club }
+     * {@link ClubId }
      * {@link String }
      * 
      * 
@@ -300,20 +300,20 @@ public class Entry {
     /**
      * Gets the value of the entryClass property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the entryClass property.
+     * This is why there is not a <CODE>set</CODE> method for the entryClass property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getEntryClass().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EntryClass }
      * 

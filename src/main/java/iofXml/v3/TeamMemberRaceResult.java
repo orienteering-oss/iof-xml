@@ -21,70 +21,70 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         Result information for a person in a race.
  *       
  * 
- * &lt;p&gt;Java class for TeamMemberRaceResult complex type.
+ * <p>Java class for TeamMemberRaceResult complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="TeamMemberRaceResult"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="Leg" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="LegOrder" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="TimeBehind" maxOccurs="unbounded" minOccurs="0"&amp;gt;
- *           &amp;lt;complexType&amp;gt;
- *             &amp;lt;simpleContent&amp;gt;
- *               &amp;lt;extension base="&amp;lt;http://www.w3.org/2001/XMLSchema&amp;gt;double"&amp;gt;
- *                 &amp;lt;attribute name="type" use="required"&amp;gt;
- *                   &amp;lt;simpleType&amp;gt;
- *                     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *                       &amp;lt;enumeration value="Leg"/&amp;gt;
- *                       &amp;lt;enumeration value="Course"/&amp;gt;
- *                     &amp;lt;/restriction&amp;gt;
- *                   &amp;lt;/simpleType&amp;gt;
- *                 &amp;lt;/attribute&amp;gt;
- *               &amp;lt;/extension&amp;gt;
- *             &amp;lt;/simpleContent&amp;gt;
- *           &amp;lt;/complexType&amp;gt;
- *         &amp;lt;/element&amp;gt;
- *         &amp;lt;element name="Position" maxOccurs="unbounded" minOccurs="0"&amp;gt;
- *           &amp;lt;complexType&amp;gt;
- *             &amp;lt;simpleContent&amp;gt;
- *               &amp;lt;extension base="&amp;lt;http://www.w3.org/2001/XMLSchema&amp;gt;integer"&amp;gt;
- *                 &amp;lt;attribute name="type" use="required"&amp;gt;
- *                   &amp;lt;simpleType&amp;gt;
- *                     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
- *                       &amp;lt;enumeration value="Leg"/&amp;gt;
- *                       &amp;lt;enumeration value="Course"/&amp;gt;
- *                     &amp;lt;/restriction&amp;gt;
- *                   &amp;lt;/simpleType&amp;gt;
- *                 &amp;lt;/attribute&amp;gt;
- *               &amp;lt;/extension&amp;gt;
- *             &amp;lt;/simpleContent&amp;gt;
- *           &amp;lt;/complexType&amp;gt;
- *         &amp;lt;/element&amp;gt;
- *         &amp;lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}ResultStatus"/&amp;gt;
- *         &amp;lt;element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="OverallResult" type="{http://www.orienteering.org/datastandard/3.0}OverallResult" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleCourse" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="SplitTime" type="{http://www.orienteering.org/datastandard/3.0}SplitTime" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="ControlAnswer" type="{http://www.orienteering.org/datastandard/3.0}ControlAnswer" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Route" type="{http://www.orienteering.org/datastandard/3.0}Route" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="TeamMemberRaceResult"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Leg" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&gt;
+ *         &lt;element name="LegOrder" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&gt;
+ *         &lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
+ *         &lt;element name="TimeBehind" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
+ *                 &lt;attribute name="type" use="required"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="Leg"/&gt;
+ *                       &lt;enumeration value="Course"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Position" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;integer"&gt;
+ *                 &lt;attribute name="type" use="required"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="Leg"/&gt;
+ *                       &lt;enumeration value="Course"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Status" type="{http://www.orienteering.org/datastandard/3.0}ResultStatus"/&gt;
+ *         &lt;element name="Score" type="{http://www.orienteering.org/datastandard/3.0}Score" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="OverallResult" type="{http://www.orienteering.org/datastandard/3.0}OverallResult" minOccurs="0"/&gt;
+ *         &lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}SimpleCourse" minOccurs="0"/&gt;
+ *         &lt;element name="SplitTime" type="{http://www.orienteering.org/datastandard/3.0}SplitTime" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="ControlAnswer" type="{http://www.orienteering.org/datastandard/3.0}ControlAnswer" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Route" type="{http://www.orienteering.org/datastandard/3.0}Route" minOccurs="0"/&gt;
+ *         &lt;element name="ControlCard" type="{http://www.orienteering.org/datastandard/3.0}ControlCard" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AssignedFee" type="{http://www.orienteering.org/datastandard/3.0}AssignedFee" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="ServiceRequest" type="{http://www.orienteering.org/datastandard/3.0}ServiceRequest" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -303,20 +303,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the timeBehind property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the timeBehind property.
+     * This is why there is not a <CODE>set</CODE> method for the timeBehind property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getTimeBehind().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamMemberRaceResult.TimeBehind }
      * 
@@ -332,20 +332,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the position property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the position property.
+     * This is why there is not a <CODE>set</CODE> method for the position property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPosition().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamMemberRaceResult.Position }
      * 
@@ -385,20 +385,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the score property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the score property.
+     * This is why there is not a <CODE>set</CODE> method for the score property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getScore().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Score }
      * 
@@ -462,20 +462,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the splitTime property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the splitTime property.
+     * This is why there is not a <CODE>set</CODE> method for the splitTime property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getSplitTime().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SplitTime }
      * 
@@ -491,20 +491,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the controlAnswer property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the controlAnswer property.
+     * This is why there is not a <CODE>set</CODE> method for the controlAnswer property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getControlAnswer().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlAnswer }
      * 
@@ -544,20 +544,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the controlCard property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the controlCard property.
+     * This is why there is not a <CODE>set</CODE> method for the controlCard property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getControlCard().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
      * 
@@ -573,20 +573,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the assignedFee property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the assignedFee property.
+     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAssignedFee().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
      * 
@@ -602,20 +602,20 @@ public class TeamMemberRaceResult {
     /**
      * Gets the value of the serviceRequest property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the serviceRequest property.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getServiceRequest().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
      * 
@@ -678,26 +678,26 @@ public class TeamMemberRaceResult {
 
 
     /**
-     * &lt;p&gt;Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
-     * &lt;pre&gt;
-     * &amp;lt;complexType&amp;gt;
-     *   &amp;lt;simpleContent&amp;gt;
-     *     &amp;lt;extension base="&amp;lt;http://www.w3.org/2001/XMLSchema&amp;gt;integer"&amp;gt;
-     *       &amp;lt;attribute name="type" use="required"&amp;gt;
-     *         &amp;lt;simpleType&amp;gt;
-     *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
-     *             &amp;lt;enumeration value="Leg"/&amp;gt;
-     *             &amp;lt;enumeration value="Course"/&amp;gt;
-     *           &amp;lt;/restriction&amp;gt;
-     *         &amp;lt;/simpleType&amp;gt;
-     *       &amp;lt;/attribute&amp;gt;
-     *     &amp;lt;/extension&amp;gt;
-     *   &amp;lt;/simpleContent&amp;gt;
-     * &amp;lt;/complexType&amp;gt;
-     * &lt;/pre&gt;
+     * <pre>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;integer"&gt;
+     *       &lt;attribute name="type" use="required"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="Leg"/&gt;
+     *             &lt;enumeration value="Course"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
+     * </pre>
      * 
      * 
      */
@@ -765,26 +765,26 @@ public class TeamMemberRaceResult {
 
 
     /**
-     * &lt;p&gt;Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
-     * &lt;pre&gt;
-     * &amp;lt;complexType&amp;gt;
-     *   &amp;lt;simpleContent&amp;gt;
-     *     &amp;lt;extension base="&amp;lt;http://www.w3.org/2001/XMLSchema&amp;gt;double"&amp;gt;
-     *       &amp;lt;attribute name="type" use="required"&amp;gt;
-     *         &amp;lt;simpleType&amp;gt;
-     *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;
-     *             &amp;lt;enumeration value="Leg"/&amp;gt;
-     *             &amp;lt;enumeration value="Course"/&amp;gt;
-     *           &amp;lt;/restriction&amp;gt;
-     *         &amp;lt;/simpleType&amp;gt;
-     *       &amp;lt;/attribute&amp;gt;
-     *     &amp;lt;/extension&amp;gt;
-     *   &amp;lt;/simpleContent&amp;gt;
-     * &amp;lt;/complexType&amp;gt;
-     * &lt;/pre&gt;
+     * <pre>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
+     *       &lt;attribute name="type" use="required"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="Leg"/&gt;
+     *             &lt;enumeration value="Course"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
+     * </pre>
      * 
      * 
      */

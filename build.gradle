@@ -36,7 +36,7 @@ configurations {
 }
 
 dependencies {
-    jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.3"
+    jaxb "org.glassfish.jaxb:jaxb-xjc:2.3.6"
 
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
@@ -44,8 +44,8 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
 
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
-    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.5"
-    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:2.3.5"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.6"
+    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:2.3.6"
 
     testImplementation platform("org.junit:junit-bom:5.7.2")
     testImplementation "org.junit.jupiter:junit-jupiter"

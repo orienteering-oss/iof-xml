@@ -15,43 +15,43 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element ref="{}FirstStart" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}StartInterval" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EstimatedBestTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}EstimatedLastPrizeTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}PrizeCeremonyTime" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}AllocationMethod" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}StartMethod" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ClassRaceStatus"/&amp;gt;
- *         &amp;lt;element ref="{}CourseVariationId" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *       &amp;lt;attribute name="numberOfVacants" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="rankingRace" default="N"&amp;gt;
- *         &amp;lt;simpleType&amp;gt;
- *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&amp;gt;
- *             &amp;lt;enumeration value="Y"/&amp;gt;
- *             &amp;lt;enumeration value="N"/&amp;gt;
- *           &amp;lt;/restriction&amp;gt;
- *         &amp;lt;/simpleType&amp;gt;
- *       &amp;lt;/attribute&amp;gt;
- *       &amp;lt;attribute name="numberOfPrizes" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="bibNumberPrefix" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="bibNumberBase" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *       &amp;lt;attribute name="finishChute" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{}FirstStart" minOccurs="0"/&gt;
+ *         &lt;element ref="{}StartInterval" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EstimatedBestTime" minOccurs="0"/&gt;
+ *         &lt;element ref="{}EstimatedLastPrizeTime" minOccurs="0"/&gt;
+ *         &lt;element ref="{}PrizeCeremonyTime" minOccurs="0"/&gt;
+ *         &lt;element ref="{}AllocationMethod" minOccurs="0"/&gt;
+ *         &lt;element ref="{}StartMethod" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ClassRaceStatus"/&gt;
+ *         &lt;element ref="{}CourseVariationId" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="numberOfVacants" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="rankingRace" default="N"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *             &lt;enumeration value="Y"/&gt;
+ *             &lt;enumeration value="N"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="numberOfPrizes" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="bibNumberPrefix" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="bibNumberBase" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *       &lt;attribute name="finishChute" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -305,20 +305,20 @@ public class ClassRaceInfo {
     /**
      * Gets the value of the courseVariationId property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the courseVariationId property.
+     * This is why there is not a <CODE>set</CODE> method for the courseVariationId property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getCourseVariationId().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
      * 
