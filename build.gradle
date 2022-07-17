@@ -164,22 +164,9 @@ tasks.withType(Sign) {
     onlyIf { isReleaseVersion }
 }
 
-
-//kotlin {
-//  jvmToolchain {
-//    languageVersion.set(JavaLanguageVersion.of("11"))
-//  }
-//}
-
-
 mainClassName = "${archivesBaseName}.MainKt"
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-}
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "11"
-    }
+kotlin {
+  jvmToolchain {
+    languageVersion.set(JavaLanguageVersion.of("11"))
+  }
 }
