@@ -1,1 +1,1 @@
-var packageSearchIndex = [{"l":"iofXml.v3","url":"iofXml/v3/package-summary.html"}, {"l":"iofXml.v2","url":"iofXml/v2/package-summary.html"}, {"l":"iofXml","url":"iofXml/package-summary.html"}, {"l":"All packages","url":"index.html"}]
+var packageSearchIndex = [{"l":"iofXml.v2","url":"iofXml/v2/package-summary.html"}, {"l":"iofXml.v3","url":"iofXml/v3/package-summary.html"}, {"l":"iofXml","url":"iofXml/package-summary.html"}, {"l":"All packages","url":"index.html"}]

@@ -110,7 +110,31 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=EventClass.html>EventClass</a></span>
 
                     </pre>
-                    <div class="block"><p>&lt;p&gt;Java class for anonymous complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;choice&amp;gt; &amp;lt;element ref="{}ClassId"/&amp;gt; &amp;lt;element ref="{}Class"/&amp;gt; &amp;lt;/choice&amp;gt; &amp;lt;choice minOccurs="0"&amp;gt; &amp;lt;choice&amp;gt; &amp;lt;sequence maxOccurs="unbounded"&amp;gt; &amp;lt;element ref="{}EventRaceId"/&amp;gt; &amp;lt;element ref="{}ClassRaceInfo"/&amp;gt; &amp;lt;element ref="{}PunchingUnitType"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;/choice&amp;gt; &amp;lt;element ref="{}TransferedToClass" minOccurs="0"/&amp;gt; &amp;lt;element ref="{}DividedIntoClass"/&amp;gt; &amp;lt;/choice&amp;gt; &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;choice&gt;
+          &lt;element ref="{}ClassId"/&gt;
+          &lt;element ref="{}Class"/&gt;
+        &lt;/choice&gt;
+        &lt;choice minOccurs="0"&gt;
+          &lt;choice&gt;
+            &lt;sequence maxOccurs="unbounded"&gt;
+              &lt;element ref="{}EventRaceId"/&gt;
+              &lt;element ref="{}ClassRaceInfo"/&gt;
+              &lt;element ref="{}PunchingUnitType"/&gt;
+            &lt;/sequence&gt;
+          &lt;/choice&gt;
+          &lt;element ref="{}TransferedToClass" minOccurs="0"/&gt;
+          &lt;element ref="{}DividedIntoClass"/&gt;
+        &lt;/choice&gt;
+        &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>
@@ -411,7 +435,8 @@ public class <span class="typeNameLabel"><a href=EventClass.html>EventClass</a><
                                     <li class="blockList">
                                         <h4>getEventRaceIdAndClassRaceInfoAndPunchingUnitType</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=EventClass.html#getEventRaceIdAndClassRaceInfoAndPunchingUnitType()>getEventRaceIdAndClassRaceInfoAndPunchingUnitType</a>()</pre>
-                                        <div class="block"><p>Gets the value of the eventRaceIdAndClassRaceInfoAndPunchingUnitType property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the eventRaceIdAndClassRaceInfoAndPunchingUnitType property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getEventRaceIdAndClassRaceInfoAndPunchingUnitType().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a><a href=ClassRaceInfo.html>ClassRaceInfo</a><a href=PunchingUnitType.html>PunchingUnitType</a></p></div>
+                                        <div class="block"><p>Gets the value of the eventRaceIdAndClassRaceInfoAndPunchingUnitType property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the eventRaceIdAndClassRaceInfoAndPunchingUnitType property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getEventRaceIdAndClassRaceInfoAndPunchingUnitType().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=ClassRaceInfo.html>ClassRaceInfo</a><a href=PunchingUnitType.html>PunchingUnitType</a><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

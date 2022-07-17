@@ -110,7 +110,20 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=TeamCourseAssignment.html>TeamCourseAssignment</a></span>
 
                     </pre>
-                    <div class="block"><p>Element that connects a number of team members in a relay team to a number of courses. Teams are matched by 1) BibNumber, 2) TeamName+ClassName. &lt;p&gt;Java class for TeamCourseAssignment complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="TeamCourseAssignment"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="TeamName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="ClassName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="TeamMemberCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}TeamMemberCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>Element that connects a number of team members in a relay team to a number of courses. Teams are matched by 1) BibNumber, 2) TeamName+ClassName. </p><p>Java class for TeamCourseAssignment complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType name="TeamCourseAssignment"&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element name="BibNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+        &lt;element name="TeamName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+        &lt;element name="ClassName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+        &lt;element name="TeamMemberCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}TeamMemberCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>
@@ -428,7 +441,8 @@ public class <span class="typeNameLabel"><a href=TeamCourseAssignment.html>TeamC
                                     <li class="blockList">
                                         <h4>getTeamMemberCourseAssignment</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=TeamMemberCourseAssignment.html>TeamMemberCourseAssignment</a>&gt; <a href=TeamCourseAssignment.html#getTeamMemberCourseAssignment()>getTeamMemberCourseAssignment</a>()</pre>
-                                        <div class="block"><p>Gets the value of the teamMemberCourseAssignment property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the teamMemberCourseAssignment property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getTeamMemberCourseAssignment().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=TeamMemberCourseAssignment.html>TeamMemberCourseAssignment</a></p></div>
+                                        <div class="block"><p>Gets the value of the teamMemberCourseAssignment property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the teamMemberCourseAssignment property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getTeamMemberCourseAssignment().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=TeamMemberCourseAssignment.html>TeamMemberCourseAssignment</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

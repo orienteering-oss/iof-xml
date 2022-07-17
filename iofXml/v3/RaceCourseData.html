@@ -110,7 +110,23 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseData</a></span>
 
                     </pre>
-                    <div class="block"><p>This element defines all the control and course information for a race. &lt;p&gt;Java class for RaceCourseData complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="RaceCourseData"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="Map" type="{http://www.orienteering.org/datastandard/3.0}Map" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Control" type="{http://www.orienteering.org/datastandard/3.0}Control" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}Course" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="ClassCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}ClassCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="PersonCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}PersonCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="TeamCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}TeamCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>This element defines all the control and course information for a race. </p><p>Java class for RaceCourseData complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType name="RaceCourseData"&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element name="Map" type="{http://www.orienteering.org/datastandard/3.0}Map" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Control" type="{http://www.orienteering.org/datastandard/3.0}Control" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Course" type="{http://www.orienteering.org/datastandard/3.0}Course" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="ClassCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}ClassCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="PersonCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}PersonCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="TeamCourseAssignment" type="{http://www.orienteering.org/datastandard/3.0}TeamCourseAssignment" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+      &lt;attribute name="raceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>
@@ -337,7 +353,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getMap</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Map.html>Map</a>&gt; <a href=RaceCourseData.html#getMap()>getMap</a>()</pre>
-                                        <div class="block"><p>Gets the value of the map property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the map property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getMap().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Map.html>Map</a></p></div>
+                                        <div class="block"><p>Gets the value of the map property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the map property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getMap().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Map.html>Map</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -352,7 +369,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getControl</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Control.html>Control</a>&gt; <a href=RaceCourseData.html#getControl()>getControl</a>()</pre>
-                                        <div class="block"><p>Gets the value of the control property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the control property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getControl().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Control.html>Control</a></p></div>
+                                        <div class="block"><p>Gets the value of the control property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the control property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getControl().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Control.html>Control</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -367,7 +385,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getCourse</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Course.html>Course</a>&gt; <a href=RaceCourseData.html#getCourse()>getCourse</a>()</pre>
-                                        <div class="block"><p>Gets the value of the course property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the course property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getCourse().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Course.html>Course</a></p></div>
+                                        <div class="block"><p>Gets the value of the course property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the course property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getCourse().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Course.html>Course</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -382,7 +401,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getClassCourseAssignment</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=ClassCourseAssignment.html>ClassCourseAssignment</a>&gt; <a href=RaceCourseData.html#getClassCourseAssignment()>getClassCourseAssignment</a>()</pre>
-                                        <div class="block"><p>Gets the value of the classCourseAssignment property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the classCourseAssignment property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getClassCourseAssignment().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=ClassCourseAssignment.html>ClassCourseAssignment</a></p></div>
+                                        <div class="block"><p>Gets the value of the classCourseAssignment property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the classCourseAssignment property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getClassCourseAssignment().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=ClassCourseAssignment.html>ClassCourseAssignment</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -397,7 +417,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getPersonCourseAssignment</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=PersonCourseAssignment.html>PersonCourseAssignment</a>&gt; <a href=RaceCourseData.html#getPersonCourseAssignment()>getPersonCourseAssignment</a>()</pre>
-                                        <div class="block"><p>Gets the value of the personCourseAssignment property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the personCourseAssignment property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getPersonCourseAssignment().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=PersonCourseAssignment.html>PersonCourseAssignment</a></p></div>
+                                        <div class="block"><p>Gets the value of the personCourseAssignment property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the personCourseAssignment property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getPersonCourseAssignment().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=PersonCourseAssignment.html>PersonCourseAssignment</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -412,7 +433,8 @@ public class <span class="typeNameLabel"><a href=RaceCourseData.html>RaceCourseD
                                     <li class="blockList">
                                         <h4>getTeamCourseAssignment</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=TeamCourseAssignment.html>TeamCourseAssignment</a>&gt; <a href=RaceCourseData.html#getTeamCourseAssignment()>getTeamCourseAssignment</a>()</pre>
-                                        <div class="block"><p>Gets the value of the teamCourseAssignment property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the teamCourseAssignment property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getTeamCourseAssignment().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=TeamCourseAssignment.html>TeamCourseAssignment</a></p></div>
+                                        <div class="block"><p>Gets the value of the teamCourseAssignment property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the teamCourseAssignment property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getTeamCourseAssignment().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=TeamCourseAssignment.html>TeamCourseAssignment</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

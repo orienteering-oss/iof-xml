@@ -110,7 +110,26 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=FinishPoint.html>FinishPoint</a></span>
 
                     </pre>
-                    <div class="block"><p>&lt;p&gt;Java class for anonymous complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element ref="{}FinishPointCode"/&amp;gt; &amp;lt;element ref="{}Description" minOccurs="0"/&amp;gt; &amp;lt;element ref="{}ControlPosition" minOccurs="0"/&amp;gt; &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt; &amp;lt;element ref="{}PunchingUnit"/&amp;gt; &amp;lt;element ref="{}PunchPattern"/&amp;gt; &amp;lt;/choice&amp;gt; &amp;lt;element ref="{}PunchingUnitType" minOccurs="0"/&amp;gt; &amp;lt;element ref="{}MapPosition" minOccurs="0"/&amp;gt; &amp;lt;element ref="{}Comment" minOccurs="0"/&amp;gt; &amp;lt;element ref="{}ModifyDate" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>Java class for anonymous complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element ref="{}FinishPointCode"/&gt;
+        &lt;element ref="{}Description" minOccurs="0"/&gt;
+        &lt;element ref="{}ControlPosition" minOccurs="0"/&gt;
+        &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+          &lt;element ref="{}PunchingUnit"/&gt;
+          &lt;element ref="{}PunchPattern"/&gt;
+        &lt;/choice&gt;
+        &lt;element ref="{}PunchingUnitType" minOccurs="0"/&gt;
+        &lt;element ref="{}MapPosition" minOccurs="0"/&gt;
+        &lt;element ref="{}Comment" minOccurs="0"/&gt;
+        &lt;element ref="{}ModifyDate" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>
@@ -494,7 +513,8 @@ public class <span class="typeNameLabel"><a href=FinishPoint.html>FinishPoint</a
                                     <li class="blockList">
                                         <h4>getPunchingUnitOrPunchPattern</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=FinishPoint.html#getPunchingUnitOrPunchPattern()>getPunchingUnitOrPunchPattern</a>()</pre>
-                                        <div class="block"><p>Gets the value of the punchingUnitOrPunchPattern property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the punchingUnitOrPunchPattern property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getPunchingUnitOrPunchPattern().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=PunchingUnit.html>PunchingUnit</a><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></p></div>
+                                        <div class="block"><p>Gets the value of the punchingUnitOrPunchPattern property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the punchingUnitOrPunchPattern property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getPunchingUnitOrPunchPattern().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=PunchingUnit.html>PunchingUnit</a><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

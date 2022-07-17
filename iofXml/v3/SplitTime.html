@@ -110,7 +110,27 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=SplitTime.html>SplitTime</a></span>
 
                     </pre>
-                    <div class="block"><p>Defines a split time at a control. &lt;p&gt;Java class for SplitTime complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="SplitTime"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="ControlCode" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt; &amp;lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;attribute name="status" default="OK"&amp;gt; &amp;lt;simpleType&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt; &amp;lt;enumeration value="OK"/&amp;gt; &amp;lt;enumeration value="Missing"/&amp;gt; &amp;lt;enumeration value="Additional"/&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/simpleType&amp;gt; &amp;lt;/attribute&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>Defines a split time at a control. </p><p>Java class for SplitTime complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType name="SplitTime"&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element name="ControlCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+        &lt;element name="Time" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
+        &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+      &lt;attribute name="status" default="OK"&gt;
+        &lt;simpleType&gt;
+          &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+            &lt;enumeration value="OK"/&gt;
+            &lt;enumeration value="Missing"/&gt;
+            &lt;enumeration value="Additional"/&gt;
+          &lt;/restriction&gt;
+        &lt;/simpleType&gt;
+      &lt;/attribute&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>

@@ -110,7 +110,44 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=Organisation.html>Organisation</a></span>
 
                     </pre>
-                    <div class="block"><p>Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc. &lt;p&gt;Java class for Organisation complex type. &lt;p&gt;The following schema fragment specifies the expected content contained within this class. &lt;pre&gt; &amp;lt;complexType name="Organisation"&amp;gt; &amp;lt;complexContent&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt; &amp;lt;sequence&amp;gt; &amp;lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&amp;gt; &amp;lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt; &amp;lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="MediaName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&amp;gt; &amp;lt;element name="ParentOrganisationId" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&amp;gt; &amp;lt;element name="Country" type="{http://www.orienteering.org/datastandard/3.0}Country" minOccurs="0"/&amp;gt; &amp;lt;element name="Address" type="{http://www.orienteering.org/datastandard/3.0}Address" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Contact" type="{http://www.orienteering.org/datastandard/3.0}Contact" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Position" type="{http://www.orienteering.org/datastandard/3.0}GeoPosition" minOccurs="0"/&amp;gt; &amp;lt;element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Role" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Logotype" type="{http://www.orienteering.org/datastandard/3.0}Image" maxOccurs="unbounded" minOccurs="0"/&amp;gt; &amp;lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&amp;gt; &amp;lt;/sequence&amp;gt; &amp;lt;attribute name="type"&amp;gt; &amp;lt;simpleType&amp;gt; &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt; &amp;lt;enumeration value="IOF"/&amp;gt; &amp;lt;enumeration value="IOFRegion"/&amp;gt; &amp;lt;enumeration value="NationalFederation"/&amp;gt; &amp;lt;enumeration value="NationalRegion"/&amp;gt; &amp;lt;enumeration value="Club"/&amp;gt; &amp;lt;enumeration value="School"/&amp;gt; &amp;lt;enumeration value="Company"/&amp;gt; &amp;lt;enumeration value="Military"/&amp;gt; &amp;lt;enumeration value="Other"/&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/simpleType&amp;gt; &amp;lt;/attribute&amp;gt; &amp;lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&amp;gt; &amp;lt;/restriction&amp;gt; &amp;lt;/complexContent&amp;gt; &amp;lt;/complexType&amp;gt; &lt;/pre&gt;</p></div>
+                    <div class="block"><p>Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc. </p><p>Java class for Organisation complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>&lt;complexType name="Organisation"&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element name="Id" type="{http://www.orienteering.org/datastandard/3.0}Id" minOccurs="0"/&gt;
+        &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+        &lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+        &lt;element name="MediaName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+        &lt;element name="ParentOrganisationId" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/&gt;
+        &lt;element name="Country" type="{http://www.orienteering.org/datastandard/3.0}Country" minOccurs="0"/&gt;
+        &lt;element name="Address" type="{http://www.orienteering.org/datastandard/3.0}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Contact" type="{http://www.orienteering.org/datastandard/3.0}Contact" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Position" type="{http://www.orienteering.org/datastandard/3.0}GeoPosition" minOccurs="0"/&gt;
+        &lt;element name="Account" type="{http://www.orienteering.org/datastandard/3.0}Account" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Role" type="{http://www.orienteering.org/datastandard/3.0}Role" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Logotype" type="{http://www.orienteering.org/datastandard/3.0}Image" maxOccurs="unbounded" minOccurs="0"/&gt;
+        &lt;element name="Extensions" type="{http://www.orienteering.org/datastandard/3.0}Extensions" minOccurs="0"/&gt;
+      &lt;/sequence&gt;
+      &lt;attribute name="type"&gt;
+        &lt;simpleType&gt;
+          &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+            &lt;enumeration value="IOF"/&gt;
+            &lt;enumeration value="IOFRegion"/&gt;
+            &lt;enumeration value="NationalFederation"/&gt;
+            &lt;enumeration value="NationalRegion"/&gt;
+            &lt;enumeration value="Club"/&gt;
+            &lt;enumeration value="School"/&gt;
+            &lt;enumeration value="Company"/&gt;
+            &lt;enumeration value="Military"/&gt;
+            &lt;enumeration value="Other"/&gt;
+          &lt;/restriction&gt;
+        &lt;/simpleType&gt;
+      &lt;/attribute&gt;
+      &lt;attribute name="modifyTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</code></pre></div>
                 </li>
             </ul>
         </div>
@@ -733,7 +770,8 @@ public class <span class="typeNameLabel"><a href=Organisation.html>Organisation<
                                     <li class="blockList">
                                         <h4>getAddress</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Address.html>Address</a>&gt; <a href=Organisation.html#getAddress()>getAddress</a>()</pre>
-                                        <div class="block"><p>Gets the value of the address property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the address property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getAddress().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Address.html>Address</a></p></div>
+                                        <div class="block"><p>Gets the value of the address property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the address property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getAddress().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Address.html>Address</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -748,7 +786,8 @@ public class <span class="typeNameLabel"><a href=Organisation.html>Organisation<
                                     <li class="blockList">
                                         <h4>getContact</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Contact.html>Contact</a>&gt; <a href=Organisation.html#getContact()>getContact</a>()</pre>
-                                        <div class="block"><p>Gets the value of the contact property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the contact property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getContact().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Contact.html>Contact</a></p></div>
+                                        <div class="block"><p>Gets the value of the contact property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the contact property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getContact().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Contact.html>Contact</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -802,7 +841,8 @@ public class <span class="typeNameLabel"><a href=Organisation.html>Organisation<
                                     <li class="blockList">
                                         <h4>getAccount</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Account.html>Account</a>&gt; <a href=Organisation.html#getAccount()>getAccount</a>()</pre>
-                                        <div class="block"><p>Gets the value of the account property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the account property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getAccount().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Account.html>Account</a></p></div>
+                                        <div class="block"><p>Gets the value of the account property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the account property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getAccount().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Account.html>Account</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -817,7 +857,8 @@ public class <span class="typeNameLabel"><a href=Organisation.html>Organisation<
                                     <li class="blockList">
                                         <h4>getRole</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Role.html>Role</a>&gt; <a href=Organisation.html#getRole()>getRole</a>()</pre>
-                                        <div class="block"><p>Gets the value of the role property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the role property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getRole().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Role.html>Role</a></p></div>
+                                        <div class="block"><p>Gets the value of the role property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the role property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getRole().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Role.html>Role</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -832,7 +873,8 @@ public class <span class="typeNameLabel"><a href=Organisation.html>Organisation<
                                     <li class="blockList">
                                         <h4>getLogotype</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Image.html>Image</a>&gt; <a href=Organisation.html#getLogotype()>getLogotype</a>()</pre>
-                                        <div class="block"><p>Gets the value of the logotype property. &lt;p&gt; This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the logotype property. &lt;p&gt; For example, to add a new item, do as follows: &lt;pre&gt; getLogotype().add(newItem); &lt;/pre&gt; &lt;p&gt; Objects of the following type(s) are allowed in the list <a href=Image.html>Image</a></p></div>
+                                        <div class="block"><p>Gets the value of the logotype property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the logotype property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getLogotype().add(newItem);
+</code></pre><p> Objects of the following type(s) are allowed in the list <a href=Image.html>Image</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
