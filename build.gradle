@@ -2,15 +2,16 @@ plugins {
     id 'java'
     id 'java-library'
 
-    id 'maven' // See https://central.sonatype.org/publish/publish-gradle/
-    // 'maven' is deprecated, should consider using maven-publish, see
+    id 'maven-publish' // NB: previously used 'maven', that is deprecated
+    // See
+    // https://central.sonatype.org/publish/publish-gradle/
     // https://medium.com/@nmauti/sign-and-publish-on-maven-central-a-project-with-the-new-maven-publish-gradle-plugin-22a72a4bfd4b
-    // and https://github.com/jmini/html-publish-helper/blob/master/build.gradle
+    // https://github.com/jmini/html-publish-helper/blob/master/build.gradle
 
     id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
-    id("org.jetbrains.dokka") version "1.5.0"
-    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+    id 'org.jetbrains.dokka' version '1.5.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
 }
 
 group 'io.github.orienteering-oss'
@@ -40,7 +41,6 @@ dependencies {
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.9.8'
 
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
@@ -54,25 +54,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-task javadocJar(type: Jar) {
-    classifier = 'javadoc'
-    from javadoc
-}
-
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-artifacts {
-    archives javadocJar, sourcesJar
-}
-
-signing {
-    required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
-    sign configurations.archives
 }
 
 // Cookie cutter function for defining multiple XJC tasks
@@ -112,50 +93,84 @@ tasks.register('generateSources') {
     dependsOn tasks.getByName('iof_v3')
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            beforeDeployment { deployment -> signing.signPom(deployment) }
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
 
-            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
 
-            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
+            artifacts = [javadocJar, sourcesJar]
+            from components.java
 
-            pom.project {
-                name 'iofXml'
-                packaging 'jar'
-                // optionally artifactId can be defined here
-                description 'Java classes generated from IOF XSD v3 and v2'
-                url 'https://github.com/orienteering-oss/iof-xml'
-
-                scm {
-                    connection 'scm:https://github.com/orienteering-oss/iof-xml.git'
-                    developerConnection 'scm:https://github.com/orienteering-oss/iof-xml.git'
-                    url 'https://github.com/orienteering-oss/iof-xml'
-                }
+            pom {
+                name = 'iofXml'
+                description = 'Java classes generated from IOF XSD v3 and v2'
+                url = 'https://github.com/orienteering-oss/iof-xml'
 
                 licenses {
                     license {
-                        name 'GNU General Public License v3.0'
-                        url 'https://github.com/orienteering-oss/iof-xml/blob/main/LICENSE'
+                        name = 'GNU General Public License v3.0'
+                        url = 'https://github.com/orienteering-oss/iof-xml/blob/main/LICENSE'
                     }
                 }
 
                 developers {
                     developer {
-                        id 'mikaello'
-                        name 'mikaello'
-                        email 'eeeeeeeefeeeeeeeeee+ooosss@gmail.com'
+                        id = 'mikaello'
+                        name = 'mikaello'
+                        email = 'eeeeeeeefeeeeeeeeee+ooosss@gmail.com'
                     }
+                }
+
+                scm {
+                    connection = 'scm:https://github.com/orienteering-oss/iof-xml.git'
+                    developerConnection = 'scm:https://github.com/orienteering-oss/iof-xml.git'
+                    url = 'https://github.com/orienteering-oss/iof-xml'
                 }
             }
         }
     }
+    repositories {
+        maven {
+            name = "iofXml"
+
+            def releaseRepo = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotRepo = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            url = isReleaseVersion ? releaseRepo : snapshotRepo
+
+            //url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = ossrhUsername // maybe use findProperty("ossrhUsername") ?
+                password = ossrhPassword
+            }
+        }
+    }
 }
+
+signing {
+    sign publishing.publications.mavenJava
+}
+tasks.withType(Sign) {
+    onlyIf { isReleaseVersion }
+}
+
+
+//kotlin {
+//  jvmToolchain {
+//    languageVersion.set(JavaLanguageVersion.of("11"))
+//  }
+//}
+
 
 mainClassName = "${archivesBaseName}.MainKt"
 compileKotlin {
