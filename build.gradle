@@ -164,6 +164,8 @@ tasks.withType(Sign) {
     onlyIf { isReleaseVersion }
 }
 
+javadoc.options.addStringOption('Xdoclint:none', '-quiet')
+
 dokkaHtml {
     dokkaSourceSets {
         configureEach {
