@@ -28,7 +28,7 @@ Install the project by adding the dependency to your pom.xml or build.gradle fil
     <dependency>
       <groupId>io.github.orienteering-oss</groupId>
       <artifactId>iofXml</artifactId>
-      <version>1.2</version>
+      <version>1.3.6</version>
     </dependency>
   </dependencies>
 <!-- ... -->
@@ -36,7 +36,7 @@ Install the project by adding the dependency to your pom.xml or build.gradle fil
 
 **build.gradle:**
 ```groovy
-  implementation group: 'io.github.orienteering-oss', name: 'iofXml', version: '1.2'
+  implementation group: 'io.github.orienteering-oss', name: 'iofXml', version: '1.3.6'
 ```
 
 ### Usage
