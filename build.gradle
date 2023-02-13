@@ -36,7 +36,7 @@ configurations {
 }
 
 dependencies {
-    jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.1"
+    jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.2"
     jaxb "org.glassfish.jaxb:jaxb-runtime:4.0.2" // See also https://github.com/bjornvester/xjc-gradle-plugin/issues/21#issuecomment-904518682
 
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
