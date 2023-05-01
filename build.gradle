@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'java-library'
+    id 'idea'
 
     id 'maven-publish' // NB: previously used 'maven', that is deprecated
     // See
@@ -21,6 +22,14 @@ ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 repositories {
     mavenCentral()
+}
+
+// Needed to download sources and javadoc for imported modules
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }
 
 def generated_dir = "src/main/java"
