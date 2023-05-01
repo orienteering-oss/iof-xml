@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import java.util.Locale
+import java.util.TimeZone
+import kotlin.collections.HashMap
 
 /**
  * Convert an IOF V3 XML to JSON. If a value is not
@@ -59,6 +61,7 @@ fun iofV2JsonToXml(json: String) = iofJsonToXml(json, "v2")
 
 internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
     val mapper = ObjectMapper()
+    mapper.setTimeZone(TimeZone.getDefault())
     //mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     val tempJsonMap = mapper.readValue(json, HashMap::class.java)
 

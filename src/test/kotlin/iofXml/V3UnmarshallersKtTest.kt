@@ -38,7 +38,7 @@ internal class V3UnmarshallersKtTest {
     fun unmarshalIofV3OrganisationList() {
         val file = getV3ResourceAsText("OrganisationList.xml")
         val obj = iofXml.unmarshalIofV3OrganisationList(file)
-        assertEquals("Bushmen OC", obj.organisation.find { it.id.value == "2"  }?.name)
+        assertEquals("Bushmen OC", obj.organisation.find { it.id.value == "2" }?.name)
     }
 
     @Test
@@ -52,7 +52,7 @@ internal class V3UnmarshallersKtTest {
     fun unmarshalIofV3ClassList() {
         val file = getV3ResourceAsText("ClassList_Relay_Step1.xml")
         val obj = iofXml.unmarshalIofV3ClassList(file)
-        assertEquals(java.math.BigInteger("35"), obj.clazz.find { it.name == "Men Open"  }?.numberOfCompetitors)
+        assertEquals(java.math.BigInteger("35"), obj.clazz.find { it.name == "Men Open" }?.numberOfCompetitors)
     }
 
     @Test
@@ -69,7 +69,7 @@ internal class V3UnmarshallersKtTest {
         val obj = iofXml.unmarshalIofV3CourseData(file)
         assertEquals("Example event", obj.event.name)
         assertEquals("S", obj.raceCourseData.first().control.first().id.value)
-        assertEquals(2960.0, obj.raceCourseData.first().course.find{ it.name == "A"}?.length)
+        assertEquals(2960.0, obj.raceCourseData.first().course.find { it.name == "A" }?.length)
     }
 
     @Test
@@ -103,5 +103,16 @@ internal class V3UnmarshallersKtTest {
         val obj = iofXml.unmarshalIofV3ControlCardList(file)
         assertEquals("Best Runner in Grefsen", obj.owner)
         assertEquals("SI", obj.controlCard.first().punchingSystem)
+    }
+
+    @Test
+    fun unmarshalIofV3ResultListAndBackToXml() {
+        val file = getV3ResourceAsText("ResultList3.xml")
+        val obj = iofXml.unmarshalIofV3ResultList(file)
+        val newXml = iofXml.marshallIofObject(obj, true)
+
+        assert(newXml.contains("<Date>2011-07-30</Date>"))
+        assert(newXml.contains("<Time>10:00:00+01:00</Time>"))
+        assert(newXml.contains("<FinishTime>2011-07-30T10:33:21+01:00</FinishTime>"))
     }
 }

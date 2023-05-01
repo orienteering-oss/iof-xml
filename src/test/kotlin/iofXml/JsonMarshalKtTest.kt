@@ -31,6 +31,8 @@ internal class JsonMarshalKtTest {
 
         assert(newXml.contains("<ResultList status=\"Complete\""))
         assert(newXml.contains("Men Elite"))
+        assert(newXml.contains("<Date>2011-07-30"))
+        assert(newXml.contains("<FinishTime>2011-07-30T"))
     }
 
     @Test
