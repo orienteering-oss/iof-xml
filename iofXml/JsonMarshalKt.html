@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en"><head>
-    <title>JsonMarshalKt 1.3.6-SNAPSHOT API </title>
+    <title>JsonMarshalKt 1.4.0-SNAPSHOT API </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="dc.created" content="2020-03-25">
     <link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
@@ -118,6 +118,14 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
 
                     </pre>
                     <div class="block"></div>
+
+                    <dl>
+
+                    
+
+                    
+
+                    </dl>
                 </li>
             </ul>
         </div>
@@ -331,8 +339,10 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                         <h4>iofV3XmlToJson</h4>
                                         <pre class="methodSignature"> final static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=JsonMarshalKt.html#iofV3XmlToJson(java.lang.String,java.lang.Boolean)>iofV3XmlToJson</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> xml, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a> validateXml)</pre>
                                         <div class="block"><p>Convert an IOF V3 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v3 XSD).</p></div>
-                                        
+
                                         <dl>
+
+                                        
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
@@ -343,9 +353,16 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                             <dd><code>validateXml</code> - if the XML string should be validated against IOF V3 XSD</dd>
                                             
                                             
-                                        </dl>
                                         
-                                        <!-- TODO missing return annotation -->
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>JSON representation of this XML</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
                                     </li>
                                 </ul>
                                 
@@ -359,17 +376,26 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                         <h4>iofV2XmlToJson</h4>
                                         <pre class="methodSignature"> final static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=JsonMarshalKt.html#iofV2XmlToJson(java.lang.String)>iofV2XmlToJson</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> xml)</pre>
                                         <div class="block"><p>Convert an IOF V2 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v2 DTD).</p></div>
-                                        
+
                                         <dl>
+
+                                        
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
                                             <dd><code>xml</code> - any of the supported v2 XML types</dd>
                                             
                                             
-                                        </dl>
                                         
-                                        <!-- TODO missing return annotation -->
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>JSON representation of this XML</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
                                     </li>
                                 </ul>
                                 
@@ -383,17 +409,26 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                         <h4>iofV3JsonToXml</h4>
                                         <pre class="methodSignature"> final static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=JsonMarshalKt.html#iofV3JsonToXml(java.lang.String)>iofV3JsonToXml</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> json)</pre>
                                         <div class="block"><p>Convert an IOF V3 JSON to XML.</p><p>NB: Experimental. This function does not support 'Extensions', and may also have other datatypes it does not support.</p></div>
-                                        
+
                                         <dl>
+
+                                        
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
                                             <dd><code>json</code> - JSON of any of the v3 root data types</dd>
                                             
                                             
-                                        </dl>
                                         
-                                        <!-- TODO missing return annotation -->
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>XML representation of the IOF JSON</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
                                     </li>
                                 </ul>
                                 
@@ -407,17 +442,26 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                         <h4>iofV2JsonToXml</h4>
                                         <pre class="methodSignature"> final static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=JsonMarshalKt.html#iofV2JsonToXml(java.lang.String)>iofV2JsonToXml</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> json)</pre>
                                         <div class="block"><p>Convert an IOF V2 JSON to XML.</p><p>NB: Experimental/unstable. failing for some types of data.</p></div>
-                                        
+
                                         <dl>
+
+                                        
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
                                             <dd><code>json</code> - JSON of any of the v2 root data types</dd>
                                             
                                             
-                                        </dl>
                                         
-                                        <!-- TODO missing return annotation -->
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>XML representation of the IOF JSON</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
                                     </li>
                                 </ul>
                                 
@@ -431,8 +475,10 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                         <h4>marshalIofObjectToJson</h4>
                                         <pre class="methodSignature"> final static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=JsonMarshalKt.html#marshalIofObjectToJson(java.lang.Object,java.lang.Boolean)>marshalIofObjectToJson</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> obj, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html>Boolean</a> prettyPrint)</pre>
                                         <div class="block"><p>Serialize an IOF object (v3 or v2) to a JSON string</p></div>
-                                        
+
                                         <dl>
+
+                                        
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
@@ -443,9 +489,16 @@ public final class <span class="typeNameLabel"><a href=JsonMarshalKt.html>JsonMa
                                             <dd><code>prettyPrint</code> - should output be indented/prettified</dd>
                                             
                                             
-                                        </dl>
                                         
-                                        <!-- TODO missing return annotation -->
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>JSON representation of the object</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
                                     </li>
                                 </ul>
                                 
