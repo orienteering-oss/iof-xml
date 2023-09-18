@@ -51,7 +51,7 @@ dependencies {
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
     generatedImplementation "org.glassfish.jaxb:jaxb-runtime:4.0.3"
     implementation "org.glassfish.jaxb:jaxb-runtime:4.0.3"
-    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0' // In JAXB v3, 'javax.xml.bind' was moved to 'jakarta.xml.bind'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.1' // In JAXB v3, 'javax.xml.bind' was moved to 'jakarta.xml.bind'
 
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
