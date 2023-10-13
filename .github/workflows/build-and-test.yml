@@ -11,8 +11,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          # renovate: datasource=java-version depName="java" packageName="java-jdk" versioning=regex:^(?<major>\\d+)
-          java-version: "17"
+          # renovate: datasource=java-version depName="java" packageName="java-jdk"
+          java-version: "17.0.0"
           distribution: "temurin"
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
