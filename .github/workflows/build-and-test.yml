@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           # renovate: datasource=java-version depName="java" packageName="java-jdk"
-          java-version: "17.0.8+7"
+          java-version: "21.0.0+35.0.LTS"
           distribution: "temurin"
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
