@@ -117,7 +117,7 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a></span>
 
                     </pre>
-                    <div class="block"><p>Start information for an individual competitor, including e.g. start time and bib number. </p><p>Java class for PersonStart complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+                    <div class="block"><p>Start information for an individual competitor, including e.g. start time and bib number. </p><p>Java class for PersonStart complex type</p>. <p>The following schema fragment specifies the expected content contained within this class.</p><pre><code>
 &lt;complexType name=&quot;PersonStart&quot;&gt;
   &lt;complexContent&gt;
     &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
@@ -271,7 +271,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=PersonStart.html#getEntryId()>getEntryId</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the entryId property.</td>
+                                            <td class="colLast">The id corresponding to this person's entry in an EntryList.</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
@@ -287,7 +287,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=PersonStart.html#getPerson()>getPerson</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the person property.</td>
+                                            <td class="colLast">The person that the start time belongs to.</td>
                                         </tr>
                                         
                                         <tr id="i3" class="rowColor">
@@ -303,7 +303,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=PersonStart.html#getOrganisation()>getOrganisation</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the organisation property.</td>
+                                            <td class="colLast">The organisation that the person is representing at the event.</td>
                                         </tr>
                                         
                                         <tr id="i5" class="rowColor">
@@ -319,7 +319,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=PersonStart.html#getStart()>getStart</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the start property.</td>
+                                            <td class="colLast">The core start information for the person; one element per race in the event.</td>
                                         </tr>
                                         
                                         <tr id="i7" class="rowColor">
@@ -327,7 +327,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=PersonStart.html#getExtensions()>getExtensions</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the extensions property.</td>
+                                            <td class="colLast">Container element for custom elements from other schemas.</td>
                                         </tr>
                                         
                                         <tr id="i8" class="altColor">
@@ -417,7 +417,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                     <li class="blockList">
                                         <h4>getEntryId</h4>
                                         <pre class="methodSignature"> <a href=Id.html>Id</a> <a href=PersonStart.html#getEntryId()>getEntryId</a>()</pre>
-                                        <div class="block"><p>Gets the value of the entryId property.</p></div>
+                                        <div class="block"><p>The id corresponding to this person's entry in an EntryList.</p></div>
 
                                         <dl>
 
@@ -473,7 +473,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                     <li class="blockList">
                                         <h4>getPerson</h4>
                                         <pre class="methodSignature"> <a href=Person.html>Person</a> <a href=PersonStart.html#getPerson()>getPerson</a>()</pre>
-                                        <div class="block"><p>Gets the value of the person property.</p></div>
+                                        <div class="block"><p>The person that the start time belongs to. Omit if there is no person assigned to the start time, e.g. a vacant person.</p></div>
 
                                         <dl>
 
@@ -529,7 +529,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                     <li class="blockList">
                                         <h4>getOrganisation</h4>
                                         <pre class="methodSignature"> <a href=Organisation.html>Organisation</a> <a href=PersonStart.html#getOrganisation()>getOrganisation</a>()</pre>
-                                        <div class="block"><p>Gets the value of the organisation property.</p></div>
+                                        <div class="block"><p>The organisation that the person is representing at the event.</p></div>
 
                                         <dl>
 
@@ -585,7 +585,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                     <li class="blockList">
                                         <h4>getStart</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=PersonRaceStart.html>PersonRaceStart</a>&gt; <a href=PersonStart.html#getStart()>getStart</a>()</pre>
-                                        <div class="block"><p>Gets the value of the start property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the start property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getStart().add(newItem);
+                                        <div class="block"><p>The core start information for the person; one element per race in the event. Gets the value of the start property. </p><p>This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the start property.</p><p> For example, to add a new item, do as follows: </p><pre><code>getStart().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=PersonRaceStart.html>PersonRaceStart</a></p></div>
 
                                         <dl>
@@ -612,7 +612,7 @@ public class <span class="typeNameLabel"><a href=PersonStart.html>PersonStart</a
                                     <li class="blockList">
                                         <h4>getExtensions</h4>
                                         <pre class="methodSignature"> <a href=Extensions.html>Extensions</a> <a href=PersonStart.html#getExtensions()>getExtensions</a>()</pre>
-                                        <div class="block"><p>Gets the value of the extensions property.</p></div>
+                                        <div class="block"><p>Container element for custom elements from other schemas.</p></div>
 
                                         <dl>
 

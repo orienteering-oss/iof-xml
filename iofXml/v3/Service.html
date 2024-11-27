@@ -117,7 +117,7 @@ var pathtoroot = "../../";
 public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
 
                     </pre>
-                    <div class="block"><p>Defines a general purpose service request, e.g. for rental card or accomodation. </p><p>Java class for Service complex type. </p><p>The following schema fragment specifies the expected content contained within this class. </p><pre><code>
+                    <div class="block"><p>Defines a general purpose service request, e.g. for rental card or accomodation. </p><p>Java class for Service complex type</p>. <p>The following schema fragment specifies the expected content contained within this class.</p><pre><code>
 &lt;complexType name=&quot;Service&quot;&gt;
   &lt;complexContent&gt;
     &lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
@@ -290,7 +290,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getName()>getName</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the name property.</td>
+                                            <td class="colLast">The name of the service.</td>
                                         </tr>
                                         
                                         <tr id="i3" class="rowColor">
@@ -298,7 +298,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getFee()>getFee</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the fee property.</td>
+                                            <td class="colLast">The fees attached to this service.</td>
                                         </tr>
                                         
                                         <tr id="i4" class="altColor">
@@ -306,7 +306,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getDescription()>getDescription</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the description property.</td>
+                                            <td class="colLast">A further description of the service than the Name element gives.</td>
                                         </tr>
                                         
                                         <tr id="i5" class="rowColor">
@@ -314,7 +314,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getMaxNumber()>getMaxNumber</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the maxNumber property.</td>
+                                            <td class="colLast">The maximum number of instances of this service that are available.</td>
                                         </tr>
                                         
                                         <tr id="i6" class="altColor">
@@ -330,7 +330,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getRequestedNumber()>getRequestedNumber</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the requestedNumber property.</td>
+                                            <td class="colLast">The number of instances of this service that has been requested.</td>
                                         </tr>
                                         
                                         <tr id="i8" class="altColor">
@@ -346,7 +346,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getExtensions()>getExtensions</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the extensions property.</td>
+                                            <td class="colLast">Container element for custom elements from other schemas.</td>
                                         </tr>
                                         
                                         <tr id="i10" class="altColor">
@@ -362,7 +362,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Service.html#getType()>getType</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets the value of the type property.</td>
+                                            <td class="colLast">Used to mark special services, e.g.</td>
                                         </tr>
                                         
                                         <tr id="i12" class="altColor">
@@ -508,7 +508,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getName</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=LanguageString.html>LanguageString</a>&gt; <a href=Service.html#getName()>getName</a>()</pre>
-                                        <div class="block"><p>Gets the value of the name property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the name property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getName().add(newItem);
+                                        <div class="block"><p>The name of the service. Gets the value of the name property. </p><p>This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the name property.</p><p> For example, to add a new item, do as follows: </p><pre><code>getName().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=LanguageString.html>LanguageString</a></p></div>
 
                                         <dl>
@@ -535,7 +535,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getFee</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=Fee.html>Fee</a>&gt; <a href=Service.html#getFee()>getFee</a>()</pre>
-                                        <div class="block"><p>Gets the value of the fee property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the fee property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getFee().add(newItem);
+                                        <div class="block"><p>The fees attached to this service. Gets the value of the fee property. </p><p>This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the fee property.</p><p> For example, to add a new item, do as follows: </p><pre><code>getFee().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=Fee.html>Fee</a></p></div>
 
                                         <dl>
@@ -562,7 +562,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getDescription</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=LanguageString.html>LanguageString</a>&gt; <a href=Service.html#getDescription()>getDescription</a>()</pre>
-                                        <div class="block"><p>Gets the value of the description property. </p><p> This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the Jakarta XML Binding object. This is why there is not a <code>set</code> method for the description property. </p><p> For example, to add a new item, do as follows: </p><pre><code>   getDescription().add(newItem);
+                                        <div class="block"><p>A further description of the service than the Name element gives. Gets the value of the description property. </p><p>This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a <code>set</code> method for the description property.</p><p> For example, to add a new item, do as follows: </p><pre><code>getDescription().add(newItem);
 </code></pre><p> Objects of the following type(s) are allowed in the list <a href=LanguageString.html>LanguageString</a></p></div>
 
                                         <dl>
@@ -589,7 +589,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getMaxNumber</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=Service.html#getMaxNumber()>getMaxNumber</a>()</pre>
-                                        <div class="block"><p>Gets the value of the maxNumber property.</p></div>
+                                        <div class="block"><p>The maximum number of instances of this service that are available. Omit this element if there is no such limit.</p></div>
 
                                         <dl>
 
@@ -645,7 +645,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getRequestedNumber</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=Service.html#getRequestedNumber()>getRequestedNumber</a>()</pre>
-                                        <div class="block"><p>Gets the value of the requestedNumber property.</p></div>
+                                        <div class="block"><p>The number of instances of this service that has been requested.</p></div>
 
                                         <dl>
 
@@ -701,7 +701,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getExtensions</h4>
                                         <pre class="methodSignature"> <a href=Extensions.html>Extensions</a> <a href=Service.html#getExtensions()>getExtensions</a>()</pre>
-                                        <div class="block"><p>Gets the value of the extensions property.</p></div>
+                                        <div class="block"><p>Container element for custom elements from other schemas.</p></div>
 
                                         <dl>
 
@@ -757,7 +757,7 @@ public class <span class="typeNameLabel"><a href=Service.html>Service</a></span>
                                     <li class="blockList">
                                         <h4>getType</h4>
                                         <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=Service.html#getType()>getType</a>()</pre>
-                                        <div class="block"><p>Gets the value of the type property.</p></div>
+                                        <div class="block"><p>Used to mark special services, e.g. rental cards whose fees that are to be used in entry scenarios.</p></div>
 
                                         <dl>
 
