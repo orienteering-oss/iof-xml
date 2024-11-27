@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a course, i.e. a number of controls including start and finish.
  * 
- *         Defines a course, i.e. a number of controls including start and finish.
- *       
+ * <p>Java class for Course complex type</p>.
  * 
- * <p>Java class for Course complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Course">
@@ -60,20 +58,52 @@ public class Course {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the course.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The family or group of forked courses that the course is part of.
+     * 
+     */
     @XmlElement(name = "CourseFamily")
     protected String courseFamily;
+    /**
+     * The length of the course, in meters.
+     * 
+     */
     @XmlElement(name = "Length")
     protected Double length;
+    /**
+     * The climb of the course, in meters, along the expected best route choice.
+     * 
+     */
     @XmlElement(name = "Climb")
     protected Double climb;
+    /**
+     * The controls, including start and finish, that the course is made up of.
+     * 
+     */
     @XmlElement(name = "CourseControl", required = true)
     protected List<CourseControl> courseControl;
+    /**
+     * The id of the map used for this course.
+     * 
+     */
     @XmlElement(name = "MapId")
     protected BigInteger mapId;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The number of competitors that this course has been assigned to.
+     * 
+     */
     @XmlAttribute(name = "numberOfCompetitors")
     protected BigInteger numberOfCompetitors;
     @XmlAttribute(name = "modifyTime")
@@ -105,7 +135,7 @@ public class Course {
     }
 
     /**
-     * Gets the value of the name property.
+     * The name of the course.
      * 
      * @return
      *     possible object is
@@ -123,13 +153,14 @@ public class Course {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the courseFamily property.
+     * The family or group of forked courses that the course is part of.
      * 
      * @return
      *     possible object is
@@ -147,13 +178,14 @@ public class Course {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseFamily()
      */
     public void setCourseFamily(String value) {
         this.courseFamily = value;
     }
 
     /**
-     * Gets the value of the length property.
+     * The length of the course, in meters.
      * 
      * @return
      *     possible object is
@@ -171,13 +203,14 @@ public class Course {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getLength()
      */
     public void setLength(Double value) {
         this.length = value;
     }
 
     /**
-     * Gets the value of the climb property.
+     * The climb of the course, in meters, along the expected best route choice.
      * 
      * @return
      *     possible object is
@@ -195,30 +228,34 @@ public class Course {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getClimb()
      */
     public void setClimb(Double value) {
         this.climb = value;
     }
 
     /**
+     * The controls, including start and finish, that the course is made up of.
+     * 
      * Gets the value of the courseControl property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the courseControl property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the courseControl property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourseControl().add(newItem);
+     * getCourseControl().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CourseControl }
+     * </p>
      * 
      * 
      * @return
@@ -232,7 +269,7 @@ public class Course {
     }
 
     /**
-     * Gets the value of the mapId property.
+     * The id of the map used for this course.
      * 
      * @return
      *     possible object is
@@ -250,13 +287,14 @@ public class Course {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMapId()
      */
     public void setMapId(BigInteger value) {
         this.mapId = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -274,13 +312,14 @@ public class Course {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the numberOfCompetitors property.
+     * The number of competitors that this course has been assigned to.
      * 
      * @return
      *     possible object is
@@ -298,6 +337,7 @@ public class Course {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getNumberOfCompetitors()
      */
     public void setNumberOfCompetitors(BigInteger value) {
         this.numberOfCompetitors = value;

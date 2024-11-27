@@ -12,9 +12,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -169,16 +169,16 @@ public class Course {
     /**
      * Gets the value of the classIdOrClassShortName property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classIdOrClassShortName property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classIdOrClassShortName property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClassIdOrClassShortName().add(newItem);
+     * getClassIdOrClassShortName().add(newItem);
      * </pre>
      * 
      * 
@@ -186,6 +186,7 @@ public class Course {
      * Objects of the following type(s) are allowed in the list
      * {@link ClassId }
      * {@link ClassShortName }
+     * </p>
      * 
      * 
      * @return
@@ -201,22 +202,23 @@ public class Course {
     /**
      * Gets the value of the courseVariation property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the courseVariation property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the courseVariation property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourseVariation().add(newItem);
+     * getCourseVariation().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CourseVariation }
+     * </p>
      * 
      * 
      * @return

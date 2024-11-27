@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Element that connects a course with a relay team member. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Team members are matched by 1) BibNumber, 2) Leg and LegOrder, 3) EntryId.
  * 
- *         Element that connects a course with a relay team member. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Team members are matched by 1) BibNumber, 2) Leg and LegOrder, 3) EntryId.
- *       
+ * <p>Java class for TeamMemberCourseAssignment complex type</p>.
  * 
- * <p>Java class for TeamMemberCourseAssignment complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="TeamMemberCourseAssignment">
@@ -51,25 +49,57 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TeamMemberCourseAssignment {
 
+    /**
+     * The id corresponding to this person's entry in an EntryList.
+     * 
+     */
     @XmlElement(name = "EntryId")
     protected Id entryId;
+    /**
+     * The bib number of the person or the team that the person belongs to. Omit if the bib number is specified in the TeamCourseAssignment element.
+     * 
+     */
     @XmlElement(name = "BibNumber")
     protected String bibNumber;
+    /**
+     * For relay entries, the number of the leg that the person is taking part in.
+     * 
+     */
     @XmlElement(name = "Leg")
     protected BigInteger leg;
+    /**
+     * Defines the person's starting order within a team at a parallel relay leg.
+     * 
+     */
     @XmlElement(name = "LegOrder")
     protected BigInteger legOrder;
+    /**
+     * The name of the person.
+     * 
+     */
     @XmlElement(name = "TeamMemberName")
     protected String teamMemberName;
+    /**
+     * The name of the course.
+     * 
+     */
     @XmlElement(name = "CourseName")
     protected String courseName;
+    /**
+     * The family or group of forked courses that the course is part of.
+     * 
+     */
     @XmlElement(name = "CourseFamily")
     protected String courseFamily;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
     /**
-     * Gets the value of the entryId property.
+     * The id corresponding to this person's entry in an EntryList.
      * 
      * @return
      *     possible object is
@@ -87,13 +117,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link Id }
      *     
+     * @see #getEntryId()
      */
     public void setEntryId(Id value) {
         this.entryId = value;
     }
 
     /**
-     * Gets the value of the bibNumber property.
+     * The bib number of the person or the team that the person belongs to. Omit if the bib number is specified in the TeamCourseAssignment element.
      * 
      * @return
      *     possible object is
@@ -111,13 +142,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getBibNumber()
      */
     public void setBibNumber(String value) {
         this.bibNumber = value;
     }
 
     /**
-     * Gets the value of the leg property.
+     * For relay entries, the number of the leg that the person is taking part in.
      * 
      * @return
      *     possible object is
@@ -135,13 +167,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getLeg()
      */
     public void setLeg(BigInteger value) {
         this.leg = value;
     }
 
     /**
-     * Gets the value of the legOrder property.
+     * Defines the person's starting order within a team at a parallel relay leg.
      * 
      * @return
      *     possible object is
@@ -159,13 +192,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getLegOrder()
      */
     public void setLegOrder(BigInteger value) {
         this.legOrder = value;
     }
 
     /**
-     * Gets the value of the teamMemberName property.
+     * The name of the person.
      * 
      * @return
      *     possible object is
@@ -183,13 +217,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getTeamMemberName()
      */
     public void setTeamMemberName(String value) {
         this.teamMemberName = value;
     }
 
     /**
-     * Gets the value of the courseName property.
+     * The name of the course.
      * 
      * @return
      *     possible object is
@@ -207,13 +242,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseName()
      */
     public void setCourseName(String value) {
         this.courseName = value;
     }
 
     /**
-     * Gets the value of the courseFamily property.
+     * The family or group of forked courses that the course is part of.
      * 
      * @return
      *     possible object is
@@ -231,13 +267,14 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseFamily()
      */
     public void setCourseFamily(String value) {
         this.courseFamily = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -255,6 +292,7 @@ public class TeamMemberCourseAssignment {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * The score earned in an event for some purpose, e.g. a ranking list. The 'type' attribute is used to specify which purpose.
  * 
- *         The score earned in an event for some purpose, e.g. a ranking list. The 'type' attribute is used to specify which purpose.
- *       
+ * <p>Java class for Score complex type</p>.
  * 
- * <p>Java class for Score complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Score">

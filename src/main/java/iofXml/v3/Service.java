@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a general purpose service request, e.g. for rental card or accomodation.
  * 
- *         Defines a general purpose service request, e.g. for rental card or accomodation.
- *       
+ * <p>Java class for Service complex type</p>.
  * 
- * <p>Java class for Service complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Service">
@@ -57,18 +55,46 @@ public class Service {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the service.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected List<LanguageString> name;
+    /**
+     * The fees attached to this service.
+     * 
+     */
     @XmlElement(name = "Fee")
     protected List<Fee> fee;
+    /**
+     * A further description of the service than the Name element gives.
+     * 
+     */
     @XmlElement(name = "Description")
     protected List<LanguageString> description;
+    /**
+     * The maximum number of instances of this service that are available. Omit this element if there is no such limit.
+     * 
+     */
     @XmlElement(name = "MaxNumber")
     protected Double maxNumber;
+    /**
+     * The number of instances of this service that has been requested.
+     * 
+     */
     @XmlElement(name = "RequestedNumber")
     protected Double requestedNumber;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * Used to mark special services, e.g. rental cards whose fees that are to be used in entry scenarios.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected String type;
     @XmlAttribute(name = "modifyTime")
@@ -100,24 +126,27 @@ public class Service {
     }
 
     /**
+     * The name of the service.
+     * 
      * Gets the value of the name property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the name property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the name property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getName().add(newItem);
+     * getName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
+     * </p>
      * 
      * 
      * @return
@@ -131,24 +160,27 @@ public class Service {
     }
 
     /**
+     * The fees attached to this service.
+     * 
      * Gets the value of the fee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the fee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getFee().add(newItem);
+     * getFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
+     * </p>
      * 
      * 
      * @return
@@ -162,24 +194,27 @@ public class Service {
     }
 
     /**
+     * A further description of the service than the Name element gives.
+     * 
      * Gets the value of the description property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the description property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the description property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getDescription().add(newItem);
+     * getDescription().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
+     * </p>
      * 
      * 
      * @return
@@ -193,7 +228,7 @@ public class Service {
     }
 
     /**
-     * Gets the value of the maxNumber property.
+     * The maximum number of instances of this service that are available. Omit this element if there is no such limit.
      * 
      * @return
      *     possible object is
@@ -211,13 +246,14 @@ public class Service {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getMaxNumber()
      */
     public void setMaxNumber(Double value) {
         this.maxNumber = value;
     }
 
     /**
-     * Gets the value of the requestedNumber property.
+     * The number of instances of this service that has been requested.
      * 
      * @return
      *     possible object is
@@ -235,13 +271,14 @@ public class Service {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getRequestedNumber()
      */
     public void setRequestedNumber(Double value) {
         this.requestedNumber = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -259,13 +296,14 @@ public class Service {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * Used to mark special services, e.g. rental cards whose fees that are to be used in entry scenarios.
      * 
      * @return
      *     possible object is
@@ -283,6 +321,7 @@ public class Service {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

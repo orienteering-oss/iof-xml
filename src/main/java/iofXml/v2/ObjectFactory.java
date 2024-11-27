@@ -11,7 +11,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the iofXml.v2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -24,40 +24,40 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Family_QNAME = new QName("", "Family");
-    private final static QName _WebURL_QNAME = new QName("", "WebURL");
-    private final static QName _CCardId_QNAME = new QName("", "CCardId");
-    private final static QName _RankPosition_QNAME = new QName("", "RankPosition");
-    private final static QName _RankValue_QNAME = new QName("", "RankValue");
-    private final static QName _EventOfficialRole_QNAME = new QName("", "EventOfficialRole");
-    private final static QName _EventRaceId_QNAME = new QName("", "EventRaceId");
-    private final static QName _CourseVariationId_QNAME = new QName("", "CourseVariationId");
-    private final static QName _ServiceId_QNAME = new QName("", "ServiceId");
-    private final static QName _ServiceOrderNumber_QNAME = new QName("", "ServiceOrderNumber");
-    private final static QName _EntryId_QNAME = new QName("", "EntryId");
-    private final static QName _TeamName_QNAME = new QName("", "TeamName");
-    private final static QName _TeamSequence_QNAME = new QName("", "TeamSequence");
-    private final static QName _StartNumber_QNAME = new QName("", "StartNumber");
-    private final static QName _BibNumber_QNAME = new QName("", "BibNumber");
-    private final static QName _StartId_QNAME = new QName("", "StartId");
-    private final static QName _ResultPosition_QNAME = new QName("", "ResultPosition");
-    private final static QName _StartPointCode_QNAME = new QName("", "StartPointCode");
-    private final static QName _SymbolId_QNAME = new QName("", "SymbolId");
-    private final static QName _FinishChute_QNAME = new QName("", "FinishChute");
-    private final static QName _Sequence_QNAME = new QName("", "Sequence");
-    private final static QName _ControlCode_QNAME = new QName("", "ControlCode");
-    private final static QName _UnitCode_QNAME = new QName("", "UnitCode");
-    private final static QName _PunchPattern_QNAME = new QName("", "PunchPattern");
-    private final static QName _FinishPointCode_QNAME = new QName("", "FinishPointCode");
-    private final static QName _Scale_QNAME = new QName("", "Scale");
-    private final static QName _CourseName_QNAME = new QName("", "CourseName");
-    private final static QName _CourseId_QNAME = new QName("", "CourseId");
-    private final static QName _CourseSectionId_QNAME = new QName("", "CourseSectionId");
-    private final static QName _CourseBranchId_QNAME = new QName("", "CourseBranchId");
-    private final static QName _TimeFactor_QNAME = new QName("", "TimeFactor");
-    private final static QName _Position_QNAME = new QName("", "Position");
-    private final static QName _Info_QNAME = new QName("", "Info");
-    private final static QName _FinishId_QNAME = new QName("", "FinishId");
+    private static final QName _Family_QNAME = new QName("", "Family");
+    private static final QName _WebURL_QNAME = new QName("", "WebURL");
+    private static final QName _CCardId_QNAME = new QName("", "CCardId");
+    private static final QName _RankPosition_QNAME = new QName("", "RankPosition");
+    private static final QName _RankValue_QNAME = new QName("", "RankValue");
+    private static final QName _EventOfficialRole_QNAME = new QName("", "EventOfficialRole");
+    private static final QName _EventRaceId_QNAME = new QName("", "EventRaceId");
+    private static final QName _CourseVariationId_QNAME = new QName("", "CourseVariationId");
+    private static final QName _ServiceId_QNAME = new QName("", "ServiceId");
+    private static final QName _ServiceOrderNumber_QNAME = new QName("", "ServiceOrderNumber");
+    private static final QName _EntryId_QNAME = new QName("", "EntryId");
+    private static final QName _TeamName_QNAME = new QName("", "TeamName");
+    private static final QName _TeamSequence_QNAME = new QName("", "TeamSequence");
+    private static final QName _StartNumber_QNAME = new QName("", "StartNumber");
+    private static final QName _BibNumber_QNAME = new QName("", "BibNumber");
+    private static final QName _StartId_QNAME = new QName("", "StartId");
+    private static final QName _ResultPosition_QNAME = new QName("", "ResultPosition");
+    private static final QName _StartPointCode_QNAME = new QName("", "StartPointCode");
+    private static final QName _SymbolId_QNAME = new QName("", "SymbolId");
+    private static final QName _FinishChute_QNAME = new QName("", "FinishChute");
+    private static final QName _Sequence_QNAME = new QName("", "Sequence");
+    private static final QName _ControlCode_QNAME = new QName("", "ControlCode");
+    private static final QName _UnitCode_QNAME = new QName("", "UnitCode");
+    private static final QName _PunchPattern_QNAME = new QName("", "PunchPattern");
+    private static final QName _FinishPointCode_QNAME = new QName("", "FinishPointCode");
+    private static final QName _Scale_QNAME = new QName("", "Scale");
+    private static final QName _CourseName_QNAME = new QName("", "CourseName");
+    private static final QName _CourseId_QNAME = new QName("", "CourseId");
+    private static final QName _CourseSectionId_QNAME = new QName("", "CourseSectionId");
+    private static final QName _CourseBranchId_QNAME = new QName("", "CourseBranchId");
+    private static final QName _TimeFactor_QNAME = new QName("", "TimeFactor");
+    private static final QName _Position_QNAME = new QName("", "Position");
+    private static final QName _Info_QNAME = new QName("", "Info");
+    private static final QName _FinishId_QNAME = new QName("", "FinishId");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: iofXml.v2

@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Defines a position in a map's coordinate system.
  * 
- *         Defines a position in a map's coordinate system.
- *       
+ * <p>Java class for MapPosition complex type</p>.
  * 
- * <p>Java class for MapPosition complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="MapPosition">
@@ -43,16 +41,28 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "MapPosition")
 public class MapPosition {
 
+    /**
+     * The number of units right of the center of the coordinate system.
+     * 
+     */
     @XmlAttribute(name = "x", required = true)
     protected double x;
+    /**
+     * The number of units below the center of the coordinate system.
+     * 
+     */
     @XmlAttribute(name = "y", required = true)
     protected double y;
+    /**
+     * The type of unit used.
+     * 
+     */
     @XmlAttribute(name = "unit")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String unit;
 
     /**
-     * Gets the value of the x property.
+     * The number of units right of the center of the coordinate system.
      * 
      */
     public double getX() {
@@ -68,7 +78,7 @@ public class MapPosition {
     }
 
     /**
-     * Gets the value of the y property.
+     * The number of units below the center of the coordinate system.
      * 
      */
     public double getY() {
@@ -84,7 +94,7 @@ public class MapPosition {
     }
 
     /**
-     * Gets the value of the unit property.
+     * The type of unit used.
      * 
      * @return
      *     possible object is
@@ -106,6 +116,7 @@ public class MapPosition {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getUnit()
      */
     public void setUnit(String value) {
         this.unit = value;

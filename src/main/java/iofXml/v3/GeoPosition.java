@@ -8,13 +8,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a geographical position, e.g. of a control.
  * 
- *         Defines a geographical position, e.g. of a control.
- *       
+ * <p>Java class for GeoPosition complex type</p>.
  * 
- * <p>Java class for GeoPosition complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="GeoPosition">
@@ -34,15 +32,27 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GeoPosition")
 public class GeoPosition {
 
+    /**
+     * The longitude.
+     * 
+     */
     @XmlAttribute(name = "lng", required = true)
     protected double lng;
+    /**
+     * The latitude.
+     * 
+     */
     @XmlAttribute(name = "lat", required = true)
     protected double lat;
+    /**
+     * The altitude (elevation above sea level), in meters.
+     * 
+     */
     @XmlAttribute(name = "alt")
     protected Double alt;
 
     /**
-     * Gets the value of the lng property.
+     * The longitude.
      * 
      */
     public double getLng() {
@@ -58,7 +68,7 @@ public class GeoPosition {
     }
 
     /**
-     * Gets the value of the lat property.
+     * The latitude.
      * 
      */
     public double getLat() {
@@ -74,7 +84,7 @@ public class GeoPosition {
     }
 
     /**
-     * Gets the value of the alt property.
+     * The altitude (elevation above sea level), in meters.
      * 
      * @return
      *     possible object is
@@ -92,6 +102,7 @@ public class GeoPosition {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getAlt()
      */
     public void setAlt(Double value) {
         this.alt = value;

@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Defines an image file, either as a link (use the url attribute) or as base64-encoded binary data.
  * 
- *           Defines an image file, either as a link (use the url attribute) or as base64-encoded binary data.
- *         
+ * <p>Java class for Image complex type</p>.
  * 
- * <p>Java class for Image complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Image">
@@ -42,14 +40,34 @@ public class Image {
 
     @XmlValue
     protected byte[] value;
+    /**
+     * The url to the image if it is stored externally (i.e. not as base64-encoded binary data).
+     * 
+     */
     @XmlAttribute(name = "url")
     protected String url;
+    /**
+     * The type of the image file, e.g. image/jpeg. Refer to https://www.iana.org/assignments/media-types/media-types.xhtml#image for available media types.
+     * 
+     */
     @XmlAttribute(name = "mediaType", required = true)
     protected String mediaType;
+    /**
+     * The width of the image in pixels.
+     * 
+     */
     @XmlAttribute(name = "width")
     protected BigInteger width;
+    /**
+     * The height of the image in pixels.
+     * 
+     */
     @XmlAttribute(name = "height")
     protected BigInteger height;
+    /**
+     * The resolution of the image in dpi.
+     * 
+     */
     @XmlAttribute(name = "resolution")
     protected Double resolution;
 
@@ -76,7 +94,7 @@ public class Image {
     }
 
     /**
-     * Gets the value of the url property.
+     * The url to the image if it is stored externally (i.e. not as base64-encoded binary data).
      * 
      * @return
      *     possible object is
@@ -94,13 +112,14 @@ public class Image {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getUrl()
      */
     public void setUrl(String value) {
         this.url = value;
     }
 
     /**
-     * Gets the value of the mediaType property.
+     * The type of the image file, e.g. image/jpeg. Refer to https://www.iana.org/assignments/media-types/media-types.xhtml#image for available media types.
      * 
      * @return
      *     possible object is
@@ -118,13 +137,14 @@ public class Image {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getMediaType()
      */
     public void setMediaType(String value) {
         this.mediaType = value;
     }
 
     /**
-     * Gets the value of the width property.
+     * The width of the image in pixels.
      * 
      * @return
      *     possible object is
@@ -142,13 +162,14 @@ public class Image {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getWidth()
      */
     public void setWidth(BigInteger value) {
         this.width = value;
     }
 
     /**
-     * Gets the value of the height property.
+     * The height of the image in pixels.
      * 
      * @return
      *     possible object is
@@ -166,13 +187,14 @@ public class Image {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getHeight()
      */
     public void setHeight(BigInteger value) {
         this.height = value;
     }
 
     /**
-     * Gets the value of the resolution property.
+     * The resolution of the image in dpi.
      * 
      * @return
      *     possible object is
@@ -190,6 +212,7 @@ public class Image {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getResolution()
      */
     public void setResolution(Double value) {
         this.resolution = value;

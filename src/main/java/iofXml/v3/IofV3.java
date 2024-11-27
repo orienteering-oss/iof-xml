@@ -9,9 +9,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -52,29 +52,69 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "IofV3")
 public class IofV3 {
 
+    /**
+     * A list of competitors. This is used to exchange a "brutto" list of possible competitors. This should not be used to exchange entries; use EntryList instead.
+     * 
+     */
     @XmlElement(name = "CompetitorList")
     protected CompetitorList competitorList;
+    /**
+     * A list of organisations, including address and contact information.
+     * 
+     */
     @XmlElement(name = "OrganisationList")
     protected OrganisationList organisationList;
+    /**
+     * A list of events. This can be used to exchange fixtures.
+     * 
+     */
     @XmlElement(name = "EventList")
     protected EventList eventList;
+    /**
+     * A list of classes.
+     * 
+     */
     @XmlElement(name = "ClassList")
     protected ClassList classList;
+    /**
+     * A list of persons and/or teams which are registered for a particular event.
+     * 
+     */
     @XmlElement(name = "EntryList")
     protected EntryList entryList;
+    /**
+     * This element defines all the control and course information for an event or race. Used when transferring courses from course-setting software to event administration software.
+     * 
+     */
     @XmlElement(name = "CourseData")
     protected CourseData courseData;
+    /**
+     * Contains information about the start lists for the classes in an event.
+     * 
+     */
     @XmlElement(name = "StartList")
     protected StartList startList;
+    /**
+     * Contains information about the result lists for the classes in an event.
+     * 
+     */
     @XmlElement(name = "ResultList")
     protected ResultList resultList;
+    /**
+     * A list of service requests.
+     * 
+     */
     @XmlElement(name = "ServiceRequestList")
     protected ServiceRequestList serviceRequestList;
+    /**
+     * Defines control card ownership, e.g. for rental control card handling purposes.
+     * 
+     */
     @XmlElement(name = "ControlCardList")
     protected ControlCardList controlCardList;
 
     /**
-     * Gets the value of the competitorList property.
+     * A list of competitors. This is used to exchange a "brutto" list of possible competitors. This should not be used to exchange entries; use EntryList instead.
      * 
      * @return
      *     possible object is
@@ -92,13 +132,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link CompetitorList }
      *     
+     * @see #getCompetitorList()
      */
     public void setCompetitorList(CompetitorList value) {
         this.competitorList = value;
     }
 
     /**
-     * Gets the value of the organisationList property.
+     * A list of organisations, including address and contact information.
      * 
      * @return
      *     possible object is
@@ -116,13 +157,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link OrganisationList }
      *     
+     * @see #getOrganisationList()
      */
     public void setOrganisationList(OrganisationList value) {
         this.organisationList = value;
     }
 
     /**
-     * Gets the value of the eventList property.
+     * A list of events. This can be used to exchange fixtures.
      * 
      * @return
      *     possible object is
@@ -140,13 +182,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link EventList }
      *     
+     * @see #getEventList()
      */
     public void setEventList(EventList value) {
         this.eventList = value;
     }
 
     /**
-     * Gets the value of the classList property.
+     * A list of classes.
      * 
      * @return
      *     possible object is
@@ -164,13 +207,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link ClassList }
      *     
+     * @see #getClassList()
      */
     public void setClassList(ClassList value) {
         this.classList = value;
     }
 
     /**
-     * Gets the value of the entryList property.
+     * A list of persons and/or teams which are registered for a particular event.
      * 
      * @return
      *     possible object is
@@ -188,13 +232,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link EntryList }
      *     
+     * @see #getEntryList()
      */
     public void setEntryList(EntryList value) {
         this.entryList = value;
     }
 
     /**
-     * Gets the value of the courseData property.
+     * This element defines all the control and course information for an event or race. Used when transferring courses from course-setting software to event administration software.
      * 
      * @return
      *     possible object is
@@ -212,13 +257,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link CourseData }
      *     
+     * @see #getCourseData()
      */
     public void setCourseData(CourseData value) {
         this.courseData = value;
     }
 
     /**
-     * Gets the value of the startList property.
+     * Contains information about the start lists for the classes in an event.
      * 
      * @return
      *     possible object is
@@ -236,13 +282,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link StartList }
      *     
+     * @see #getStartList()
      */
     public void setStartList(StartList value) {
         this.startList = value;
     }
 
     /**
-     * Gets the value of the resultList property.
+     * Contains information about the result lists for the classes in an event.
      * 
      * @return
      *     possible object is
@@ -260,13 +307,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link ResultList }
      *     
+     * @see #getResultList()
      */
     public void setResultList(ResultList value) {
         this.resultList = value;
     }
 
     /**
-     * Gets the value of the serviceRequestList property.
+     * A list of service requests.
      * 
      * @return
      *     possible object is
@@ -284,13 +332,14 @@ public class IofV3 {
      *     allowed object is
      *     {@link ServiceRequestList }
      *     
+     * @see #getServiceRequestList()
      */
     public void setServiceRequestList(ServiceRequestList value) {
         this.serviceRequestList = value;
     }
 
     /**
-     * Gets the value of the controlCardList property.
+     * Defines control card ownership, e.g. for rental control card handling purposes.
      * 
      * @return
      *     possible object is
@@ -308,6 +357,7 @@ public class IofV3 {
      *     allowed object is
      *     {@link ControlCardList }
      *     
+     * @see #getControlCardList()
      */
     public void setControlCardList(ControlCardList value) {
         this.controlCardList = value;

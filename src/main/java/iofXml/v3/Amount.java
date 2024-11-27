@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Defines a monetary amount.
  * 
- *         Defines a monetary amount.
- *       
+ * <p>Java class for Amount complex type</p>.
  * 
- * <p>Java class for Amount complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Amount">

@@ -8,13 +8,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Element that connects a course with an individual competitor. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Persons are matched by 1) BibNumber, 2) EntryId.
  * 
- *         Element that connects a course with an individual competitor. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Persons are matched by 1) BibNumber, 2) EntryId.
- *       
+ * <p>Java class for PersonCourseAssignment complex type</p>.
  * 
- * <p>Java class for PersonCourseAssignment complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="PersonCourseAssignment">
@@ -48,23 +46,51 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PersonCourseAssignment {
 
+    /**
+     * The id corresponding to this person's entry in an EntryList.
+     * 
+     */
     @XmlElement(name = "EntryId")
     protected Id entryId;
+    /**
+     * The bib number of the person.
+     * 
+     */
     @XmlElement(name = "BibNumber")
     protected String bibNumber;
+    /**
+     * The name of the person.
+     * 
+     */
     @XmlElement(name = "PersonName")
     protected String personName;
+    /**
+     * The name of the class that the person belongs to.
+     * 
+     */
     @XmlElement(name = "ClassName")
     protected String className;
+    /**
+     * The name of the course.
+     * 
+     */
     @XmlElement(name = "CourseName")
     protected String courseName;
+    /**
+     * The family or group of forked courses that the course is part of.
+     * 
+     */
     @XmlElement(name = "CourseFamily")
     protected String courseFamily;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
     /**
-     * Gets the value of the entryId property.
+     * The id corresponding to this person's entry in an EntryList.
      * 
      * @return
      *     possible object is
@@ -82,13 +108,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link Id }
      *     
+     * @see #getEntryId()
      */
     public void setEntryId(Id value) {
         this.entryId = value;
     }
 
     /**
-     * Gets the value of the bibNumber property.
+     * The bib number of the person.
      * 
      * @return
      *     possible object is
@@ -106,13 +133,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getBibNumber()
      */
     public void setBibNumber(String value) {
         this.bibNumber = value;
     }
 
     /**
-     * Gets the value of the personName property.
+     * The name of the person.
      * 
      * @return
      *     possible object is
@@ -130,13 +158,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getPersonName()
      */
     public void setPersonName(String value) {
         this.personName = value;
     }
 
     /**
-     * Gets the value of the className property.
+     * The name of the class that the person belongs to.
      * 
      * @return
      *     possible object is
@@ -154,13 +183,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getClassName()
      */
     public void setClassName(String value) {
         this.className = value;
     }
 
     /**
-     * Gets the value of the courseName property.
+     * The name of the course.
      * 
      * @return
      *     possible object is
@@ -178,13 +208,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseName()
      */
     public void setCourseName(String value) {
         this.courseName = value;
     }
 
     /**
-     * Gets the value of the courseFamily property.
+     * The family or group of forked courses that the course is part of.
      * 
      * @return
      *     possible object is
@@ -202,13 +233,14 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseFamily()
      */
     public void setCourseFamily(String value) {
         this.courseFamily = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -226,6 +258,7 @@ public class PersonCourseAssignment {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

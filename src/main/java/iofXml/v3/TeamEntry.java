@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines an event entry for a team.
  * 
- *         Defines an event entry for a team.
- *       
+ * <p>Java class for TeamEntry complex type</p>.
  * 
- * <p>Java class for TeamEntry complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="TeamEntry">
@@ -67,27 +65,71 @@ public class TeamEntry {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the team. If a relay, this is probably the name of the club optionally followed by a sequence number to distinguish teams from the same club in a class.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The organisation(s) that the team represents.
+     * 
+     */
     @XmlElement(name = "Organisation")
     protected List<Organisation> organisation;
+    /**
+     * The persons that make up the team.
+     * 
+     */
     @XmlElement(name = "TeamEntryPerson")
     protected List<TeamEntryPerson> teamEntryPerson;
+    /**
+     * The class(es) the team wants to take part in. Multiple classes may be provided in order of preference in scenarios where the number of competitors are limited in some classes.
+     * 
+     */
     @XmlElement(name = "Class")
     protected List<Class> clazz;
+    /**
+     * The numbers of the races that the team is taking part in. If not specified, team person takes part in all races.
+     * 
+     */
     @XmlElement(name = "Race")
     protected List<BigInteger> race;
+    /**
+     * The fees that the team as a whole has to pay when entering the event. In a multi-race event, there is usually one element for each race. If there are differentated fees for the team members, specify them in the TeamEntryPerson elements.
+     * 
+     */
     @XmlElement(name = "AssignedFee")
     protected List<AssignedFee> assignedFee;
+    /**
+     * Defines the services requested by the team.
+     * 
+     */
     @XmlElement(name = "ServiceRequest")
     protected List<ServiceRequest> serviceRequest;
+    /**
+     * Any special preferences regarding start time that has to be taken into consideration when making the start list draw.
+     * 
+     */
     @XmlElement(name = "StartTimeAllocationRequest")
     protected StartTimeAllocationRequest startTimeAllocationRequest;
+    /**
+     * Contact information (name and e.g. mobile phone number) to a team leader or coach, expressed as plain text.
+     * 
+     */
     @XmlElement(name = "ContactInformation")
     protected String contactInformation;
+    /**
+     * The time when the entry was first submitted.
+     * 
+     */
     @XmlElement(name = "EntryTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar entryTime;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -119,7 +161,7 @@ public class TeamEntry {
     }
 
     /**
-     * Gets the value of the name property.
+     * The name of the team. If a relay, this is probably the name of the club optionally followed by a sequence number to distinguish teams from the same club in a class.
      * 
      * @return
      *     possible object is
@@ -137,30 +179,34 @@ public class TeamEntry {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
+     * The organisation(s) that the team represents.
+     * 
      * Gets the value of the organisation property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organisation property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organisation property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisation().add(newItem);
+     * getOrganisation().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Organisation }
+     * </p>
      * 
      * 
      * @return
@@ -174,24 +220,27 @@ public class TeamEntry {
     }
 
     /**
+     * The persons that make up the team.
+     * 
      * Gets the value of the teamEntryPerson property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamEntryPerson property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamEntryPerson property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamEntryPerson().add(newItem);
+     * getTeamEntryPerson().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamEntryPerson }
+     * </p>
      * 
      * 
      * @return
@@ -205,24 +254,27 @@ public class TeamEntry {
     }
 
     /**
+     * The class(es) the team wants to take part in. Multiple classes may be provided in order of preference in scenarios where the number of competitors are limited in some classes.
+     * 
      * Gets the value of the clazz property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the clazz property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the clazz property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClazz().add(newItem);
+     * getClazz().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Class }
+     * </p>
      * 
      * 
      * @return
@@ -236,24 +288,27 @@ public class TeamEntry {
     }
 
     /**
+     * The numbers of the races that the team is taking part in. If not specified, team person takes part in all races.
+     * 
      * Gets the value of the race property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the race property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the race property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getRace().add(newItem);
+     * getRace().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BigInteger }
+     * </p>
      * 
      * 
      * @return
@@ -267,24 +322,27 @@ public class TeamEntry {
     }
 
     /**
+     * The fees that the team as a whole has to pay when entering the event. In a multi-race event, there is usually one element for each race. If there are differentated fees for the team members, specify them in the TeamEntryPerson elements.
+     * 
      * Gets the value of the assignedFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the assignedFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAssignedFee().add(newItem);
+     * getAssignedFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
+     * </p>
      * 
      * 
      * @return
@@ -298,24 +356,27 @@ public class TeamEntry {
     }
 
     /**
+     * Defines the services requested by the team.
+     * 
      * Gets the value of the serviceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceRequest().add(newItem);
+     * getServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -329,7 +390,7 @@ public class TeamEntry {
     }
 
     /**
-     * Gets the value of the startTimeAllocationRequest property.
+     * Any special preferences regarding start time that has to be taken into consideration when making the start list draw.
      * 
      * @return
      *     possible object is
@@ -347,13 +408,14 @@ public class TeamEntry {
      *     allowed object is
      *     {@link StartTimeAllocationRequest }
      *     
+     * @see #getStartTimeAllocationRequest()
      */
     public void setStartTimeAllocationRequest(StartTimeAllocationRequest value) {
         this.startTimeAllocationRequest = value;
     }
 
     /**
-     * Gets the value of the contactInformation property.
+     * Contact information (name and e.g. mobile phone number) to a team leader or coach, expressed as plain text.
      * 
      * @return
      *     possible object is
@@ -371,13 +433,14 @@ public class TeamEntry {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContactInformation()
      */
     public void setContactInformation(String value) {
         this.contactInformation = value;
     }
 
     /**
-     * Gets the value of the entryTime property.
+     * The time when the entry was first submitted.
      * 
      * @return
      *     possible object is
@@ -395,13 +458,14 @@ public class TeamEntry {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getEntryTime()
      */
     public void setEntryTime(XMLGregorianCalendar value) {
         this.entryTime = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -419,6 +483,7 @@ public class TeamEntry {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

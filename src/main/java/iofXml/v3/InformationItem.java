@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a general-purpose information object containing a title and content.
  * 
- *         Defines a general-purpose information object containing a title and content.
- *       
+ * <p>Java class for InformationItem complex type</p>.
  * 
- * <p>Java class for InformationItem complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="InformationItem">
@@ -42,8 +40,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class InformationItem {
 
+    /**
+     * A short summary of the information.
+     * 
+     */
     @XmlElement(name = "Title", required = true)
     protected String title;
+    /**
+     * The information in detailed form.
+     * 
+     */
     @XmlElement(name = "Content", required = true)
     protected String content;
     @XmlAttribute(name = "modifyTime")
@@ -51,7 +57,7 @@ public class InformationItem {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the title property.
+     * A short summary of the information.
      * 
      * @return
      *     possible object is
@@ -69,13 +75,14 @@ public class InformationItem {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getTitle()
      */
     public void setTitle(String value) {
         this.title = value;
     }
 
     /**
-     * Gets the value of the content property.
+     * The information in detailed form.
      * 
      * @return
      *     possible object is
@@ -93,6 +100,7 @@ public class InformationItem {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContent()
      */
     public void setContent(String value) {
         this.content = value;

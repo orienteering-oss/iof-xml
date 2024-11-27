@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Represents information about a person in a competition context, i.e. including organisation and control card.
  * 
- *         Represents information about a person in a competition context, i.e. including organisation and control card.
- *       
+ * <p>Java class for Competitor complex type</p>.
  * 
- * <p>Java class for Competitor complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Competitor">
@@ -54,14 +52,34 @@ public class Competitor {
 
     @XmlElement(name = "Person", required = true)
     protected Person person;
+    /**
+     * The organisations that the person is member of.
+     * 
+     */
     @XmlElement(name = "Organisation")
     protected List<Organisation> organisation;
+    /**
+     * The default control cards of the competitor.
+     * 
+     */
     @XmlElement(name = "ControlCard")
     protected List<ControlCard> controlCard;
+    /**
+     * The default classes of the competitor.
+     * 
+     */
     @XmlElement(name = "Class")
     protected List<Class> clazz;
+    /**
+     * Any scores, e.g. ranking scores, for the person.
+     * 
+     */
     @XmlElement(name = "Score")
     protected List<Score> score;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -93,24 +111,27 @@ public class Competitor {
     }
 
     /**
+     * The organisations that the person is member of.
+     * 
      * Gets the value of the organisation property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organisation property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organisation property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisation().add(newItem);
+     * getOrganisation().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Organisation }
+     * </p>
      * 
      * 
      * @return
@@ -124,24 +145,27 @@ public class Competitor {
     }
 
     /**
+     * The default control cards of the competitor.
+     * 
      * Gets the value of the controlCard property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the controlCard property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the controlCard property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getControlCard().add(newItem);
+     * getControlCard().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
+     * </p>
      * 
      * 
      * @return
@@ -155,24 +179,27 @@ public class Competitor {
     }
 
     /**
+     * The default classes of the competitor.
+     * 
      * Gets the value of the clazz property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the clazz property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the clazz property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClazz().add(newItem);
+     * getClazz().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Class }
+     * </p>
      * 
      * 
      * @return
@@ -186,24 +213,27 @@ public class Competitor {
     }
 
     /**
+     * Any scores, e.g. ranking scores, for the person.
+     * 
      * Gets the value of the score property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the score property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the score property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getScore().add(newItem);
+     * getScore().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Score }
+     * </p>
      * 
      * 
      * @return
@@ -217,7 +247,7 @@ public class Competitor {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -235,6 +265,7 @@ public class Competitor {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

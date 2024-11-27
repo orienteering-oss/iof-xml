@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Used to state start time allocation requests. It consists of a possible reference Organisation or Person and the allocation request, e.g. late start or grouped with the reference Organisation/Person. This way it is possible to state requests to the event organizer so that e.g. all members of an organisation has start times close to each other - or parents have start times far from each other. It is totally up to the event software and organizers whether they will support such requests.
  * 
- *         Used to state start time allocation requests. It consists of a possible reference Organisation or Person and the allocation request, e.g. late start or grouped with the reference Organisation/Person. This way it is possible to state requests to the event organizer so that e.g. all members of an organisation has start times close to each other - or parents have start times far from each other. It is totally up to the event software and organizers whether they will support such requests.
- *       
+ * <p>Java class for StartTimeAllocationRequest complex type</p>.
  * 
- * <p>Java class for StartTimeAllocationRequest complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="StartTimeAllocationRequest">
@@ -52,16 +50,28 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StartTimeAllocationRequest {
 
+    /**
+     * The reference organisation for the start time allocation request.
+     * 
+     */
     @XmlElement(name = "Organisation")
     protected Organisation organisation;
+    /**
+     * The reference person for the start time allocation request.
+     * 
+     */
     @XmlElement(name = "Person")
     protected Person person;
+    /**
+     * The type of start time allocation request.
+     * 
+     */
     @XmlAttribute(name = "type")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String type;
 
     /**
-     * Gets the value of the organisation property.
+     * The reference organisation for the start time allocation request.
      * 
      * @return
      *     possible object is
@@ -79,13 +89,14 @@ public class StartTimeAllocationRequest {
      *     allowed object is
      *     {@link Organisation }
      *     
+     * @see #getOrganisation()
      */
     public void setOrganisation(Organisation value) {
         this.organisation = value;
     }
 
     /**
-     * Gets the value of the person property.
+     * The reference person for the start time allocation request.
      * 
      * @return
      *     possible object is
@@ -103,13 +114,14 @@ public class StartTimeAllocationRequest {
      *     allowed object is
      *     {@link Person }
      *     
+     * @see #getPerson()
      */
     public void setPerson(Person value) {
         this.person = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * The type of start time allocation request.
      * 
      * @return
      *     possible object is
@@ -131,6 +143,7 @@ public class StartTimeAllocationRequest {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

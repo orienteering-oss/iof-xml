@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Contains information about a fee that has been assigned to a competitor or a team, and the amount that has been paid.
  * 
- *         Contains information about a fee that has been assigned to a competitor or a team, and the amount that has been paid.
- *       
+ * <p>Java class for AssignedFee complex type</p>.
  * 
- * <p>Java class for AssignedFee complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="AssignedFee">
@@ -44,10 +42,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AssignedFee {
 
+    /**
+     * The fee that has been assigned to the competitor or the team.
+     * 
+     */
     @XmlElement(name = "Fee", required = true)
     protected Fee fee;
+    /**
+     * The amount that has been paid, optionally including currency code.
+     * 
+     */
     @XmlElement(name = "PaidAmount")
     protected Amount paidAmount;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -55,7 +65,7 @@ public class AssignedFee {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the fee property.
+     * The fee that has been assigned to the competitor or the team.
      * 
      * @return
      *     possible object is
@@ -73,13 +83,14 @@ public class AssignedFee {
      *     allowed object is
      *     {@link Fee }
      *     
+     * @see #getFee()
      */
     public void setFee(Fee value) {
         this.fee = value;
     }
 
     /**
-     * Gets the value of the paidAmount property.
+     * The amount that has been paid, optionally including currency code.
      * 
      * @return
      *     possible object is
@@ -97,13 +108,14 @@ public class AssignedFee {
      *     allowed object is
      *     {@link Amount }
      *     
+     * @see #getPaidAmount()
      */
     public void setPaidAmount(Amount value) {
         this.paidAmount = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -121,6 +133,7 @@ public class AssignedFee {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

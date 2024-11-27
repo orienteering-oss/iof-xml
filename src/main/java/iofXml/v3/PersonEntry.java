@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines an event entry for a person.
  * 
- *         Defines an event entry for a person.
- *       
+ * <p>Java class for PersonEntry complex type</p>.
  * 
- * <p>Java class for PersonEntry complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="PersonEntry">
@@ -67,27 +65,71 @@ public class PersonEntry {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The person that is entered.
+     * 
+     */
     @XmlElement(name = "Person", required = true)
     protected Person person;
+    /**
+     * The organisation that the person represents at the event.
+     * 
+     */
     @XmlElement(name = "Organisation")
     protected Organisation organisation;
+    /**
+     * Information about the control cards (punching cards) that the person uses at the event. Multiple control cards can be specified, e.g. one for punch checking and another for timing.
+     * 
+     */
     @XmlElement(name = "ControlCard")
     protected List<ControlCard> controlCard;
+    /**
+     * Any score that is submitted together with the entry, e.g. World Ranking points.
+     * 
+     */
     @XmlElement(name = "Score")
     protected List<Score> score;
+    /**
+     * The class(es) the person wants to take part in. Multiple classes may be provided in order of preference in scenarios where the number of competitors are limited in some classes.
+     * 
+     */
     @XmlElement(name = "Class")
     protected List<Class> clazz;
+    /**
+     * The ordinal numbers of the races that the person is taking part in, starting at 1. If not specified, the person takes part in all races.
+     * 
+     */
     @XmlElement(name = "RaceNumber")
     protected List<BigInteger> raceNumber;
+    /**
+     * The fees that the person has to pay when entering the event. In a multi-race event, there is usually one element for each race.
+     * 
+     */
     @XmlElement(name = "AssignedFee")
     protected List<AssignedFee> assignedFee;
+    /**
+     * Defines the services requested by the person.
+     * 
+     */
     @XmlElement(name = "ServiceRequest")
     protected List<ServiceRequest> serviceRequest;
+    /**
+     * Any special preferences regarding start time that has to be taken into consideration when making the start list draw.
+     * 
+     */
     @XmlElement(name = "StartTimeAllocationRequest")
     protected StartTimeAllocationRequest startTimeAllocationRequest;
+    /**
+     * The time when the entry was first submitted.
+     * 
+     */
     @XmlElement(name = "EntryTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar entryTime;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -119,7 +161,7 @@ public class PersonEntry {
     }
 
     /**
-     * Gets the value of the person property.
+     * The person that is entered.
      * 
      * @return
      *     possible object is
@@ -137,13 +179,14 @@ public class PersonEntry {
      *     allowed object is
      *     {@link Person }
      *     
+     * @see #getPerson()
      */
     public void setPerson(Person value) {
         this.person = value;
     }
 
     /**
-     * Gets the value of the organisation property.
+     * The organisation that the person represents at the event.
      * 
      * @return
      *     possible object is
@@ -161,30 +204,34 @@ public class PersonEntry {
      *     allowed object is
      *     {@link Organisation }
      *     
+     * @see #getOrganisation()
      */
     public void setOrganisation(Organisation value) {
         this.organisation = value;
     }
 
     /**
+     * Information about the control cards (punching cards) that the person uses at the event. Multiple control cards can be specified, e.g. one for punch checking and another for timing.
+     * 
      * Gets the value of the controlCard property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the controlCard property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the controlCard property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getControlCard().add(newItem);
+     * getControlCard().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
+     * </p>
      * 
      * 
      * @return
@@ -198,24 +245,27 @@ public class PersonEntry {
     }
 
     /**
+     * Any score that is submitted together with the entry, e.g. World Ranking points.
+     * 
      * Gets the value of the score property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the score property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the score property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getScore().add(newItem);
+     * getScore().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Score }
+     * </p>
      * 
      * 
      * @return
@@ -229,24 +279,27 @@ public class PersonEntry {
     }
 
     /**
+     * The class(es) the person wants to take part in. Multiple classes may be provided in order of preference in scenarios where the number of competitors are limited in some classes.
+     * 
      * Gets the value of the clazz property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the clazz property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the clazz property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClazz().add(newItem);
+     * getClazz().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Class }
+     * </p>
      * 
      * 
      * @return
@@ -260,24 +313,27 @@ public class PersonEntry {
     }
 
     /**
+     * The ordinal numbers of the races that the person is taking part in, starting at 1. If not specified, the person takes part in all races.
+     * 
      * Gets the value of the raceNumber property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the raceNumber property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the raceNumber property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getRaceNumber().add(newItem);
+     * getRaceNumber().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BigInteger }
+     * </p>
      * 
      * 
      * @return
@@ -291,24 +347,27 @@ public class PersonEntry {
     }
 
     /**
+     * The fees that the person has to pay when entering the event. In a multi-race event, there is usually one element for each race.
+     * 
      * Gets the value of the assignedFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the assignedFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAssignedFee().add(newItem);
+     * getAssignedFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
+     * </p>
      * 
      * 
      * @return
@@ -322,24 +381,27 @@ public class PersonEntry {
     }
 
     /**
+     * Defines the services requested by the person.
+     * 
      * Gets the value of the serviceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceRequest().add(newItem);
+     * getServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -353,7 +415,7 @@ public class PersonEntry {
     }
 
     /**
-     * Gets the value of the startTimeAllocationRequest property.
+     * Any special preferences regarding start time that has to be taken into consideration when making the start list draw.
      * 
      * @return
      *     possible object is
@@ -371,13 +433,14 @@ public class PersonEntry {
      *     allowed object is
      *     {@link StartTimeAllocationRequest }
      *     
+     * @see #getStartTimeAllocationRequest()
      */
     public void setStartTimeAllocationRequest(StartTimeAllocationRequest value) {
         this.startTimeAllocationRequest = value;
     }
 
     /**
-     * Gets the value of the entryTime property.
+     * The time when the entry was first submitted.
      * 
      * @return
      *     possible object is
@@ -395,13 +458,14 @@ public class PersonEntry {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getEntryTime()
      */
     public void setEntryTime(XMLGregorianCalendar value) {
         this.entryTime = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -419,6 +483,7 @@ public class PersonEntry {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

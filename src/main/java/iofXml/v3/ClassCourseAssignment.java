@@ -12,13 +12,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Element that connects a course with a class. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Classes are matched by 1) Id, 2) Name.
  * 
- *         Element that connects a course with a class. Courses should be present in the RaceCourseData element and are matched on course name and/or course family. Classes are matched by 1) Id, 2) Name.
- *       
+ * <p>Java class for ClassCourseAssignment complex type</p>.
  * 
- * <p>Java class for ClassCourseAssignment complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ClassCourseAssignment">
@@ -51,23 +49,51 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ClassCourseAssignment {
 
+    /**
+     * The id of the class.
+     * 
+     */
     @XmlElement(name = "ClassId")
     protected Id classId;
+    /**
+     * The name of the class.
+     * 
+     */
     @XmlElement(name = "ClassName", required = true)
     protected String className;
+    /**
+     * The legs that the course can be assigned to in a relay class. This element can be omitted for individual classes.
+     * 
+     */
     @XmlElement(name = "AllowedOnLeg")
     protected List<BigInteger> allowedOnLeg;
+    /**
+     * The name of the course.
+     * 
+     */
     @XmlElement(name = "CourseName")
     protected String courseName;
+    /**
+     * The family or group of forked courses that the course is part of.
+     * 
+     */
     @XmlElement(name = "CourseFamily")
     protected String courseFamily;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The number of competitors in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event).
+     * 
+     */
     @XmlAttribute(name = "numberOfCompetitors")
     protected BigInteger numberOfCompetitors;
 
     /**
-     * Gets the value of the classId property.
+     * The id of the class.
      * 
      * @return
      *     possible object is
@@ -85,13 +111,14 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link Id }
      *     
+     * @see #getClassId()
      */
     public void setClassId(Id value) {
         this.classId = value;
     }
 
     /**
-     * Gets the value of the className property.
+     * The name of the class.
      * 
      * @return
      *     possible object is
@@ -109,30 +136,34 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getClassName()
      */
     public void setClassName(String value) {
         this.className = value;
     }
 
     /**
+     * The legs that the course can be assigned to in a relay class. This element can be omitted for individual classes.
+     * 
      * Gets the value of the allowedOnLeg property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the allowedOnLeg property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the allowedOnLeg property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAllowedOnLeg().add(newItem);
+     * getAllowedOnLeg().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BigInteger }
+     * </p>
      * 
      * 
      * @return
@@ -146,7 +177,7 @@ public class ClassCourseAssignment {
     }
 
     /**
-     * Gets the value of the courseName property.
+     * The name of the course.
      * 
      * @return
      *     possible object is
@@ -164,13 +195,14 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseName()
      */
     public void setCourseName(String value) {
         this.courseName = value;
     }
 
     /**
-     * Gets the value of the courseFamily property.
+     * The family or group of forked courses that the course is part of.
      * 
      * @return
      *     possible object is
@@ -188,13 +220,14 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseFamily()
      */
     public void setCourseFamily(String value) {
         this.courseFamily = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -212,13 +245,14 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the numberOfCompetitors property.
+     * The number of competitors in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event).
      * 
      * @return
      *     possible object is
@@ -236,6 +270,7 @@ public class ClassCourseAssignment {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getNumberOfCompetitors()
      */
     public void setNumberOfCompetitors(BigInteger value) {
         this.numberOfCompetitors = value;

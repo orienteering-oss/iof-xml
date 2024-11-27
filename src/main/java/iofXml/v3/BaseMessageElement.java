@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * The base message element that all message elements extend.
  * 
- *         The base message element that all message elements extend.
- *       
+ * <p>Java class for BaseMessageElement complex type</p>.
  * 
- * <p>Java class for BaseMessageElement complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="BaseMessageElement">
@@ -49,16 +47,28 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class BaseMessageElement {
 
+    /**
+     * The version of the IOF Interface Standard that the file conforms to.
+     * 
+     */
     @XmlAttribute(name = "iofVersion", required = true)
     protected String iofVersion;
+    /**
+     * The time when the file was created.
+     * 
+     */
     @XmlAttribute(name = "createTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar createTime;
+    /**
+     * The name of the software that created the file.
+     * 
+     */
     @XmlAttribute(name = "creator")
     protected String creator;
 
     /**
-     * Gets the value of the iofVersion property.
+     * The version of the IOF Interface Standard that the file conforms to.
      * 
      * @return
      *     possible object is
@@ -80,13 +90,14 @@ public abstract class BaseMessageElement {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getIofVersion()
      */
     public void setIofVersion(String value) {
         this.iofVersion = value;
     }
 
     /**
-     * Gets the value of the createTime property.
+     * The time when the file was created.
      * 
      * @return
      *     possible object is
@@ -104,13 +115,14 @@ public abstract class BaseMessageElement {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getCreateTime()
      */
     public void setCreateTime(XMLGregorianCalendar value) {
         this.createTime = value;
     }
 
     /**
-     * Gets the value of the creator property.
+     * The name of the software that created the file.
      * 
      * @return
      *     possible object is
@@ -128,6 +140,7 @@ public abstract class BaseMessageElement {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCreator()
      */
     public void setCreator(String value) {
         this.creator = value;

@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * The result list for a single class containing either individual results or team results.
  * 
- *         The result list for a single class containing either individual results or team results.
- *       
+ * <p>Java class for ClassResult complex type</p>.
  * 
- * <p>Java class for ClassResult complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ClassResult">
@@ -51,16 +49,40 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ClassResult {
 
+    /**
+     * The class that the result list belongs to.
+     * 
+     */
     @XmlElement(name = "Class", required = true)
     protected Class clazz;
+    /**
+     * Defines the course assigned to the class. If courses are unique per competitor, use PersonResult/Course or TeamResult/TeamMemberResult/Course instead. One element per race.
+     * 
+     */
     @XmlElement(name = "Course")
     protected List<SimpleRaceCourse> course;
+    /**
+     * Results for individual competitors in the class.
+     * 
+     */
     @XmlElement(name = "PersonResult")
     protected List<PersonResult> personResult;
+    /**
+     * Results for teams in the class.
+     * 
+     */
     @XmlElement(name = "TeamResult")
     protected List<TeamResult> teamResult;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The time resolution of the results, normally 1. For tenths of a second, use 0.1.
+     * 
+     */
     @XmlAttribute(name = "timeResolution")
     protected Double timeResolution;
     @XmlAttribute(name = "modifyTime")
@@ -68,7 +90,7 @@ public class ClassResult {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the clazz property.
+     * The class that the result list belongs to.
      * 
      * @return
      *     possible object is
@@ -86,30 +108,34 @@ public class ClassResult {
      *     allowed object is
      *     {@link Class }
      *     
+     * @see #getClazz()
      */
     public void setClazz(Class value) {
         this.clazz = value;
     }
 
     /**
+     * Defines the course assigned to the class. If courses are unique per competitor, use PersonResult/Course or TeamResult/TeamMemberResult/Course instead. One element per race.
+     * 
      * Gets the value of the course property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the course property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the course property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourse().add(newItem);
+     * getCourse().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SimpleRaceCourse }
+     * </p>
      * 
      * 
      * @return
@@ -123,24 +149,27 @@ public class ClassResult {
     }
 
     /**
+     * Results for individual competitors in the class.
+     * 
      * Gets the value of the personResult property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personResult property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personResult property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonResult().add(newItem);
+     * getPersonResult().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonResult }
+     * </p>
      * 
      * 
      * @return
@@ -154,24 +183,27 @@ public class ClassResult {
     }
 
     /**
+     * Results for teams in the class.
+     * 
      * Gets the value of the teamResult property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamResult property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamResult property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamResult().add(newItem);
+     * getTeamResult().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamResult }
+     * </p>
      * 
      * 
      * @return
@@ -185,7 +217,7 @@ public class ClassResult {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -203,13 +235,14 @@ public class ClassResult {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the timeResolution property.
+     * The time resolution of the results, normally 1. For tenths of a second, use 0.1.
      * 
      * @return
      *     possible object is
@@ -231,6 +264,7 @@ public class ClassResult {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTimeResolution()
      */
     public void setTimeResolution(Double value) {
         this.timeResolution = value;

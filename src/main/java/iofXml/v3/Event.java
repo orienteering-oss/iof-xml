@@ -13,9 +13,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Event complex type.
+ * <p>Java class for Event complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Event">
@@ -78,41 +78,105 @@ public class Event {
     protected Id id;
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The start time for the first starting competitor of the event. If the event contains multiple races, this is the start time for the first starting competitor of the first race.
+     * 
+     */
     @XmlElement(name = "StartTime")
     protected DateAndOptionalTime startTime;
+    /**
+     * The expected finish time for the last finishing competitor of the event. If the event contains multiple races, this is the expected finish time for the last finishing competitor of the last race.
+     * 
+     */
     @XmlElement(name = "EndTime")
     protected DateAndOptionalTime endTime;
+    /**
+     * The status of the event. If the event is a multi-race event, and status is set per race, use the Status element of the Race element.
+     * 
+     */
     @XmlElement(name = "Status")
     @XmlSchemaType(name = "NMTOKEN")
     protected EventStatus status;
+    /**
+     * The classification or level of the event. If the event is a multi-race event, and classification is set per race, use the Classification element of the Race element.
+     * 
+     */
     @XmlElement(name = "Classification")
     @XmlSchemaType(name = "NMTOKEN")
     protected EventClassification classification;
     @XmlElement(name = "Form")
     @XmlSchemaType(name = "NMTOKEN")
     protected List<EventForm> form;
+    /**
+     * The organisations that organise the event.
+     * 
+     */
     @XmlElement(name = "Organiser")
     protected List<Organisation> organiser;
+    /**
+     * The main officials of the event, e.g. course setter and event president.
+     * 
+     */
     @XmlElement(name = "Official")
     protected List<Role> official;
+    /**
+     * The classes that are available at the event.
+     * 
+     */
     @XmlElement(name = "Class")
     protected List<Class> clazz;
+    /**
+     * An event consists of a number of races. The number is equal to the number of times a competitor should start. Most events contain a single race, and this elemend could then be omitted.
+     * 
+     */
     @XmlElement(name = "Race")
     protected List<Race> race;
+    /**
+     * Address and contact information to the person or organisation which registers the entries for the event.
+     * 
+     */
     @XmlElement(name = "EntryReceiver")
     protected EntryReceiver entryReceiver;
+    /**
+     * The services available for the event, e.g. accomodation and transport.
+     * 
+     */
     @XmlElement(name = "Service")
     protected List<Service> service;
+    /**
+     * The bank account for the event.
+     * 
+     */
     @XmlElement(name = "Account")
     protected List<Account> account;
+    /**
+     * URLs to various types of additional information regarding the event, e.g. event website or result list.
+     * 
+     */
     @XmlElement(name = "URL")
     protected List<EventURL> url;
+    /**
+     * Presents arbitrary data about the event, e.g. "Accommodation", "Local Attractions", and so on. Information present here should be defined well in advance of the event, in contrast to the 'News' element.
+     * 
+     */
     @XmlElement(name = "Information")
     protected List<InformationItem> information;
+    /**
+     * Defines the schedule of events that comprise the entire orienteering event, e.g. entry deadlines, banquet and social events, and awards ceremonies.
+     * 
+     */
     @XmlElement(name = "Schedule")
     protected List<Schedule> schedule;
+    /**
+     * Presents "last minute information" about the event.
+     * 
+     */
     @XmlElement(name = "News")
     protected List<InformationItem> news;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -168,7 +232,7 @@ public class Event {
     }
 
     /**
-     * Gets the value of the startTime property.
+     * The start time for the first starting competitor of the event. If the event contains multiple races, this is the start time for the first starting competitor of the first race.
      * 
      * @return
      *     possible object is
@@ -186,13 +250,14 @@ public class Event {
      *     allowed object is
      *     {@link DateAndOptionalTime }
      *     
+     * @see #getStartTime()
      */
     public void setStartTime(DateAndOptionalTime value) {
         this.startTime = value;
     }
 
     /**
-     * Gets the value of the endTime property.
+     * The expected finish time for the last finishing competitor of the event. If the event contains multiple races, this is the expected finish time for the last finishing competitor of the last race.
      * 
      * @return
      *     possible object is
@@ -210,13 +275,14 @@ public class Event {
      *     allowed object is
      *     {@link DateAndOptionalTime }
      *     
+     * @see #getEndTime()
      */
     public void setEndTime(DateAndOptionalTime value) {
         this.endTime = value;
     }
 
     /**
-     * Gets the value of the status property.
+     * The status of the event. If the event is a multi-race event, and status is set per race, use the Status element of the Race element.
      * 
      * @return
      *     possible object is
@@ -234,13 +300,14 @@ public class Event {
      *     allowed object is
      *     {@link EventStatus }
      *     
+     * @see #getStatus()
      */
     public void setStatus(EventStatus value) {
         this.status = value;
     }
 
     /**
-     * Gets the value of the classification property.
+     * The classification or level of the event. If the event is a multi-race event, and classification is set per race, use the Classification element of the Race element.
      * 
      * @return
      *     possible object is
@@ -258,6 +325,7 @@ public class Event {
      *     allowed object is
      *     {@link EventClassification }
      *     
+     * @see #getClassification()
      */
     public void setClassification(EventClassification value) {
         this.classification = value;
@@ -266,22 +334,23 @@ public class Event {
     /**
      * Gets the value of the form property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the form property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the form property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getForm().add(newItem);
+     * getForm().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventForm }
+     * </p>
      * 
      * 
      * @return
@@ -295,24 +364,27 @@ public class Event {
     }
 
     /**
+     * The organisations that organise the event.
+     * 
      * Gets the value of the organiser property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organiser property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organiser property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganiser().add(newItem);
+     * getOrganiser().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Organisation }
+     * </p>
      * 
      * 
      * @return
@@ -326,24 +398,27 @@ public class Event {
     }
 
     /**
+     * The main officials of the event, e.g. course setter and event president.
+     * 
      * Gets the value of the official property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the official property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the official property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOfficial().add(newItem);
+     * getOfficial().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Role }
+     * </p>
      * 
      * 
      * @return
@@ -357,24 +432,27 @@ public class Event {
     }
 
     /**
+     * The classes that are available at the event.
+     * 
      * Gets the value of the clazz property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the clazz property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the clazz property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClazz().add(newItem);
+     * getClazz().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Class }
+     * </p>
      * 
      * 
      * @return
@@ -388,24 +466,27 @@ public class Event {
     }
 
     /**
+     * An event consists of a number of races. The number is equal to the number of times a competitor should start. Most events contain a single race, and this elemend could then be omitted.
+     * 
      * Gets the value of the race property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the race property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the race property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getRace().add(newItem);
+     * getRace().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Race }
+     * </p>
      * 
      * 
      * @return
@@ -419,7 +500,7 @@ public class Event {
     }
 
     /**
-     * Gets the value of the entryReceiver property.
+     * Address and contact information to the person or organisation which registers the entries for the event.
      * 
      * @return
      *     possible object is
@@ -437,30 +518,34 @@ public class Event {
      *     allowed object is
      *     {@link EntryReceiver }
      *     
+     * @see #getEntryReceiver()
      */
     public void setEntryReceiver(EntryReceiver value) {
         this.entryReceiver = value;
     }
 
     /**
+     * The services available for the event, e.g. accomodation and transport.
+     * 
      * Gets the value of the service property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the service property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the service property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getService().add(newItem);
+     * getService().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Service }
+     * </p>
      * 
      * 
      * @return
@@ -474,24 +559,27 @@ public class Event {
     }
 
     /**
+     * The bank account for the event.
+     * 
      * Gets the value of the account property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the account property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the account property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAccount().add(newItem);
+     * getAccount().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Account }
+     * </p>
      * 
      * 
      * @return
@@ -505,24 +593,27 @@ public class Event {
     }
 
     /**
+     * URLs to various types of additional information regarding the event, e.g. event website or result list.
+     * 
      * Gets the value of the url property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the url property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the url property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getURL().add(newItem);
+     * getURL().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventURL }
+     * </p>
      * 
      * 
      * @return
@@ -536,24 +627,27 @@ public class Event {
     }
 
     /**
+     * Presents arbitrary data about the event, e.g. "Accommodation", "Local Attractions", and so on. Information present here should be defined well in advance of the event, in contrast to the 'News' element.
+     * 
      * Gets the value of the information property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the information property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the information property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getInformation().add(newItem);
+     * getInformation().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link InformationItem }
+     * </p>
      * 
      * 
      * @return
@@ -567,24 +661,27 @@ public class Event {
     }
 
     /**
+     * Defines the schedule of events that comprise the entire orienteering event, e.g. entry deadlines, banquet and social events, and awards ceremonies.
+     * 
      * Gets the value of the schedule property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the schedule property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the schedule property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getSchedule().add(newItem);
+     * getSchedule().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Schedule }
+     * </p>
      * 
      * 
      * @return
@@ -598,24 +695,27 @@ public class Event {
     }
 
     /**
+     * Presents "last minute information" about the event.
+     * 
      * Gets the value of the news property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the news property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the news property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getNews().add(newItem);
+     * getNews().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link InformationItem }
+     * </p>
      * 
      * 
      * @return
@@ -629,7 +729,7 @@ public class Event {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -647,6 +747,7 @@ public class Event {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

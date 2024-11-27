@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Defines the name of the country.
  * 
- *         Defines the name of the country.
- *       
+ * <p>Java class for Country complex type</p>.
  * 
- * <p>Java class for Country complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Country">
@@ -37,6 +35,10 @@ public class Country {
 
     @XmlValue
     protected String value;
+    /**
+     * The International Olympic Committee's 3-letter code of the country as stated in https://en.wikipedia.org/wiki/List_of_IOC_country_codes. Note that several of the IOC codes are different from the standard ISO 3166-1 alpha-3 codes.
+     * 
+     */
     @XmlAttribute(name = "code", required = true)
     protected String code;
 
@@ -65,7 +67,7 @@ public class Country {
     }
 
     /**
-     * Gets the value of the code property.
+     * The International Olympic Committee's 3-letter code of the country as stated in https://en.wikipedia.org/wiki/List_of_IOC_country_codes. Note that several of the IOC codes are different from the standard ISO 3166-1 alpha-3 codes.
      * 
      * @return
      *     possible object is
@@ -83,6 +85,7 @@ public class Country {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCode()
      */
     public void setCode(String value) {
         this.code = value;

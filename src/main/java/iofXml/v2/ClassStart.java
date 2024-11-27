@@ -12,9 +12,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -135,16 +135,16 @@ public class ClassStart {
     /**
      * Gets the value of the personStartOrTeamStart property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personStartOrTeamStart property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personStartOrTeamStart property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonStartOrTeamStart().add(newItem);
+     * getPersonStartOrTeamStart().add(newItem);
      * </pre>
      * 
      * 
@@ -152,6 +152,7 @@ public class ClassStart {
      * Objects of the following type(s) are allowed in the list
      * {@link PersonStart }
      * {@link TeamStart }
+     * </p>
      * 
      * 
      * @return

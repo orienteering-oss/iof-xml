@@ -8,8 +8,7 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * 
- *         Defines a route, i.e. a number of geographical positions (waypoints) describing a competitor's navigation throughout a course.
+ * Defines a route, i.e. a number of geographical positions (waypoints) describing a competitor's navigation throughout a course.
  * 
  *         As routes contain large amounts of information, a compact storage format is utilized to keep the overall file size small. A route is stored as a base64-encoded byte sequence of waypoints. A waypoint is represented as described below. All multi-byte data types are stored in big-endian byte order (most significant byte first). Typically, a one-hour route with one-second waypoint recording interval occupies around 20 kilobytes.
  * 
@@ -85,11 +84,10 @@ import jakarta.xml.bind.annotation.XmlValue;
  *         The position of the first waypoint of a route is always stored in full storage mode.
  * 
  *         Code libraries for reading and writing route data is found in https://github.com/international-orienteering-federation/datastandard-v3/tree/master/libraries.
- *       
  * 
- * <p>Java class for Route complex type.
+ * <p>Java class for Route complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Route">

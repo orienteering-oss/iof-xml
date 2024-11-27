@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a course for a certain race, excluding controls.
  * 
- *         Defines a course for a certain race, excluding controls.
- *       
+ * <p>Java class for SimpleRaceCourse complex type</p>.
  * 
- * <p>Java class for SimpleRaceCourse complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="SimpleRaceCourse">
@@ -35,11 +33,15 @@ public class SimpleRaceCourse
     extends SimpleCourse
 {
 
+    /**
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
+     * 
+     */
     @XmlAttribute(name = "raceNumber")
     protected BigInteger raceNumber;
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -57,6 +59,7 @@ public class SimpleRaceCourse
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;

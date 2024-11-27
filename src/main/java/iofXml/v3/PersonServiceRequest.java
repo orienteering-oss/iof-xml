@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Service requests made by a person.
  * 
- *         Service requests made by a person.
- *       
+ * <p>Java class for PersonServiceRequest complex type</p>.
  * 
- * <p>Java class for PersonServiceRequest complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="PersonServiceRequest">
@@ -40,13 +38,21 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PersonServiceRequest {
 
+    /**
+     * The person that made the requests.
+     * 
+     */
     @XmlElement(name = "Person", required = true)
     protected Person person;
+    /**
+     * The service requests.
+     * 
+     */
     @XmlElement(name = "ServiceRequest", required = true)
     protected List<ServiceRequest> serviceRequest;
 
     /**
-     * Gets the value of the person property.
+     * The person that made the requests.
      * 
      * @return
      *     possible object is
@@ -64,30 +70,34 @@ public class PersonServiceRequest {
      *     allowed object is
      *     {@link Person }
      *     
+     * @see #getPerson()
      */
     public void setPerson(Person value) {
         this.person = value;
     }
 
     /**
+     * The service requests.
+     * 
      * Gets the value of the serviceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceRequest().add(newItem);
+     * getServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
+     * </p>
      * 
      * 
      * @return

@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Defines a text that is given in a particular language.
  * 
- *         Defines a text that is given in a particular language.
- *       
+ * <p>Java class for LanguageString complex type</p>.
  * 
- * <p>Java class for LanguageString complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="LanguageString">
@@ -37,6 +35,10 @@ public class LanguageString {
 
     @XmlValue
     protected String value;
+    /**
+     * The ISO 639-1 two-letter code of the language as stated in https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.
+     * 
+     */
     @XmlAttribute(name = "language")
     protected String language;
 
@@ -65,7 +67,7 @@ public class LanguageString {
     }
 
     /**
-     * Gets the value of the language property.
+     * The ISO 639-1 two-letter code of the language as stated in https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.
      * 
      * @return
      *     possible object is
@@ -83,6 +85,7 @@ public class LanguageString {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getLanguage()
      */
     public void setLanguage(String value) {
         this.language = value;

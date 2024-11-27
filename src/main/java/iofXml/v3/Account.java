@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * The bank account of an organisation or an event.
  * 
- *         The bank account of an organisation or an event.
- *       
+ * <p>Java class for Account complex type</p>.
  * 
- * <p>Java class for Account complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Account">
@@ -37,6 +35,10 @@ public class Account {
 
     @XmlValue
     protected String value;
+    /**
+     * The account type.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected String type;
 
@@ -65,7 +67,7 @@ public class Account {
     }
 
     /**
-     * Gets the value of the type property.
+     * The account type.
      * 
      * @return
      *     possible object is
@@ -83,6 +85,7 @@ public class Account {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

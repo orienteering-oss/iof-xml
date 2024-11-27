@@ -13,9 +13,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ServiceRequest complex type.
+ * <p>Java class for ServiceRequest complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ServiceRequest">
@@ -52,16 +52,40 @@ public class ServiceRequest {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The service that is requested.
+     * 
+     */
     @XmlElement(name = "Service", required = true)
     protected Service service;
+    /**
+     * The quantity (number of instances) of the service that is requested.
+     * 
+     */
     @XmlElement(name = "RequestedQuantity")
     protected double requestedQuantity;
+    /**
+     * The quantity (number of instances) of the service that has been delivered. Can differ from RequestedQuantity when the available number of instances of a service is limited.
+     * 
+     */
     @XmlElement(name = "DeliveredQuantity")
     protected Double deliveredQuantity;
+    /**
+     * Any extra information or comment attached to the service request.
+     * 
+     */
     @XmlElement(name = "Comment")
     protected String comment;
+    /**
+     * The fees related to this service request.
+     * 
+     */
     @XmlElement(name = "AssignedFee")
     protected List<AssignedFee> assignedFee;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -93,7 +117,7 @@ public class ServiceRequest {
     }
 
     /**
-     * Gets the value of the service property.
+     * The service that is requested.
      * 
      * @return
      *     possible object is
@@ -111,13 +135,14 @@ public class ServiceRequest {
      *     allowed object is
      *     {@link Service }
      *     
+     * @see #getService()
      */
     public void setService(Service value) {
         this.service = value;
     }
 
     /**
-     * Gets the value of the requestedQuantity property.
+     * The quantity (number of instances) of the service that is requested.
      * 
      */
     public double getRequestedQuantity() {
@@ -133,7 +158,7 @@ public class ServiceRequest {
     }
 
     /**
-     * Gets the value of the deliveredQuantity property.
+     * The quantity (number of instances) of the service that has been delivered. Can differ from RequestedQuantity when the available number of instances of a service is limited.
      * 
      * @return
      *     possible object is
@@ -151,13 +176,14 @@ public class ServiceRequest {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getDeliveredQuantity()
      */
     public void setDeliveredQuantity(Double value) {
         this.deliveredQuantity = value;
     }
 
     /**
-     * Gets the value of the comment property.
+     * Any extra information or comment attached to the service request.
      * 
      * @return
      *     possible object is
@@ -175,30 +201,34 @@ public class ServiceRequest {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getComment()
      */
     public void setComment(String value) {
         this.comment = value;
     }
 
     /**
+     * The fees related to this service request.
+     * 
      * Gets the value of the assignedFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the assignedFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAssignedFee().add(newItem);
+     * getAssignedFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
+     * </p>
      * 
      * 
      * @return
@@ -212,7 +242,7 @@ public class ServiceRequest {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -230,6 +260,7 @@ public class ServiceRequest {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

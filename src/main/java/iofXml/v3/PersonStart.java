@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Start information for an individual competitor, including e.g. start time and bib number.
  * 
- *         Start information for an individual competitor, including e.g. start time and bib number.
- *       
+ * <p>Java class for PersonStart complex type</p>.
  * 
- * <p>Java class for PersonStart complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="PersonStart">
@@ -50,14 +48,34 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PersonStart {
 
+    /**
+     * The id corresponding to this person's entry in an EntryList.
+     * 
+     */
     @XmlElement(name = "EntryId")
     protected Id entryId;
+    /**
+     * The person that the start time belongs to. Omit if there is no person assigned to the start time, e.g. a vacant person.
+     * 
+     */
     @XmlElement(name = "Person")
     protected Person person;
+    /**
+     * The organisation that the person is representing at the event.
+     * 
+     */
     @XmlElement(name = "Organisation")
     protected Organisation organisation;
+    /**
+     * The core start information for the person; one element per race in the event.
+     * 
+     */
     @XmlElement(name = "Start", required = true)
     protected List<PersonRaceStart> start;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -65,7 +83,7 @@ public class PersonStart {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the entryId property.
+     * The id corresponding to this person's entry in an EntryList.
      * 
      * @return
      *     possible object is
@@ -83,13 +101,14 @@ public class PersonStart {
      *     allowed object is
      *     {@link Id }
      *     
+     * @see #getEntryId()
      */
     public void setEntryId(Id value) {
         this.entryId = value;
     }
 
     /**
-     * Gets the value of the person property.
+     * The person that the start time belongs to. Omit if there is no person assigned to the start time, e.g. a vacant person.
      * 
      * @return
      *     possible object is
@@ -107,13 +126,14 @@ public class PersonStart {
      *     allowed object is
      *     {@link Person }
      *     
+     * @see #getPerson()
      */
     public void setPerson(Person value) {
         this.person = value;
     }
 
     /**
-     * Gets the value of the organisation property.
+     * The organisation that the person is representing at the event.
      * 
      * @return
      *     possible object is
@@ -131,30 +151,34 @@ public class PersonStart {
      *     allowed object is
      *     {@link Organisation }
      *     
+     * @see #getOrganisation()
      */
     public void setOrganisation(Organisation value) {
         this.organisation = value;
     }
 
     /**
+     * The core start information for the person; one element per race in the event.
+     * 
      * Gets the value of the start property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the start property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the start property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getStart().add(newItem);
+     * getStart().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonRaceStart }
+     * </p>
      * 
      * 
      * @return
@@ -168,7 +192,7 @@ public class PersonStart {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -186,6 +210,7 @@ public class PersonStart {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

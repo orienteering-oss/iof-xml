@@ -15,13 +15,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Represents a person. This could either be a competitor (see the Competitor element) or contact persons in an organisation (see the Organisation element).
  * 
- *         Represents a person. This could either be a competitor (see the Competitor element) or contact persons in an organisation (see the Organisation element).
- *       
+ * <p>Java class for Person complex type</p>.
  * 
- * <p>Java class for Person complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Person">
@@ -64,10 +62,18 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class Person {
 
+    /**
+     * The identifier of the person. Multiple identifiers can be included, e.g. when there is both a World Ranking Event identifier and a national database identifier for the person.
+     * 
+     */
     @XmlElement(name = "Id")
     protected List<Id> id;
     @XmlElement(name = "Name", required = true)
     protected PersonName name;
+    /**
+     * The date when the person was born, expressed in ISO 8601 format.
+     * 
+     */
     @XmlElement(name = "BirthDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar birthDate;
@@ -77,6 +83,10 @@ public class Person {
     protected List<Address> address;
     @XmlElement(name = "Contact")
     protected List<Contact> contact;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "sex")
@@ -87,24 +97,27 @@ public class Person {
     protected XMLGregorianCalendar modifyTime;
 
     /**
+     * The identifier of the person. Multiple identifiers can be included, e.g. when there is both a World Ranking Event identifier and a national database identifier for the person.
+     * 
      * Gets the value of the id property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the id property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the id property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getId().add(newItem);
+     * getId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Id }
+     * </p>
      * 
      * 
      * @return
@@ -142,7 +155,7 @@ public class Person {
     }
 
     /**
-     * Gets the value of the birthDate property.
+     * The date when the person was born, expressed in ISO 8601 format.
      * 
      * @return
      *     possible object is
@@ -160,6 +173,7 @@ public class Person {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getBirthDate()
      */
     public void setBirthDate(XMLGregorianCalendar value) {
         this.birthDate = value;
@@ -192,22 +206,23 @@ public class Person {
     /**
      * Gets the value of the address property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the address property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the address property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAddress().add(newItem);
+     * getAddress().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Address }
+     * </p>
      * 
      * 
      * @return
@@ -223,22 +238,23 @@ public class Person {
     /**
      * Gets the value of the contact property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the contact property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the contact property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getContact().add(newItem);
+     * getContact().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Contact }
+     * </p>
      * 
      * 
      * @return
@@ -252,7 +268,7 @@ public class Person {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -270,6 +286,7 @@ public class Person {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

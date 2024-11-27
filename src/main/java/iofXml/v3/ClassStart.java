@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * The start list of a single class containing either individual start times or team start times.
  * 
- *         The start list of a single class containing either individual start times or team start times.
- *       
+ * <p>Java class for ClassStart complex type</p>.
  * 
- * <p>Java class for ClassStart complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ClassStart">
@@ -53,18 +51,46 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ClassStart {
 
+    /**
+     * The class that the start list belongs to.
+     * 
+     */
     @XmlElement(name = "Class", required = true)
     protected Class clazz;
+    /**
+     * Defines the course assigned to the class. If courses are unique per competitor, use PersonStart/Course or TeamStart/TeamMemberStart/Course instead. One element per race.
+     * 
+     */
     @XmlElement(name = "Course")
     protected List<SimpleRaceCourse> course;
+    /**
+     * Defines the name of the start place (e.g. Start 1), if the race has multiple start places. One element per race.
+     * 
+     */
     @XmlElement(name = "StartName")
     protected List<StartName> startName;
+    /**
+     * Start times for individual competitors in the class.
+     * 
+     */
     @XmlElement(name = "PersonStart")
     protected List<PersonStart> personStart;
+    /**
+     * Start times for teams in the class.
+     * 
+     */
     @XmlElement(name = "TeamStart")
     protected List<TeamStart> teamStart;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The time resolution of the start times, normally 1. For tenths of a second, use 0.1.
+     * 
+     */
     @XmlAttribute(name = "timeResolution")
     protected Double timeResolution;
     @XmlAttribute(name = "modifyTime")
@@ -72,7 +98,7 @@ public class ClassStart {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the clazz property.
+     * The class that the start list belongs to.
      * 
      * @return
      *     possible object is
@@ -90,30 +116,34 @@ public class ClassStart {
      *     allowed object is
      *     {@link Class }
      *     
+     * @see #getClazz()
      */
     public void setClazz(Class value) {
         this.clazz = value;
     }
 
     /**
+     * Defines the course assigned to the class. If courses are unique per competitor, use PersonStart/Course or TeamStart/TeamMemberStart/Course instead. One element per race.
+     * 
      * Gets the value of the course property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the course property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the course property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourse().add(newItem);
+     * getCourse().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SimpleRaceCourse }
+     * </p>
      * 
      * 
      * @return
@@ -127,24 +157,27 @@ public class ClassStart {
     }
 
     /**
+     * Defines the name of the start place (e.g. Start 1), if the race has multiple start places. One element per race.
+     * 
      * Gets the value of the startName property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the startName property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the startName property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getStartName().add(newItem);
+     * getStartName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StartName }
+     * </p>
      * 
      * 
      * @return
@@ -158,24 +191,27 @@ public class ClassStart {
     }
 
     /**
+     * Start times for individual competitors in the class.
+     * 
      * Gets the value of the personStart property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personStart property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personStart property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonStart().add(newItem);
+     * getPersonStart().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonStart }
+     * </p>
      * 
      * 
      * @return
@@ -189,24 +225,27 @@ public class ClassStart {
     }
 
     /**
+     * Start times for teams in the class.
+     * 
      * Gets the value of the teamStart property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamStart property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamStart property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamStart().add(newItem);
+     * getTeamStart().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamStart }
+     * </p>
      * 
      * 
      * @return
@@ -220,7 +259,7 @@ public class ClassStart {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -238,13 +277,14 @@ public class ClassStart {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the timeResolution property.
+     * The time resolution of the start times, normally 1. For tenths of a second, use 0.1.
      * 
      * @return
      *     possible object is
@@ -266,6 +306,7 @@ public class ClassStart {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTimeResolution()
      */
     public void setTimeResolution(Double value) {
         this.timeResolution = value;

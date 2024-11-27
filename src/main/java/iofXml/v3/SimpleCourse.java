@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a course, excluding controls.
  * 
- *         Defines a course, excluding controls.
- *       
+ * <p>Java class for SimpleCourse complex type</p>.
  * 
- * <p>Java class for SimpleCourse complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="SimpleCourse">
@@ -53,14 +51,34 @@ public class SimpleCourse {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the course.
+     * 
+     */
     @XmlElement(name = "Name")
     protected String name;
+    /**
+     * The family or group of forked courses that the course is part of.
+     * 
+     */
     @XmlElement(name = "CourseFamily")
     protected String courseFamily;
+    /**
+     * The length of the course, in meters.
+     * 
+     */
     @XmlElement(name = "Length")
     protected Double length;
+    /**
+     * The climb of the course, in meters, along the expected best route choice.
+     * 
+     */
     @XmlElement(name = "Climb")
     protected Double climb;
+    /**
+     * The number of controls in the course, excluding start and finish.
+     * 
+     */
     @XmlElement(name = "NumberOfControls")
     protected BigInteger numberOfControls;
 
@@ -89,7 +107,7 @@ public class SimpleCourse {
     }
 
     /**
-     * Gets the value of the name property.
+     * The name of the course.
      * 
      * @return
      *     possible object is
@@ -107,13 +125,14 @@ public class SimpleCourse {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the courseFamily property.
+     * The family or group of forked courses that the course is part of.
      * 
      * @return
      *     possible object is
@@ -131,13 +150,14 @@ public class SimpleCourse {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCourseFamily()
      */
     public void setCourseFamily(String value) {
         this.courseFamily = value;
     }
 
     /**
-     * Gets the value of the length property.
+     * The length of the course, in meters.
      * 
      * @return
      *     possible object is
@@ -155,13 +175,14 @@ public class SimpleCourse {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getLength()
      */
     public void setLength(Double value) {
         this.length = value;
     }
 
     /**
-     * Gets the value of the climb property.
+     * The climb of the course, in meters, along the expected best route choice.
      * 
      * @return
      *     possible object is
@@ -179,13 +200,14 @@ public class SimpleCourse {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getClimb()
      */
     public void setClimb(Double value) {
         this.climb = value;
     }
 
     /**
-     * Gets the value of the numberOfControls property.
+     * The number of controls in the course, excluding start and finish.
      * 
      * @return
      *     possible object is
@@ -203,6 +225,7 @@ public class SimpleCourse {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getNumberOfControls()
      */
     public void setNumberOfControls(BigInteger value) {
         this.numberOfControls = value;

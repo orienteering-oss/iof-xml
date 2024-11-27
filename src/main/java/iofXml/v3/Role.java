@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * A role defines a connection between a person and some kind of task, responsibility or engagement, e.g. being a course setter at an event.
  * 
- *         A role defines a connection between a person and some kind of task, responsibility or engagement, e.g. being a course setter at an event.
- *       
+ * <p>Java class for Role complex type</p>.
  * 
- * <p>Java class for Role complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Role">
@@ -40,6 +38,10 @@ public class Role {
 
     @XmlElement(name = "Person", required = true)
     protected Person person;
+    /**
+     * The type of role that the person has.
+     * 
+     */
     @XmlAttribute(name = "type", required = true)
     protected String type;
 
@@ -68,7 +70,7 @@ public class Role {
     }
 
     /**
-     * Gets the value of the type property.
+     * The type of role that the person has.
      * 
      * @return
      *     possible object is
@@ -86,6 +88,7 @@ public class Role {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

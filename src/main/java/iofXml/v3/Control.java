@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a control, without any relationship to a particular course.
  * 
- *         Defines a control, without any relationship to a particular course.
- *       
+ * <p>Java class for Control complex type</p>.
  * 
- * <p>Java class for Control complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Control">
@@ -53,18 +51,46 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Control {
 
+    /**
+     * The code of the control.
+     * 
+     */
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * If the control has multiple punching units with separate codes, specify all these codes using elements of this kind. Omit this element if there is a single punching unit whose code is the same as the control code.
+     * 
+     */
     @XmlElement(name = "PunchingUnitId")
     protected List<Id> punchingUnitId;
+    /**
+     * The name of the control, used for e.g. online controls ('spectator control', 'prewarning').
+     * 
+     */
     @XmlElement(name = "Name")
     protected List<LanguageString> name;
+    /**
+     * The geographical position of the control.
+     * 
+     */
     @XmlElement(name = "Position")
     protected GeoPosition position;
+    /**
+     * The position of the control according to tha map's coordinate system.
+     * 
+     */
     @XmlElement(name = "MapPosition")
     protected MapPosition mapPosition;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The type of the control: (ordinary) control, start, finish, crossing point or end of marked route. This attribute can be overridden on the CourseControl level.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected ControlType type;
     @XmlAttribute(name = "modifyTime")
@@ -72,7 +98,7 @@ public class Control {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the id property.
+     * The code of the control.
      * 
      * @return
      *     possible object is
@@ -90,30 +116,34 @@ public class Control {
      *     allowed object is
      *     {@link Id }
      *     
+     * @see #getId()
      */
     public void setId(Id value) {
         this.id = value;
     }
 
     /**
+     * If the control has multiple punching units with separate codes, specify all these codes using elements of this kind. Omit this element if there is a single punching unit whose code is the same as the control code.
+     * 
      * Gets the value of the punchingUnitId property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the punchingUnitId property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the punchingUnitId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPunchingUnitId().add(newItem);
+     * getPunchingUnitId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Id }
+     * </p>
      * 
      * 
      * @return
@@ -127,24 +157,27 @@ public class Control {
     }
 
     /**
+     * The name of the control, used for e.g. online controls ('spectator control', 'prewarning').
+     * 
      * Gets the value of the name property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the name property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the name property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getName().add(newItem);
+     * getName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
+     * </p>
      * 
      * 
      * @return
@@ -158,7 +191,7 @@ public class Control {
     }
 
     /**
-     * Gets the value of the position property.
+     * The geographical position of the control.
      * 
      * @return
      *     possible object is
@@ -176,13 +209,14 @@ public class Control {
      *     allowed object is
      *     {@link GeoPosition }
      *     
+     * @see #getPosition()
      */
     public void setPosition(GeoPosition value) {
         this.position = value;
     }
 
     /**
-     * Gets the value of the mapPosition property.
+     * The position of the control according to tha map's coordinate system.
      * 
      * @return
      *     possible object is
@@ -200,13 +234,14 @@ public class Control {
      *     allowed object is
      *     {@link MapPosition }
      *     
+     * @see #getMapPosition()
      */
     public void setMapPosition(MapPosition value) {
         this.mapPosition = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -224,13 +259,14 @@ public class Control {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * The type of the control: (ordinary) control, start, finish, crossing point or end of marked route. This attribute can be overridden on the CourseControl level.
      * 
      * @return
      *     possible object is
@@ -252,6 +288,7 @@ public class Control {
      *     allowed object is
      *     {@link ControlType }
      *     
+     * @see #getType()
      */
     public void setType(ControlType value) {
         this.type = value;

@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * An event consists of a number of races. The number is equal to the number of times a competitor should start.
  * 
- *         An event consists of a number of races. The number is equal to the number of times a competitor should start.
- *       
+ * <p>Java class for Race complex type</p>.
  * 
- * <p>Java class for Race complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Race">
@@ -67,33 +65,77 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Race {
 
+    /**
+     * The ordinal number of the race in the multi-race event, starting at 1.
+     * 
+     */
     @XmlElement(name = "RaceNumber", required = true)
     protected BigInteger raceNumber;
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The start time for the first starting competitor of the race.
+     * 
+     */
     @XmlElement(name = "StartTime")
     protected DateAndOptionalTime startTime;
+    /**
+     * The time when the finish closes.
+     * 
+     */
     @XmlElement(name = "EndTime")
     protected DateAndOptionalTime endTime;
+    /**
+     * The status of the race. This element overrides the Status element of the parent Event element.
+     * 
+     */
     @XmlElement(name = "Status")
     @XmlSchemaType(name = "NMTOKEN")
     protected EventStatus status;
+    /**
+     * The classification or level of the race. This element overrides the Classification element of the parent Event element.
+     * 
+     */
     @XmlElement(name = "Classification")
     @XmlSchemaType(name = "NMTOKEN")
     protected EventClassification classification;
+    /**
+     * The geographical location of the arena.
+     * 
+     */
     @XmlElement(name = "Position")
     protected GeoPosition position;
     @XmlElement(name = "Discipline")
     @XmlSchemaType(name = "NMTOKEN")
     protected List<RaceDiscipline> discipline;
+    /**
+     * The organisations that organise the event.
+     * 
+     */
     @XmlElement(name = "Organiser")
     protected List<Organisation> organiser;
+    /**
+     * The main officials of the event, e.g. course setter and event president.
+     * 
+     */
     @XmlElement(name = "Official")
     protected List<Role> official;
+    /**
+     * The services available for the race, e.g. accomodation and transport.
+     * 
+     */
     @XmlElement(name = "Service")
     protected List<Service> service;
+    /**
+     * URLs to various types of additional information regarding the event, e.g. event website or result list.
+     * 
+     */
     @XmlElement(name = "URL")
     protected List<EventURL> url;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
     @XmlAttribute(name = "modifyTime")
@@ -101,7 +143,7 @@ public class Race {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race in the multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -119,6 +161,7 @@ public class Race {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;
@@ -149,7 +192,7 @@ public class Race {
     }
 
     /**
-     * Gets the value of the startTime property.
+     * The start time for the first starting competitor of the race.
      * 
      * @return
      *     possible object is
@@ -167,13 +210,14 @@ public class Race {
      *     allowed object is
      *     {@link DateAndOptionalTime }
      *     
+     * @see #getStartTime()
      */
     public void setStartTime(DateAndOptionalTime value) {
         this.startTime = value;
     }
 
     /**
-     * Gets the value of the endTime property.
+     * The time when the finish closes.
      * 
      * @return
      *     possible object is
@@ -191,13 +235,14 @@ public class Race {
      *     allowed object is
      *     {@link DateAndOptionalTime }
      *     
+     * @see #getEndTime()
      */
     public void setEndTime(DateAndOptionalTime value) {
         this.endTime = value;
     }
 
     /**
-     * Gets the value of the status property.
+     * The status of the race. This element overrides the Status element of the parent Event element.
      * 
      * @return
      *     possible object is
@@ -215,13 +260,14 @@ public class Race {
      *     allowed object is
      *     {@link EventStatus }
      *     
+     * @see #getStatus()
      */
     public void setStatus(EventStatus value) {
         this.status = value;
     }
 
     /**
-     * Gets the value of the classification property.
+     * The classification or level of the race. This element overrides the Classification element of the parent Event element.
      * 
      * @return
      *     possible object is
@@ -239,13 +285,14 @@ public class Race {
      *     allowed object is
      *     {@link EventClassification }
      *     
+     * @see #getClassification()
      */
     public void setClassification(EventClassification value) {
         this.classification = value;
     }
 
     /**
-     * Gets the value of the position property.
+     * The geographical location of the arena.
      * 
      * @return
      *     possible object is
@@ -263,6 +310,7 @@ public class Race {
      *     allowed object is
      *     {@link GeoPosition }
      *     
+     * @see #getPosition()
      */
     public void setPosition(GeoPosition value) {
         this.position = value;
@@ -271,22 +319,23 @@ public class Race {
     /**
      * Gets the value of the discipline property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the discipline property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the discipline property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getDiscipline().add(newItem);
+     * getDiscipline().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RaceDiscipline }
+     * </p>
      * 
      * 
      * @return
@@ -300,24 +349,27 @@ public class Race {
     }
 
     /**
+     * The organisations that organise the event.
+     * 
      * Gets the value of the organiser property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organiser property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organiser property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganiser().add(newItem);
+     * getOrganiser().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Organisation }
+     * </p>
      * 
      * 
      * @return
@@ -331,24 +383,27 @@ public class Race {
     }
 
     /**
+     * The main officials of the event, e.g. course setter and event president.
+     * 
      * Gets the value of the official property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the official property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the official property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOfficial().add(newItem);
+     * getOfficial().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Role }
+     * </p>
      * 
      * 
      * @return
@@ -362,24 +417,27 @@ public class Race {
     }
 
     /**
+     * The services available for the race, e.g. accomodation and transport.
+     * 
      * Gets the value of the service property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the service property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the service property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getService().add(newItem);
+     * getService().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Service }
+     * </p>
      * 
      * 
      * @return
@@ -393,24 +451,27 @@ public class Race {
     }
 
     /**
+     * URLs to various types of additional information regarding the event, e.g. event website or result list.
+     * 
      * Gets the value of the url property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the url property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the url property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getURL().add(newItem);
+     * getURL().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EventURL }
+     * </p>
      * 
      * 
      * @return
@@ -424,7 +485,7 @@ public class Race {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -442,6 +503,7 @@ public class Race {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

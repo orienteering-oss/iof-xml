@@ -11,9 +11,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -44,17 +44,33 @@ public class ServiceRequestList
     extends BaseMessageElement
 {
 
+    /**
+     * The event that the service requests are valid for.
+     * 
+     */
     @XmlElement(name = "Event", required = true)
     protected Event event;
+    /**
+     * Service requests made by organisations.
+     * 
+     */
     @XmlElement(name = "OrganisationServiceRequest")
     protected List<OrganisationServiceRequest> organisationServiceRequest;
+    /**
+     * Service requests made by persons.
+     * 
+     */
     @XmlElement(name = "PersonServiceRequest")
     protected List<PersonServiceRequest> personServiceRequest;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
     /**
-     * Gets the value of the event property.
+     * The event that the service requests are valid for.
      * 
      * @return
      *     possible object is
@@ -72,30 +88,34 @@ public class ServiceRequestList
      *     allowed object is
      *     {@link Event }
      *     
+     * @see #getEvent()
      */
     public void setEvent(Event value) {
         this.event = value;
     }
 
     /**
+     * Service requests made by organisations.
+     * 
      * Gets the value of the organisationServiceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organisationServiceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organisationServiceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisationServiceRequest().add(newItem);
+     * getOrganisationServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -109,24 +129,27 @@ public class ServiceRequestList
     }
 
     /**
+     * Service requests made by persons.
+     * 
      * Gets the value of the personServiceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personServiceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personServiceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonServiceRequest().add(newItem);
+     * getPersonServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -140,7 +163,7 @@ public class ServiceRequestList
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -158,6 +181,7 @@ public class ServiceRequestList
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

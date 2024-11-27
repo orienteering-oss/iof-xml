@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Defines a split time at a control.
  * 
- *         Defines a split time at a control.
- *       
+ * <p>Java class for SplitTime complex type</p>.
  * 
- * <p>Java class for SplitTime complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="SplitTime">
@@ -52,18 +50,34 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class SplitTime {
 
+    /**
+     * The code of the control.
+     * 
+     */
     @XmlElement(name = "ControlCode", required = true)
     protected String controlCode;
+    /**
+     * The time, in seconds, elapsed from start to punching the control. Fractions of seconds (e.g. 258.7) may be used if the time resolution is higher than one second.
+     * 
+     */
     @XmlElement(name = "Time")
     protected Double time;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The status of the split time.
+     * 
+     */
     @XmlAttribute(name = "status")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String status;
 
     /**
-     * Gets the value of the controlCode property.
+     * The code of the control.
      * 
      * @return
      *     possible object is
@@ -81,13 +95,14 @@ public class SplitTime {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getControlCode()
      */
     public void setControlCode(String value) {
         this.controlCode = value;
     }
 
     /**
-     * Gets the value of the time property.
+     * The time, in seconds, elapsed from start to punching the control. Fractions of seconds (e.g. 258.7) may be used if the time resolution is higher than one second.
      * 
      * @return
      *     possible object is
@@ -105,13 +120,14 @@ public class SplitTime {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTime()
      */
     public void setTime(Double value) {
         this.time = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -129,13 +145,14 @@ public class SplitTime {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the status property.
+     * The status of the split time.
      * 
      * @return
      *     possible object is
@@ -157,6 +174,7 @@ public class SplitTime {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getStatus()
      */
     public void setStatus(String value) {
         this.status = value;

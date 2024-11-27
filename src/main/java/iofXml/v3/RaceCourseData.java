@@ -12,13 +12,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * This element defines all the control and course information for a race.
  * 
- *         This element defines all the control and course information for a race.
- *       
+ * <p>Java class for RaceCourseData complex type</p>.
  * 
- * <p>Java class for RaceCourseData complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="RaceCourseData">
@@ -53,42 +51,77 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RaceCourseData {
 
+    /**
+     * The map(s) used in this race. Usually just one map, but different courses may use different scales and/or areas.
+     * 
+     */
     @XmlElement(name = "Map")
     protected List<Map> map;
+    /**
+     * All controls of the race.
+     * 
+     */
     @XmlElement(name = "Control")
     protected List<Control> control;
+    /**
+     * All courses of the race.
+     * 
+     */
     @XmlElement(name = "Course")
     protected List<Course> course;
+    /**
+     * The assignment of courses to classes.
+     * 
+     */
     @XmlElement(name = "ClassCourseAssignment")
     protected List<ClassCourseAssignment> classCourseAssignment;
+    /**
+     * The assignment of courses to individual competitors.
+     * 
+     */
     @XmlElement(name = "PersonCourseAssignment")
     protected List<PersonCourseAssignment> personCourseAssignment;
+    /**
+     * The assignment of courses to relay team members teams.
+     * 
+     */
     @XmlElement(name = "TeamCourseAssignment")
     protected List<TeamCourseAssignment> teamCourseAssignment;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
+     * 
+     */
     @XmlAttribute(name = "raceNumber")
     protected BigInteger raceNumber;
 
     /**
+     * The map(s) used in this race. Usually just one map, but different courses may use different scales and/or areas.
+     * 
      * Gets the value of the map property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the map property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the map property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getMap().add(newItem);
+     * getMap().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Map }
+     * </p>
      * 
      * 
      * @return
@@ -102,24 +135,27 @@ public class RaceCourseData {
     }
 
     /**
+     * All controls of the race.
+     * 
      * Gets the value of the control property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the control property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the control property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getControl().add(newItem);
+     * getControl().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Control }
+     * </p>
      * 
      * 
      * @return
@@ -133,24 +169,27 @@ public class RaceCourseData {
     }
 
     /**
+     * All courses of the race.
+     * 
      * Gets the value of the course property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the course property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the course property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourse().add(newItem);
+     * getCourse().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Course }
+     * </p>
      * 
      * 
      * @return
@@ -164,24 +203,27 @@ public class RaceCourseData {
     }
 
     /**
+     * The assignment of courses to classes.
+     * 
      * Gets the value of the classCourseAssignment property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classCourseAssignment property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classCourseAssignment property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClassCourseAssignment().add(newItem);
+     * getClassCourseAssignment().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassCourseAssignment }
+     * </p>
      * 
      * 
      * @return
@@ -195,24 +237,27 @@ public class RaceCourseData {
     }
 
     /**
+     * The assignment of courses to individual competitors.
+     * 
      * Gets the value of the personCourseAssignment property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personCourseAssignment property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personCourseAssignment property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonCourseAssignment().add(newItem);
+     * getPersonCourseAssignment().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonCourseAssignment }
+     * </p>
      * 
      * 
      * @return
@@ -226,24 +271,27 @@ public class RaceCourseData {
     }
 
     /**
+     * The assignment of courses to relay team members teams.
+     * 
      * Gets the value of the teamCourseAssignment property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamCourseAssignment property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamCourseAssignment property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamCourseAssignment().add(newItem);
+     * getTeamCourseAssignment().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamCourseAssignment }
+     * </p>
      * 
      * 
      * @return
@@ -257,7 +305,7 @@ public class RaceCourseData {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -275,13 +323,14 @@ public class RaceCourseData {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -299,6 +348,7 @@ public class RaceCourseData {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;

@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Defines the name of the start place (e.g. Start 1), if the race has multiple start places.
  * 
- *           Defines the name of the start place (e.g. Start 1), if the race has multiple start places.
- *         
+ * <p>Java class for StartName complex type</p>.
  * 
- * <p>Java class for StartName complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="StartName">
@@ -38,6 +36,10 @@ public class StartName {
 
     @XmlValue
     protected String value;
+    /**
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
+     * 
+     */
     @XmlAttribute(name = "raceNumber")
     protected BigInteger raceNumber;
 
@@ -66,7 +68,7 @@ public class StartName {
     }
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -84,6 +86,7 @@ public class StartName {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;

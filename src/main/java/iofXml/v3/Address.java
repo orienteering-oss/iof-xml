@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * The postal address of a person or organisation.
  * 
- *         The postal address of a person or organisation.
- *       
+ * <p>Java class for Address complex type</p>.
  * 
- * <p>Java class for Address complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Address">
@@ -63,6 +61,10 @@ public class Address {
     protected String state;
     @XmlElement(name = "Country")
     protected Country country;
+    /**
+     * The address type, e.g. visitor address or invoice address.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected String type;
     @XmlAttribute(name = "modifyTime")
@@ -214,7 +216,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the type property.
+     * The address type, e.g. visitor address or invoice address.
      * 
      * @return
      *     possible object is
@@ -232,6 +234,7 @@ public class Address {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

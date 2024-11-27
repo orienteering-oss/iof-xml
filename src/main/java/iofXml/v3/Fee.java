@@ -15,13 +15,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * A fee that applies when entering a class at a race or ordering a service.
  * 
- *         A fee that applies when entering a class at a race or ordering a service.
- *       
+ * <p>Java class for Fee complex type</p>.
  * 
- * <p>Java class for Fee complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Fee">
@@ -74,30 +72,74 @@ public class Fee {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * A describing name of the fee, e.g. 'Late entry fee'.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected List<LanguageString> name;
+    /**
+     * The fee amount, optionally including currency code. This element must not be present if a Percentage element exists.
+     * 
+     */
     @XmlElement(name = "Amount")
     protected Amount amount;
+    /**
+     * The fee amount that is taxable, i.e. considered when calculating taxes for an event. This element must not be present if a Percentage element exists, or if an Amount element does not exist.
+     * 
+     */
     @XmlElement(name = "TaxableAmount")
     protected Amount taxableAmount;
+    /**
+     * The percentage to increase or decrease already existing fees in a fee list with. This element must not be present if an Amount element exists.
+     * 
+     */
     @XmlElement(name = "Percentage")
     protected Double percentage;
+    /**
+     * The percentage to increase or decrease already existing taxable fees in a fee list with. This element must not be present if an Amount element exists, or if a Percentage element does not exist.
+     * 
+     */
     @XmlElement(name = "TaxablePercentage")
     protected Double taxablePercentage;
+    /**
+     * The time when the fee takes effect.
+     * 
+     */
     @XmlElement(name = "ValidFromTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar validFromTime;
+    /**
+     * The time when the fee expires.
+     * 
+     */
     @XmlElement(name = "ValidToTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar validToTime;
+    /**
+     * The start of the birth date interval that the fee should be applied to. Omit if no lower birth date restriction.
+     * 
+     */
     @XmlElement(name = "FromDateOfBirth")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fromDateOfBirth;
+    /**
+     * The end of the birth date interval that the fee should be applied to. Omit if no upper birth date restriction.
+     * 
+     */
     @XmlElement(name = "ToDateOfBirth")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar toDateOfBirth;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The type of fee.
+     * 
+     */
     @XmlAttribute(name = "type")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String type;
@@ -130,24 +172,27 @@ public class Fee {
     }
 
     /**
+     * A describing name of the fee, e.g. 'Late entry fee'.
+     * 
      * Gets the value of the name property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the name property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the name property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getName().add(newItem);
+     * getName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LanguageString }
+     * </p>
      * 
      * 
      * @return
@@ -161,7 +206,7 @@ public class Fee {
     }
 
     /**
-     * Gets the value of the amount property.
+     * The fee amount, optionally including currency code. This element must not be present if a Percentage element exists.
      * 
      * @return
      *     possible object is
@@ -179,13 +224,14 @@ public class Fee {
      *     allowed object is
      *     {@link Amount }
      *     
+     * @see #getAmount()
      */
     public void setAmount(Amount value) {
         this.amount = value;
     }
 
     /**
-     * Gets the value of the taxableAmount property.
+     * The fee amount that is taxable, i.e. considered when calculating taxes for an event. This element must not be present if a Percentage element exists, or if an Amount element does not exist.
      * 
      * @return
      *     possible object is
@@ -203,13 +249,14 @@ public class Fee {
      *     allowed object is
      *     {@link Amount }
      *     
+     * @see #getTaxableAmount()
      */
     public void setTaxableAmount(Amount value) {
         this.taxableAmount = value;
     }
 
     /**
-     * Gets the value of the percentage property.
+     * The percentage to increase or decrease already existing fees in a fee list with. This element must not be present if an Amount element exists.
      * 
      * @return
      *     possible object is
@@ -227,13 +274,14 @@ public class Fee {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getPercentage()
      */
     public void setPercentage(Double value) {
         this.percentage = value;
     }
 
     /**
-     * Gets the value of the taxablePercentage property.
+     * The percentage to increase or decrease already existing taxable fees in a fee list with. This element must not be present if an Amount element exists, or if a Percentage element does not exist.
      * 
      * @return
      *     possible object is
@@ -251,13 +299,14 @@ public class Fee {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTaxablePercentage()
      */
     public void setTaxablePercentage(Double value) {
         this.taxablePercentage = value;
     }
 
     /**
-     * Gets the value of the validFromTime property.
+     * The time when the fee takes effect.
      * 
      * @return
      *     possible object is
@@ -275,13 +324,14 @@ public class Fee {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getValidFromTime()
      */
     public void setValidFromTime(XMLGregorianCalendar value) {
         this.validFromTime = value;
     }
 
     /**
-     * Gets the value of the validToTime property.
+     * The time when the fee expires.
      * 
      * @return
      *     possible object is
@@ -299,13 +349,14 @@ public class Fee {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getValidToTime()
      */
     public void setValidToTime(XMLGregorianCalendar value) {
         this.validToTime = value;
     }
 
     /**
-     * Gets the value of the fromDateOfBirth property.
+     * The start of the birth date interval that the fee should be applied to. Omit if no lower birth date restriction.
      * 
      * @return
      *     possible object is
@@ -323,13 +374,14 @@ public class Fee {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getFromDateOfBirth()
      */
     public void setFromDateOfBirth(XMLGregorianCalendar value) {
         this.fromDateOfBirth = value;
     }
 
     /**
-     * Gets the value of the toDateOfBirth property.
+     * The end of the birth date interval that the fee should be applied to. Omit if no upper birth date restriction.
      * 
      * @return
      *     possible object is
@@ -347,13 +399,14 @@ public class Fee {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getToDateOfBirth()
      */
     public void setToDateOfBirth(XMLGregorianCalendar value) {
         this.toDateOfBirth = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -371,13 +424,14 @@ public class Fee {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * The type of fee.
      * 
      * @return
      *     possible object is
@@ -399,6 +453,7 @@ public class Fee {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a class type, which is used to group classes in categories.
  * 
- *         Defines a class type, which is used to group classes in categories.
- *       
+ * <p>Java class for ClassType complex type</p>.
  * 
- * <p>Java class for ClassType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ClassType">
@@ -44,6 +42,10 @@ public class ClassType {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the class type.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
     @XmlAttribute(name = "modifyTime")
@@ -75,7 +77,7 @@ public class ClassType {
     }
 
     /**
-     * Gets the value of the name property.
+     * The name of the class type.
      * 
      * @return
      *     possible object is
@@ -93,6 +95,7 @@ public class ClassType {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;

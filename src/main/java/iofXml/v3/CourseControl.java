@@ -15,13 +15,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * A control included in a particular course.
  * 
- *         A control included in a particular course.
- *       
+ * <p>Java class for CourseControl complex type</p>.
  * 
- * <p>Java class for CourseControl complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="CourseControl">
@@ -68,25 +66,65 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class CourseControl {
 
+    /**
+     * The code(s) of the control(s), without course-specific information. Specifying multiple control codes means that the competitor is required to punch one of the controls, but not all of them.
+     * 
+     */
     @XmlElement(name = "Control", required = true)
     protected List<String> control;
+    /**
+     * Indicates the text shown next to the control circle, i.e. the control number.
+     * 
+     */
     @XmlElement(name = "MapText")
     protected String mapText;
+    /**
+     * Indicates the position of the center of the text relative to the center of the control circle.
+     * 
+     */
     @XmlElement(name = "MapTextPosition")
     protected MapPosition mapTextPosition;
+    /**
+     * The length in meters from the previous control on the course. For starts, this length may refer to the distance from the time start to the start flag.
+     * 
+     */
     @XmlElement(name = "LegLength")
     protected Double legLength;
+    /**
+     * The score of the control in score-O events.
+     * 
+     */
     @XmlElement(name = "Score")
     protected Double score;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The type of the control: (ordinary) control, start, finish, crossing point or end of marked route. If this attribute is specified, it overrides the corresponding Control's type.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected ControlType type;
+    /**
+     * Non-broken sequences of course controls having randomOrder set to true can be visited in an arbitrary order.
+     * 
+     */
     @XmlAttribute(name = "randomOrder")
     protected Boolean randomOrder;
+    /**
+     * Any special instruction applied at the control, see the column G as defined in International Specification for Control Descriptions.
+     * 
+     */
     @XmlAttribute(name = "specialInstruction")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String specialInstruction;
+    /**
+     * The length of the taped route in meters. Only to be specified if specialInstruction is TapedRoute or FunnelTapedRoute and if different from the value specified in LegLength element, i.e. when Special Instruction 13.1 is used.
+     * 
+     */
     @XmlAttribute(name = "tapedRouteLength")
     protected Double tapedRouteLength;
     @XmlAttribute(name = "modifyTime")
@@ -94,24 +132,27 @@ public class CourseControl {
     protected XMLGregorianCalendar modifyTime;
 
     /**
+     * The code(s) of the control(s), without course-specific information. Specifying multiple control codes means that the competitor is required to punch one of the controls, but not all of them.
+     * 
      * Gets the value of the control property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the control property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the control property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getControl().add(newItem);
+     * getControl().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
      * @return
@@ -125,7 +166,7 @@ public class CourseControl {
     }
 
     /**
-     * Gets the value of the mapText property.
+     * Indicates the text shown next to the control circle, i.e. the control number.
      * 
      * @return
      *     possible object is
@@ -143,13 +184,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getMapText()
      */
     public void setMapText(String value) {
         this.mapText = value;
     }
 
     /**
-     * Gets the value of the mapTextPosition property.
+     * Indicates the position of the center of the text relative to the center of the control circle.
      * 
      * @return
      *     possible object is
@@ -167,13 +209,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link MapPosition }
      *     
+     * @see #getMapTextPosition()
      */
     public void setMapTextPosition(MapPosition value) {
         this.mapTextPosition = value;
     }
 
     /**
-     * Gets the value of the legLength property.
+     * The length in meters from the previous control on the course. For starts, this length may refer to the distance from the time start to the start flag.
      * 
      * @return
      *     possible object is
@@ -191,13 +234,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getLegLength()
      */
     public void setLegLength(Double value) {
         this.legLength = value;
     }
 
     /**
-     * Gets the value of the score property.
+     * The score of the control in score-O events.
      * 
      * @return
      *     possible object is
@@ -215,13 +259,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getScore()
      */
     public void setScore(Double value) {
         this.score = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -239,13 +284,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * The type of the control: (ordinary) control, start, finish, crossing point or end of marked route. If this attribute is specified, it overrides the corresponding Control's type.
      * 
      * @return
      *     possible object is
@@ -263,13 +309,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link ControlType }
      *     
+     * @see #getType()
      */
     public void setType(ControlType value) {
         this.type = value;
     }
 
     /**
-     * Gets the value of the randomOrder property.
+     * Non-broken sequences of course controls having randomOrder set to true can be visited in an arbitrary order.
      * 
      * @return
      *     possible object is
@@ -291,13 +338,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link Boolean }
      *     
+     * @see #isRandomOrder()
      */
     public void setRandomOrder(Boolean value) {
         this.randomOrder = value;
     }
 
     /**
-     * Gets the value of the specialInstruction property.
+     * Any special instruction applied at the control, see the column G as defined in International Specification for Control Descriptions.
      * 
      * @return
      *     possible object is
@@ -319,13 +367,14 @@ public class CourseControl {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getSpecialInstruction()
      */
     public void setSpecialInstruction(String value) {
         this.specialInstruction = value;
     }
 
     /**
-     * Gets the value of the tapedRouteLength property.
+     * The length of the taped route in meters. Only to be specified if specialInstruction is TapedRoute or FunnelTapedRoute and if different from the value specified in LegLength element, i.e. when Special Instruction 13.1 is used.
      * 
      * @return
      *     possible object is
@@ -343,6 +392,7 @@ public class CourseControl {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTapedRouteLength()
      */
     public void setTapedRouteLength(Double value) {
         this.tapedRouteLength = value;

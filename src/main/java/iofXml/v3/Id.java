@@ -9,13 +9,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * Identifier element, used extensively. The id should be known and common for both systems taking part in the data exchange.
  * 
- *         Identifier element, used extensively. The id should be known and common for both systems taking part in the data exchange.
- *       
+ * <p>Java class for Id complex type</p>.
  * 
- * <p>Java class for Id complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Id">
@@ -37,6 +35,10 @@ public class Id {
 
     @XmlValue
     protected String value;
+    /**
+     * The issuer of the identity, e.g. World Ranking List.
+     * 
+     */
     @XmlAttribute(name = "type")
     protected String type;
 
@@ -65,7 +67,7 @@ public class Id {
     }
 
     /**
-     * Gets the value of the type property.
+     * The issuer of the identity, e.g. World Ranking List.
      * 
      * @return
      *     possible object is
@@ -83,6 +85,7 @@ public class Id {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

@@ -8,13 +8,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines the the selected answer, the correct answer and the time used on a Trail-O control.
  * 
- *         Defines the the selected answer, the correct answer and the time used on a Trail-O control.
- *       
+ * <p>Java class for ControlAnswer complex type</p>.
  * 
- * <p>Java class for ControlAnswer complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ControlAnswer">
@@ -42,17 +40,33 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ControlAnswer {
 
+    /**
+     * The answer that the competitor selected. If the competitor did not give any answer, use an empty string.
+     * 
+     */
     @XmlElement(name = "Answer", required = true)
     protected String answer;
+    /**
+     * The correct answer. If no answer is correct, use an empty string.
+     * 
+     */
     @XmlElement(name = "CorrectAnswer", required = true)
     protected String correctAnswer;
+    /**
+     * The time in seconds used to give the answer, in case of a timed control. Fractions of seconds (e.g. 258.7) may be used if the time resolution is higher than one second.
+     * 
+     */
     @XmlElement(name = "Time")
     protected Double time;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
     /**
-     * Gets the value of the answer property.
+     * The answer that the competitor selected. If the competitor did not give any answer, use an empty string.
      * 
      * @return
      *     possible object is
@@ -70,13 +84,14 @@ public class ControlAnswer {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getAnswer()
      */
     public void setAnswer(String value) {
         this.answer = value;
     }
 
     /**
-     * Gets the value of the correctAnswer property.
+     * The correct answer. If no answer is correct, use an empty string.
      * 
      * @return
      *     possible object is
@@ -94,13 +109,14 @@ public class ControlAnswer {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCorrectAnswer()
      */
     public void setCorrectAnswer(String value) {
         this.correctAnswer = value;
     }
 
     /**
-     * Gets the value of the time property.
+     * The time in seconds used to give the answer, in case of a timed control. Fractions of seconds (e.g. 258.7) may be used if the time resolution is higher than one second.
      * 
      * @return
      *     possible object is
@@ -118,13 +134,14 @@ public class ControlAnswer {
      *     allowed object is
      *     {@link Double }
      *     
+     * @see #getTime()
      */
     public void setTime(Double value) {
         this.time = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -142,6 +159,7 @@ public class ControlAnswer {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

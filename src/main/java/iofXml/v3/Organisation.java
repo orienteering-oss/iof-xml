@@ -16,13 +16,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc.
  * 
- *         Information about an organisation, i.e. address, contact person(s) etc. An organisation is a general term including federations, clubs, etc.
- *       
+ * <p>Java class for Organisation complex type</p>.
  * 
- * <p>Java class for Organisation complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Organisation">
@@ -86,12 +84,28 @@ public class Organisation {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The full name of the organisation.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The short (abbreviated) name of the organisation.
+     * 
+     */
     @XmlElement(name = "ShortName")
     protected String shortName;
+    /**
+     * The name of the organisation as appearing in result lists targeted to media.
+     * 
+     */
     @XmlElement(name = "MediaName")
     protected String mediaName;
+    /**
+     * The id of the parent of this organisation, e.g. a regional organisation for a club.
+     * 
+     */
     @XmlElement(name = "ParentOrganisationId")
     protected BigInteger parentOrganisationId;
     @XmlElement(name = "Country")
@@ -100,16 +114,36 @@ public class Organisation {
     protected List<Address> address;
     @XmlElement(name = "Contact")
     protected List<Contact> contact;
+    /**
+     * The geographical location of the organisation, e.g. a city center, an office or a club house.
+     * 
+     */
     @XmlElement(name = "Position")
     protected GeoPosition position;
     @XmlElement(name = "Account")
     protected List<Account> account;
+    /**
+     * Persons having certain roles within the organisation, e.g. chairman, secretary, and treasurer.
+     * 
+     */
     @XmlElement(name = "Role")
     protected List<Role> role;
+    /**
+     * The logotype for the organisation. Multiple logotypes may be included; in this case, make sure to include width and height attributes.
+     * 
+     */
     @XmlElement(name = "Logotype")
     protected List<Image> logotype;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The hierarchical level or type of an organisation.
+     * 
+     */
     @XmlAttribute(name = "type")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String type;
@@ -142,7 +176,7 @@ public class Organisation {
     }
 
     /**
-     * Gets the value of the name property.
+     * The full name of the organisation.
      * 
      * @return
      *     possible object is
@@ -160,13 +194,14 @@ public class Organisation {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the shortName property.
+     * The short (abbreviated) name of the organisation.
      * 
      * @return
      *     possible object is
@@ -184,13 +219,14 @@ public class Organisation {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getShortName()
      */
     public void setShortName(String value) {
         this.shortName = value;
     }
 
     /**
-     * Gets the value of the mediaName property.
+     * The name of the organisation as appearing in result lists targeted to media.
      * 
      * @return
      *     possible object is
@@ -208,13 +244,14 @@ public class Organisation {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getMediaName()
      */
     public void setMediaName(String value) {
         this.mediaName = value;
     }
 
     /**
-     * Gets the value of the parentOrganisationId property.
+     * The id of the parent of this organisation, e.g. a regional organisation for a club.
      * 
      * @return
      *     possible object is
@@ -232,6 +269,7 @@ public class Organisation {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getParentOrganisationId()
      */
     public void setParentOrganisationId(BigInteger value) {
         this.parentOrganisationId = value;
@@ -264,22 +302,23 @@ public class Organisation {
     /**
      * Gets the value of the address property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the address property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the address property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAddress().add(newItem);
+     * getAddress().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Address }
+     * </p>
      * 
      * 
      * @return
@@ -295,22 +334,23 @@ public class Organisation {
     /**
      * Gets the value of the contact property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the contact property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the contact property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getContact().add(newItem);
+     * getContact().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Contact }
+     * </p>
      * 
      * 
      * @return
@@ -324,7 +364,7 @@ public class Organisation {
     }
 
     /**
-     * Gets the value of the position property.
+     * The geographical location of the organisation, e.g. a city center, an office or a club house.
      * 
      * @return
      *     possible object is
@@ -342,6 +382,7 @@ public class Organisation {
      *     allowed object is
      *     {@link GeoPosition }
      *     
+     * @see #getPosition()
      */
     public void setPosition(GeoPosition value) {
         this.position = value;
@@ -350,22 +391,23 @@ public class Organisation {
     /**
      * Gets the value of the account property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the account property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the account property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAccount().add(newItem);
+     * getAccount().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Account }
+     * </p>
      * 
      * 
      * @return
@@ -379,24 +421,27 @@ public class Organisation {
     }
 
     /**
+     * Persons having certain roles within the organisation, e.g. chairman, secretary, and treasurer.
+     * 
      * Gets the value of the role property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the role property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the role property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getRole().add(newItem);
+     * getRole().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Role }
+     * </p>
      * 
      * 
      * @return
@@ -410,24 +455,27 @@ public class Organisation {
     }
 
     /**
+     * The logotype for the organisation. Multiple logotypes may be included; in this case, make sure to include width and height attributes.
+     * 
      * Gets the value of the logotype property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the logotype property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the logotype property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getLogotype().add(newItem);
+     * getLogotype().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Image }
+     * </p>
      * 
      * 
      * @return
@@ -441,7 +489,7 @@ public class Organisation {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -459,13 +507,14 @@ public class Organisation {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * The hierarchical level or type of an organisation.
      * 
      * @return
      *     possible object is
@@ -483,6 +532,7 @@ public class Organisation {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getType()
      */
     public void setType(String value) {
         this.type = value;

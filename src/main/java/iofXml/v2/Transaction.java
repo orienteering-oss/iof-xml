@@ -15,9 +15,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -298,16 +298,16 @@ public class Transaction {
     /**
      * Gets the value of the personIdOrPerson property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personIdOrPerson property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personIdOrPerson property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonIdOrPerson().add(newItem);
+     * getPersonIdOrPerson().add(newItem);
      * </pre>
      * 
      * 
@@ -315,6 +315,7 @@ public class Transaction {
      * Objects of the following type(s) are allowed in the list
      * {@link Person }
      * {@link PersonId }
+     * </p>
      * 
      * 
      * @return
@@ -330,22 +331,23 @@ public class Transaction {
     /**
      * Gets the value of the entryId property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the entryId property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the entryId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEntryId().add(newItem);
+     * getEntryId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
      * @return
@@ -361,16 +363,16 @@ public class Transaction {
     /**
      * Gets the value of the serviceOrderNumberOrServiceIdOrService property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceOrderNumberOrServiceIdOrService property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceOrderNumberOrServiceIdOrService property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceOrderNumberOrServiceIdOrService().add(newItem);
+     * getServiceOrderNumberOrServiceIdOrService().add(newItem);
      * </pre>
      * 
      * 
@@ -379,6 +381,7 @@ public class Transaction {
      * {@link Service }
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * </p>
      * 
      * 
      * @return

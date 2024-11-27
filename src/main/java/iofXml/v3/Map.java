@@ -8,13 +8,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Map information, used in course setting software with regard to the "real" map.
  * 
- *         Map information, used in course setting software with regard to the "real" map.
- *       
+ * <p>Java class for Map complex type</p>.
  * 
- * <p>Java class for Map complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Map">
@@ -48,14 +46,34 @@ public class Map {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The map image.
+     * 
+     */
     @XmlElement(name = "Image")
     protected Image image;
+    /**
+     * The denominator of the scale of the map. 1:15000 should be represented as 15000.
+     * 
+     */
     @XmlElement(name = "Scale")
     protected double scale;
+    /**
+     * The position of the map's top left corner given in the map's coordinate system, usually (0, 0).
+     * 
+     */
     @XmlElement(name = "MapPositionTopLeft", required = true)
     protected MapPosition mapPositionTopLeft;
+    /**
+     * The position of the map's bottom right corner given in the map's coordinate system.
+     * 
+     */
     @XmlElement(name = "MapPositionBottomRight", required = true)
     protected MapPosition mapPositionBottomRight;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
@@ -84,7 +102,7 @@ public class Map {
     }
 
     /**
-     * Gets the value of the image property.
+     * The map image.
      * 
      * @return
      *     possible object is
@@ -102,13 +120,14 @@ public class Map {
      *     allowed object is
      *     {@link Image }
      *     
+     * @see #getImage()
      */
     public void setImage(Image value) {
         this.image = value;
     }
 
     /**
-     * Gets the value of the scale property.
+     * The denominator of the scale of the map. 1:15000 should be represented as 15000.
      * 
      */
     public double getScale() {
@@ -124,7 +143,7 @@ public class Map {
     }
 
     /**
-     * Gets the value of the mapPositionTopLeft property.
+     * The position of the map's top left corner given in the map's coordinate system, usually (0, 0).
      * 
      * @return
      *     possible object is
@@ -142,13 +161,14 @@ public class Map {
      *     allowed object is
      *     {@link MapPosition }
      *     
+     * @see #getMapPositionTopLeft()
      */
     public void setMapPositionTopLeft(MapPosition value) {
         this.mapPositionTopLeft = value;
     }
 
     /**
-     * Gets the value of the mapPositionBottomRight property.
+     * The position of the map's bottom right corner given in the map's coordinate system.
      * 
      * @return
      *     possible object is
@@ -166,13 +186,14 @@ public class Map {
      *     allowed object is
      *     {@link MapPosition }
      *     
+     * @see #getMapPositionBottomRight()
      */
     public void setMapPositionBottomRight(MapPosition value) {
         this.mapPositionBottomRight = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -190,6 +211,7 @@ public class Map {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;

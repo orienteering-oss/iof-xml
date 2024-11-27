@@ -16,13 +16,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Defines a class in an event.
  * 
- *         Defines a class in an event.
- *       
+ * <p>Java class for Class complex type</p>.
  * 
- * <p>Java class for Class complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Class">
@@ -95,48 +93,128 @@ public class Class {
 
     @XmlElement(name = "Id")
     protected Id id;
+    /**
+     * The name of the class.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The abbreviated name of a class, used when space is limited.
+     * 
+     */
     @XmlElement(name = "ShortName")
     protected String shortName;
+    /**
+     * The class type(s) for the class.
+     * 
+     */
     @XmlElement(name = "ClassType")
     protected List<ClassType> classType;
+    /**
+     * Information about the legs, if the class is a relay class. One Leg element per leg must be present.
+     * 
+     */
     @XmlElement(name = "Leg")
     protected List<Leg> leg;
+    /**
+     * The entry fees for a team as a whole taking part in this class. Use the Fee element to specify a fee for an individual competitor in the team. Use the TeamFee subelement of the RaceClass element to specify a fee on race level.
+     * 
+     */
     @XmlElement(name = "TeamFee")
     protected List<Fee> teamFee;
+    /**
+     * The entry fees for an individual competitor taking part in the class. Use the TeamFee element to specify a fee for the team as a whole. Use the Fee subelement of the RaceClass element to specify a fee on race level.
+     * 
+     */
     @XmlElement(name = "Fee")
     protected List<Fee> fee;
+    /**
+     * The overall status of the class, e.g. if overall results should be considered invalid due to misplaced controls.
+     * 
+     */
     @XmlElement(name = "Status", defaultValue = "Normal")
     @XmlSchemaType(name = "NMTOKEN")
     protected EventClassStatus status;
+    /**
+     * Race-specific information for the class, e.g. course(s) assigned to the class.
+     * 
+     */
     @XmlElement(name = "RaceClass")
     protected List<RaceClass> raceClass;
+    /**
+     * The class that competitors in this class should be transferred to if there are too few entries in this class.
+     * 
+     */
     @XmlElement(name = "TooFewEntriesSubstituteClass")
     protected Class tooFewEntriesSubstituteClass;
+    /**
+     * The class that competitors that are not qualified (e.g. due to too low ranking) should be transferred to if there are too many entries in this class.
+     * 
+     */
     @XmlElement(name = "TooManyEntriesSubstituteClass")
     protected Class tooManyEntriesSubstituteClass;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The lowest allowed age for a competitor taking part in the class.
+     * 
+     */
     @XmlAttribute(name = "minAge")
     protected BigInteger minAge;
+    /**
+     * The highest allowed age for a competitor taking part in the class.
+     * 
+     */
     @XmlAttribute(name = "maxAge")
     protected BigInteger maxAge;
     @XmlAttribute(name = "sex")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String sex;
+    /**
+     * The minimum number of members in a team taking part in the class, if the class is a team class.
+     * 
+     */
     @XmlAttribute(name = "minNumberOfTeamMembers")
     protected BigInteger minNumberOfTeamMembers;
+    /**
+     * The maximum number of members in a team taking part in the class, if the class is a team class.
+     * 
+     */
     @XmlAttribute(name = "maxNumberOfTeamMembers")
     protected BigInteger maxNumberOfTeamMembers;
+    /**
+     * The lowest allowed age sum of the team members for a team taking part in the class.
+     * 
+     */
     @XmlAttribute(name = "minTeamAge")
     protected BigInteger minTeamAge;
+    /**
+     * The highest allowed age sum of the team members for a team taking part in the class.
+     * 
+     */
     @XmlAttribute(name = "maxTeamAge")
     protected BigInteger maxTeamAge;
+    /**
+     * The number of competitors in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event).
+     * 
+     */
     @XmlAttribute(name = "numberOfCompetitors")
     protected BigInteger numberOfCompetitors;
+    /**
+     * The maximum number of competitors that are allowed to take part in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event). If the maximum number of competitors varies between races in a multi-day event, use the maxNumberOfCompetitors attribute in the RaceClass element.
+     * 
+     */
     @XmlAttribute(name = "maxNumberOfCompetitors")
     protected BigInteger maxNumberOfCompetitors;
+    /**
+     * Defines the kind of information to include in the result list, and how to sort it. For example, the result list of a beginner's class may include just "finished" or "did not finish" instead of the actual times.
+     * 
+     */
     @XmlAttribute(name = "resultListMode")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String resultListMode;
@@ -169,7 +247,7 @@ public class Class {
     }
 
     /**
-     * Gets the value of the name property.
+     * The name of the class.
      * 
      * @return
      *     possible object is
@@ -187,13 +265,14 @@ public class Class {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the shortName property.
+     * The abbreviated name of a class, used when space is limited.
      * 
      * @return
      *     possible object is
@@ -211,30 +290,34 @@ public class Class {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getShortName()
      */
     public void setShortName(String value) {
         this.shortName = value;
     }
 
     /**
+     * The class type(s) for the class.
+     * 
      * Gets the value of the classType property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classType property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classType property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClassType().add(newItem);
+     * getClassType().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassType }
+     * </p>
      * 
      * 
      * @return
@@ -248,24 +331,27 @@ public class Class {
     }
 
     /**
+     * Information about the legs, if the class is a relay class. One Leg element per leg must be present.
+     * 
      * Gets the value of the leg property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the leg property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the leg property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getLeg().add(newItem);
+     * getLeg().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Leg }
+     * </p>
      * 
      * 
      * @return
@@ -279,24 +365,27 @@ public class Class {
     }
 
     /**
+     * The entry fees for a team as a whole taking part in this class. Use the Fee element to specify a fee for an individual competitor in the team. Use the TeamFee subelement of the RaceClass element to specify a fee on race level.
+     * 
      * Gets the value of the teamFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamFee().add(newItem);
+     * getTeamFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
+     * </p>
      * 
      * 
      * @return
@@ -310,24 +399,27 @@ public class Class {
     }
 
     /**
+     * The entry fees for an individual competitor taking part in the class. Use the TeamFee element to specify a fee for the team as a whole. Use the Fee subelement of the RaceClass element to specify a fee on race level.
+     * 
      * Gets the value of the fee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the fee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getFee().add(newItem);
+     * getFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
+     * </p>
      * 
      * 
      * @return
@@ -341,7 +433,7 @@ public class Class {
     }
 
     /**
-     * Gets the value of the status property.
+     * The overall status of the class, e.g. if overall results should be considered invalid due to misplaced controls.
      * 
      * @return
      *     possible object is
@@ -359,30 +451,34 @@ public class Class {
      *     allowed object is
      *     {@link EventClassStatus }
      *     
+     * @see #getStatus()
      */
     public void setStatus(EventClassStatus value) {
         this.status = value;
     }
 
     /**
+     * Race-specific information for the class, e.g. course(s) assigned to the class.
+     * 
      * Gets the value of the raceClass property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the raceClass property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the raceClass property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getRaceClass().add(newItem);
+     * getRaceClass().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RaceClass }
+     * </p>
      * 
      * 
      * @return
@@ -396,7 +492,7 @@ public class Class {
     }
 
     /**
-     * Gets the value of the tooFewEntriesSubstituteClass property.
+     * The class that competitors in this class should be transferred to if there are too few entries in this class.
      * 
      * @return
      *     possible object is
@@ -414,13 +510,14 @@ public class Class {
      *     allowed object is
      *     {@link Class }
      *     
+     * @see #getTooFewEntriesSubstituteClass()
      */
     public void setTooFewEntriesSubstituteClass(Class value) {
         this.tooFewEntriesSubstituteClass = value;
     }
 
     /**
-     * Gets the value of the tooManyEntriesSubstituteClass property.
+     * The class that competitors that are not qualified (e.g. due to too low ranking) should be transferred to if there are too many entries in this class.
      * 
      * @return
      *     possible object is
@@ -438,13 +535,14 @@ public class Class {
      *     allowed object is
      *     {@link Class }
      *     
+     * @see #getTooManyEntriesSubstituteClass()
      */
     public void setTooManyEntriesSubstituteClass(Class value) {
         this.tooManyEntriesSubstituteClass = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -462,13 +560,14 @@ public class Class {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the minAge property.
+     * The lowest allowed age for a competitor taking part in the class.
      * 
      * @return
      *     possible object is
@@ -486,13 +585,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMinAge()
      */
     public void setMinAge(BigInteger value) {
         this.minAge = value;
     }
 
     /**
-     * Gets the value of the maxAge property.
+     * The highest allowed age for a competitor taking part in the class.
      * 
      * @return
      *     possible object is
@@ -510,6 +610,7 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxAge()
      */
     public void setMaxAge(BigInteger value) {
         this.maxAge = value;
@@ -544,7 +645,7 @@ public class Class {
     }
 
     /**
-     * Gets the value of the minNumberOfTeamMembers property.
+     * The minimum number of members in a team taking part in the class, if the class is a team class.
      * 
      * @return
      *     possible object is
@@ -566,13 +667,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMinNumberOfTeamMembers()
      */
     public void setMinNumberOfTeamMembers(BigInteger value) {
         this.minNumberOfTeamMembers = value;
     }
 
     /**
-     * Gets the value of the maxNumberOfTeamMembers property.
+     * The maximum number of members in a team taking part in the class, if the class is a team class.
      * 
      * @return
      *     possible object is
@@ -594,13 +696,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxNumberOfTeamMembers()
      */
     public void setMaxNumberOfTeamMembers(BigInteger value) {
         this.maxNumberOfTeamMembers = value;
     }
 
     /**
-     * Gets the value of the minTeamAge property.
+     * The lowest allowed age sum of the team members for a team taking part in the class.
      * 
      * @return
      *     possible object is
@@ -618,13 +721,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMinTeamAge()
      */
     public void setMinTeamAge(BigInteger value) {
         this.minTeamAge = value;
     }
 
     /**
-     * Gets the value of the maxTeamAge property.
+     * The highest allowed age sum of the team members for a team taking part in the class.
      * 
      * @return
      *     possible object is
@@ -642,13 +746,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxTeamAge()
      */
     public void setMaxTeamAge(BigInteger value) {
         this.maxTeamAge = value;
     }
 
     /**
-     * Gets the value of the numberOfCompetitors property.
+     * The number of competitors in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event).
      * 
      * @return
      *     possible object is
@@ -666,13 +771,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getNumberOfCompetitors()
      */
     public void setNumberOfCompetitors(BigInteger value) {
         this.numberOfCompetitors = value;
     }
 
     /**
-     * Gets the value of the maxNumberOfCompetitors property.
+     * The maximum number of competitors that are allowed to take part in the class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event). If the maximum number of competitors varies between races in a multi-day event, use the maxNumberOfCompetitors attribute in the RaceClass element.
      * 
      * @return
      *     possible object is
@@ -690,13 +796,14 @@ public class Class {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxNumberOfCompetitors()
      */
     public void setMaxNumberOfCompetitors(BigInteger value) {
         this.maxNumberOfCompetitors = value;
     }
 
     /**
-     * Gets the value of the resultListMode property.
+     * Defines the kind of information to include in the result list, and how to sort it. For example, the result list of a beginner's class may include just "finished" or "did not finish" instead of the actual times.
      * 
      * @return
      *     possible object is
@@ -718,6 +825,7 @@ public class Class {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getResultListMode()
      */
     public void setResultListMode(String value) {
         this.resultListMode = value;

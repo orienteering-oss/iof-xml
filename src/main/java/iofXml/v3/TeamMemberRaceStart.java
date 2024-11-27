@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Start information for a team member in a race.
  * 
- *         Start information for a team member in a race.
- *       
+ * <p>Java class for TeamMemberRaceStart complex type</p>.
  * 
- * <p>Java class for TeamMemberRaceStart complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="TeamMemberRaceStart">
@@ -59,30 +57,70 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TeamMemberRaceStart {
 
+    /**
+     * In case of a relay, this is the number of the leg that the team member takes part in.
+     * 
+     */
     @XmlElement(name = "Leg")
     protected BigInteger leg;
+    /**
+     * In case of a relay with parallel legs, this defines the team member's starting order of the leg within the team.
+     * 
+     */
     @XmlElement(name = "LegOrder")
     protected BigInteger legOrder;
+    /**
+     * The bib number that the team member is wearing.
+     * 
+     */
     @XmlElement(name = "BibNumber")
     protected String bibNumber;
+    /**
+     * The time when the team member starts.
+     * 
+     */
     @XmlElement(name = "StartTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startTime;
+    /**
+     * Defines the course assigned to the team member.
+     * 
+     */
     @XmlElement(name = "Course")
     protected SimpleCourse course;
+    /**
+     * Defines the control card assigned to the team member. Multiple control cards can be specified, e.g. one for punch checking and another for timing.
+     * 
+     */
     @XmlElement(name = "ControlCard")
     protected List<ControlCard> controlCard;
+    /**
+     * Defines the fees that the team member has been assigned.
+     * 
+     */
     @XmlElement(name = "AssignedFee")
     protected List<AssignedFee> assignedFee;
+    /**
+     * Defines the services requested by the team member.
+     * 
+     */
     @XmlElement(name = "ServiceRequest")
     protected List<ServiceRequest> serviceRequest;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
+     * 
+     */
     @XmlAttribute(name = "raceNumber")
     protected BigInteger raceNumber;
 
     /**
-     * Gets the value of the leg property.
+     * In case of a relay, this is the number of the leg that the team member takes part in.
      * 
      * @return
      *     possible object is
@@ -100,13 +138,14 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getLeg()
      */
     public void setLeg(BigInteger value) {
         this.leg = value;
     }
 
     /**
-     * Gets the value of the legOrder property.
+     * In case of a relay with parallel legs, this defines the team member's starting order of the leg within the team.
      * 
      * @return
      *     possible object is
@@ -124,13 +163,14 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getLegOrder()
      */
     public void setLegOrder(BigInteger value) {
         this.legOrder = value;
     }
 
     /**
-     * Gets the value of the bibNumber property.
+     * The bib number that the team member is wearing.
      * 
      * @return
      *     possible object is
@@ -148,13 +188,14 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getBibNumber()
      */
     public void setBibNumber(String value) {
         this.bibNumber = value;
     }
 
     /**
-     * Gets the value of the startTime property.
+     * The time when the team member starts.
      * 
      * @return
      *     possible object is
@@ -172,13 +213,14 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getStartTime()
      */
     public void setStartTime(XMLGregorianCalendar value) {
         this.startTime = value;
     }
 
     /**
-     * Gets the value of the course property.
+     * Defines the course assigned to the team member.
      * 
      * @return
      *     possible object is
@@ -196,30 +238,34 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link SimpleCourse }
      *     
+     * @see #getCourse()
      */
     public void setCourse(SimpleCourse value) {
         this.course = value;
     }
 
     /**
+     * Defines the control card assigned to the team member. Multiple control cards can be specified, e.g. one for punch checking and another for timing.
+     * 
      * Gets the value of the controlCard property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the controlCard property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the controlCard property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getControlCard().add(newItem);
+     * getControlCard().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlCard }
+     * </p>
      * 
      * 
      * @return
@@ -233,24 +279,27 @@ public class TeamMemberRaceStart {
     }
 
     /**
+     * Defines the fees that the team member has been assigned.
+     * 
      * Gets the value of the assignedFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the assignedFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the assignedFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAssignedFee().add(newItem);
+     * getAssignedFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AssignedFee }
+     * </p>
      * 
      * 
      * @return
@@ -264,24 +313,27 @@ public class TeamMemberRaceStart {
     }
 
     /**
+     * Defines the services requested by the team member.
+     * 
      * Gets the value of the serviceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceRequest().add(newItem);
+     * getServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -295,7 +347,7 @@ public class TeamMemberRaceStart {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -313,13 +365,14 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -337,6 +390,7 @@ public class TeamMemberRaceStart {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;

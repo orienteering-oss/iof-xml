@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines a point in time which either is known by date and time, or just by date. May be used for event dates, when the event date is decided before the time of the first start.
  * 
- *         Defines a point in time which either is known by date and time, or just by date. May be used for event dates, when the event date is decided before the time of the first start.
- *       
+ * <p>Java class for DateAndOptionalTime complex type</p>.
  * 
- * <p>Java class for DateAndOptionalTime complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="DateAndOptionalTime">
@@ -40,15 +38,23 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DateAndOptionalTime {
 
+    /**
+     * The date part, expressed in ISO 8601 format.
+     * 
+     */
     @XmlElement(name = "Date", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
+    /**
+     * The time part, expressed in ISO 8601 format.
+     * 
+     */
     @XmlElement(name = "Time")
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar time;
 
     /**
-     * Gets the value of the date property.
+     * The date part, expressed in ISO 8601 format.
      * 
      * @return
      *     possible object is
@@ -66,13 +72,14 @@ public class DateAndOptionalTime {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getDate()
      */
     public void setDate(XMLGregorianCalendar value) {
         this.date = value;
     }
 
     /**
-     * Gets the value of the time property.
+     * The time part, expressed in ISO 8601 format.
      * 
      * @return
      *     possible object is
@@ -90,6 +97,7 @@ public class DateAndOptionalTime {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getTime()
      */
     public void setTime(XMLGregorianCalendar value) {
         this.time = value;

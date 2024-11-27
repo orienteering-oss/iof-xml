@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines the schedule of sub-events that comprise the entire orienteering event, e.g. banquets, social events and awards ceremonies.
  * 
- *         Defines the schedule of sub-events that comprise the entire orienteering event, e.g. banquets, social events and awards ceremonies.
- *       
+ * <p>Java class for Schedule complex type</p>.
  * 
- * <p>Java class for Schedule complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Schedule">
@@ -50,18 +48,42 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Schedule {
 
+    /**
+     * The start time of the sub-event.
+     * 
+     */
     @XmlElement(name = "StartTime", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startTime;
+    /**
+     * The end time of the sub-event.
+     * 
+     */
     @XmlElement(name = "EndTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endTime;
+    /**
+     * The name or title of the sub-event.
+     * 
+     */
     @XmlElement(name = "Name", required = true)
     protected String name;
+    /**
+     * The name of the place where the sub-event occurs.
+     * 
+     */
     @XmlElement(name = "Venue")
     protected String venue;
+    /**
+     * The geographical position of the sub-event.
+     * 
+     */
     @XmlElement(name = "Position")
     protected GeoPosition position;
+    /**
+     * Any extra information about the sub-event.
+     * 
+     */
     @XmlElement(name = "Details")
     protected String details;
     @XmlAttribute(name = "modifyTime")
@@ -69,7 +91,7 @@ public class Schedule {
     protected XMLGregorianCalendar modifyTime;
 
     /**
-     * Gets the value of the startTime property.
+     * The start time of the sub-event.
      * 
      * @return
      *     possible object is
@@ -87,13 +109,14 @@ public class Schedule {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getStartTime()
      */
     public void setStartTime(XMLGregorianCalendar value) {
         this.startTime = value;
     }
 
     /**
-     * Gets the value of the endTime property.
+     * The end time of the sub-event.
      * 
      * @return
      *     possible object is
@@ -111,13 +134,14 @@ public class Schedule {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
+     * @see #getEndTime()
      */
     public void setEndTime(XMLGregorianCalendar value) {
         this.endTime = value;
     }
 
     /**
-     * Gets the value of the name property.
+     * The name or title of the sub-event.
      * 
      * @return
      *     possible object is
@@ -135,13 +159,14 @@ public class Schedule {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the venue property.
+     * The name of the place where the sub-event occurs.
      * 
      * @return
      *     possible object is
@@ -159,13 +184,14 @@ public class Schedule {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getVenue()
      */
     public void setVenue(String value) {
         this.venue = value;
     }
 
     /**
-     * Gets the value of the position property.
+     * The geographical position of the sub-event.
      * 
      * @return
      *     possible object is
@@ -183,13 +209,14 @@ public class Schedule {
      *     allowed object is
      *     {@link GeoPosition }
      *     
+     * @see #getPosition()
      */
     public void setPosition(GeoPosition value) {
         this.position = value;
     }
 
     /**
-     * Gets the value of the details property.
+     * Any extra information about the sub-event.
      * 
      * @return
      *     possible object is
@@ -207,6 +234,7 @@ public class Schedule {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getDetails()
      */
     public void setDetails(String value) {
         this.details = value;

@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Service requests made by an organisation.
  * 
- *         Service requests made by an organisation.
- *       
+ * <p>Java class for OrganisationServiceRequest complex type</p>.
  * 
- * <p>Java class for OrganisationServiceRequest complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="OrganisationServiceRequest">
@@ -42,15 +40,27 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OrganisationServiceRequest {
 
+    /**
+     * The organisation that made the requests.
+     * 
+     */
     @XmlElement(name = "Organisation", required = true)
     protected Organisation organisation;
+    /**
+     * The service requests that the organisation made.
+     * 
+     */
     @XmlElement(name = "ServiceRequest")
     protected List<ServiceRequest> serviceRequest;
+    /**
+     * The service requests made by persons representing the organisation.
+     * 
+     */
     @XmlElement(name = "PersonServiceRequest")
     protected List<PersonServiceRequest> personServiceRequest;
 
     /**
-     * Gets the value of the organisation property.
+     * The organisation that made the requests.
      * 
      * @return
      *     possible object is
@@ -68,30 +78,34 @@ public class OrganisationServiceRequest {
      *     allowed object is
      *     {@link Organisation }
      *     
+     * @see #getOrganisation()
      */
     public void setOrganisation(Organisation value) {
         this.organisation = value;
     }
 
     /**
+     * The service requests that the organisation made.
+     * 
      * Gets the value of the serviceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getServiceRequest().add(newItem);
+     * getServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceRequest }
+     * </p>
      * 
      * 
      * @return
@@ -105,24 +119,27 @@ public class OrganisationServiceRequest {
     }
 
     /**
+     * The service requests made by persons representing the organisation.
+     * 
      * Gets the value of the personServiceRequest property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the personServiceRequest property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the personServiceRequest property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPersonServiceRequest().add(newItem);
+     * getPersonServiceRequest().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PersonServiceRequest }
+     * </p>
      * 
      * 
      * @return

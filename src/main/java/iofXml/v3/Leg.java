@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Defines extra information for a relay leg.
  * 
- *         Defines extra information for a relay leg.
- *       
+ * <p>Java class for Leg complex type</p>.
  * 
- * <p>Java class for Leg complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Leg">
@@ -42,17 +40,33 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Leg {
 
+    /**
+     * The name of the leg, if not sequentially named.
+     * 
+     */
     @XmlElement(name = "Name")
     protected String name;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The minimum number of competitors in case of a parallel leg.
+     * 
+     */
     @XmlAttribute(name = "minNumberOfCompetitors")
     protected BigInteger minNumberOfCompetitors;
+    /**
+     * The maximum number of competitors in case of a parallel leg.
+     * 
+     */
     @XmlAttribute(name = "maxNumberOfCompetitors")
     protected BigInteger maxNumberOfCompetitors;
 
     /**
-     * Gets the value of the name property.
+     * The name of the leg, if not sequentially named.
      * 
      * @return
      *     possible object is
@@ -70,13 +84,14 @@ public class Leg {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getName()
      */
     public void setName(String value) {
         this.name = value;
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -94,13 +109,14 @@ public class Leg {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the minNumberOfCompetitors property.
+     * The minimum number of competitors in case of a parallel leg.
      * 
      * @return
      *     possible object is
@@ -122,13 +138,14 @@ public class Leg {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMinNumberOfCompetitors()
      */
     public void setMinNumberOfCompetitors(BigInteger value) {
         this.minNumberOfCompetitors = value;
     }
 
     /**
-     * Gets the value of the maxNumberOfCompetitors property.
+     * The maximum number of competitors in case of a parallel leg.
      * 
      * @return
      *     possible object is
@@ -150,6 +167,7 @@ public class Leg {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxNumberOfCompetitors()
      */
     public void setMaxNumberOfCompetitors(BigInteger value) {
         this.maxNumberOfCompetitors = value;

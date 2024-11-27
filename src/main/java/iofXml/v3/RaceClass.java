@@ -14,13 +14,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Information about a class with respect to a race.
  * 
- *         Information about a class with respect to a race.
- *       
+ * <p>Java class for RaceClass complex type</p>.
  * 
- * <p>Java class for RaceClass complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="RaceClass">
@@ -59,26 +57,62 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RaceClass {
 
+    /**
+     * The punching system used for the class at the race. Multiple punching systems can be specified, e.g. one for punch checking and another for timing.
+     * 
+     */
     @XmlElement(name = "PunchingSystem")
     protected List<String> punchingSystem;
+    /**
+     * The entry fees for a team as a whole taking part in this class. Use the Fee element to specify a fee for an individual competitor in the team. Use the TeamFee subelement of the Class element to specify a fee on event level.
+     * 
+     */
     @XmlElement(name = "TeamFee")
     protected List<Fee> teamFee;
+    /**
+     * The entry fees for an individual competitor taking part in the race class. Use the TeamFee element to specify a fee for the team as a whole. Use the Fee subelement of the Class element to specify a fee on event level.
+     * 
+     */
     @XmlElement(name = "Fee")
     protected List<Fee> fee;
     @XmlElement(name = "FirstStart")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar firstStart;
+    /**
+     * The status of the race, e.g. if results should be considered invalid due to misplaced constrols.
+     * 
+     */
     @XmlElement(name = "Status")
     @XmlSchemaType(name = "NMTOKEN")
     protected RaceClassStatus status;
+    /**
+     * The courses assigned to this class. For a mass-start event or a relay event, there are usually multiple courses per class due to the usage of spreading methods.
+     * 
+     */
     @XmlElement(name = "Course")
     protected List<SimpleCourse> course;
+    /**
+     * The controls that are online controls for this class.
+     * 
+     */
     @XmlElement(name = "OnlineControl")
     protected List<Control> onlineControl;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
+    /**
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
+     * 
+     */
     @XmlAttribute(name = "raceNumber")
     protected BigInteger raceNumber;
+    /**
+     * The maximum number of competitors that are allowed to take part in the race class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event). This attribute overrides the maxNumberOfCompetitors attribute in the Class element.
+     * 
+     */
     @XmlAttribute(name = "maxNumberOfCompetitors")
     protected BigInteger maxNumberOfCompetitors;
     @XmlAttribute(name = "modifyTime")
@@ -86,24 +120,27 @@ public class RaceClass {
     protected XMLGregorianCalendar modifyTime;
 
     /**
+     * The punching system used for the class at the race. Multiple punching systems can be specified, e.g. one for punch checking and another for timing.
+     * 
      * Gets the value of the punchingSystem property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the punchingSystem property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the punchingSystem property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPunchingSystem().add(newItem);
+     * getPunchingSystem().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
      * @return
@@ -117,24 +154,27 @@ public class RaceClass {
     }
 
     /**
+     * The entry fees for a team as a whole taking part in this class. Use the Fee element to specify a fee for an individual competitor in the team. Use the TeamFee subelement of the Class element to specify a fee on event level.
+     * 
      * Gets the value of the teamFee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamFee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamFee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamFee().add(newItem);
+     * getTeamFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
+     * </p>
      * 
      * 
      * @return
@@ -148,24 +188,27 @@ public class RaceClass {
     }
 
     /**
+     * The entry fees for an individual competitor taking part in the race class. Use the TeamFee element to specify a fee for the team as a whole. Use the Fee subelement of the Class element to specify a fee on event level.
+     * 
      * Gets the value of the fee property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the fee property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fee property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getFee().add(newItem);
+     * getFee().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Fee }
+     * </p>
      * 
      * 
      * @return
@@ -203,7 +246,7 @@ public class RaceClass {
     }
 
     /**
-     * Gets the value of the status property.
+     * The status of the race, e.g. if results should be considered invalid due to misplaced constrols.
      * 
      * @return
      *     possible object is
@@ -221,30 +264,34 @@ public class RaceClass {
      *     allowed object is
      *     {@link RaceClassStatus }
      *     
+     * @see #getStatus()
      */
     public void setStatus(RaceClassStatus value) {
         this.status = value;
     }
 
     /**
+     * The courses assigned to this class. For a mass-start event or a relay event, there are usually multiple courses per class due to the usage of spreading methods.
+     * 
      * Gets the value of the course property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the course property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the course property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getCourse().add(newItem);
+     * getCourse().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SimpleCourse }
+     * </p>
      * 
      * 
      * @return
@@ -258,24 +305,27 @@ public class RaceClass {
     }
 
     /**
+     * The controls that are online controls for this class.
+     * 
      * Gets the value of the onlineControl property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the onlineControl property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the onlineControl property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOnlineControl().add(newItem);
+     * getOnlineControl().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Control }
+     * </p>
      * 
      * 
      * @return
@@ -289,7 +339,7 @@ public class RaceClass {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -307,13 +357,14 @@ public class RaceClass {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
     }
 
     /**
-     * Gets the value of the raceNumber property.
+     * The ordinal number of the race that the information belongs to for a multi-race event, starting at 1.
      * 
      * @return
      *     possible object is
@@ -331,13 +382,14 @@ public class RaceClass {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getRaceNumber()
      */
     public void setRaceNumber(BigInteger value) {
         this.raceNumber = value;
     }
 
     /**
-     * Gets the value of the maxNumberOfCompetitors property.
+     * The maximum number of competitors that are allowed to take part in the race class. A competitor corresponds to a person (if an individual event) or a team (if a team or relay event). This attribute overrides the maxNumberOfCompetitors attribute in the Class element.
      * 
      * @return
      *     possible object is
@@ -355,6 +407,7 @@ public class RaceClass {
      *     allowed object is
      *     {@link BigInteger }
      *     
+     * @see #getMaxNumberOfCompetitors()
      */
     public void setMaxNumberOfCompetitors(BigInteger value) {
         this.maxNumberOfCompetitors = value;

@@ -12,9 +12,9 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType>
@@ -79,16 +79,16 @@ public class ResultSelection {
     /**
      * Gets the value of the organisationIdOrOrganisation property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organisationIdOrOrganisation property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organisationIdOrOrganisation property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisationIdOrOrganisation().add(newItem);
+     * getOrganisationIdOrOrganisation().add(newItem);
      * </pre>
      * 
      * 
@@ -96,6 +96,7 @@ public class ResultSelection {
      * Objects of the following type(s) are allowed in the list
      * {@link Organisation }
      * {@link OrganisationId }
+     * </p>
      * 
      * 
      * @return
@@ -111,16 +112,16 @@ public class ResultSelection {
     /**
      * Gets the value of the clubIdOrClub property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the clubIdOrClub property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the clubIdOrClub property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClubIdOrClub().add(newItem);
+     * getClubIdOrClub().add(newItem);
      * </pre>
      * 
      * 
@@ -128,6 +129,7 @@ public class ResultSelection {
      * Objects of the following type(s) are allowed in the list
      * {@link Club }
      * {@link ClubId }
+     * </p>
      * 
      * 
      * @return
@@ -143,16 +145,16 @@ public class ResultSelection {
     /**
      * Gets the value of the classIdOrClassShortNameOrClazz property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classIdOrClassShortNameOrClazz property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classIdOrClassShortNameOrClazz property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClassIdOrClassShortNameOrClazz().add(newItem);
+     * getClassIdOrClassShortNameOrClazz().add(newItem);
      * </pre>
      * 
      * 
@@ -161,6 +163,7 @@ public class ResultSelection {
      * {@link Class }
      * {@link ClassId }
      * {@link ClassShortName }
+     * </p>
      * 
      * 
      * @return

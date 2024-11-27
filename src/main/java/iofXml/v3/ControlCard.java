@@ -11,13 +11,11 @@ import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
+ * The unique identifier of the control card, i.e. card number.
  * 
- *         The unique identifier of the control card, i.e. card number.
- *       
+ * <p>Java class for ControlCard complex type</p>.
  * 
- * <p>Java class for ControlCard complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="ControlCard">
@@ -40,6 +38,10 @@ public class ControlCard {
 
     @XmlValue
     protected String value;
+    /**
+     * The manufacturer of the punching system, e.g. 'SI' or 'Emit'.
+     * 
+     */
     @XmlAttribute(name = "punchingSystem")
     protected String punchingSystem;
     @XmlAttribute(name = "modifyTime")
@@ -71,7 +73,7 @@ public class ControlCard {
     }
 
     /**
-     * Gets the value of the punchingSystem property.
+     * The manufacturer of the punching system, e.g. 'SI' or 'Emit'.
      * 
      * @return
      *     possible object is
@@ -89,6 +91,7 @@ public class ControlCard {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getPunchingSystem()
      */
     public void setPunchingSystem(String value) {
         this.punchingSystem = value;

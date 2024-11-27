@@ -13,13 +13,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Contact information for a person, organisation or other entity.
  * 
- *         Contact information for a person, organisation or other entity.
- *       
+ * <p>Java class for Contact complex type</p>.
  * 
- * <p>Java class for Contact complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="Contact">

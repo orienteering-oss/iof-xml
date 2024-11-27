@@ -10,13 +10,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Element that connects a number of team members in a relay team to a number of courses. Teams are matched by 1) BibNumber, 2) TeamName+ClassName.
  * 
- *         Element that connects a number of team members in a relay team to a number of courses. Teams are matched by 1) BibNumber, 2) TeamName+ClassName.
- *       
+ * <p>Java class for TeamCourseAssignment complex type</p>.
  * 
- * <p>Java class for TeamCourseAssignment complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>{@code
  * <complexType name="TeamCourseAssignment">
@@ -46,19 +44,39 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TeamCourseAssignment {
 
+    /**
+     * The bib number of the team.
+     * 
+     */
     @XmlElement(name = "BibNumber")
     protected String bibNumber;
+    /**
+     * The name of the team.
+     * 
+     */
     @XmlElement(name = "TeamName")
     protected String teamName;
+    /**
+     * The name of the class that the team belongs to.
+     * 
+     */
     @XmlElement(name = "ClassName")
     protected String className;
+    /**
+     * The assignment of courses to team members.
+     * 
+     */
     @XmlElement(name = "TeamMemberCourseAssignment")
     protected List<TeamMemberCourseAssignment> teamMemberCourseAssignment;
+    /**
+     * Container element for custom elements from other schemas.
+     * 
+     */
     @XmlElement(name = "Extensions")
     protected Extensions extensions;
 
     /**
-     * Gets the value of the bibNumber property.
+     * The bib number of the team.
      * 
      * @return
      *     possible object is
@@ -76,13 +94,14 @@ public class TeamCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getBibNumber()
      */
     public void setBibNumber(String value) {
         this.bibNumber = value;
     }
 
     /**
-     * Gets the value of the teamName property.
+     * The name of the team.
      * 
      * @return
      *     possible object is
@@ -100,13 +119,14 @@ public class TeamCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getTeamName()
      */
     public void setTeamName(String value) {
         this.teamName = value;
     }
 
     /**
-     * Gets the value of the className property.
+     * The name of the class that the team belongs to.
      * 
      * @return
      *     possible object is
@@ -124,30 +144,34 @@ public class TeamCourseAssignment {
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getClassName()
      */
     public void setClassName(String value) {
         this.className = value;
     }
 
     /**
+     * The assignment of courses to team members.
+     * 
      * Gets the value of the teamMemberCourseAssignment property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the teamMemberCourseAssignment property.
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the teamMemberCourseAssignment property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTeamMemberCourseAssignment().add(newItem);
+     * getTeamMemberCourseAssignment().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TeamMemberCourseAssignment }
+     * </p>
      * 
      * 
      * @return
@@ -161,7 +185,7 @@ public class TeamCourseAssignment {
     }
 
     /**
-     * Gets the value of the extensions property.
+     * Container element for custom elements from other schemas.
      * 
      * @return
      *     possible object is
@@ -179,6 +203,7 @@ public class TeamCourseAssignment {
      *     allowed object is
      *     {@link Extensions }
      *     
+     * @see #getExtensions()
      */
     public void setExtensions(Extensions value) {
         this.extensions = value;
