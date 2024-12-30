@@ -26,39 +26,82 @@
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
 <link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
     <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-                    <a class="library-name--link" href="../../index.html">
-                            iofXml
-                    </a>
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    iofXml
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.4.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":dokkaHtml/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":dokkaHtml/main"
+                                       data-filter=":dokkaHtml/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div class="library-version">
-1.4.0-SNAPSHOT            </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
         </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
+    </nav>
         <div id="container">
             <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    iofXml
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
             </div>
             <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageIds="iofXml::iofXml////PointingToDeclaration//769193423">
@@ -82,7 +125,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="classes-v2.html">classesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all main types / classes of IOF V2 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="classes-v2.html">classesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all main types / classes of IOF V2 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -97,7 +140,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="classes-v3.html">classesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../iofXml.v3/-base-message-element/index.html">BaseMessageElement</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all main types / classes of IOF V3 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="classes-v3.html">classesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../iofXml.v3/-base-message-element/index.html">BaseMessageElement</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all main types / classes of IOF V3 XSD specification. Only these classes can be top level XML elements.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -112,7 +155,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="class-names-v2.html">classNamesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all names for all main classes of IOF V2 XSD specification, generated from <a href="classes-v2.html">classesV2</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="class-names-v2.html">classNamesV2</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all names for all main classes of IOF V2 XSD specification, generated from <a href="classes-v2.html">classesV2</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -127,7 +170,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="class-names-v3.html">classNamesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all names for all main classes of IOF V3 XSD specification, generated from <a href="classes-v3.html">classesV3</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="class-names-v3.html">classNamesV3</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">List of all names for all main classes of IOF V3 XSD specification, generated from <a href="classes-v3.html">classesV3</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -146,7 +189,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v2-json-to-xml.html"><span class="token function">iofV2JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V2 JSON to XML.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v2-json-to-xml.html"><span class="token function">iofV2JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V2 JSON to XML.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -161,7 +204,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v2-xml-to-json.html"><span class="token function">iofV2XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V2 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v2 DTD).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v2-xml-to-json.html"><span class="token function">iofV2XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V2 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v2 DTD).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -176,7 +219,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v3-json-to-xml.html"><span class="token function">iofV3JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V3 JSON to XML.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v3-json-to-xml.html"><span class="token function">iofV3JsonToXml</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V3 JSON to XML.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -191,7 +234,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v3-xml-to-json.html"><span class="token function">iofV3XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V3 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v3 XSD).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="iof-v3-xml-to-json.html"><span class="token function">iofV3XmlToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an IOF V3 XML to JSON. If a value is not explicitly set in the XML document, the default value will be added to the JSON (as defined in the v3 XSD).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -206,7 +249,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="marshal-iof-object-to-json.html"><span class="token function">marshalIofObjectToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Serialize an IOF object (v3 or v2) to a JSON string</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="marshal-iof-object-to-json.html"><span class="token function">marshalIofObjectToJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Serialize an IOF object (v3 or v2) to a JSON string</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -221,7 +264,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="marshall-iof-object.html"><span class="token function">marshallIofObject</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an object of IOF V3 or V2 type to XML string</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="marshall-iof-object.html"><span class="token function">marshallIofObject</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">obj<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">prettyPrint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Convert an object of IOF V3 or V2 type to XML string</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -236,7 +279,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v2.html"><span class="token function">unmarshalGenericIofV2</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V2 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV2PersonList</code>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v2.html"><span class="token function">unmarshalGenericIofV2</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V2 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV2PersonList</code>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -251,7 +294,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v3.html"><span class="token function">unmarshalGenericIofV3</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V3 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV3CompetitorList</code>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-generic-iof-v3.html"><span class="token function">unmarshalGenericIofV3</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">validateXml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Convert an XML file to an object of IOF V3 type. This function could be great for testing, but in production you may want to use one of the specialized converters, e.g. <code class="lang-kotlin">unmarshalIofV3CompetitorList</code>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -266,7 +309,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-class-data.html"><span class="token function">unmarshalIofV2ClassData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-class-data/index.html">ClassData</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClassData XML to an object of type ClassData</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-class-data.html"><span class="token function">unmarshalIofV2ClassData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-class-data/index.html">ClassData</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClassData XML to an object of type ClassData</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -281,7 +324,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-club-list.html"><span class="token function">unmarshalIofV2ClubList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-club-list/index.html">ClubList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClubList XML to an object of type ClubList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-club-list.html"><span class="token function">unmarshalIofV2ClubList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-club-list/index.html">ClubList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ClubList XML to an object of type ClubList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -296,7 +339,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-competitor-list.html"><span class="token function">unmarshalIofV2CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-competitor-list/index.html">CompetitorList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-competitor-list.html"><span class="token function">unmarshalIofV2CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-competitor-list/index.html">CompetitorList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -311,7 +354,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-course-data.html"><span class="token function">unmarshalIofV2CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-course-data/index.html">CourseData</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-course-data.html"><span class="token function">unmarshalIofV2CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-course-data/index.html">CourseData</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -326,7 +369,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-entry-list.html"><span class="token function">unmarshalIofV2EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-entry-list/index.html">EntryList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-entry-list.html"><span class="token function">unmarshalIofV2EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-entry-list/index.html">EntryList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -341,7 +384,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-event-list.html"><span class="token function">unmarshalIofV2EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-event-list/index.html">EventList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EventList XML to an object of type EventList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-event-list.html"><span class="token function">unmarshalIofV2EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-event-list/index.html">EventList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize EventList XML to an object of type EventList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -356,7 +399,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-person-list.html"><span class="token function">unmarshalIofV2PersonList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-person-list/index.html">PersonList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize PersonList XML to an object of type PersonList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-person-list.html"><span class="token function">unmarshalIofV2PersonList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-person-list/index.html">PersonList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize PersonList XML to an object of type PersonList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -371,7 +414,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-rank-list.html"><span class="token function">unmarshalIofV2RankList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-rank-list/index.html">RankList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize RankList XML to an object of type RankList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-rank-list.html"><span class="token function">unmarshalIofV2RankList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-rank-list/index.html">RankList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize RankList XML to an object of type RankList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -386,7 +429,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-result-list.html"><span class="token function">unmarshalIofV2ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-result-list/index.html">ResultList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-result-list.html"><span class="token function">unmarshalIofV2ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-result-list/index.html">ResultList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -401,7 +444,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-service-request-list.html"><span class="token function">unmarshalIofV2ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-service-request-list/index.html">ServiceRequestList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-service-request-list.html"><span class="token function">unmarshalIofV2ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-service-request-list/index.html">ServiceRequestList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -416,7 +459,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-start-list.html"><span class="token function">unmarshalIofV2StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-start-list/index.html">StartList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize StartList XML to an object of type StartList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v2-start-list.html"><span class="token function">unmarshalIofV2StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v2/-start-list/index.html">StartList</a></div><div class="brief "><p class="paragraph">IOF V2: Deserialize StartList XML to an object of type StartList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -431,7 +474,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-class-list.html"><span class="token function">unmarshalIofV3ClassList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-class-list/index.html">ClassList</a></div><div class="brief "><p class="paragraph">Deserialize ClassList XML to an object of type ClassList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-class-list.html"><span class="token function">unmarshalIofV3ClassList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-class-list/index.html">ClassList</a></div><div class="brief "><p class="paragraph">Deserialize ClassList XML to an object of type ClassList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -446,7 +489,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-competitor-list.html"><span class="token function">unmarshalIofV3CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-competitor-list/index.html">CompetitorList</a></div><div class="brief "><p class="paragraph">Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-competitor-list.html"><span class="token function">unmarshalIofV3CompetitorList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-competitor-list/index.html">CompetitorList</a></div><div class="brief "><p class="paragraph">Deserialize CompetitorList XML to an object of type CompetitorList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -461,7 +504,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-control-card-list.html"><span class="token function">unmarshalIofV3ControlCardList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-control-card-list/index.html">ControlCardList</a></div><div class="brief "><p class="paragraph">Deserialize ControlCardList XML to an object of type ControlCardList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-control-card-list.html"><span class="token function">unmarshalIofV3ControlCardList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-control-card-list/index.html">ControlCardList</a></div><div class="brief "><p class="paragraph">Deserialize ControlCardList XML to an object of type ControlCardList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -476,7 +519,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-course-data.html"><span class="token function">unmarshalIofV3CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-course-data/index.html">CourseData</a></div><div class="brief "><p class="paragraph">Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-course-data.html"><span class="token function">unmarshalIofV3CourseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-course-data/index.html">CourseData</a></div><div class="brief "><p class="paragraph">Deserialize CourseData XML to an object of type CourseData</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -491,7 +534,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-entry-list.html"><span class="token function">unmarshalIofV3EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-entry-list/index.html">EntryList</a></div><div class="brief "><p class="paragraph">Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-entry-list.html"><span class="token function">unmarshalIofV3EntryList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-entry-list/index.html">EntryList</a></div><div class="brief "><p class="paragraph">Deserialize EntryList XML to an object of type EntryList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -506,7 +549,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-event-list.html"><span class="token function">unmarshalIofV3EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-event-list/index.html">EventList</a></div><div class="brief "><p class="paragraph">Deserialize EventList XML to an object of type EventList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-event-list.html"><span class="token function">unmarshalIofV3EventList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-event-list/index.html">EventList</a></div><div class="brief "><p class="paragraph">Deserialize EventList XML to an object of type EventList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -521,7 +564,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-organisation-list.html"><span class="token function">unmarshalIofV3OrganisationList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-organisation-list/index.html">OrganisationList</a></div><div class="brief "><p class="paragraph">Deserialize OrganisationList XML to an object of type OrganisationList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-organisation-list.html"><span class="token function">unmarshalIofV3OrganisationList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-organisation-list/index.html">OrganisationList</a></div><div class="brief "><p class="paragraph">Deserialize OrganisationList XML to an object of type OrganisationList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -536,7 +579,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-result-list.html"><span class="token function">unmarshalIofV3ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-result-list/index.html">ResultList</a></div><div class="brief "><p class="paragraph">Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-result-list.html"><span class="token function">unmarshalIofV3ResultList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-result-list/index.html">ResultList</a></div><div class="brief "><p class="paragraph">Deserialize ResultList XML to an object of type ResultList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -551,7 +594,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-service-request-list.html"><span class="token function">unmarshalIofV3ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-service-request-list/index.html">ServiceRequestList</a></div><div class="brief "><p class="paragraph">Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-service-request-list.html"><span class="token function">unmarshalIofV3ServiceRequestList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-service-request-list/index.html">ServiceRequestList</a></div><div class="brief "><p class="paragraph">Deserialize ServiceRequestList XML to an object of type ServiceRequestList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -566,7 +609,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-start-list.html"><span class="token function">unmarshalIofV3StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-start-list/index.html">StartList</a></div><div class="brief "><p class="paragraph">Deserialize StartList XML to an object of type StartList</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unmarshal-iof-v3-start-list.html"><span class="token function">unmarshalIofV3StartList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">xml<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../iofXml.v3/-start-list/index.html">StartList</a></div><div class="brief "><p class="paragraph">Deserialize StartList XML to an object of type StartList</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -576,11 +619,16 @@
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
-                class="pull-right"><span>Generated by </span><a
-                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2024 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
             </div>
         </div>
     </div>
