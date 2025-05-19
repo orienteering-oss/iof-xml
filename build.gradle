@@ -12,7 +12,7 @@ plugins {
     id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
     id 'org.jetbrains.dokka' version '2.0.0'
-    id 'org.jetbrains.kotlin.jvm' version '2.1.20'
+    id 'org.jetbrains.kotlin.jvm' version '2.1.21'
 }
 
 group 'io.github.orienteering-oss'
