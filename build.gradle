@@ -45,12 +45,12 @@ configurations {
 }
 
 dependencies {
-    jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.5"
-    jaxb "org.glassfish.jaxb:jaxb-runtime:4.0.5" // See also https://github.com/bjornvester/xjc-gradle-plugin/issues/21#issuecomment-904518682
+    jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.6"
+    jaxb "org.glassfish.jaxb:jaxb-runtime:4.0.6" // See also https://github.com/bjornvester/xjc-gradle-plugin/issues/21#issuecomment-904518682
 
     // Generated code depends on the JAXB API, which is removed from base Java in JDK 11
-    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:4.0.5"
-    implementation "org.glassfish.jaxb:jaxb-runtime:4.0.5"
+    generatedImplementation "org.glassfish.jaxb:jaxb-runtime:4.0.6"
+    implementation "org.glassfish.jaxb:jaxb-runtime:4.0.6"
     implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.4' // In JAXB v3, 'javax.xml.bind' was moved to 'jakarta.xml.bind'
 
     // The generated IOF v2/3 files
