@@ -58,7 +58,7 @@ dependencies {
 
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.20.1'
 
-    testImplementation platform("org.junit:junit-bom:5.14.1")
+    testImplementation platform("org.junit:junit-bom:5.14.2")
     testImplementation "org.junit.jupiter:junit-jupiter"
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
