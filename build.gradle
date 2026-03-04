@@ -56,9 +56,9 @@ dependencies {
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
 
-    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.21.0'
+    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.21.1'
 
-    testImplementation platform("org.junit:junit-bom:5.14.2")
+    testImplementation platform("org.junit:junit-bom:5.14.3")
     testImplementation "org.junit.jupiter:junit-jupiter"
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
