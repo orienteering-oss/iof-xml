@@ -15,7 +15,7 @@ jobs:
           java-version: "25.0.2+10.0.LTS"
           distribution: "temurin"
       - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v5
+        uses: gradle/actions/wrapper-validation@v6
       - name: Generate Java sources from XSD files
         run: ./gradlew generateSources
       - name: Build with Gradle
