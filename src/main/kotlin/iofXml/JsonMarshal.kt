@@ -103,13 +103,13 @@ internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
  * @sample iofXml.JsonMarshalKtTest.marshalIofObjectToJson
  */
 fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
-    val mapper = ObjectMapper()
-    mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL) // Else all fields not set will be 'null'
-    if (prettyPrint) {
-        mapper.enable(SerializationFeature.INDENT_OUTPUT)
+    val mapper = ObjectMapper().apply {
+        // Omit null fields so only explicitly set values appear in output
+        configOverride(Any::class.java).setInclude(
+            JsonInclude.Value.construct(JsonInclude.Include.NON_NULL, JsonInclude.Include.NON_NULL)
+        )
+        if (prettyPrint) enable(SerializationFeature.INDENT_OUTPUT)
     }
-
-    //mapper.enable(SerializationFeature.WRAP_ROOT_VALUE) // Problem: root will be UpperCamelCase (need lowerCamelCase)
     val className = nameFromJavaClass(obj.javaClass)
     val objectWithRoot = mapOf(className to obj)
 

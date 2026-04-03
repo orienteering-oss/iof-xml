@@ -1,7 +1,6 @@
 package iofXml
 
 import java.io.StringReader
-import java.lang.Class
 import java.net.URL
 import jakarta.xml.bind.JAXBContext
 import javax.xml.XMLConstants
@@ -45,7 +44,7 @@ private fun unmarshalV3Xml(className: String, dirtyXml: String, validateXml: Boo
     val mainElementName = getMainElementName(dirtyXml) ?: ""
     val xml = removeUTF8BOM(dirtyXml, mainElementName)
     if (mainElementName != className) {
-        println("ERROR V3: mainElementName=$mainElementName is not equal to className=$className")
+        throw IllegalArgumentException("Expected IOF V3 element '$className' but found '$mainElementName'")
     }
 
     val actualClass = Class.forName("iofXml.v3.$className")
