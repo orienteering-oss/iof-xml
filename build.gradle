@@ -184,13 +184,11 @@ tasks.withType(Sign) {
 
 javadoc.options.addStringOption('Xdoclint:none', '-quiet')
 
-dokkaHtml {
-    dokkaSourceSets {
-        configureEach {
-            // See https://kotlin.github.io/dokka/1.7.10/user_guide/gradle/usage/#configuration-options
-            includes.from("src/main/README.md")
-            samples.from("src/test/kotlin/iofXml")
-        }
+dokka {
+    dokkaSourceSets.configureEach {
+        // See https://kotl.in/dokka-gradle-migration
+        includes.from("src/main/README.md")
+        samples.from("src/test/kotlin/iofXml")
     }
 }
 
