@@ -24,11 +24,12 @@ jobs:
           java-version: '21'
 
       - name: Build documentation Dokka plugin https://github.com/Kotlin/dokka
-        run: ./gradlew dokkaGenerateHtml
+        run: ./gradlew dokkaGenerateHtml javadoc
 
       - name: Copy to documentation website location
         run: |
-          cp -rf build/dokka/html public
+          cp -rf build/docs/javadoc public
+          cp -rf build/dokka/html public/kotlin
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
