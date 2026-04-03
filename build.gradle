@@ -16,8 +16,9 @@ plugins {
 }
 
 group 'io.github.orienteering-oss'
-archivesBaseName = "iofXml"
+base.archivesName = "iofXml"
 version '1.4.0-SNAPSHOT'
+def archivesBaseName = base.archivesName.get()
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 repositories {
@@ -193,7 +194,9 @@ dokkaHtml {
     }
 }
 
-mainClassName = "${archivesBaseName}.MainKt"
+application {
+    mainClass = "${base.archivesName.get()}.MainKt"
+}
 kotlin {
   jvmToolchain {
     languageVersion.set(JavaLanguageVersion.of("11"))
