@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ServiceRequestList SYSTEM "IOFdata.dtd">
+<ServiceRequestList>
+   <IOFVersion version="2.0.3" />
+
+   <ClubServiceRequest>
+      <ClubId>3390</ClubId>
+      <PersonServiceRequest>
+         <Person sex="M">
+            <PersonName>
+               <Family>Olsen</Family>
+               <Given>Erik</Given>
+            </PersonName>
+            <PersonId type="int" idManager="IOF">99001</PersonId>
+         </Person>
+         <ServiceRequest>
+            <ServiceId>lunch</ServiceId>
+            <RequestedQuantity>2</RequestedQuantity>
+         </ServiceRequest>
+      </PersonServiceRequest>
+   </ClubServiceRequest>
+</ServiceRequestList>

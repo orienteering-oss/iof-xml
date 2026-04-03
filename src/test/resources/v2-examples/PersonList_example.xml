@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PersonList SYSTEM "IOFdata.dtd">
+<PersonList>
+   <IOFVersion version="2.0.3" />
+
+   <Person sex="M">
+      <PersonName>
+         <Family>Andersen</Family>
+         <Given>Lars</Given>
+      </PersonName>
+      <PersonId type="int" idManager="IOF">12345</PersonId>
+   </Person>
+
+   <Person sex="F">
+      <PersonName>
+         <Family>Nielsen</Family>
+         <Given>Anna</Given>
+      </PersonName>
+      <PersonId type="int" idManager="IOF">12346</PersonId>
+   </Person>
+</PersonList>

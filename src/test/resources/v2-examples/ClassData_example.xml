@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ClassData SYSTEM "IOFdata.dtd">
+<ClassData>
+   <IOFVersion version="2.0.3" />
+
+   <Class>
+      <ClassId type="nat" idManager="DOF">H21</ClassId>
+      <ClassShortName>H21</ClassShortName>
+   </Class>
+
+   <Class>
+      <ClassId type="nat" idManager="DOF">D21</ClassId>
+      <ClassShortName>D21</ClassShortName>
+   </Class>
+</ClassData>
