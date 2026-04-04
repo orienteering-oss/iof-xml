@@ -14,7 +14,7 @@ internal class V2UnmarshallersKtTest {
         val (obj) = unmarshalGenericIofV2(file)
         val xmlString = marshallIofObject(obj)
 
-        assert(xmlString.length > 0)
+        assert(xmlString.isNotEmpty())
         assert(xmlString.contains("<PersonName>"))
         assert(xmlString.contains("Ejsing"))
     }
