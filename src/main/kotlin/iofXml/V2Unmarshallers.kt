@@ -55,7 +55,7 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
     val xml = removeUTF8BOM(dirtyXml, mainElementName)
 
     if (mainElementName != className) {
-        println("ERROR V2: mainElementName=$mainElementName is not equal to className=$className")
+        throw IllegalArgumentException("V2: mainElementName=$mainElementName is not equal to className=$className")
     }
 
     val actualClass = Class.forName("iofXml.v2.$className")
