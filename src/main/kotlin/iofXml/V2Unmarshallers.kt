@@ -34,7 +34,7 @@ fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
         // Credit: https://stackoverflow.com/a/64931583/5550386
         val spf = SAXParserFactory.newInstance()
         // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
         val xmlSource = SAXSource(
             spf.newSAXParser().xmlReader,
             InputSource(StringReader(xmlClean))
@@ -68,7 +68,7 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
         // Credit: https://stackoverflow.com/a/64931583/5550386
         val spf = SAXParserFactory.newInstance()
         // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
         val xmlSource = SAXSource(
             spf.newSAXParser().xmlReader,
             InputSource(StringReader(xml))
