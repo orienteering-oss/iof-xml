@@ -1,7 +1,6 @@
 package iofXml
 
 import java.io.StringReader
-import java.lang.Class
 import jakarta.xml.bind.JAXBContext
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.sax.SAXSource
