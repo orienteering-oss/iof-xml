@@ -63,7 +63,6 @@ fun iofV2JsonToXml(json: String) = iofJsonToXml(json, "v2")
 internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
     val mapper = ObjectMapper()
     mapper.setTimeZone(TimeZone.getDefault())
-    //mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     val tempJsonMap = mapper.readValue(json, HashMap::class.java)
 
     val mainKeys = tempJsonMap.keys
@@ -111,7 +110,6 @@ fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
     }
     val mapper = builder.build()
 
-    //mapper.enable(SerializationFeature.WRAP_ROOT_VALUE) // Problem: root will be UpperCamelCase (need lowerCamelCase)
     val className = nameFromJavaClass(obj.javaClass)
     val objectWithRoot = mapOf(className to obj)
 
