@@ -63,7 +63,6 @@ fun iofV2JsonToXml(json: String) = iofJsonToXml(json, "v2")
 internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
     val mapper = ObjectMapper()
     mapper.setTimeZone(TimeZone.getDefault())
-    //mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     val tempJsonMap = mapper.readValue(json, HashMap::class.java)
 
     val mainKeys = tempJsonMap.keys
@@ -112,6 +111,7 @@ fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
         builder.enable(SerializationFeature.INDENT_OUTPUT)
     }
     val mapper = builder.build()
+
     val className = nameFromJavaClass(obj.javaClass)
     val objectWithRoot = mapOf(className to obj)
 
