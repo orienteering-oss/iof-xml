@@ -6,7 +6,7 @@ import java.io.StringWriter
 import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.Marshaller
 
-private fun main() {
+fun main() {
     val file = File("src/test/resources/v2-examples/ResultList_example.xml").readText()
     val (obj, name, theClass) = unmarshalGenericIofV2(file)
     println(ObjectMapper().writeValueAsString(obj))
