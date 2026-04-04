@@ -2771,9 +2771,6 @@ $dokka.location:iofXml//classNamesV2/#/PointingToDeclaration/iof-xml/iofXml/cla
 $dokka.location:iofXml//classNamesV3/#/PointingToDeclaration/iof-xml/iofXml/class-names-v3.html
 $dokka.location:iofXml//classesV2/#/PointingToDeclaration/iof-xml/iofXml/classes-v2.html
 $dokka.location:iofXml//classesV3/#/PointingToDeclaration/iof-xml/iofXml/classes-v3.html
-$dokka.location:iofXml//generateJsonSchemaForClass/#java.lang.Class[*]#com.github.victools.jsonschema.generator.SchemaVersion/PointingToDeclaration/iof-xml/iofXml/generate-json-schema-for-class.html
-$dokka.location:iofXml//generateJsonSchemasForIofV2/#com.github.victools.jsonschema.generator.SchemaVersion/PointingToDeclaration/iof-xml/iofXml/generate-json-schemas-for-iof-v2.html
-$dokka.location:iofXml//generateJsonSchemasForIofV3/#com.github.victools.jsonschema.generator.SchemaVersion/PointingToDeclaration/iof-xml/iofXml/generate-json-schemas-for-iof-v3.html
 $dokka.location:iofXml//iofV2JsonToXml/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v2-json-to-xml.html
 $dokka.location:iofXml//iofV2XmlToJson/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v2-xml-to-json.html
 $dokka.location:iofXml//iofV3JsonToXml/#kotlin.String/PointingToDeclaration/iof-xml/iofXml/iof-v3-json-to-xml.html
