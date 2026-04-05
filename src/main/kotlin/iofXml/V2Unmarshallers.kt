@@ -1,7 +1,6 @@
 package iofXml
 
 import java.io.StringReader
-import java.lang.Class
 import jakarta.xml.bind.JAXBContext
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.sax.SAXSource
@@ -35,7 +34,7 @@ fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
         // Credit: https://stackoverflow.com/a/64931583/5550386
         val spf = SAXParserFactory.newInstance()
         // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
         val xmlSource = SAXSource(
             spf.newSAXParser().xmlReader,
             InputSource(StringReader(xmlClean))
@@ -55,7 +54,7 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
     val xml = removeUTF8BOM(dirtyXml, mainElementName)
 
     if (mainElementName != className) {
-        println("ERROR V2: mainElementName=$mainElementName is not equal to className=$className")
+        throw IllegalArgumentException("V2: mainElementName=$mainElementName is not equal to className=$className")
     }
 
     val actualClass = Class.forName("iofXml.v2.$className")
@@ -69,7 +68,7 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
         // Credit: https://stackoverflow.com/a/64931583/5550386
         val spf = SAXParserFactory.newInstance()
         // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
         val xmlSource = SAXSource(
             spf.newSAXParser().xmlReader,
             InputSource(StringReader(xml))
