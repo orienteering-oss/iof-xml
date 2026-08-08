@@ -6,7 +6,7 @@ import java.io.StringWriter
 import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.Marshaller
 
-private fun main() {
+fun main() {
     val file = File("src/test/resources/v2-examples/ResultList_example.xml").readText()
     val (obj, name, theClass) = unmarshalGenericIofV2(file)
     println(ObjectMapper().writeValueAsString(obj))
@@ -72,7 +72,7 @@ val classesV3 = listOf(
 /**
  * List of all names for all main classes of IOF V3 XSD specification, generated from [classesV3][classesV3].
  */
-val classNamesV3 = classesV3.map { nameFromJavaClass(it.javaClass) }
+val classNamesV3 = classesV3.map { nameFromJavaClass(it) }
 
 /**
  * List of all main types / classes of IOF V2 XSD specification. Only these
@@ -97,4 +97,4 @@ val classesV2 = listOf(
 /**
  * List of all names for all main classes of IOF V2 XSD specification, generated from [classesV2][classesV2].
  */
-val classNamesV2 = classesV2.map { nameFromJavaClass(it.javaClass) }
+val classNamesV2 = classesV2.map { nameFromJavaClass(it) }
