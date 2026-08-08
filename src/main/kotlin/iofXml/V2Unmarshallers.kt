@@ -1,7 +1,6 @@
 package iofXml
 
 import java.io.StringReader
-import java.lang.Class
 import jakarta.xml.bind.JAXBContext
 import javax.xml.parsers.SAXParserFactory
 import javax.xml.transform.sax.SAXSource
@@ -19,29 +18,17 @@ fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
     val className = getMainElementName(xml) ?: ""
     val xmlClean = removeUTF8BOM(xml, className)
     val actualClass = Class.forName("iofXml.v2.$className")
-
     val jaxbContext = JAXBContext.newInstance(actualClass)
-
     val unmarshall = jaxbContext.createUnmarshaller()
 
-    val validateXml = false
-    return if (validateXml) {
-        /*
-            This does not work, because it tries to load ethe IOFdata.dtd file, which I can't make work.
-         */
-        val reader = StringReader(xmlClean)
-        Triple(unmarshall.unmarshal(reader), className, actualClass)
-    } else {
-        // Credit: https://stackoverflow.com/a/64931583/5550386
-        val spf = SAXParserFactory.newInstance()
-        // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-        val xmlSource = SAXSource(
-            spf.newSAXParser().xmlReader,
-            InputSource(StringReader(xmlClean))
-        )
-        Triple(unmarshall.unmarshal(xmlSource), className, actualClass)
-    }
+    // Credit: https://stackoverflow.com/a/64931583/5550386
+    val spf = SAXParserFactory.newInstance()
+    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
+    val xmlSource = SAXSource(
+        spf.newSAXParser().xmlReader,
+        InputSource(StringReader(xmlClean))
+    )
+    return Triple(unmarshall.unmarshal(xmlSource), className, actualClass)
 }
 
 /**
@@ -55,30 +42,21 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
     val xml = removeUTF8BOM(dirtyXml, mainElementName)
 
     if (mainElementName != className) {
-        println("ERROR V2: mainElementName=$mainElementName is not equal to className=$className")
+        throw IllegalArgumentException("Expected IOF V2 element '$className' but found '$mainElementName'")
     }
 
     val actualClass = Class.forName("iofXml.v2.$className")
-
     val jaxbContext = JAXBContext.newInstance(actualClass)
-
-    val turnOfDtdValidation = true
     val unmarshall = jaxbContext.createUnmarshaller()
 
-    return if (turnOfDtdValidation) {
-        // Credit: https://stackoverflow.com/a/64931583/5550386
-        val spf = SAXParserFactory.newInstance()
-        // Do not validate DTD
-        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-        val xmlSource = SAXSource(
-            spf.newSAXParser().xmlReader,
-            InputSource(StringReader(xml))
-        )
-        unmarshall.unmarshal(xmlSource)
-    } else {
-        val reader = StringReader(xml)
-        unmarshall.unmarshal(reader)
-    }
+    // Credit: https://stackoverflow.com/a/64931583/5550386
+    val spf = SAXParserFactory.newInstance()
+    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
+    val xmlSource = SAXSource(
+        spf.newSAXParser().xmlReader,
+        InputSource(StringReader(xml))
+    )
+    return unmarshall.unmarshal(xmlSource)
 }
 
 /** IOF V2: Deserialize PersonList XML to an object of type PersonList */
