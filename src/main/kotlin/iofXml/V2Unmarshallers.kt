@@ -21,14 +21,20 @@ fun unmarshalGenericIofV2(xml: String): Triple<Any, String, Class<*>> {
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
 
-    // Credit: https://stackoverflow.com/a/64931583/5550386
-    val spf = SAXParserFactory.newInstance()
-    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
-    val xmlSource = SAXSource(
-        spf.newSAXParser().xmlReader,
-        InputSource(StringReader(xmlClean))
-    )
-    return Triple(unmarshall.unmarshal(xmlSource), className, actualClass)
+    // Manual switch: the default reader may load IOFdata.dtd, but does not enable validation.
+    val validateXml = false
+    return if (validateXml) {
+        Triple(unmarshall.unmarshal(StringReader(xmlClean)), className, actualClass)
+    } else {
+        // Credit: https://stackoverflow.com/a/64931583/5550386
+        val spf = SAXParserFactory.newInstance()
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
+        val xmlSource = SAXSource(
+            spf.newSAXParser().xmlReader,
+            InputSource(StringReader(xmlClean))
+        )
+        Triple(unmarshall.unmarshal(xmlSource), className, actualClass)
+    }
 }
 
 /**
@@ -49,14 +55,20 @@ private fun unmarshalV2Xml(className: String, dirtyXml: String): Any {
     val jaxbContext = JAXBContext.newInstance(actualClass)
     val unmarshall = jaxbContext.createUnmarshaller()
 
-    // Credit: https://stackoverflow.com/a/64931583/5550386
-    val spf = SAXParserFactory.newInstance()
-    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
-    val xmlSource = SAXSource(
-        spf.newSAXParser().xmlReader,
-        InputSource(StringReader(xml))
-    )
-    return unmarshall.unmarshal(xmlSource)
+    // Manual switch: true skips loading IOFdata.dtd; neither path enables validation.
+    val turnOfDtdValidation = true
+    return if (turnOfDtdValidation) {
+        // Credit: https://stackoverflow.com/a/64931583/5550386
+        val spf = SAXParserFactory.newInstance()
+        spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
+        val xmlSource = SAXSource(
+            spf.newSAXParser().xmlReader,
+            InputSource(StringReader(xml))
+        )
+        unmarshall.unmarshal(xmlSource)
+    } else {
+        unmarshall.unmarshal(StringReader(xml))
+    }
 }
 
 /** IOF V2: Deserialize PersonList XML to an object of type PersonList */
