@@ -1,15 +1,35 @@
 package iofXml
 
+import com.github.victools.jsonschema.generator.CustomDefinition
 import com.github.victools.jsonschema.generator.OptionPreset
 import com.github.victools.jsonschema.generator.SchemaGenerator
 import com.github.victools.jsonschema.generator.SchemaGeneratorConfigBuilder
+import com.github.victools.jsonschema.generator.SchemaKeyword
 import com.github.victools.jsonschema.generator.SchemaVersion
 import com.github.victools.jsonschema.module.jackson.JacksonModule
+import javax.xml.datatype.XMLGregorianCalendar
 
 private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator {
     val jacksonModule = JacksonModule()
     val configBuilder = SchemaGeneratorConfigBuilder(schemaVersion, OptionPreset.PLAIN_JSON)
         .with(jacksonModule)
+    // Match ObjectMapper's default output for JAXB dates and binary values.
+    configBuilder.forTypesInGeneral().withCustomDefinitionProvider { type, context ->
+        val jsonType = when (type.erasedType) {
+            XMLGregorianCalendar::class.java -> SchemaKeyword.TAG_TYPE_INTEGER
+            ByteArray::class.java -> SchemaKeyword.TAG_TYPE_STRING
+            else -> null
+        }
+        jsonType?.let {
+            val definition = context.generatorConfig.createObjectNode()
+                .put(context.getKeyword(SchemaKeyword.TAG_TYPE), context.getKeyword(it))
+            CustomDefinition(
+                definition,
+                CustomDefinition.DefinitionType.INLINE,
+                CustomDefinition.AttributeInclusion.NO
+            )
+        }
+    }
     return SchemaGenerator(configBuilder.build())
 }
 
