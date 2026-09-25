@@ -195,8 +195,19 @@ dokka {
 application {
     mainClass = "${base.archivesName.get()}.MainKt"
 }
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
 kotlin {
-  jvmToolchain {
-    languageVersion.set(JavaLanguageVersion.of("17"))
-  }
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        freeCompilerArgs.add('-Xjdk-release=17')
+    }
 }
