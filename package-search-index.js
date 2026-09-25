@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"iofXml.v2"},{"l":"iofXml.v3"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"iofXml.v2"},{"l":"iofXml.v3"}];updateSearchResults();
