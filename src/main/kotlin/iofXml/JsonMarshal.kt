@@ -3,6 +3,7 @@ package iofXml
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.databind.json.JsonMapper
 import java.util.Locale
 import java.util.TimeZone
 import kotlin.collections.HashMap
@@ -103,13 +104,14 @@ internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
  * @sample iofXml.JsonMarshalKtTest.marshalIofObjectToJson
  */
 fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
-    val mapper = ObjectMapper().apply {
-        // Omit null fields so only explicitly set values appear in output
-        configOverride(Any::class.java).setInclude(
+    val builder = JsonMapper.builder()
+        .defaultPropertyInclusion(
             JsonInclude.Value.construct(JsonInclude.Include.NON_NULL, JsonInclude.Include.NON_NULL)
         )
-        if (prettyPrint) enable(SerializationFeature.INDENT_OUTPUT)
+    if (prettyPrint) {
+        builder.enable(SerializationFeature.INDENT_OUTPUT)
     }
+    val mapper = builder.build()
     val className = nameFromJavaClass(obj.javaClass)
     val objectWithRoot = mapOf(className to obj)
 
