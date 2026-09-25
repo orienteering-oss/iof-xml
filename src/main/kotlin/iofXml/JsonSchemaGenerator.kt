@@ -15,6 +15,7 @@ private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator 
 
 /**
  * Generate a JSON Schema (Draft 2019-09) for an IOF V3 top-level class.
+ * The schema describes the value inside the root key produced by [marshalIofObjectToJson].
  *
  * @param clazz the IOF V3 class to generate schema for, e.g. `iofXml.v3.StartList::class.java`
  * @param schemaVersion the JSON Schema draft version to generate (default: 2019-09)
@@ -28,6 +29,7 @@ fun generateJsonSchemaForClass(
 
 /**
  * Generate JSON Schemas (Draft 2019-09) for all supported IOF V3 top-level classes.
+ * Each map key is the JSON root key, and its schema describes the value under that key.
  *
  * @param schemaVersion the JSON Schema draft version to generate (default: 2019-09)
  * @return map of class name to JSON Schema string
@@ -43,6 +45,7 @@ fun generateJsonSchemasForIofV3(
 
 /**
  * Generate JSON Schemas (Draft 2019-09) for all supported IOF V2 top-level classes.
+ * Each map key is the JSON root key, and its schema describes the value under that key.
  *
  * @param schemaVersion the JSON Schema draft version to generate (default: 2019-09)
  * @return map of class name to JSON Schema string
