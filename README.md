@@ -87,6 +87,8 @@ var classListExampleXml = """
 
 ## Development with Gradle
 
+Use JDK 17 or a newer JDK supported by the Gradle wrapper; the library targets Java 17.
+
 ### Run project
 
 ```shell
