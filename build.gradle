@@ -57,7 +57,7 @@ dependencies {
     // The generated IOF v2/3 files
     implementation sourceSets.generated.output
 
-    implementation 'com.github.victools:jsonschema-generator:4.38.0'
+    api 'com.github.victools:jsonschema-generator:4.38.0'
     implementation 'com.github.victools:jsonschema-module-jackson:4.38.0'
 
     testImplementation platform("org.junit:junit-bom:6.1.3")
