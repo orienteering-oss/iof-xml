@@ -4,6 +4,13 @@
   "schedule": ["before 3am on Monday"],
   "packageRules": [
     {
+      "matchPackageNames": [
+        "com.github.victools:jsonschema-generator",
+        "com.github.victools:jsonschema-module-jackson"
+      ],
+      "groupName": "victools JSON Schema"
+    },
+    {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "platformAutomerge": true
