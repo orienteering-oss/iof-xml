@@ -85,6 +85,12 @@ var classListExampleXml = """
 """.trimIndent()
 ```
 
+### JSON conversion
+
+JSON conversion uses Jackson 3 and writes calendar values as ISO 8601 strings, preserving date-only and time-only values, timezone offsets, and fractional seconds.
+This replaces the previous numeric timestamp output; generated JSON Schemas now describe calendar values as strings.
+Reading existing JSON with numeric timestamps remains supported.
+
 ## Development with Gradle
 
 Use JDK 17 or a newer JDK supported by the Gradle wrapper; the library targets Java 17.

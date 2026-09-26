@@ -1,12 +1,15 @@
 package iofXml
 
 import com.fasterxml.jackson.annotation.JsonInclude
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.databind.SerializationFeature
-import com.fasterxml.jackson.databind.json.JsonMapper
+import tools.jackson.databind.SerializationFeature
+import tools.jackson.databind.json.JsonMapper
 import java.util.Locale
 import java.util.TimeZone
 import kotlin.collections.HashMap
+
+private val xmlCalendarModule = XmlCalendarModule()
+
+internal fun jsonMapperBuilder(): JsonMapper.Builder = JsonMapper.builder().addModule(xmlCalendarModule)
 
 /**
  * Convert an IOF V3 XML to JSON. If a value is not
@@ -61,9 +64,9 @@ fun iofV3JsonToXml(json: String) = iofJsonToXml(json, "v3")
 fun iofV2JsonToXml(json: String) = iofJsonToXml(json, "v2")
 
 internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
-    val mapper = ObjectMapper()
-    mapper.setTimeZone(TimeZone.getDefault())
-    //mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    val mapper = jsonMapperBuilder()
+        .defaultTimeZone(TimeZone.getDefault())
+        .build()
     val tempJsonMap = mapper.readValue(json, HashMap::class.java)
 
     val mainKeys = tempJsonMap.keys
@@ -104,10 +107,11 @@ internal fun iofJsonToXml(json: String, iofVersion: String = "v3"): String {
  * @sample iofXml.JsonMarshalKtTest.marshalIofObjectToJson
  */
 fun marshalIofObjectToJson(obj: Any, prettyPrint: Boolean = true): String {
-    val builder = JsonMapper.builder()
-        .defaultPropertyInclusion(
-            JsonInclude.Value.construct(JsonInclude.Include.NON_NULL, JsonInclude.Include.NON_NULL)
-        )
+    val builder = jsonMapperBuilder()
+        .changeDefaultPropertyInclusion {
+            it.withValueInclusion(JsonInclude.Include.NON_NULL)
+                .withContentInclusion(JsonInclude.Include.NON_NULL)
+        }
     if (prettyPrint) {
         builder.enable(SerializationFeature.INDENT_OUTPUT)
     }
