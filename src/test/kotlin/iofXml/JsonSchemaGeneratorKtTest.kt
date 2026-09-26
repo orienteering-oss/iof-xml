@@ -28,8 +28,8 @@ class JsonSchemaGeneratorKtTest {
         val serialized = mapper.readTree(marshalIofObjectToJson(startList)).path("startList")
 
         assertTrue(serialized.has("event"))
-        assertTrue(serialized.path("createTime").isString)
-        assertEquals("string", schemaProperties.path("createTime").path("type").asString())
+        assertTrue(serialized.path("createTime").isIntegralNumber)
+        assertEquals("integer", schemaProperties.path("createTime").path("type").asString())
         serialized.propertyNames().forEach { property ->
             assertTrue(schemaProperties.has(property), "Missing schema property: $property")
         }
@@ -47,13 +47,13 @@ class JsonSchemaGeneratorKtTest {
     }
 
     @Test
-    fun generatedSchemaDescribesDateAndTimeAsStrings() {
+    fun generatedSchemaDescribesDateAndTimeAsNumericTimestamps() {
         val mapper = JsonMapper.builder().build()
         val properties = mapper.readTree(generateJsonSchemaForClass(DateAndOptionalTime::class.java))
             .path("properties")
 
-        assertEquals("string", properties.path("date").path("type").asString())
-        assertEquals("string", properties.path("time").path("type").asString())
+        assertEquals("integer", properties.path("date").path("type").asString())
+        assertEquals("integer", properties.path("time").path("type").asString())
     }
 
     @Test

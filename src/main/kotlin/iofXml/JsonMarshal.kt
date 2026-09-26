@@ -1,15 +1,37 @@
 package iofXml
 
 import com.fasterxml.jackson.annotation.JsonInclude
+import tools.jackson.databind.cfg.DateTimeFeature
 import tools.jackson.databind.SerializationFeature
+import tools.jackson.databind.cfg.MapperConfig
+import tools.jackson.databind.introspect.AccessorNamingStrategy
+import tools.jackson.databind.introspect.AnnotatedClass
+import tools.jackson.databind.introspect.DefaultAccessorNamingStrategy
 import tools.jackson.databind.json.JsonMapper
 import java.util.Locale
 import java.util.TimeZone
 import kotlin.collections.HashMap
 
-private val xmlCalendarModule = XmlCalendarModule()
+// Jackson 3 removed legacy getter naming; retain names such as "iofversion" and "ccardId".
+private val legacyAccessorNaming = object : DefaultAccessorNamingStrategy.Provider() {
+    override fun forPOJO(config: MapperConfig<*>, targetClass: AnnotatedClass): AccessorNamingStrategy =
+        object : DefaultAccessorNamingStrategy(config, targetClass, "set", "get", "is", null) {
+            override fun stdManglePropertyName(basename: String, offset: Int): String? {
+                if (offset == basename.length) return null
+                val name = StringBuilder(basename.substring(offset))
+                for (index in name.indices) {
+                    val lower = name[index].lowercaseChar()
+                    if (lower == name[index]) break
+                    name.setCharAt(index, lower)
+                }
+                return name.toString()
+            }
+        }
+}
 
-internal fun jsonMapperBuilder(): JsonMapper.Builder = JsonMapper.builder().addModule(xmlCalendarModule)
+internal fun jsonMapperBuilder(): JsonMapper.Builder = JsonMapper.builderWithJackson2Defaults()
+    .accessorNaming(legacyAccessorNaming)
+    .enable(DateTimeFeature.WRITE_DATES_AS_TIMESTAMPS)
 
 /**
  * Convert an IOF V3 XML to JSON. If a value is not

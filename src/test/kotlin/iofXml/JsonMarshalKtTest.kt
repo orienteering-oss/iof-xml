@@ -1,11 +1,13 @@
 package iofXml
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 import tools.jackson.databind.json.JsonMapper
 import tools.jackson.databind.node.ObjectNode
-import javax.xml.datatype.DatatypeFactory
+import java.util.TimeZone
 
 internal class JsonMarshalKtTest {
 
@@ -64,37 +66,30 @@ internal class JsonMarshalKtTest {
     }
 
     @Test
-    fun calendarStringsPreserveXmlValuesThroughJsonRoundTrip() {
-        val factory = DatatypeFactory.newInstance()
+    fun calendarValuesUseNumericTimestamps() {
         val mapper = JsonMapper.builder().build()
-        val values = listOf(
-            Triple("2026-09-26", "10:00:00", "2026-09-26T10:00:00"),
-            Triple("2026-09-26Z", "10:00:00Z", "2026-09-26T10:00:00Z"),
-            Triple("2026-09-26+14:00", "23:59:59.123456+14:00", "2026-09-26T23:59:59.123456+14:00"),
-            Triple("2026-09-26-11:00", "00:00:00-11:00", "2026-09-26T00:00:00-11:00")
-        )
-
-        values.forEach { (date, time, dateTime) ->
+        val originalTimeZone = TimeZone.getDefault()
+        try {
+            TimeZone.setDefault(TimeZone.getTimeZone("UTC"))
             val startList = unmarshalIofV3StartList(getV3ResourceAsText("StartList1.xml"))
-            startList.createTime = factory.newXMLGregorianCalendar(dateTime)
-            startList.event.startTime.date = factory.newXMLGregorianCalendar(date)
-            startList.event.startTime.time = factory.newXMLGregorianCalendar(time)
+            val serialized = mapper.readTree(marshalIofObjectToJson(startList)).path("startList")
+            val dateTime = serialized.path("createTime")
+            val date = serialized.path("event").path("startTime").path("date")
+            val time = serialized.path("event").path("startTime").path("time")
 
-            val json = marshalIofObjectToJson(startList)
-            val serialized = mapper.readTree(json).path("startList")
-            assertEquals(dateTime, serialized.path("createTime").asString())
-            assertEquals(date, serialized.path("event").path("startTime").path("date").asString())
-            assertEquals(time, serialized.path("event").path("startTime").path("time").asString())
-
-            val restored = unmarshalIofV3StartList(iofV3JsonToXml(json))
-            assertEquals(dateTime, restored.createTime.toXMLFormat())
-            assertEquals(date, restored.event.startTime.date.toXMLFormat())
-            assertEquals(time, restored.event.startTime.time.toXMLFormat())
+            assertTrue(dateTime.isIntegralNumber)
+            assertTrue(date.isIntegralNumber)
+            assertTrue(time.isIntegralNumber)
+            assertEquals(1311156991000L, dateTime.asLong())
+            assertEquals(1311984000000L, date.asLong())
+            assertEquals(32400000L, time.asLong())
+        } finally {
+            TimeZone.setDefault(originalTimeZone)
         }
     }
 
     @Test
-    fun legacyNumericTimestampsCanStillBeRead() {
+    fun numericTimestampsCanBeRead() {
         val mapper = JsonMapper.builder().build()
         val startList = unmarshalIofV3StartList(getV3ResourceAsText("StartList1.xml"))
         val serialized = mapper.readTree(marshalIofObjectToJson(startList))
@@ -104,5 +99,19 @@ internal class JsonMarshalKtTest {
 
         val restored = unmarshalIofV3StartList(iofV3JsonToXml(serialized.toString()))
         assertEquals(timestamp, restored.createTime.toGregorianCalendar().timeInMillis)
+    }
+
+    @Test
+    fun acronymPropertiesRetainJackson2Names() {
+        val json = iofV2XmlToJson(getV2ResourceAsText("EntryList_example.xml"))
+        val entryList = JsonMapper.builder().build().readTree(json).path("entryList")
+        val entry = entryList.path("clubEntry").path(0).path("entry").path(0)
+
+        assertTrue(entryList.has("iofversion"))
+        assertFalse(entryList.has("IOFVersion"))
+        assertTrue(entry.has("ccard"))
+        assertFalse(entry.has("CCard"))
+        assertEquals("287130", entry.path("ccard").path(0).path("ccardId").asString())
+        assertTrue(iofV2JsonToXml(json).contains("<CCardId>287130</CCardId>"))
     }
 }

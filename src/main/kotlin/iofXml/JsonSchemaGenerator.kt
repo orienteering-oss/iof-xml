@@ -13,10 +13,10 @@ private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator 
     val jacksonModule = JacksonSchemaModule()
     val configBuilder = SchemaGeneratorConfigBuilder(schemaVersion, OptionPreset.PLAIN_JSON)
         .with(jacksonModule)
-    // Match IOF JSON's XML calendar strings and base64-encoded binary values.
+    // Match IOF JSON's numeric calendar timestamps and base64-encoded binary values.
     configBuilder.forTypesInGeneral().withCustomDefinitionProvider { type, context ->
         val jsonType = when (type.erasedType) {
-            XMLGregorianCalendar::class.java -> SchemaKeyword.TAG_TYPE_STRING
+            XMLGregorianCalendar::class.java -> SchemaKeyword.TAG_TYPE_INTEGER
             ByteArray::class.java -> SchemaKeyword.TAG_TYPE_STRING
             else -> null
         }
