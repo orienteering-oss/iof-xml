@@ -15,9 +15,9 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '2.4.20'
 }
 
-group 'io.github.orienteering-oss'
+group = 'io.github.orienteering-oss'
 base.archivesName = "iofXml"
-version '1.5.0'
+version = '1.5.0'
 def archivesBaseName = base.archivesName.get()
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
@@ -78,7 +78,7 @@ def addXjcTask(taskName, schema, pkg, dest) {
     // The main XJC task, calls XJCFacade which is the entry point of the XJC JAR
     tasks.create(name: taskName, type: JavaExec) {
 
-        classpath configurations.jaxb
+        classpath = configurations.jaxb
         mainClass = 'com.sun.tools.xjc.XJCFacade'
 
         // To explore available args, download the XJC JAR and run java -jar jaxb-xjc.jar --help
@@ -101,7 +101,7 @@ addXjcTask("iof_v3",
         "$generated_dir")
 
 tasks.register('generateSources') {
-    description "Generate Java sources fram XSD files"
+    description = "Generate Java sources fram XSD files"
     dependsOn tasks.getByName('iof_v2')
     dependsOn tasks.getByName('iof_v3')
 }
@@ -117,17 +117,16 @@ task sourcesJar(type: Jar) {
 }
 
 
-artifacts {
-    archives sourcesJar
-    archives javadocJar
+tasks.named('assemble') {
+    dependsOn sourcesJar, javadocJar
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId project.group
-            artifactId project.name
-            version project.version
+            groupId = project.group
+            artifactId = project.name
+            version = project.version
             artifacts = [javadocJar, sourcesJar]
             from components.java
 
