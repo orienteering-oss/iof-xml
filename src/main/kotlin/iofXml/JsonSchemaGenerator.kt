@@ -6,11 +6,11 @@ import com.github.victools.jsonschema.generator.SchemaGenerator
 import com.github.victools.jsonschema.generator.SchemaGeneratorConfigBuilder
 import com.github.victools.jsonschema.generator.SchemaKeyword
 import com.github.victools.jsonschema.generator.SchemaVersion
-import com.github.victools.jsonschema.module.jackson.JacksonModule
+import com.github.victools.jsonschema.module.jackson.JacksonSchemaModule
 import javax.xml.datatype.XMLGregorianCalendar
 
 private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator {
-    val jacksonModule = JacksonModule()
+    val jacksonModule = JacksonSchemaModule()
     val configBuilder = SchemaGeneratorConfigBuilder(schemaVersion, OptionPreset.PLAIN_JSON)
         .with(jacksonModule)
     // Match ObjectMapper's default output for JAXB dates and binary values.
