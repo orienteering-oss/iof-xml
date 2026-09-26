@@ -30,6 +30,18 @@ private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator 
             )
         }
     }
+    // Jackson's legacy getter naming lowercases leading acronyms (getCCardId -> ccardId).
+    configBuilder.forFields().withPropertyNameOverrideResolver { field ->
+        val getter = field.findGetter()?.declaredName ?: return@withPropertyNameOverrideResolver null
+        val prefixLength = if (getter.startsWith("get")) 3 else 2
+        val name = StringBuilder(getter.substring(prefixLength))
+        for (index in name.indices) {
+            val lower = name[index].lowercaseChar()
+            if (lower == name[index]) break
+            name.setCharAt(index, lower)
+        }
+        name.toString()
+    }
     return SchemaGenerator(configBuilder.build())
 }
 
