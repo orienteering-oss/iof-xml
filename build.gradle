@@ -61,7 +61,7 @@ dependencies {
     implementation 'com.github.victools:jsonschema-module-jackson:5.0.0'
 
     // Keep XML/JSON conversion on Jackson 2; victools 5 uses Jackson 3 internally.
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.3'
 
     testImplementation platform("org.junit:junit-bom:6.1.3")
     testImplementation "org.junit.jupiter:junit-jupiter"
