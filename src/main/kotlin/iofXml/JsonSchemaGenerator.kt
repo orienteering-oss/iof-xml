@@ -13,7 +13,7 @@ private fun buildSchemaGenerator(schemaVersion: SchemaVersion): SchemaGenerator 
     val jacksonModule = JacksonSchemaModule()
     val configBuilder = SchemaGeneratorConfigBuilder(schemaVersion, OptionPreset.PLAIN_JSON)
         .with(jacksonModule)
-    // Match ObjectMapper's default output for JAXB dates and binary values.
+    // Match IOF JSON's numeric calendar timestamps and base64-encoded binary values.
     configBuilder.forTypesInGeneral().withCustomDefinitionProvider { type, context ->
         val jsonType = when (type.erasedType) {
             XMLGregorianCalendar::class.java -> SchemaKeyword.TAG_TYPE_INTEGER
