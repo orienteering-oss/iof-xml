@@ -107,16 +107,35 @@ Use JDK 17 or a newer JDK supported by the Gradle wrapper; the library targets J
 ./gradlew generateSources
 ```
 
-### Upload to maven central
+### Publish a release to Maven Central
 
-(Remember to put a file `gradle.properties` with the required fields (GPG-key and ossrh username and password
-see [Signing artifacts](https://docs.gradle.org/current/userguide/publishing_signing.html))
+1. Set a non-`SNAPSHOT` version in `build.gradle` and update both install examples above to match.
+   Commit the release changes before publishing.
+2. Verify access to `io.github.orienteering-oss` in the [Central Portal namespaces](https://central.sonatype.com/publishing/namespaces) and generate a [Portal user token](https://central.sonatype.com/usertoken).
+3. Add the token and [GPG signing credentials](https://docs.gradle.org/current/userguide/signing_plugin.html#sec:signatory_credentials) to `~/.gradle/gradle.properties`:
 
-```shell
-./gradlew publishMavenJavaPublicationToSonatypeRepository
-```
+   ```properties
+   mavenCentralUsername=PORTAL_TOKEN_USERNAME
+   mavenCentralPassword=PORTAL_TOKEN_PASSWORD
+   signing.keyId=LAST_8_HEX_DIGITS_OF_GPG_KEY_ID
+   signing.password=GPG_KEY_PASSPHRASE
+   signing.secretKeyRingFile=/absolute/path/to/secring.gpg
+   ```
 
-After upload, follow [the release process](https://central.sonatype.org/publish/release/).
+   Use Portal token credentials instead of the old `ossrhUsername` and `ossrhPassword` properties.
+   Keep credentials outside Git and [publish your GPG public key](https://central.sonatype.org/publish/requirements/gpg/#distributing-your-public-key).
+4. Run the publishing task from the release commit:
+
+   ```shell
+   ./gradlew clean publishAggregationToCentralPortal
+   ```
+
+   Gradle runs the project checks, builds and signs the artifacts, uploads them through the Central Portal API, and automatically publishes after validation.
+   It waits up to 30 minutes for publication to finish.
+   Check the [Portal deployments](https://central.sonatype.com/publishing/deployments) for status and validation errors; published versions cannot be overwritten.
+5. Create the matching Git tag and GitHub release from the same commit if they do not already exist.
+
+To inspect the signed bundle locally before uploading, run `./gradlew nmcpZipAggregation` and inspect `build/nmcp/zip/aggregation.zip`.
 
 ## Related
 

@@ -3,12 +3,9 @@ plugins {
     id 'java-library'
     id 'idea'
 
-    id 'maven-publish' // NB: previously used 'maven', that is deprecated
-    // See
-    // https://central.sonatype.org/publish/publish-gradle/
-    // https://medium.com/@nmauti/sign-and-publish-on-maven-central-a-project-with-the-new-maven-publish-gradle-plugin-22a72a4bfd4b
-    // https://github.com/jmini/html-publish-helper/blob/master/build.gradle
-
+    id 'maven-publish'
+    id 'com.gradleup.nmcp' version '1.6.2'
+    id 'com.gradleup.nmcp.aggregation' version '1.6.2'
     id 'signing' // See https://docs.gradle.org/current/userguide/signing_plugin.html
     id 'application'
     id 'org.jetbrains.dokka' version '2.2.0'
@@ -46,6 +43,8 @@ configurations {
 }
 
 dependencies {
+    nmcpAggregation project(':')
+
     jaxb "org.glassfish.jaxb:jaxb-xjc:4.0.9"
     jaxb "org.glassfish.jaxb:jaxb-runtime:4.0.9" // See also https://github.com/bjornvester/xjc-gradle-plugin/issues/21#issuecomment-904518682
 
@@ -160,19 +159,23 @@ publishing {
             }
         }
     }
-    repositories {
-        maven {
-            name = "sonatype"
+}
 
-            def releaseRepo = "https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/"
-            def snapshotRepo = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-            url = isReleaseVersion ? releaseRepo : snapshotRepo
+nmcpAggregation {
+    centralPortal {
+        username.set(providers.gradleProperty('mavenCentralUsername'))
+        password.set(providers.gradleProperty('mavenCentralPassword'))
+        publishingType.set('AUTOMATIC')
+        publicationName.set("${project.group}:${project.name}:${project.version}")
+        publishingTimeout.set(java.time.Duration.ofMinutes(30))
+    }
+}
 
-            //url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            credentials {
-                username = ossrhUsername // maybe use findProperty("ossrhUsername") ?
-                password = ossrhPassword
-            }
+tasks.named('nmcpPublishAggregationToCentralPortal') {
+    dependsOn tasks.named('check')
+    doFirst {
+        if (!isReleaseVersion) {
+            throw new GradleException('Use a non-SNAPSHOT version to publish a release to Maven Central.')
         }
     }
 }
